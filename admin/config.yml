@@ -3,7 +3,7 @@ backend:
   repo: USEPA/capd-test-docs
   branch: test-decap
   base_url: https://usepa.github.io/capd-test-docs
-  auth_endpoint: external/auth/github
+  auth_endpoint: /admin/external/auth/github
   preview_context: pages/build
 media_folder: "app/public/images/"
 public_folder: "/images"
