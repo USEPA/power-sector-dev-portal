@@ -2,10 +2,10 @@ backend:
   name: github
   repo: USEPA/capd-test-docs
   branch: test-decap
-  base_url: https://USEPA.github.io/capd-test-docs/app/
-  auth_endpoint: external/auth/github
+  base_url: https://usepa.github.io/capd-test-docs
+  auth_endpoint: /admin/external/auth/github
   preview_context: pages/build
-media_folder: "public/images/" 
+media_folder: "app/public/images/"
 public_folder: "/images"
 collections:
   - name: "posts" 
