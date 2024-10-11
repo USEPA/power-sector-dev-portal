@@ -4,6 +4,7 @@ backend:
   branch: test-decap
   base_url: https://usepa.github.io/capd-test-docs
   auth_endpoint: /admin/external/auth/github
+  client_id: Ov23likqtmFqj6W5lcWe
   preview_context: pages/build
 media_folder: "app/public/images/"
 public_folder: "/images"
