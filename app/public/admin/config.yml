@@ -1,17 +1,15 @@
 backend:
   name: git-gateway
-  branch: master  
-
-media_folder: "public/images"  
+  branch: main 
+media_folder: "public/images/" 
 public_folder: "/images"
-
 collections:
   - name: "posts" 
     label: "Blog Posts"
     folder: "posts" 
-    create: true
+    create: true 
     slug: "{{slug}}"
-    fields: # The fields for each document, usually in front matter
+    fields: 
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
