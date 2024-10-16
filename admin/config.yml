@@ -1,10 +1,6 @@
 backend:
-  name: github
-  repo: USEPA/capd-test-docs  
+  name: git-gateway
   branch: test-decap 
-  base_url: https://usepa.github.io/capd-test-docs 
-  login: true  
-  auth_endpoint: https://api.netlify.com  
 media_folder: "app/public/images/"
 public_folder: "/images"
 collections:
