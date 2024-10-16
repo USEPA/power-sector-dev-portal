@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: USEPA/capd-test-docs
   branch: test-decap 
 media_folder: "public/images/"
 public_folder: "/images"
