@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: test-decap 
-media_folder: "app/public/images/"
+media_folder: "public/images/"
 public_folder: "/images"
 collections:
   - name: "posts" 
