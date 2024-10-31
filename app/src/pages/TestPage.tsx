@@ -7,10 +7,17 @@ const TestPage: React.FC = () => {
     const [markdownContent, setMarkdownContent] = useState<string>('');
 
     useEffect(() => {
-        fetch('./content/test.md')
-            .then((res) => res.text())
-            .then((text) => setMarkdownContent(text));
+        fetch('/content/test.md')
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.text();
+            })
+            .then((text) => setMarkdownContent(text))
+            .catch((error) => console.error('Error fetching the Markdown file:', error));
     }, []);
+    
 
     return (
         <Layout>
