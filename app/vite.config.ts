@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
     plugins: [react()],
-    base: '/capd-test-docs/app/', 
+    base: '/capd-test-docs/', 
     server: {
         open: true 
     },
