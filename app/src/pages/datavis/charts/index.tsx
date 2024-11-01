@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../../hooks/useMarkdownContent';
-import Banner from '../../../components/datavis/Banner';
+import Banner from '../../../components/datavis/Banner/Banner';
 import { Link } from 'react-router-dom';
 
 const Charts: React.FC = () => {
@@ -13,7 +13,7 @@ const Charts: React.FC = () => {
     }
     
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ padding: '20px' }}>
             <Banner title="Charts" tagline="" />
             <ul style={{ listStyleType: "square", paddingLeft: "20px" }}>
                 <li><Link to="/datavis/charts/line-charts">Line Charts</Link></li>

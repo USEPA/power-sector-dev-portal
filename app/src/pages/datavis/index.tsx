@@ -13,7 +13,7 @@ const DataVisualization: React.FC = () => {
     }
     
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ padding: '20px' }}>
             <h1>Data Visualization Style Guide</h1>
             <ul style={{ listStyleType: "circle", paddingLeft: "20px" }}>
               <li><Link to="/datavis/principles">Principles</Link></li>

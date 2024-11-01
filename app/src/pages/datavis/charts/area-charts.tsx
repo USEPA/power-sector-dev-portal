@@ -11,7 +11,7 @@ const AreaCharts: React.FC = () => {
     }
     
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ padding: '20px' }}>
             <h1>Area Charts</h1>
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>

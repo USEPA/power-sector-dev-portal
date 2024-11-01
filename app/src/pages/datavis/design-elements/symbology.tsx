@@ -11,7 +11,7 @@ const Symbology: React.FC = () => {
     }
     
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ padding: '20px' }}>
             <h1>Symbology</h1>
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>
