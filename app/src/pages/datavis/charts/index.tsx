@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../../hooks/useMarkdownContent';
+import Banner from '../../../components/datavis/Banner';
 
 const Charts: React.FC = () => {
     const { content, error } = useMarkdownContent('/content/datavis/charts/charts.md');
@@ -12,7 +13,7 @@ const Charts: React.FC = () => {
     
     return (
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1>Charts</h1>
+            <Banner title="Charts" tagline="" />
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>
     );

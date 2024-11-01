@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../../hooks/useMarkdownContent';
+import Banner from '../../../components/datavis/Banner';
 
 const DesignElements: React.FC = () => {
     const { content, error } = useMarkdownContent('/content/datavis/design-elements/design-elements.md');
@@ -12,7 +13,7 @@ const DesignElements: React.FC = () => {
     
     return (
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1>Design Elements</h1>
+            <Banner title="Design Elements" tagline="" />
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>
     );

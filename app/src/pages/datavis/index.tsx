@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../hooks/useMarkdownContent';
+import './index.scss';
 
 const DataVisualization: React.FC = () => {
     const { content, error } = useMarkdownContent('/content/datavis/datavis.md');
