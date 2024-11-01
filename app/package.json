@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npx gulp watch\" \"vite\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -13,18 +13,20 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@trussworks/react-uswds": "^9.1.0",
-    "@uswds/uswds": "3.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "sass": "^1.80.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@uswds/compile": "^1.2.0",
+    "@uswds/uswds": "^3.9.0",
     "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.0.1",
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",

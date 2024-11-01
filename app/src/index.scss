@@ -1,6 +1,8 @@
 // @forward "uswds-theme.scss";
 // @forward "./path/to/source/uswds";
-@import './variables';
+@use './variables' as *;
+
+
 
 
 :root {

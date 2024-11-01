@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import './assets/css/styles.css';
+
 
 // Importing main pages for each section
 import DataVisualization from "./pages/datavis/index";
