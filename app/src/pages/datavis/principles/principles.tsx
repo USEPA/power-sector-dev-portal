@@ -21,7 +21,7 @@ const Principles: React.FC = () => {
         });
     };
 
-    
+
     const principles = extractPrinciples(content);
 
     return (

@@ -29,25 +29,6 @@ function App() {
           <h2>Open Source Resource Hub</h2>
           <ul style={{ listStyleType: "none", padding: 0 }}>
             <li><Link to="/datavis">Data Visualization Guide</Link></li>
-            <ul style={{ listStyleType: "circle", paddingLeft: "20px" }}>
-              <li><Link to="/datavis/principles">Principles</Link></li>
-              <li><Link to="/datavis/design-elements">Design Elements</Link></li>
-              <ul style={{ listStyleType: "square", paddingLeft: "20px" }}>
-                <li><Link to="/datavis/design-elements/color">Color</Link></li>
-                <li><Link to="/datavis/design-elements/typography">Typography</Link></li>
-                <li><Link to="/datavis/design-elements/symbology">Symbology</Link></li>
-                <li><Link to="/datavis/design-elements/layout">Layout</Link></li>
-              </ul>
-              <li><Link to="/datavis/charts">Charts</Link></li>
-              <ul style={{ listStyleType: "square", paddingLeft: "20px" }}>
-                <li><Link to="/datavis/charts/line-charts">Line Charts</Link></li>
-                <li><Link to="/datavis/charts/bar-charts">Bar Charts</Link></li>
-                <li><Link to="/datavis/charts/area-charts">Area Charts</Link></li>
-                <li><Link to="/datavis/charts/maps">Maps</Link></li>
-              </ul>
-              <li><Link to="/datavis/further-reading">Further Reading</Link></li>
-            </ul>
-            {/* Links for R Style Guide and API Documentation */}
             <li><Link to="/rstyle">R Style Guide</Link></li>
             <li><Link to="/api">API Documentation</Link></li>
           </ul>

@@ -1,0 +1,21 @@
+$primary-color: #005ea2;  // Example: USWDS blue
+$secondary-color: #ffcc00; // Example: USWDS gold
+$accent-color: #d9e2e7;    // Example: USWDS light gray
+
+// Font family
+$font-family: 'Source Sans Pro', sans-serif;
+
+// Global Styles
+body {
+    font-family: $font-family;
+    color: $primary-color;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    color: $primary-color;
+}
+
+p {
+    margin-bottom: 1em;
+}

@@ -1,3 +1,8 @@
+// @forward "uswds-theme.scss";
+// @forward "./path/to/source/uswds";
+@import './variables';
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
