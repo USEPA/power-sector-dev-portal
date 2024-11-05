@@ -81,6 +81,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+// custom components //
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-col--two {
+
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+
+}
+
+.grid-col--one {
+  grid-template-columns: repeat(1, 1fr); 
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

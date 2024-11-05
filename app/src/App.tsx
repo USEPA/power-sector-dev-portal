@@ -16,7 +16,7 @@ import LineCharts from "./pages/datavis/charts/line-charts";
 import BarCharts from "./pages/datavis/charts/bar-charts";
 import AreaCharts from "./pages/datavis/charts/area-charts";
 import Maps from "./pages/datavis/charts/maps";
-import FurtherReading from "./pages/datavis/further-reading/further-reading";
+import FurtherReading from "./pages/datavis/further-reading/further-reading/further-reading";
 
 // Placeholder components for R Style Guide and API Documentation
 import RStyleGuide from "./pages/rstyle/rstyle";

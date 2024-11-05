@@ -1,17 +1,23 @@
-// src/components/datavis/PrincipleItem.tsx
+// src/components/datavis/InfloBlock/InfoBlock.tsx
 import React from 'react';
-import "./InfoBlock.scss"; 
+import './InfoBlock.scss';
 
 interface InfoBlockProps {
     title: string;
     content: string;
+    link?: string; 
 }
 
-const InfoBlock: React.FC<InfoBlockProps> = ({ title, content }) => {
+const InfoBlock: React.FC<InfoBlockProps> = ({ title, content, link }) => {
     return (
-        <div className="InfoBlock">
+        <div className="info-block">
             <h3>{title}</h3>
-            <p>{content}</p>
+            {content && <p>{content}</p>}
+            {link && (
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    Visit {title}
+                </a>
+            )}
         </div>
     );
 };

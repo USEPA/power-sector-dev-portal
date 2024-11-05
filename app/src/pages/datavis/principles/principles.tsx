@@ -44,7 +44,7 @@ const Principles: React.FC = () => {
         <h2>{introTitle}</h2>
         <p>{introContent}</p>
       </div>
-        <div className="grid">
+        <div className="grid grid-col--two ">
           {principles.map((principle, index) => (
             <InfoBlock
               key={index}
