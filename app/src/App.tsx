@@ -4,14 +4,14 @@ import './assets/css/styles.css';
 
 
 // Importing main pages for each section
-import DataVisualization from "./pages/datavis/index";
+import DataVisualization from "./pages/datavis/datavis";
 import Principles from "./pages/datavis/principles/principles";
-import DesignElements from "./pages/datavis/design-elements/index";
+import DesignElements from "./pages/datavis/design-elements/design-elements";
 import Color from "./pages/datavis/design-elements/color";
 import Typography from "./pages/datavis/design-elements/typography";
 import Symbology from "./pages/datavis/design-elements/symbology";
 import Layout from "./pages/datavis/design-elements/layout";
-import Charts from "./pages/datavis/charts/index";
+import Charts from "./pages/datavis/charts/charts";
 import LineCharts from "./pages/datavis/charts/line-charts";
 import BarCharts from "./pages/datavis/charts/bar-charts";
 import AreaCharts from "./pages/datavis/charts/area-charts";
@@ -19,8 +19,8 @@ import Maps from "./pages/datavis/charts/maps";
 import FurtherReading from "./pages/datavis/further-reading/further-reading";
 
 // Placeholder components for R Style Guide and API Documentation
-import RStyleGuide from "./pages/rstyle/index";
-import APIDocumentation from "./pages/api/index";
+import RStyleGuide from "./pages/rstyle/rstyle";
+import APIDocumentation from "./pages/api/api";
 
 function App() {
   return (
