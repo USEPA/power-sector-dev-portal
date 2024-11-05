@@ -2,8 +2,8 @@
 import React from "react";
 import useMarkdownContent from "../../../hooks/useMarkdownContent";
 import Banner from "../../../components/datavis/Banner/Banner";
-import PrincipleItem from "../../../components/datavis/PrincipleItem";
-// import './Principles.css';
+import InfoBlock from "../../../components/datavis/InfloBlock/InfoBlock";
+import './principles.scss';
 
 const Principles: React.FC = () => {
   const { content, error } = useMarkdownContent(
@@ -15,15 +15,21 @@ const Principles: React.FC = () => {
   }
 
   const extractPrinciples = (markdownContent: string) => {
-    const sections = markdownContent.split(/###\s+/).slice(1);
-    return sections.map((section) => {
+    const sections = markdownContent.split(/##\s+/).slice(1);
+    const introSection = sections[0].split("\n\n"); 
+    const introTitle = introSection[0].trim(); 
+    const introContent = introSection[1].trim(); 
+
+    const principles = sections.slice(1).map((section) => {
       const [title, ...body] = section.split("\n");
       const content = body.join("\n").trim();
       return { title, content };
     });
+
+    return { introTitle, introContent, principles }; 
   };
 
-  const principles = extractPrinciples(content);
+  const { introTitle, introContent, principles } = extractPrinciples(content);
 
   return (
     <div className="principles-page">
@@ -32,13 +38,19 @@ const Principles: React.FC = () => {
         tagline="General advice on how data visualizations and data products should be approached."
       />
       <div className="container">
-        {principles.map((principle, index) => (
-          <PrincipleItem
-            key={index}
-            title={principle.title}
-            content={principle.content}
-          />
-        ))}
+      <div className="intro-section">
+        <h2>{introTitle}</h2>
+        <p>{introContent}</p>
+      </div>
+        <div className="grid">
+          {principles.map((principle, index) => (
+            <InfoBlock
+              key={index}
+              title={principle.title}
+              content={principle.content}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

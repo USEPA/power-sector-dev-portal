@@ -1,0 +1,9 @@
+@use './../../../variables' as *;
+
+.InfoBlock {
+    border-top: 1.5px solid $blue-vivid;
+
+    h3 {
+        margin: .5em 0px 0px;
+    }
+}
