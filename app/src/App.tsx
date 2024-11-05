@@ -28,12 +28,14 @@ function App() {
       <div className="App">
         {/* Navigation Menu */}
         <nav style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
+        <div className="container">
           <h2>Open Source Resource Hub</h2>
           <ul style={{ listStyleType: "none", padding: 0 }}>
             <li><Link to="/datavis">Data Visualization Guide</Link></li>
             <li><Link to="/rstyle">R Style Guide</Link></li>
             <li><Link to="/api">API Documentation</Link></li>
           </ul>
+          </div>
         </nav>
 
         {/* Route Components */}

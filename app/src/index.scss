@@ -43,22 +43,23 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-  font-size: 96px;
-  line-height: 1.1;
+  font-size: 96px !important;
+  line-height: 1.1 !important; 
+  margin: 0 !important;
 }
 
 h2 {
-  font-size: 40px;
-  line-height: auto;
+  font-size: 40px !important;
+  line-height: auto !important;
 }
 
 h3 {
-  font-size: 32px;
-  line-height: auto;
+  font-size: 32px !important;
+  line-height: auto !important;
 }
 
 p {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 button {

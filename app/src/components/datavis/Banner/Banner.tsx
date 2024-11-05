@@ -1,5 +1,5 @@
 import React from "react";
-import "./Banner.scss"; 
+import "./Banner.scss";
 
 interface BannerProps {
   title: string;
@@ -8,10 +8,10 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ title, tagline }) => {
   return (
-    <header className="banner" style={{ padding: "10px" }}>
-        <div className="container">
-      <h1>{title}</h1>
-      <p>{tagline}</p>
+    <header className="banner">
+      <div className="banner-container">
+        <h1>{title}</h1>
+        <p>{tagline}</p>
       </div>
     </header>
   );

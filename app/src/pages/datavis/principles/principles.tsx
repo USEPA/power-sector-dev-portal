@@ -29,7 +29,9 @@ const Principles: React.FC = () => {
     return { introTitle, introContent, principles }; 
   };
 
-  const { introTitle, introContent, principles } = extractPrinciples(content);
+  const { introTitle, introContent, principles } = content 
+  ? extractPrinciples(content) 
+  : { introTitle: '', introContent: '', principles: [] };
 
   return (
     <div className="principles-page">
