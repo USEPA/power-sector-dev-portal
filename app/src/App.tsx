@@ -27,10 +27,10 @@ function App() {
     <Router>
       <div className="App">
         {/* Navigation Menu */}
+        <div style={{ padding: "10px", backgroundColor: "#162e51" }}>   <div className="banner-container"> <h2>Open Source Resource Hub</h2></div></div>
         <nav style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
-        <div className="container">
-          <h2>Open Source Resource Hub</h2>
-          <ul style={{ listStyleType: "none", padding: 0 }}>
+        <div className="banner-container">
+          <ul style={{ listStyleType: "none", padding: 0, display: 'flex', justifyContent: 'space-between'}}>
             <li><Link to="/datavis">Data Visualization Guide</Link></li>
             <li><Link to="/rstyle">R Style Guide</Link></li>
             <li><Link to="/api">API Documentation</Link></li>

@@ -98,6 +98,10 @@ button:focus-visible {
   grid-template-columns: repeat(1, 1fr); 
 }
 
+.intro-section{
+  margin-bottom: 3em;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

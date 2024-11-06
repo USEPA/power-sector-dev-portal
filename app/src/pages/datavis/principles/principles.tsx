@@ -14,30 +14,50 @@ const Principles: React.FC = () => {
     return <div>Error loading content: {error}</div>;
   }
 
-  const extractPrinciples = (markdownContent: string) => {
-    const sections = markdownContent.split(/##\s+/).slice(1);
-    const introSection = sections[0].split("\n\n"); 
-    const introTitle = introSection[0].trim(); 
-    const introContent = introSection[1].trim(); 
+    const extractPrinciples = (markdownContent: string) => {
+      const sections = markdownContent.split(/##\s+/);
+      const titleSection = sections[0].split("\n\n");
+      const title = titleSection[0].replace(/^#\s*/, '').trim();
+      const tagline = titleSection[1].trim();
+      const introSection = sections[1].split("\n\n");
+      const introTitle = introSection[0].trim();
+      const introContent = introSection[1].trim();
 
-    const principles = sections.slice(1).map((section) => {
-      const [title, ...body] = section.split("\n");
-      const content = body.join("\n").trim();
-      return { title, content };
-    });
 
-    return { introTitle, introContent, principles }; 
+      const principles = sections.slice(2).map((section) => {
+          const lines = section.split("\n").map(line => line.trim()).filter(line => line);
+          const title = lines[0];
+
+          const bodyLines = lines.slice(1);
+          const contentParts: string[] = [];
+          let link = '';
+
+          bodyLines.forEach(line => {
+              const linkMatch = line.match(/\[(.*?)\]\((.*?)\)/);
+              if (linkMatch) {
+                  link = linkMatch[2]; 
+              } else {
+                  contentParts.push(line); 
+              }
+          });
+
+          const content = contentParts.join("\n").trim(); 
+
+          return { title: title.trim(), content, link };
+      });
+
+      return { title, tagline, introTitle, introContent, principles };
   };
 
-  const { introTitle, introContent, principles } = content 
-  ? extractPrinciples(content) 
-  : { introTitle: '', introContent: '', principles: [] };
+  const { title, tagline, introTitle, introContent, principles } = content 
+      ? extractPrinciples(content) 
+      : { title: '', tagline: '', introTitle: '', introContent: '', principles: [] };
 
   return (
     <div className="principles-page">
       <Banner
-        title="Principles"
-        tagline="General advice on how data visualizations and data products should be approached."
+        title={title}
+        tagline={tagline}
       />
       <div className="container">
       <div className="intro-section">
