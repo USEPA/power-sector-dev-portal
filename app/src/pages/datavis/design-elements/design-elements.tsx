@@ -5,6 +5,7 @@ import Banner from "../../../components/datavis/Banner/Banner";
 import InfoBlock from "../../../components/datavis/InfloBlock/InfoBlock";
 import { extractBanner } from "../../../utilities/extractBanner";
 import { extractInfoBlock } from "../../../utilities/extractInfoBlock";
+import { extractIntro } from "../../../utilities/extractIntro";
 
 const DesignElements: React.FC = () => {
   const { content, error } = useMarkdownContent('/content/datavis/design-elements/design-elements.md');
@@ -18,12 +19,16 @@ const DesignElements: React.FC = () => {
   : { title: '', tagline: '' };
 
 
-  const { introTitle, introContent, info} = content 
+  const { info} = content 
   ? extractInfoBlock(content) 
-  : { introTitle: '', introContent: '', info: [] };
+  : { info: [] };
+
+  const { introTitle, introContent} = content 
+  ? extractIntro(content) 
+  : { introTitle: '', introContent: '' };
 
   return (
-    <div className="principles-page">
+    <div className="design-elements-page">
       <Banner
         title={title}
         tagline={tagline}

@@ -6,6 +6,7 @@ import InfoBlock from "../../../components/datavis/InfloBlock/InfoBlock";
 import './principles.scss';
 import { extractBanner } from "../../../utilities/extractBanner";
 import { extractInfoBlock } from "../../../utilities/extractInfoBlock";
+import { extractIntro } from "../../../utilities/extractIntro";
 
 const Principles: React.FC = () => {
   const { content, error } = useMarkdownContent(
@@ -20,9 +21,13 @@ const Principles: React.FC = () => {
   ? extractBanner(content) 
   : { title: '', tagline: '' };
 
-  const { introTitle, introContent, info} = content 
+  const { info} = content 
   ? extractInfoBlock(content) 
-  : { introTitle: '', introContent: '', info: [] };
+  : { info: [] };
+
+  const { introTitle, introContent} = content 
+  ? extractIntro(content) 
+  : { introTitle: '', introContent: '' };
 
   return (
     <div className="principles-page">

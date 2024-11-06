@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <div style={{ padding: "10px", backgroundColor: "#162e51" }}>
           <div className="banner-container">
-            <h2>Open Source Resource Hub</h2>
+            <h2 style={{color: "white"}}>Open Source Resource Hub</h2>
           </div>
         </div>
         <nav style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>

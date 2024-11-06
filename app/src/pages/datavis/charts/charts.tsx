@@ -1,28 +1,39 @@
 // src/pages/datavis/index.tsx
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../../hooks/useMarkdownContent';
 import Banner from '../../../components/datavis/Banner/Banner';
-import { Link } from 'react-router-dom';
+import { extractBanner } from '../../../utilities/extractBanner';
+import { extractIntro } from '../../../utilities/extractIntro';
 
 const Charts: React.FC = () => {
     const { content, error } = useMarkdownContent('/content/datavis/charts/charts.md');
 
+    const { title, tagline} = content 
+    ? extractBanner(content) 
+    : { title: '', tagline: '' };
+
+    const { introTitle, introContent} = content 
+    ? extractIntro(content) 
+    : { introTitle: '', introContent: '' };
+  
     if (error) {
-        return <div>Error loading content: {error}</div>;
+      return <div>Error loading content: {error}</div>;
     }
     
     return (
-        <div style={{ padding: '20px' }}>
-            <Banner title="Charts" tagline="" />
-            <ul style={{ listStyleType: "square", paddingLeft: "20px" }}>
-                <li><Link to="/datavis/charts/line-charts">Line Charts</Link></li>
-                <li><Link to="/datavis/charts/bar-charts">Bar Charts</Link></li>
-                <li><Link to="/datavis/charts/area-charts">Area Charts</Link></li>
-                <li><Link to="/datavis/charts/maps">Maps</Link></li>
-              </ul>
-            <ReactMarkdown>{content}</ReactMarkdown>
-        </div>
+        <div className="design-elements-page">
+      <Banner
+        title={title}
+        tagline={tagline}
+        level="level2"
+      />
+      <div className="container">
+      <div className="intro-section">
+        <h2>{introTitle}</h2>
+        <p>{introContent}</p>
+      </div>
+      </div>
+    </div>
     );
 };
 
