@@ -1,6 +1,17 @@
 @use '../../../variables' as *;
 
 .banner {
-    background-color: $blue-vivid;
+   
     padding: 4em 0;
+}
+
+.level1 {
+    background-color: $primary-vivid;
+    h1, p {
+        color: white;
+    }
+}
+
+.level2 {
+    background-color: $blue-vivid;
 }

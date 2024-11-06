@@ -53,7 +53,7 @@ const FurtherReading: React.FC = () => {
 
     return (
         <div className="further-reading-page">
-            <Banner title={title} tagline={tagline} />
+            <Banner title={title} tagline={tagline} level="level2" />
             <div className="container">
                 <div className="intro-section">
                     <h2>{introTitle}</h2>

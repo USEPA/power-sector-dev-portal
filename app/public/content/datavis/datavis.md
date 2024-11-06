@@ -1,3 +1,3 @@
-# Datavis.md!
+# Data Visualization Style Guide
 
-This is content from a **Markdown file**.
+Lorem Ipsum

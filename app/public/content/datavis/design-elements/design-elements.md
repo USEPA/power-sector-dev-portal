@@ -1,4 +1,4 @@
-# Design Elements!
+# Design Elements
 
 Specific guidance about common visualization characteristics and components.
 

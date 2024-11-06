@@ -58,6 +58,7 @@ const Principles: React.FC = () => {
       <Banner
         title={title}
         tagline={tagline}
+        level="level2" 
       />
       <div className="container">
       <div className="intro-section">
