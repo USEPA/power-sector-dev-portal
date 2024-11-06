@@ -29,9 +29,9 @@ function App() {
             <h2 style={{color: "white"}}>Open Source Resource Hub</h2>
           </div>
         </div>
-        <nav style={{ padding: "10px", backgroundColor: "#f4f4f4" }}>
+        <nav style={{ padding: '10px', backgroundColor: '#e8e8e8' }}>
           <div className="banner-container">
-            <ul style={{ listStyleType: "none", padding: 0, display: 'flex', justifyContent: 'space-between' }}>
+          <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', gap: '10px' }}>
               <li><Link to="/datavis">Data Visualization Guide</Link></li>
               <li><Link to="/rstyle">R Style Guide</Link></li>
               <li><Link to="/api">API Documentation</Link></li>
