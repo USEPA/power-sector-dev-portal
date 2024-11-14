@@ -1,7 +1,7 @@
 // App.tsx
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import './assets/css/styles.css';
+import "./assets/css/styles.css";
 
 import DataVisualization from "./pages/datavis/datavis";
 import Principles from "./pages/datavis/principles/principles";
@@ -18,26 +18,36 @@ import Maps from "./pages/datavis/charts/maps";
 import FurtherReading from "./pages/datavis/further-reading/further-reading/further-reading";
 import RStyleGuide from "./pages/rstyle/rstyle";
 import APIDocumentation from "./pages/api/api";
-import DataVisLayout from "./layouts/dataVisLayout"
+import DataVisLayout from "./layouts/dataVisLayout";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <div style={{ padding: "10px", backgroundColor: "#162e51" }}>
-          <div className="banner-container">
-            <h2 style={{color: "white"}}>Open Source Resource Hub</h2>
-          </div>
-        </div>
-        <nav style={{ padding: '10px', backgroundColor: '#e8e8e8' }}>
-          <div className="banner-container">
-          <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', gap: '10px' }}>
-              <li><Link to="/datavis">Data Visualization Guide</Link></li>
-              <li><Link to="/rstyle">R Style Guide</Link></li>
-              <li><Link to="/api">API Documentation</Link></li>
+        <div className="main-banner">
+          <h3>Open Source Resource Hub</h3>
+
+          <nav>
+            <ul
+              style={{
+                listStyleType: "none",
+                padding: 0,
+                display: "flex",
+                gap: "10px",
+              }}
+            >
+              <li>
+                <Link to="/datavis">Data Visualization Guide</Link>
+              </li>
+              <li>
+                <Link to="/rstyle">R Style Guide</Link>
+              </li>
+              <li>
+                <Link to="/api">API Documentation</Link>
+              </li>
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
 
         <Routes>
           <Route path="/" element={<div>Open Source Resource Hub</div>} />

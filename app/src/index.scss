@@ -1,9 +1,6 @@
 // @forward "uswds-theme.scss";
 // @forward "./path/to/source/uswds";
-@use './variables' as *;
-
-
-
+@use "./variables" as *;
 
 :root {
   font-family: $font-family;
@@ -33,18 +30,45 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1, h2, h3, h4, p {
+nav {
+  padding: 10px;
+}
+
+.main-banner {
+  background-color: $primary-darker;
+  padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    h3,
+    a {
+      color: white;
+    }
+
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
   color: $ink;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
 }
 
 h1 {
-  font-size: 96px !important;
-  line-height: 1.1 !important; 
+  font-size: 64px !important;
+  line-height: 1.1 !important;
   margin: 0 !important;
 }
 
@@ -89,16 +113,14 @@ button:focus-visible {
 }
 
 .grid-col--two {
-
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
-
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .grid-col--one {
-  grid-template-columns: repeat(1, 1fr); 
+  grid-template-columns: repeat(1, 1fr);
 }
 
-.intro-section{
+.intro-section {
   margin-bottom: 3em;
 }
 

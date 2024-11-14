@@ -11,7 +11,7 @@ const DataVisLayout: React.FC = () => {
   return (
     <div>
       {/* Main Navigation */}
-      <nav style={{ padding: "10px", backgroundColor: "#e8e8e8" }}>
+      <nav>
         <div className="banner-container">
           <ul
             style={{
@@ -39,7 +39,7 @@ const DataVisLayout: React.FC = () => {
 
       {/* Conditional Chart Navigation */}
       {isChartRoute && (
-        <nav style={{ padding: "10px", backgroundColor: "#e8e8e8" }}>
+        <nav>
           <div className="banner-container">
             <ul
               style={{
