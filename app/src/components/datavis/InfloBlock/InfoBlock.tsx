@@ -15,7 +15,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ title, content, link }) => {
             <h3>{title}</h3>
             {content && <p>{content}</p>}
             {link && (
-                <a href={link} target="_blank" rel="noopener noreferrer">
+                <a href={link}>
                     Learn about {title} <ArrowForwardIcon />
                 </a>
             )}
