@@ -2,7 +2,7 @@
 title: "Principles"
 tagline: "General advice on how data visualizations and data products should be approached."
 introTitle: "Principles"
-introContent: "This section of the guide describes five principles for data visualizations, which are intended as high-level tenets to keep in mind when creating and updating data visualizations."
+introContent: "This section of the guide describes five principles for data visualizations, which are intended as high-level tenets to keep in mind when creating and updating data visualizations. The principles are meant to be used in combination with the more practical guidance in the Design Elements section. While not every best practice or important piece of advice is explicitly addressed by the following principles, all visualizations should adhere to their requirements."
 sections:
   - title: "Principles"
     cards:
