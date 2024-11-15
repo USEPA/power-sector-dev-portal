@@ -5,6 +5,7 @@ import InfoBlock from '../../../components/datavis/InfloBlock/InfoBlock';
 import { extractBanner, extractIntro, extractSections } from '../../../utilities/extractContent';
 import { Section } from '../../../types/ContentTypes'; // Make sure the Section type is defined in types/ContentTypes
 import './principles.scss';
+import ReactMarkdown from 'react-markdown';
 
 const Principles: React.FC = () => {
   const { content, error } = useMarkdownContent('/content/datavis/principles/principles.md');
@@ -24,7 +25,7 @@ const Principles: React.FC = () => {
       <div className="container">
         <div className="intro-section">
           <h2>{introTitle}</h2>
-          <p>{introContent}</p>
+          <ReactMarkdown>{introContent}</ReactMarkdown>
         </div>
         {sections.map((section) => (
             <div className="grid grid-col--two">
