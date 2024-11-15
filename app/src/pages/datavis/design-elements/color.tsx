@@ -8,7 +8,7 @@ const ColorPage: React.FC = () => {
   const { content, error } = useMarkdownContent('/content/datavis/design-elements/color.md');
 
   // Extract content from markdown
-  const { title } = content ? extractBanner(content) : { title: ''};
+  const { title } = content ? extractBanner(content) : { title: '' };
   const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
   const sections: Section[] = content ? extractSections(content) : [];
 
@@ -19,11 +19,13 @@ const ColorPage: React.FC = () => {
   return (
     <div className="color-page">
       <div className="container">
-      <h1>{title}</h1>
+        <h1>{title}</h1>
+
         <div className="intro-section">
           <h2>{introTitle}</h2>
-          <ReactMarkdown>{introContent}</ReactMarkdown> 
+          <ReactMarkdown>{introContent}</ReactMarkdown>
         </div>
+
 
         {sections.map((section, idx) => (
           <div key={idx} className="section">
@@ -38,7 +40,7 @@ const ColorPage: React.FC = () => {
                   <div key={subIdx} className="subsection">
                     <h4>{subsection.title}</h4>
                     <div>
-                      <ReactMarkdown>{subsection.content}</ReactMarkdown> 
+                      <ReactMarkdown>{subsection.content}</ReactMarkdown>
                     </div>
 
                     {subsection.image && (
