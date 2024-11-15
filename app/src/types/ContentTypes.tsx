@@ -8,6 +8,8 @@ export interface Card {
   export interface Section {
     title: string;
     cards: Card[];
+    subsections?: Subsection[]; 
+    content: string;
   }
   
   export interface Content {
@@ -15,5 +17,13 @@ export interface Card {
     tagline: string;
     introTitle: string;
     introContent: string;
-    sections: Section[];
+    sections: Section[]; 
   }
+  
+  export interface Subsection {
+    title: string;
+    content: string;
+    image?: string; 
+  }
+  
+  
