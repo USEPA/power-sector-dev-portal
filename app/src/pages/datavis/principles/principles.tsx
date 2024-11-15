@@ -1,55 +1,42 @@
-// src/pages/datavis/principles.tsx
-import React from "react";
-import useMarkdownContent from "../../../hooks/useMarkdownContent";
-import Banner from "../../../components/datavis/Banner/Banner";
-import InfoBlock from "../../../components/datavis/InfloBlock/InfoBlock";
+import React from 'react';
+import useMarkdownContent from '../../../hooks/useMarkdownContent';
+import Banner from '../../../components/datavis/Banner/Banner';
+import InfoBlock from '../../../components/datavis/InfloBlock/InfoBlock';
+import { extractBanner, extractIntro, extractSections } from '../../../utilities/extractContent';
+import { Section } from '../../../types/ContentTypes'; // Make sure the Section type is defined in types/ContentTypes
 import './principles.scss';
-import { extractBanner } from "../../../utilities/extractBanner";
-import { extractInfoBlock } from "../../../utilities/extractInfoBlock";
-import { extractIntro } from "../../../utilities/extractIntro";
 
 const Principles: React.FC = () => {
-  const { content, error } = useMarkdownContent(
-    "/content/datavis/principles/principles.md"
-  );
+  const { content, error } = useMarkdownContent('/content/datavis/principles/principles.md');
+
+  // Extract content from markdown
+  const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
+  const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
+  const sections: Section[] = content ? extractSections(content) : [];
 
   if (error) {
     return <div>Error loading content: {error}</div>;
   }
 
-  const { title, tagline} = content 
-  ? extractBanner(content) 
-  : { title: '', tagline: '' };
-
-  const { info} = content 
-  ? extractInfoBlock(content) 
-  : { info: [] };
-
-  const { introTitle, introContent} = content 
-  ? extractIntro(content) 
-  : { introTitle: '', introContent: '' };
-
   return (
     <div className="principles-page">
-      <Banner
-        title={title}
-        tagline={tagline}
-        level="level2" 
-      />
+      <Banner title={title} tagline={tagline} level="level2" />
       <div className="container">
-      <div className="intro-section">
-        <h2>{introTitle}</h2>
-        <p>{introContent}</p>
-      </div>
-        <div className="grid grid-col--two ">
-          {info.map((principle, index) => (
-            <InfoBlock
-              key={index}
-              title={principle.title}
-              content={principle.content}
-            />
-          ))}
+        <div className="intro-section">
+          <h2>{introTitle}</h2>
+          <p>{introContent}</p>
         </div>
+        {sections.map((section) => (
+            <div className="grid grid-col--two">
+              {section.cards.map((card, idx) => (
+                <InfoBlock
+                  key={idx}
+                  title={card.title}
+                  content={card.description}
+                />
+              ))}
+          </div>
+        ))}
       </div>
     </div>
   );
