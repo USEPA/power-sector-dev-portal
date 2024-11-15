@@ -1,6 +1,7 @@
 // src/components/datavis/InfloBlock/InfoBlock.tsx
 import React from 'react';
 import './InfoBlock.scss';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface InfoBlockProps {
     title: string;
@@ -15,7 +16,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ title, content, link }) => {
             {content && <p>{content}</p>}
             {link && (
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                    Visit {title}
+                    Learn about {title} <ArrowForwardIcon />
                 </a>
             )}
         </div>

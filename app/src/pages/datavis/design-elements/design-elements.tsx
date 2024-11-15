@@ -32,6 +32,7 @@ const DesignElements: React.FC = () => {
                 key={cardIdx}
                 title={card.title}
                 content={card.description}
+                link={card.link}
               />
             ))}
           </div>
