@@ -3,6 +3,8 @@ import useMarkdownContent from '../../../hooks/useMarkdownContent';
 import Banner from '../../../components/datavis/Banner/Banner';
 import { extractBanner, extractIntro, extractSections } from '../../../utilities/extractContent';
 import { Section, Card } from '../../../types/ContentTypes';
+import './Charts.scss';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Charts: React.FC = () => {
   const { content, error } = useMarkdownContent('/content/datavis/charts/charts.md');
@@ -30,9 +32,11 @@ const Charts: React.FC = () => {
               {section.cards.map((card: Card, idx: number) => (
                 <div key={idx} className="card">
                   <img src={card.image} alt={card.title} />
+                  <div className="card-content">
                   <h4>{card.title}</h4>
                   <p>{card.description}</p>
-                  <a href={card.link}>Learn More</a>
+                  <a href={card.link}>Learn about {card.title} <ArrowForwardIcon /></a> 
+                  </div>
                 </div>
               ))}
             </div>
