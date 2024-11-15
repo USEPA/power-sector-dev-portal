@@ -35,7 +35,9 @@ const Charts: React.FC = () => {
                   <div className="card-content">
                   <h4>{card.title}</h4>
                   <p>{card.description}</p>
+                  {card.link ?
                   <a href={card.link}>Learn about {card.title} <ArrowForwardIcon /></a> 
+                  : " " }
                   </div>
                 </div>
               ))}

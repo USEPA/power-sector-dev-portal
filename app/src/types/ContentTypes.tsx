@@ -1,7 +1,7 @@
 export interface Card {
     title: string;
     description: string;
-    link: string;
+    link?: string;
     image: string;
   }
   
