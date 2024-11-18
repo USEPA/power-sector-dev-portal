@@ -21,10 +21,8 @@ const ColorPage: React.FC = () => {
     <div className="color-page">
       <div className="container">
       <h1>{title}</h1>
-      <div className="intro-section">
           <h2>{introTitle}</h2>
           <ReactMarkdown>{introContent}</ReactMarkdown>
-        </div>
 
         {sections.map((section, idx) => (
           <div key={idx}>
