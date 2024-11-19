@@ -40,15 +40,16 @@ const ColorPage: React.FC = () => {
                 <ReactMarkdown>{section.content}</ReactMarkdown>
               </div>
             )}
-            {section.image?.endsWith(".svg") ? (
-              <SVGRenderer src={section.image} alt={section.title} />
-            ) : (
-              <img
-                src={section.image}
-                alt={section.title}
-                className="section-image"
-              />
-            )}
+            {section.image &&
+              (section.image?.endsWith(".svg") ? (
+                <SVGRenderer src={section.image} alt={section.title} />
+              ) : (
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="section-image"
+                />
+              ))}
           </div>
         ))}
       </div>
