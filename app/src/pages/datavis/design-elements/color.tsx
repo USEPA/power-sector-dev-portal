@@ -1,15 +1,23 @@
 import React from "react";
 import useMarkdownContent from "../../../hooks/useMarkdownContent";
-import { extractBanner, extractIntro, extractSections } from "../../../utilities/extractContent";
+import {
+  extractBanner,
+  extractIntro,
+  extractSections,
+} from "../../../utilities/extractContent";
 import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
-import renderHeader from "../../../utilities/renderHeader"
-
+import renderHeader from "../../../utilities/renderHeader";
+import SVGRenderer from "../../../components/datavis/SvgRenderer/SvgRenderer";
 
 const ColorPage: React.FC = () => {
-  const { content, error } = useMarkdownContent("/content/datavis/design-elements/color.md");
-  const { title } = content ? extractBanner(content) : { title: '' };
-  const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
+  const { content, error } = useMarkdownContent(
+    "/content/datavis/design-elements/color.md"
+  );
+  const { title } = content ? extractBanner(content) : { title: "" };
+  const { introTitle, introContent } = content
+    ? extractIntro(content)
+    : { introTitle: "", introContent: "" };
 
   const sections: Section[] = content ? extractSections(content) : [];
 
@@ -20,9 +28,9 @@ const ColorPage: React.FC = () => {
   return (
     <div className="color-page">
       <div className="container">
-      <h1>{title}</h1>
-          <h2>{introTitle}</h2>
-          <ReactMarkdown>{introContent}</ReactMarkdown>
+        <h1>{title}</h1>
+        <h2>{introTitle}</h2>
+        <ReactMarkdown>{introContent}</ReactMarkdown>
 
         {sections.map((section, idx) => (
           <div key={idx}>
@@ -32,8 +40,14 @@ const ColorPage: React.FC = () => {
                 <ReactMarkdown>{section.content}</ReactMarkdown>
               </div>
             )}
-            {section.image && (
-                <img src={section.image} alt={section.title} className="section-image" />
+            {section.image?.endsWith(".svg") ? (
+              <SVGRenderer src={section.image} alt={section.title} />
+            ) : (
+              <img
+                src={section.image}
+                alt={section.title}
+                className="section-image"
+              />
             )}
           </div>
         ))}

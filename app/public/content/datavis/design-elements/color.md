@@ -43,7 +43,7 @@ sections:
     image: "/src/assets/images/placeholder.png"
   - title: "Divergent Palette 2"
     level: 4
-    image: "/src/assets/images/placeholder.png"
+    image: "/src/assets/images/datavis/design-elements/color/divergent-palette-2.svg"
   - title: "Bivariate Palettes"
     level: 3
     content: |
