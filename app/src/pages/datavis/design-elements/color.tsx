@@ -7,7 +7,7 @@ import {
 } from "../../../utilities/extractContent";
 import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
-import renderHeader from "../../../utilities/renderHeader";
+import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 
 const ColorPage: React.FC = () => {
