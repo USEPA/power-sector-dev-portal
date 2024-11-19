@@ -5,18 +5,18 @@ introTitle: "Introduction"
 introContent: "In any chart, you want the data to be the most visually salient thing, followed by the title, the legend, the axes, and the gridlines. The guidance in this section will help you construct charts that adhere to this formula."
 sections:
   - title: "Chart Elements"
-    level: 3
+    level: 2
   - title: "Figure 1: Example static chart with important elements highlighted"
     level: 4
     image: "/src/assets/images/datavis/design-elements/layout/figure-1.svg"
   - title: "Titles and Subtitles"
-    level: 4
+    level: 3
     content: |
        Explanatory charts (charts intended to impart a particular takeaway) should have a title and, if necessary or desired, a subtitle. The title should summarize the main takeaway of the chart. For example, a trend chart might be titled “Coal declines as fuel generation source in USA.” The subtitle should explain the context of the chart. For example, the above chart title example could be accompanied by a subtitle that reads “Resource mix for total generation by fuel type, USA 2018-2022.” Context can include things like time and place, but also things like the type(s) of metric or measure being represented.
 
        Exploratory charts (charts intended to allow readers to draw their own conclusions of the data) should have titles that more simply describe the variables available for exploration, like a subtitle does for explanatory charts. For example, a map presented as part of a data explorer could be titled “2022 Total Emissions by State.”
   - title: "Legends"
-    level: 4
+    level: 3
     content: |
       If a chart relies on color, symbology, size, patterns, or other visual cues beyond the data elements themselves to communicate meaning, a legend should explain those cues. Relying only on color to distinguish between data elements is not accessible. Directly labeling data elements with a closely positioned legend can help mitigate this.
     cards:
@@ -33,13 +33,13 @@ sections:
       content: "On maps, legends can be placed “over” the map content, but try not to let them overlap important data points."
       type: "do"
   - title: "Axes and Ticks"
+    level: 3
     content: |
       Axes are a crucial chart elements because they place the data in context. Before deciding on an axis extent (the range of data that an axis covers), always consider how it might (mis)represent the data. For example, does using a y-axis of 10-15 distort a trend line that hovers between 12 and 13 and would appear almost nonexistent if the axis were extended to 0-15? Or is that an important change in the data to highlight?
 
         Axes should have titles. Exceptions to this rule include:
         - if the title of the axis is included in the title/subtitle
         - If one of the axes contains years and only years
-    level: 3
     cards:
     - title: "Tick Density"
       image: "/src/assets/images/datavis/design-elements/layout/tick-density.jpg"
@@ -74,6 +74,7 @@ sections:
       content: "If your time-series chart includes projections, you should use a dark gray (**#2E2E2E**) dashed gridline to denote the point at which projections start."
       type: "do"
   - title: "Tooltips"
+    level: 3
     content: |
       Tooltips can be helpful additions to charts where understanding precise values is important. A tooltip only becomes visible when a user has hovered or used keyboard controls to interact with the chart. Tooltips can be designed to suit the style of the chart or page, but they should always include the name, value, and style (color, stroke pattern, etc.) of the relevant data point(s).
     cards:
@@ -85,13 +86,12 @@ sections:
       image: "/src/assets/images/datavis/design-elements/layout/tooltip-interactions.jpg"
       content: "Hovering or using touch input anywhere on the chart—not just on the element it’s attached to—should produce a tooltip."
       type: "do"
-    level: 3
   - title: "Data Labels"
+    level: 3
     content: |
       Where possible (where there’s enough visual space) and if they would help make the takeaway(s) more clear, data labels can be used to highlight important parts of a chart.
 
         The difference between a data label and a tooltip is nuanced; generally speaking, a data label is always present, while a tooltip is conjured by a user’s interaction with the chart. Furthermore, a data label exist to highlight specific points of interest on the chart, while a tooltip exists to provide any available detail that the user wishes to see.
-    level: 3
     cards:
     - title: "Data Label Anatomy"
       image: "/src/assets/images/datavis/design-elements/layout/data-label-anatomy.jpg"
