@@ -3,16 +3,20 @@ title: "Line Charts"
 tagline: ""
 introTitle: "Introduction"
 introContent: | 
-        Icons and symbology can be useful tools when making data visualizations more accessible and engaging. Icons, shapes, and modifications to opacity or lines can allow people to understand your visualization without relying on color alone. 
+        Line charts are most useful when you want to show trends over time in continuous, quantitative data. If you have more than five or six categories, you might want to consider a different chart type or highlight only a few lines, as charts with too many lines can become confusing to read.
 sections:
-  - title: "Standard Line Chart Best Practices"
+  - title: "Standard Line Chart"
+    level: 2
+  - title: "Best Practices"
     level: 3
     content: |
-        - Don’t scale icons with data; it’s hard for people to gauge differences in size of non-standard shapes.
-        - Keep icons simple but unique. Think about how they might read at different sizes (i.e., as small icons on a map, or larger icons next to call-out values).
-        - Always provide a legend; don’t expect people to intuit the meaning of icons.
+      - If you’re creating a chart with more than one line, directly label lines or use styles like dashes to distinguish between multiple lines to avoid forcing users to rely on color alone.
+      - If you’re creating a single-line chart, use a neutral color (#2E2E2E) for the line (unless you’re plotting a variable that falls into one of the groups outlined in the categorical palettes section).
+      - Because they focus more on trends than absolute values, the y-axes of line charts don’t need to start at zero (like those of bar charts do).
+      - If your multiple-line chart exists to highlight a few lines against many others, use a light gray (#C9C9C9) for the lines in which you’re not immediately interested.
+      - If your multiple-line chart exists to make comparisons between a few (no more than 5) lines, use color for each line.
   - title: "Examples of Best Practices"
-    level: 4
+    level: 3
     cards:
     - title: "Labeling"
       image: "/src/assets/images/datavis/charts/line-charts/labeling-do.png"
@@ -35,7 +39,7 @@ sections:
       content: If your multiple-line chart exists to make comparisons between a few (no more than 5) lines, use color for each line, but make sure to also label them directly or use stroke styles to distinguish between them.
       type: "do"
   - title: "Things to Avoid"
-    level: 4
+    level: 3
     cards:
     - title: "Labeling"
       image: "/src/assets/images/datavis/charts/line-charts/labeling-do-not.png"
@@ -61,16 +65,16 @@ sections:
     level: 4
     image: "/src/assets/images/datavis/charts/line-charts/figure-2-multiple-lines.png"
   - title: "Sparklines"
-    level: 3
+    level: 2
     content: |
         Sparklines are only intended to show general trends and at-a-glance patterns, so you should not use them if users need to be able to pick out specific values. They work well in tables or in visualizations that are information-dense.
   - title: "Best Practices"
-    level: 4
+    level: 3
     content: |
         - Always show the “chart space” of a sparkline (either by putting a fill on the background or using divider lines).
         - The appropriate way to apply scaling to your sparklines varies depending on what you’re trying to focus on: if you’re interested only in the pattern of change over time, scale the y-axis of each sparkline independently. If you’re interested in being able to make comparisons in values across sparklines, scale them all the same, either a predetermined range, or from the highest to the lowest value in the sparklines’ dataset.
   - title: "Examples of Best Practices"
-    level: 4
+    level: 3
     cards:
     - title: "'Chart Space'"
       image: "/src/assets/images/datavis/charts/line-charts/chart-space.png"
