@@ -19,7 +19,7 @@ const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) 
       {type === 'do' ? (
         <CheckCircleIcon sx={{ color: '#0050d8', fontSize: '1.5rem' }} />
       ) : (
-        <CancelIcon sx={{ color: 'red', fontSize: '1.5rem' }} />
+        <CancelIcon sx={{ color: '#E41D3D', fontSize: '1.5rem' }} />
       )}
     </div>
 
