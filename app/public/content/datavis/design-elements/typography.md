@@ -8,7 +8,7 @@ introContent: |
         For a more in-depth look at using fonts and type styles, please refer to the USWDS page on typography. In this guide, we will only call out best practices as they relate to specific data visualization use cases.
 sections:
   - title: "Typographic Best Practices"
-    level: 3
+    level: 2
   - title: "Numbers"
     level: 3
     content: "Numbers should be tabular-spaced: each digit should take up the same amount of horizontal space. Numbers should also be lining (not oldstyle); that is, they should take up similar amounts of vertical space and shouldn’t extend too far above or below a common baseline. If possible, numbers should also be multiplexed:  each digit should take up the same amount of horizontal space no matter the font weight."
