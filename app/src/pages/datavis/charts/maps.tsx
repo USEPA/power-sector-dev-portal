@@ -18,7 +18,7 @@ const Maps: React.FC = () => {
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)
-    : { introTitle: "", introContent: "" }; 
+    : { introTitle: "", introContent: "" };
 
   const sections: Section[] = content ? extractSections(content) : [];
 
@@ -29,14 +29,14 @@ const Maps: React.FC = () => {
   return (
     <div className="color-page">
       <div className="container">
-        <h1>{title}</h1>
-        <h2>{introTitle}</h2>
-        {introContent && (
-          <ReactMarkdown>{introContent}</ReactMarkdown>
-        )}
+        <div className="intro-section">
+          <h1>{title}</h1>
+          <h2>{introTitle}</h2>
+          {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
+        </div>
 
-        {sections.map((section, idx) => (
-          <div key={idx}>
+        {sections.map((section) => (
+          <>
             {renderHeader(section.title, section.level || 3)}
             {section.content && (
               <div>
@@ -67,7 +67,7 @@ const Maps: React.FC = () => {
                 ))}
               </div>
             )}
-          </div>
+          </>
         ))}
       </div>
     </div>

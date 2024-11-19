@@ -28,13 +28,16 @@ const ColorPage: React.FC = () => {
   return (
     <div className="color-page">
       <div className="container">
+      <div className="intro-section">
         <h1>{title}</h1>
         <h2>{introTitle}</h2>
         <ReactMarkdown>{introContent}</ReactMarkdown>
+        </div>
 
-        {sections.map((section, idx) => (
-          <div key={idx}>
+        {sections.map((section) => (
+          <>
             {renderHeader(section.title, section.level || 3)}
+            
             {section.content && (
               <div>
                 <ReactMarkdown>{section.content}</ReactMarkdown>
@@ -50,7 +53,7 @@ const ColorPage: React.FC = () => {
                   className="section-image"
                 />
               ))}
-          </div>
+          </>
         ))}
       </div>
     </div>

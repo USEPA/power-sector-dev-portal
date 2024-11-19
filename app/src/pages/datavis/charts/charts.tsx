@@ -29,12 +29,12 @@ const Charts: React.FC = () => {
           <div key={index} className="section">
             <h3>{section.title}</h3>
             <div className="cards">
-              {section.cards.map((card: Card, idx: number) => (
+              {section.cards && section.cards.map((card: Card, idx: number) => (
                 <div key={idx} className="card">
                   <img src={card.image} alt={card.title} />
                   <div className="card-content">
                   <h4>{card.title}</h4>
-                  <p>{card.description}</p>
+                  <p>{card.content}</p>
                   {card.link ?
                   <a href={card.link}>Learn about {card.title} <ArrowForwardIcon /></a> 
                   : " " }

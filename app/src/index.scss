@@ -63,28 +63,30 @@ p {
 }
 
 ul {
-  margin: 0;
+  margin: 1em 0 !important;
 }
 
 h1 {
   font-size: 64px !important;
   line-height: 1.1 !important;
-  margin: 0 !important;
+  margin: 0 0 .5em  !important;
 }
 
 h2 {
   font-size: 40px !important;
   line-height: auto !important;
+  margin: .5em 0 !important;
 }
 
 h3 {
   font-size: 32px !important;
   line-height: auto !important;
+  margin: .5em 0 !important;
 }
 
 p {
   font-size: 16px !important;
-  margin: 1em 0;
+  margin: .5em 0 !important;
 }
 
 button {
@@ -104,6 +106,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+img, svg {
+  margin: 1em 0;
 }
 
 // custom components //

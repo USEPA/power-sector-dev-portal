@@ -29,14 +29,16 @@ const BarCharts: React.FC = () => {
   return (
     <div className="color-page">
       <div className="container">
+      <div className="intro-section">
         <h1>{title}</h1>
         <h2>{introTitle}</h2>
         {introContent && (
           <ReactMarkdown>{introContent}</ReactMarkdown>
         )}
+        </div>
 
-        {sections.map((section, idx) => (
-          <div key={idx}>
+        {sections.map((section) => (
+          <>
             {renderHeader(section.title, section.level || 3)}
             {section.content && (
               <div>
@@ -67,7 +69,7 @@ const BarCharts: React.FC = () => {
                 ))}
               </div>
             )}
-          </div>
+          </>
         ))}
       </div>
     </div>
