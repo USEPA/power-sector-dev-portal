@@ -27,11 +27,11 @@ const DesignElements: React.FC = () => {
         </div>
         {sections.map((section, idx) => (
           <div key={idx} className="grid grid-col--two">
-            {section.cards.map((card, cardIdx) => (
+            {section.cards && section.cards.map((card, cardIdx) => (
               <InfoBlock
                 key={cardIdx}
                 title={card.title}
-                content={card.description}
+                content={card.content}
                 link={card.link}
               />
             ))}

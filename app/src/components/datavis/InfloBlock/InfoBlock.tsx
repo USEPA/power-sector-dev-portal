@@ -5,7 +5,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface InfoBlockProps {
     title: string;
-    content: string;
+    content?: string;
     link?: string; 
 }
 

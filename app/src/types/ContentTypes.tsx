@@ -1,14 +1,18 @@
 export interface Card {
-    title: string;
-    description: string;
-    link?: string;
-    image: string;
-  }
+  title: string;
+  content?: string;
+  link?: string;
+  image: string;
+  type: 'do' | 'do-not'; 
+}
+
   
-  export interface Section {
-    title: string;
-    content?: string;
-    image?: string;
-    level?: number;
-  }
+export interface Section {
+  title: string;
+  content?: string;
+  image?: string;
+  level?: number;
+  cards?: Card[]; 
+}
+
   

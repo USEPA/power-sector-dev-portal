@@ -1,0 +1,36 @@
+@use "./../../../variables" as *;
+
+
+.do-dont-card {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+.card-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.do-dont-card img {
+  border-radius: 5px;
+}
+
+.card-do img {
+  border: 2px solid $primary-vivid;
+}
+
+.card-do-not img {
+  border: 2px solid red;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
