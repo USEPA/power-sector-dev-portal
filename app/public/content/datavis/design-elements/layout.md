@@ -22,7 +22,7 @@ sections:
     cards:
     - title: "Legend Positioning, Direct Labeling"
       image: "/src/assets/images/datavis/design-elements/layout/legend-positioning-direct.jpg"
-      content: "If space allows, legends should be placed as close to data elements as possible. For example, in a line chart, a legend could be placed next to the last data point to the right of the chart. If this positioning can’t be accommodated, place the legend directly below or next to the chart and label it as a legend. "
+      content: "If space allows, legends should be placed as close to data elements as possible. For example, in a line chart, a legend could be placed next to the last data point to the right of the chart. If this positioning can’t be accommodated, place the legend directly below or next to the chart and label it as a legend."
       type: "do"
     - title: "Legend Positioning, Non-Direct Labeling"
       image: "/src/assets/images/datavis/design-elements/layout/legend-positioning-non-direct.jpg"
@@ -40,9 +40,51 @@ sections:
         - if the title of the axis is included in the title/subtitle
         - If one of the axes contains years and only years
     level: 3
+    cards:
+    - title: "Tick Density"
+      image: "/src/assets/images/datavis/design-elements/layout/tick-density.jpg"
+      content: "Tick marks (the small lines on either axis attached to labels) are optional (especially if your chart already has gridlines). Tick labels should be regular and defined by the data. For example, if you have an x-axis that goes from 0 to 100, it might make sense to mark every 10th value. If your axis goes from 0 to 1000, every 10th value would be overwhelming. In general, you should aim for 5-8 regular ticks for quantitative axes."
+      type: "do"
+    - title: "First and Last Ticks"
+      image: "/src/assets/images/datavis/design-elements/layout/first-and-last-ticks.jpg"
+      content: "Always label the starting and ending points of an axis, even if they don’t fall into regular “ticks” as laid out in the previous piece of advice or if you don’t plan to include other ticks at all."
+      type: "do"
+    - title: "Tick Orientation"
+      image: "/src/assets/images/datavis/design-elements/layout/tick-orientation.jpg"
+      content: "Label your ticks with horizontal text; don’t rotate labels. If you find yourself running out of space to do this, you might have too many ticks or may need to adjust the orientation of your chart."
+      type: "do"
+    - title: "Tick Alignment"
+      image: "/src/assets/images/datavis/design-elements/layout/tick-alignment.jpg"
+      content: "X-axis labels should be center-aligned to their respective tick, gridline, or data element, with the possible exception of first and last ticks on a quantitative x-axis, which can be left and right anchored, respectively, if reading left-to-right. Y-axis labels should all be center-aligned to their respective tick, gridline, or data element."
+      type: "do"
+    - title: "Units of Measurement"
+      image: "/src/assets/images/datavis/design-elements/layout/units-of-measurement.jpg"
+      content: "Include units of measurement in the axis title, not in each tick label. A possible exceptions to this rule is an axis showing percents."
+      type: "do"
+    - title: "Gridline Style"
+      image: "/src/assets/images/datavis/design-elements/layout/gridline-style.jpg"
+      content: "If necessary or desired, gridlines should be included as light gray (#C9C9C9) dashed lines. The zero line should be a darker gray (**#2E2E2E**) solid line."
+      type: "do"
+    - title: "Categorical Gridlines"
+      image: "/src/assets/images/datavis/design-elements/layout/categorical-gridlines.jpg"
+      content: "Categorical charts should only have gridlines for the quantitative variable’s axis (so, horizontal gridlines for column charts, and vertical gridlines for bar charts)."
+      type: "do"
+    - title: "Gridlines for Projections"
+      image: "/src/assets/images/datavis/design-elements/layout/gridlines-for-projections.jpg"
+      content: "If your time-series chart includes projections, you should use a dark gray (**#2E2E2E**) dashed gridline to denote the point at which projections start."
+      type: "do"
   - title: "Tooltips"
     content: |
       Tooltips can be helpful additions to charts where understanding precise values is important. A tooltip only becomes visible when a user has hovered or used keyboard controls to interact with the chart. Tooltips can be designed to suit the style of the chart or page, but they should always include the name, value, and style (color, stroke pattern, etc.) of the relevant data point(s).
+    cards:
+    - title: "Multi-Element Tooltips"
+      image: "/src/assets/images/datavis/design-elements/layout/multi-element-tooltips.jpg"
+      content: "If your chart has multiple data elements (such as line charts with multiple lines), a tooltip should include the values for each element. If the chart uses color to distinguish multiple elements, those colors should be reproduced in the tooltip. In this way, it can help function as a legend while a user is interacting with the chart."
+      type: "do"
+    - title: "Tooltip Interaction"
+      image: "/src/assets/images/datavis/design-elements/layout/tooltip-interactions.jpg"
+      content: "Hovering or using touch input anywhere on the chart—not just on the element it’s attached to—should produce a tooltip."
+      type: "do"
     level: 3
   - title: "Data Labels"
     content: |
@@ -50,13 +92,15 @@ sections:
 
         The difference between a data label and a tooltip is nuanced; generally speaking, a data label is always present, while a tooltip is conjured by a user’s interaction with the chart. Furthermore, a data label exist to highlight specific points of interest on the chart, while a tooltip exists to provide any available detail that the user wishes to see.
     level: 3
-  - title: "Data Label Anatomy"
-    content: |
-      A data label usually comprises two or three parts:
-        - A border around the element
-        - A label describing the element or a combination of the element’s category/name and value, along with its unit of measurement (even if that unit is already identified elsewhere)
-        - Optional: A line connecting the element and its label
-    level: 3
+    cards:
+    - title: "Data Label Anatomy"
+      image: "/src/assets/images/datavis/design-elements/layout/data-label-anatomy.jpg"
+      content: |
+         A data label usually comprises two or three parts:
+         - A border around the element
+         - A label describing the element or a combination of the element’s category/name and value, along with its unit of measurement (even if that unit is already identified elsewhere)
+          - Optional: A line connecting the element and its label
+      type: "do"
   - title: "Data Accessibility"
     content: |
       When possible, provide data tables that contain the same data the chart is built with. These tables can be shown in addition to charts, or as an optional download.

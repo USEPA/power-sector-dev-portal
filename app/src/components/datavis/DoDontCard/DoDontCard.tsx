@@ -3,6 +3,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import "./DoDontCard.scss";
 import SVGRenderer from './../SvgRenderer/SvgRenderer';
+import ReactMarkdown from 'react-markdown';
 
 interface DoDontCardProps {
   type: 'do' | 'do-not';
@@ -16,7 +17,7 @@ const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) 
     <div className={`do-dont-card ${type === 'do' ? 'card-do' : 'card-do-not'}`}>
     <div className="card-icon">
       {type === 'do' ? (
-        <CheckCircleIcon sx={{ color: 'blue', fontSize: '1.5rem' }} />
+        <CheckCircleIcon sx={{ color: '#0050d8', fontSize: '1.5rem' }} />
       ) : (
         <CancelIcon sx={{ color: 'red', fontSize: '1.5rem' }} />
       )}
@@ -32,7 +33,7 @@ const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) 
 
     <div className="card-content">
       <h4>{title}</h4>
-      <p>{content}</p>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   </div>
   );
