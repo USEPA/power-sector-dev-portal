@@ -1,6 +1,6 @@
 import React from 'react';
 import useMarkdownContent from '../../../hooks/useMarkdownContent';
-import Banner from '../../../components/datavis/Banner/Banner';
+import Banner from '../../../components/Banner/Banner';
 import { extractBanner, extractIntro, extractSections } from '../../../utilities/extractContent';
 import { Section, Card } from '../../../types/ContentTypes';
 import './Charts.scss';

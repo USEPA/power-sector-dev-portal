@@ -4,7 +4,7 @@ import { extractBanner } from "../../utilities/extractBanner";
 
 import useMarkdownContent from "../../hooks/useMarkdownContent";
 import "./datavis.scss";
-import Banner from "../../components/datavis/Banner/Banner";
+import Banner from "../../components/Banner/Banner";
 
 const DataVisualization: React.FC = () => {
   const { content, error } = useMarkdownContent("/content/datavis/datavis.md");

@@ -8,7 +8,7 @@ import {
 import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderHeader";
-import SVGRenderer from "../../../components/datavis/SvgRenderer/SvgRenderer";
+import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 
 const ColorPage: React.FC = () => {
   const { content, error } = useMarkdownContent(

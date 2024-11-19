@@ -8,8 +8,8 @@ import {
 import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderHeader";
-import SVGRenderer from "../../../components/datavis/SvgRenderer/SvgRenderer";
-import DoDontCard from "../../../components/datavis/DoDontCard/DoDontCard";
+import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
+import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 
 const LineCharts: React.FC = () => {
   const { content, error } = useMarkdownContent(

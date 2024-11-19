@@ -1,7 +1,7 @@
 import React from 'react';
 import useMarkdownContent from '../../../hooks/useMarkdownContent';
-import Banner from '../../../components/datavis/Banner/Banner';
-import InfoBlock from '../../../components/datavis/InfloBlock/InfoBlock';
+import Banner from '../../../components/Banner/Banner';
+import InfoBlock from '../../../components/InfloBlock/InfoBlock';
 import { extractBanner, extractIntro, extractSections } from '../../../utilities/extractContent';
 import { Section } from '../../../types/ContentTypes'; // Make sure the Section type is defined in types/ContentTypes
 import './principles.scss';
