@@ -1,3 +1,4 @@
-# Data Visualization Style Guide
+---
+title: "Data Visualization Style Guide"
+tagline: "Lorem Ipsum"
 
-Lorem Ipsum
