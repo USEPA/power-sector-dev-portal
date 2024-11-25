@@ -1,45 +1,20 @@
 // src/pages/datavis/DataVisLayout.tsx
 import React from "react";
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const DataVisLayout: React.FC = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
   // Determine if the current path is a chart route
-  const isChartRoute = location.pathname.startsWith("/datavis/charts");
+  // const isChartRoute = location.pathname.startsWith("/datavis/charts");
 
   return (
     <div>
       {/* Main Navigation */}
-      <nav>
-        <div className="banner-container">
-          <ul
-            style={{
-              listStyleType: "none",
-              padding: 0,
-              display: "flex",
-              gap: "10px",
-            }}
-          >
-            <li>
-              <Link to="/datavis/principles">Principles</Link>
-            </li>
-            <li>
-              <Link to="/datavis/design-elements">Design Elements</Link>
-            </li>
-            <li>
-              <Link to="/datavis/charts">Charts</Link>
-            </li>
-            <li>
-              <Link to="/datavis/further-reading">Further Reading</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
       {/* Conditional Chart Navigation */}
-      {isChartRoute && (
-        <nav>
+      {/* {isChartRoute && (
+       <nav className="secondary-nav">
           <div className="banner-container">
             <ul
               style={{
@@ -64,7 +39,7 @@ const DataVisLayout: React.FC = () => {
             </ul>
           </div>
         </nav>
-      )}
+      )} */}
 
       {/* Outlet renders the component of the nested route */}
       <Outlet />

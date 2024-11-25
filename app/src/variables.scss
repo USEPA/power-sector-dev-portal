@@ -1,4 +1,4 @@
-$blue-vivid: #2491FF;
+$blue-vivid: #2491ff;
 $ink: #1b1b1b;
 
 $primary-lighter: #d9e8f6;
@@ -7,7 +7,7 @@ $primary: #005ea2;
 $primary-vivid: #0050d8;
 $primary-dark: #1a4480;
 $primary-darker: #162e51;
-$secondary-vivid: #E41D3D;
+$secondary-vivid: #e41d3d;
 $base-lightest: #f0f0f0;
 $base-lighter: #dfe1e2;
 $base-light: #a9aeb1;
@@ -17,22 +17,7 @@ $base-darker: #3d4551;
 $base-darkest: #1b1b1b;
 $ink: #1b1b1b;
 
-
 $max-width: 1200px;
 
 // Font family
-$font-family: 'Source Sans Pro', sans-serif;
-
-.container {
-    margin: 3em auto 6em;
-}
-
-.banner-container {
-    margin: 0 auto; 
-}
-
-.container, .banner-container {
-    max-width: $max-width;
-    padding: 15px 30px; 
-
-}
+$font-family: "Source Sans Pro", sans-serif;
