@@ -23,8 +23,16 @@ $max-width: 1200px;
 // Font family
 $font-family: 'Source Sans Pro', sans-serif;
 
+.container {
+    margin: 3em auto 6em;
+}
+
+.banner-container {
+    margin: 0 auto; 
+}
+
 .container, .banner-container {
     max-width: $max-width;
-    margin: 0 auto; 
     padding: 15px 30px; 
+
 }
