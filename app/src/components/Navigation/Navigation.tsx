@@ -7,26 +7,27 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Navigation: React.FC = () => {
   const location = useLocation();
 
-  //   Determine current route
-  const isDatavisRoute = location.pathname.startsWith("/datavis");
-  const isOtherRoute  = location.pathname.startsWith("/api") || location.pathname.startsWith("/rstyle");
-
-  const getPageTitle = () => {
+  const getPageInfo = () => {
     if (location.pathname.startsWith("/datavis")) {
-      return "Data Visualization Style Guide";
+      return { route: "/datavis", title: "Data Visualization Style Guide", isDatavisRoute: true };
     }
     if (location.pathname.startsWith("/rstyle")) {
-      return "R Style Guide";
+      return { route: "/rstyle", title: "R Style Guide", isRStyleRoute: true };
     }
     if (location.pathname.startsWith("/api")) {
-      return "API Documentation";
+      return { route: "/api", title: "API Documentation", isApiRoute: true };
     }
-    return "Open Source Resource Hub";
+    return { route: "/", title: "Open Source Resource Hub", isHomeRoute: true };
   };
+  
+  // Usage
+  const { route, title, isDatavisRoute, isApiRoute, isRStyleRoute, isHomeRoute } = getPageInfo();
+  
+  
 
   return (
     <div className="main-banner">
-      <h3>{getPageTitle()}</h3>
+       <h3><Link to={route}>{title}</Link></h3>
       {isDatavisRoute && (
         <nav>
           <ul
@@ -66,13 +67,13 @@ const Navigation: React.FC = () => {
             <li>
               <Link to="/datavis/further-reading">Further Reading</Link>
             </li>
-            <li>
+            <li className="backToHomeLink">
               <Link to="/">Back to Open Source Hub</Link>
             </li>
           </ul>
         </nav>
       )}
-      {isOtherRoute && (
+      {isApiRoute || isRStyleRoute && (
         <nav>
           <ul
             style={{
@@ -83,11 +84,14 @@ const Navigation: React.FC = () => {
               width: "100%",
             }}
           >
-            <li>
+           <li className="backToHomeLink">
               <Link to="/">Back to Open Source Hub</Link>
             </li>
           </ul>
         </nav>
+      )}
+      {isHomeRoute && (
+        <></>
       )}
     </div>
   );
