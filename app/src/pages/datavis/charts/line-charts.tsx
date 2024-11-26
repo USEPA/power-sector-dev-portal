@@ -37,7 +37,7 @@ const LineCharts: React.FC = () => {
 
         {sections.map((section, idx) => (
           <div key={idx}>
-            {renderHeader(section.title, section.level || 3)}
+            {section.title && renderHeader(section.title, section.level || 3)}
             {section.content && (
               <div>
                 <ReactMarkdown>{section.content}</ReactMarkdown>

@@ -7,9 +7,9 @@ import ReactMarkdown from 'react-markdown';
 
 interface DoDontCardProps {
   type: 'do' | 'do-not';
-  title: string;
+  title?: string;
   content?: string;
-  image: string;
+  image?: string;
 }
 
 const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) => {
@@ -24,7 +24,7 @@ const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) 
     </div>
 
     <div className="card-image-container">
-      {image.endsWith('.svg') ? (
+      {image && image.endsWith('.svg') ? (
         <SVGRenderer src={image} alt={title} />
       ) : (
         <img src={image} alt={title} className="card-image" />
@@ -32,7 +32,7 @@ const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) 
     </div>
 
     <div className="card-content">
-      <h4>{title}</h4>
+      {title && <h4>{title}</h4>}
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   </div>

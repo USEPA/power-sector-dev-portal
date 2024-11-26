@@ -37,7 +37,7 @@ const Maps: React.FC = () => {
 
         {sections.map((section) => (
           <>
-            {renderHeader(section.title, section.level || 3)}
+            {section.title && renderHeader(section.title, section.level || 3)}
             {section.content && (
               <div>
                 <ReactMarkdown>{section.content}</ReactMarkdown>

@@ -1,5 +1,5 @@
 export interface Card {
-  title: string;
+  title?: string;
   content?: string;
   link?: string;
   image: string;
@@ -8,7 +8,7 @@ export interface Card {
 
   
 export interface Section {
-  title: string;
+  title?: string;
   content?: string;
   image?: string;
   level?: number;
