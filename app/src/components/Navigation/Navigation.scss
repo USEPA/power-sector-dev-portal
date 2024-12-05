@@ -1,56 +1,54 @@
 @use "../../variables" as *;
 
-nav {
-  display: flex;
-  align-items: center;
+@media (min-width: 63.99em) {
 
-  li {
-    display: flex;
+  .usa-header--basic .usa-nav-container {
+    max-width: none !important;
+    padding: 20px 20px 2px !important;
     align-items: center;
-  }
-
-  a {
-    svg {
-      margin: 0;
-    }
-  }
-
-  .dropdown {
-    position: relative;
-    a {
-      display: flex;
-      align-items: center;
-    }
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    padding: 0 1.5em 0 0.5em;
-    top: 1.5em;
-  
-    a {
-      color: $primary-darker;
-      white-space: nowrap;
-      margin: 0.5em 0;
-    }
-  }
-  
-  .dropdown:hover .dropdown-content {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: fit-content;
+  }
+  
+  
+  .usa-navbar {
+    align-items: center;
+    height: fit-content;
+  }
+  
+  .usa-logo {
+    margin: 0;
+    .usa-logo__text {
+      a {
+        white-space: nowrap;
+        font-size: 22px !important;
+        line-height: auto !important;
+        margin: 0.5em 0 !important;
+        height: fit-content !important;
+      }
+    }
+  }
+  
+  ul {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  }
+  .usa-nav__primary>.usa-nav__primary-item>a, .usa-nav__primary button {
+  color: white;
   }
 }
 
-.backToHomeLink {
-    a{
-        font-style: italic;
-        font-weight: 400;
+.usa-logo {
+  margin: 0;
+  .usa-logo__text {
+    a {
+      color: white;
     }
+  }
+}
+
+
+.backToHomeLink {
+  font-style: italic;
+  font-weight: 400;
 }
 
