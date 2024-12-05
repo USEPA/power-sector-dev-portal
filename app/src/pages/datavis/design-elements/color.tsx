@@ -9,6 +9,7 @@ import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
+import SideNav from "../../../components/SideNav/SideNav";
 
 const ColorPage: React.FC = () => {
   const { content, error } = useMarkdownContent(
@@ -27,7 +28,8 @@ const ColorPage: React.FC = () => {
 
   return (
     <div className="color-page">
-      <div className="container">
+          <div className="usa-in-page-nav-container container">
+          <main id="main-content" className="main-content">
       <div className="intro-section">
         <h1>{title}</h1>
         <h2>{introTitle}</h2>
@@ -55,6 +57,8 @@ const ColorPage: React.FC = () => {
               ))}
           </>
         ))}
+        </main>
+        <SideNav />
       </div>
     </div>
   );

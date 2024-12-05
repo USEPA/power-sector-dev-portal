@@ -14,7 +14,7 @@ const SideNav: React.FC = () => {
           inPageNavigation.on(sideNavRef.current);
           initialized.current = true; 
         }
-      }, 100);
+      }, 150);
 
       // Cleanup
       return () => {

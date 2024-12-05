@@ -10,6 +10,7 @@ import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
+import SideNav from "../../../components/SideNav/SideNav";
 
 const Symbology: React.FC = () => {
   const { content, error } = useMarkdownContent(
@@ -18,7 +19,7 @@ const Symbology: React.FC = () => {
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)
-    : { introTitle: "", introContent: "" }; 
+    : { introTitle: "", introContent: "" };
 
   const sections: Section[] = content ? extractSections(content) : [];
 
@@ -28,49 +29,51 @@ const Symbology: React.FC = () => {
 
   return (
     <div className="color-page">
-      <div className="container">
-      <div className="intro-section">
-        <h1>{title}</h1>
-        <h2>{introTitle}</h2>
-        {introContent && (
-          <ReactMarkdown>{introContent}</ReactMarkdown>
-        )}
-        </div>
+      <div className="usa-in-page-nav-container container">
+        <main id="main-content" className="main-content">
+          <div className="intro-section">
+            <h1>{title}</h1>
+            <h2>{introTitle}</h2>
+            {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
+          </div>
 
-        {sections.map((section) => (
-          <>
-            {section.title && renderHeader(section.title, section.level || 3)}
-            {section.content && (
-              <div>
-                <ReactMarkdown>{section.content}</ReactMarkdown>
-              </div>
-            )}
-            {section.image &&
-              (section.image?.endsWith(".svg") ? (
-                <SVGRenderer src={section.image} alt={section.title} />
-              ) : (
-                <img
-                  src={section.image}
-                  alt={section.title}
-                  className="section-image"
-                />
-              ))}
-
-            {section.cards && section.cards.length > 0 && (
-              <div className="cards-container">
-                {section.cards.map((card, cardIdx) => (
-                  <DoDontCard
-                    key={cardIdx}
-                    type={card.type}
-                    title={card.title}
-                    content={card.content}
-                    image={card.image}
+          {sections.map((section) => (
+            <>
+              {section.title && renderHeader(section.title, section.level || 3)}
+              {section.content && (
+                <div>
+                  <ReactMarkdown>{section.content}</ReactMarkdown>
+                </div>
+              )}
+              {section.image &&
+                (section.image?.endsWith(".svg") ? (
+                  <SVGRenderer src={section.image} alt={section.title} />
+                ) : (
+                  <img
+                    src={section.image}
+                    alt={section.title}
+                    className="section-image"
                   />
                 ))}
-              </div>
-            )}
-          </>
-        ))}
+
+              {section.cards && section.cards.length > 0 && (
+                <div className="cards-container">
+                  {section.cards.map((card, cardIdx) => (
+                    <DoDontCard
+                      key={cardIdx}
+                      type={card.type}
+                      title={card.title}
+                      content={card.content}
+                      image={card.image}
+                    />
+                  ))}
+                </div>
+              )}
+            </>
+          ))}
+        </main>
+
+        <SideNav />
       </div>
     </div>
   );
