@@ -15,6 +15,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   font-weight: 700;
   color: $primary;
@@ -166,6 +170,7 @@ svg {
 .intro-section {
   margin-bottom: 4em;
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
