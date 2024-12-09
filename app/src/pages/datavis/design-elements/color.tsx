@@ -12,8 +12,8 @@ import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import SideNav from "../../../components/SideNav/SideNav";
 
 const ColorPage: React.FC = () => {
-  const { content, error } = useMarkdownContent(
-    "/content/datavis/design-elements/color.md"
+  const base = import.meta.env.BASE_URL;
+  const { content, error } = useMarkdownContent(`${base}content/datavis/design-elements/color.md`
   );
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content

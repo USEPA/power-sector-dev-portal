@@ -4,7 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../hooks/useMarkdownContent';
 
 const APIDocumentation: React.FC = () => {
-    const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + '/content/api/api.md');
+    const base = import.meta.env.BASE_URL;
+    const { content, error } = useMarkdownContent(`${base}content/api/api.md`);
 
     if (error) {
         return <div>Error loading content: {error}</div>;

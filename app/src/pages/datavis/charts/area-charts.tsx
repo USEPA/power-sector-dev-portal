@@ -13,9 +13,8 @@ import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
 
 const AreaCharts: React.FC = () => {
-  const { content, error } = useMarkdownContent(
-    "/content/datavis/charts/area-charts.md"
-  );
+  const base = import.meta.env.BASE_URL;
+  const { content, error } = useMarkdownContent(`${base}content/datavis/charts/area-charts.md`);
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)

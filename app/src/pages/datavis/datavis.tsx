@@ -7,7 +7,8 @@ import "./datavis.scss";
 import Banner from "../../components/Banner/Banner";
 
 const DataVisualization: React.FC = () => {
-  const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + "/content/datavis/datavis.md");
+  const base = import.meta.env.BASE_URL;
+  const { content, error } = useMarkdownContent(`${base}content/datavis/datavis.md`);
 
 
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
