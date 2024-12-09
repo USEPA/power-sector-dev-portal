@@ -6,7 +6,7 @@ import { extractBanner, extractIntro, extractSections } from "../../../utilities
 import { Section } from "../../../types/ContentTypes"; 
 
 const DesignElements: React.FC = () => {
-  const { content, error } = useMarkdownContent('/content/datavis/design-elements/design-elements.md');
+  const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + '/content/datavis/design-elements/design-elements.md');
 
   // Extract content from markdown
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };

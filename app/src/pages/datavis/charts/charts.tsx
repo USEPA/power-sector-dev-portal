@@ -7,7 +7,7 @@ import './Charts.scss';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Charts: React.FC = () => {
-  const { content, error } = useMarkdownContent('/content/datavis/charts/charts.md');
+  const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + '/content/datavis/charts/charts.md');
 
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
   const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };

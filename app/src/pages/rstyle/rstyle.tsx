@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import useMarkdownContent from '../../hooks/useMarkdownContent';
 
 const RStyleGuide: React.FC = () => {
-    const { content, error } = useMarkdownContent('/content/rstyle/rstyle.md');
+    const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + '/content/rstyle/rstyle.md');
 
     if (error) {
         return <div>Error loading content: {error}</div>;

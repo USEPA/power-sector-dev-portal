@@ -8,7 +8,7 @@ import './principles.scss';
 import ReactMarkdown from 'react-markdown';
 
 const Principles: React.FC = () => {
-  const { content, error } = useMarkdownContent('/content/datavis/principles/principles.md');
+  const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + '/content/datavis/principles/principles.md');
 
   // Extract content from markdown
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };

@@ -7,7 +7,7 @@ import { Section } from '../../../../types/ContentTypes';
 import './further-reading.scss';
 
 const FurtherReading: React.FC = () => {
-  const { content, error } = useMarkdownContent('/content/datavis/further-reading/further-reading.md');
+  const { content, error } = useMarkdownContent(process.env.PUBLIC_URL + '/content/datavis/further-reading/further-reading.md');
 
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
   const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
