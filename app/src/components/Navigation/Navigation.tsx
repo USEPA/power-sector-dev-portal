@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Navigation.scss";
 import CloseIcon from '@mui/icons-material/Close';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
 const Navigation: React.FC = () => {
@@ -100,7 +101,7 @@ const Navigation: React.FC = () => {
                     aria-controls="basic-nav-section-one"
                     onClick={() => toggleSection("section-one")}
                   >
-                    <span>Design Elements</span>
+                    <span style={{display: 'flex', alignItems: 'center'}}>Design Elements <KeyboardArrowDownIcon /></span>
                   </button>
                   <ul
                     id="basic-nav-section-one"
@@ -157,7 +158,7 @@ const Navigation: React.FC = () => {
                     aria-controls="basic-nav-section-two"
                     onClick={() => toggleSection("section-two")}
                   >
-                    <span>Charts</span>
+                    <span style={{display: 'flex', alignItems: 'center'}}>Charts <KeyboardArrowDownIcon /></span>
                   </button>
                   <ul
                     id="basic-nav-section-two"

@@ -29,11 +29,11 @@ const FurtherReading: React.FC = () => {
           <div key={index} className="section">
             <h3>{section.title}</h3>
             <div className="grid grid-col--one">
-              {section.cards.map((card, idx) => (
+            {section.cards && section.cards.map((card, idx) => (
                 <InfoBlock
                   key={idx}
                   title={card.title}
-                  content={card.description}
+                  content={card.content}
                   link={card.link}
                 />
               ))}

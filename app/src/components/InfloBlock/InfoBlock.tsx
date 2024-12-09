@@ -4,7 +4,7 @@ import './InfoBlock.scss';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface InfoBlockProps {
-    title: string;
+    title?: string;
     content?: string;
     link?: string; 
 }

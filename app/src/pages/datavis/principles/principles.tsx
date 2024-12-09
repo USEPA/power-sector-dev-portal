@@ -29,11 +29,11 @@ const Principles: React.FC = () => {
         </div>
         {sections.map((section) => (
             <div className="grid grid-col--two">
-              {section.cards.map((card, idx) => (
+             {section.cards && section.cards.map((card, idx) => (
                 <InfoBlock
                   key={idx}
                   title={card.title}
-                  content={card.description}
+                  content={card.content}
                 />
               ))}
           </div>
