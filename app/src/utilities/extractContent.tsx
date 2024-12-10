@@ -13,8 +13,13 @@ export function extractSections(content: string): Section[] {
 
 
 export function extractBanner(content: string) {
-  const parsedContent = matter(content);
-  return { title: parsedContent.data.title, tagline: parsedContent.data.tagline };
+  try {
+    const parsedContent = matter(content);
+    return { title: parsedContent.data.title, tagline: parsedContent.data.tagline };
+  } catch (error) {
+    console.error('Error parsing content with gray-matter:', error);
+    return { title: '', tagline: '' };
+  }
 }
 
 export function extractIntro(content: string) {
