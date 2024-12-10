@@ -1,49 +1,48 @@
-import { useState, useEffect } from 'react';
-// import matter from 'gray-matter';
+// import { useState, useEffect } from 'react';
+import matter from 'gray-matter';
+import fs from 'fs';
+// import path from 'path';
 
 const useMarkdownContent = (path: string) => {
-  const [content, setContent] = useState<string>('');
-  const [error, setError] = useState<string | null>(null);
+    const fileContents = fs.readFileSync(path, 'utf-8');
+    const { data, content } = matter(fileContents)
 
-  useEffect(() => {
-    const fetchMarkdown = async () => {
-        try {
-          console.log('Current Origin:', window.location.origin);
-          console.log('Attempting to fetch from:', path);
-      
-          // Try multiple potential paths
-          const possiblePaths = [
-            path,
-            `${window.location.origin}${path}`,
-            `${window.location.origin}/content/datavis/datavis.md`
-          ];
-      
-          for (const attemptPath of possiblePaths) {
-            try {
-              const response = await fetch(attemptPath);
-              console.log(`Attempt with ${attemptPath}:`, response.status);
-      
-              if (response.ok) {
-                const text = await response.text();
-                setContent(text);
-                return;
-              }
-            } catch (attemptError) {
-              console.error(`Failed to fetch from ${attemptPath}:`, attemptError);
-            }
-          }
-      
-          throw new Error('Could not fetch markdown from any path');
-        } catch (err) {
-          console.error('Complete error details:', err);
-          setError(err instanceof Error ? err.message : 'An unknown error occurred');
-        }
-      };
+    console.log(data); 
+console.log(content);
 
-    fetchMarkdown();
-  }, [path]);
+//   const [content, setContent] = useState<string>('');
+//   const [frontmatter, setFrontmatter] = useState<Record<string, any>>({});
+//   const [error, setError] = useState<string | null>(null);
 
-  return { content, error };
+
+
+
+//   useEffect(() => {
+//     const fetchMarkdown = async () => {
+//       try {
+//         const response = await fetch(path);
+        
+//         if (!response.ok) {
+//           throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+
+//         const text = await response.text();
+        
+//         // Parse the frontmatter from the HTML file
+//         const parsed = matter(text);
+        
+//         setContent(parsed.content);
+//         setFrontmatter(parsed.data);
+//       } catch (err) {
+//         console.error('Error fetching markdown:', err);
+//         setError(err instanceof Error ? err.message : 'An unknown error occurred');
+//       }
+//     };
+
+//     fetchMarkdown();
+//   }, [path]);
+
+//   return { content, frontmatter, error };
 };
 
 export default useMarkdownContent;
