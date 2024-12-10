@@ -1,12 +1,16 @@
+// src/pages/datavis/index.tsx
 import React from "react";
+import { extractBanner } from "../../utilities/extractContent";
+
 import useMarkdownContent from "../../hooks/useMarkdownContent";
-import ReactMarkdown from "react-markdown";
 import "./datavis.scss";
+import Banner from "../../components/Banner/Banner";
 
 const DataVisualization: React.FC = () => {
-  const { content, error } = useMarkdownContent(
-    `${window.location.origin}/content/datavis/datavis.html`
-  );
+  const { content, error } = useMarkdownContent("/content/datavis/datavis.html");
+
+
+  const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
 
   if (error) {
     return <div>Error loading content: {error}</div>;
@@ -14,7 +18,7 @@ const DataVisualization: React.FC = () => {
 
   return (
     <div>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <Banner title={title} tagline={tagline} level="level1" />
     </div>
   );
 };
