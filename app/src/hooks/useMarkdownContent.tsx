@@ -10,6 +10,7 @@ const useMarkdownContent = (filePath: string) => {
         console.log('filepath', filePath)
         fetch(filePath)
             .then((res) => {
+                console.log(res)
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
                 }
