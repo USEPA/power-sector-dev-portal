@@ -1,17 +1,18 @@
 // src/pages/datavis/index.tsx
 import React from "react";
-import { extractBanner } from "../../utilities/extractContent";
+// import { extractBanner } from "../../utilities/extractContent";
 
 import useMarkdownContent from "../../hooks/useMarkdownContent";
 import "./datavis.scss";
-import Banner from "../../components/Banner/Banner";
+// import Banner from "../../components/Banner/Banner";
+import ReactMarkdown from "react-markdown";
 
 const DataVisualization: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(`${base}content/datavis/datavis.md`);
 
 
-  const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
+  // const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
 
   if (error) {
     return <div>Error loading content: {error}</div>;
@@ -19,7 +20,8 @@ const DataVisualization: React.FC = () => {
 
   return (
     <div>
-      <Banner title={title} tagline={tagline} level="level1" />
+       <ReactMarkdown>{content}</ReactMarkdown>
+      {/* <Banner title={title} tagline={tagline} level="level1" /> */}
     </div>
   );
 };
