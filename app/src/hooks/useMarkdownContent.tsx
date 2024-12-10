@@ -1,26 +1,45 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import matter from 'gray-matter';
 
-const useMarkdownContent = (filePath: string) => {
-    const [content, setContent] = useState<string>('');
-    const [error, setError] = useState<string | null>(null);
+interface FrontmatterData {
+  title: string;
+  tagline: string;
+  [key: string]: string; 
+}
 
-    console.log('content', content)
+const useMarkdownContent = (path: string) => {
+  const [content, setContent] = useState<string>('');
+  const [frontmatter, setFrontmatter] = useState<FrontmatterData>({
+    title: '',
+    tagline: ''
+  });
+  const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        console.log('filepath', filePath)
-        fetch(filePath)
-            .then((res) => {
-                console.log(res)
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return res.text();
-            })
-            .then((text) => setContent(text))
-            .catch((error) => setError(error.message));
-    }, [filePath]);
+  useEffect(() => {
+    const fetchMarkdown = async () => {
+      try {
+        const response = await fetch(path);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const text = await response.text();
+        const parsed = matter(text);
+        setContent(parsed.content);
+        setFrontmatter({
+          title: parsed.data.title || '',
+          tagline: parsed.data.tagline || '',
+          ...parsed.data
+        });
+      } catch (err) {
+        console.error('Error fetching markdown:', err);
+        setError(err instanceof Error ? err.message : 'An unknown error occurred');
+      }
+    };
 
-    return { content, error };
+    fetchMarkdown();
+  }, [path]);
+
+  return { content, frontmatter, error };
 };
 
 export default useMarkdownContent;
