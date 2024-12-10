@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization Style Guide"
 tagline: "Lorem Ipsum"
-layout: default
+layout: null
 ---
 
 ## Test Content
