@@ -4,6 +4,6 @@ tagline: "Lorem Ipsum"
 permalink: /datavis.html
 ---
 
-## Main Content
+## Test Content
 
 This is a test paragraph.
