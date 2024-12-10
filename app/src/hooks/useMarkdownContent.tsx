@@ -7,35 +7,38 @@ const useMarkdownContent = (path: string) => {
 
   useEffect(() => {
     const fetchMarkdown = async () => {
-      try {
-        console.log('Attempting to fetch markdown from:', path);
-        
-        const response = await fetch(path, {
-          headers: {
-            'Content-Type': 'text/markdown',
-          },
-        });
-
-        console.log('Fetch response:', response);
-        console.log('Response status:', response.status);
-        console.log('Response headers:', response.headers);
-
-        if (!response.ok) {
-          const errorText = await response.text();
-          console.error('Error response text:', errorText);
-          throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+          console.log('Current Origin:', window.location.origin);
+          console.log('Attempting to fetch from:', path);
+      
+          // Try multiple potential paths
+          const possiblePaths = [
+            path,
+            `${window.location.origin}${path}`,
+            `${window.location.origin}/content/datavis/datavis.md`
+          ];
+      
+          for (const attemptPath of possiblePaths) {
+            try {
+              const response = await fetch(attemptPath);
+              console.log(`Attempt with ${attemptPath}:`, response.status);
+      
+              if (response.ok) {
+                const text = await response.text();
+                setContent(text);
+                return;
+              }
+            } catch (attemptError) {
+              console.error(`Failed to fetch from ${attemptPath}:`, attemptError);
+            }
+          }
+      
+          throw new Error('Could not fetch markdown from any path');
+        } catch (err) {
+          console.error('Complete error details:', err);
+          setError(err instanceof Error ? err.message : 'An unknown error occurred');
         }
-
-        const text = await response.text();
-        console.log('Fetched markdown content:', text);
-
-        const parsed = matter(text);
-        setContent(parsed.content);
-      } catch (err) {
-        console.error('Complete error details:', err);
-        setError(err instanceof Error ? err.message : 'An unknown error occurred');
-      }
-    };
+      };
 
     fetchMarkdown();
   }, [path]);

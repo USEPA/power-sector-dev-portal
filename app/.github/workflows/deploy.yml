@@ -1,36 +1,33 @@
-name: Deploy to GitHub Pages
+name: Deploy React App
 
 on:
   push:
-    branches:
-      - main  # or the branch you want to deploy from
+    branches: [main]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
-      # Step 1: Checkout code
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Step 2: Setup Node.js (to build the project)
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Use the version of Node.js your project requires
-
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Step 4: Build the project (adjust based on your build command)
-      - name: Build project
-        run: npm run build  # Change to your build command, e.g., `npm run build` for a Vite app
-
-      # Step 5: Deploy to GitHub Pages
+          node-version: '18'
+      
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Copy Content
+        run: |
+          mkdir -p dist/content
+          cp -r public/content/* dist/content/
+      
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Ensure this matches your build output directory (e.g., Vite's `dist`)
+          folder: dist
+          clean: true
