@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization Style Guide"
 tagline: "Lorem Ipsum"
-permalink: /datavis
+layout: default
 ---
 
 ## Test Content
