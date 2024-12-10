@@ -4,14 +4,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "concurrently \"npx gulp watch\" \"vite\"",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build && cp -r public/content dist/",
-    "deploy": "gh-pages -d dist"
-  },
+"scripts": {
+  "dev": "concurrently \"npx gulp watch\" \"vite\"",
+  "build": "tsc -b && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build && cp -r public/content dist/ && echo > dist/.nojekyll",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
