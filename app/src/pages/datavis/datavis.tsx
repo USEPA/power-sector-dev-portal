@@ -5,7 +5,7 @@ import "./datavis.scss";
 
 const DataVisualization: React.FC = () => {
   const { content, error } = useMarkdownContent(
-    `${window.location.origin}/content/datavis/datavis.md`
+    `${window.location.origin}/content/datavis/datavis.html`
   );
 
   if (error) {
