@@ -14,7 +14,7 @@ import SideNav from "../../../components/SideNav/SideNav";
 
 const AreaCharts: React.FC = () => {
   const base = import.meta.env.BASE_URL;
-  const { content, error } = useMarkdownContent(`${base}content/datavis/charts/area-charts.md`);
+  const { content, error } = useMarkdownContent(`${base}content/datavis/charts/area-charts.html`);
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)

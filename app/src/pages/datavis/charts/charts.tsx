@@ -8,7 +8,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Charts: React.FC = () => {
   const base = import.meta.env.BASE_URL;
-  const { content, error } = useMarkdownContent(`${base}content/datavis/charts/charts.md`);
+  const { content, error } = useMarkdownContent(`${base}content/datavis/charts/charts.html`);
 
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
   const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
