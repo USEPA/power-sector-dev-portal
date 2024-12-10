@@ -4,7 +4,10 @@ const useMarkdownContent = (filePath: string) => {
     const [content, setContent] = useState<string>('');
     const [error, setError] = useState<string | null>(null);
 
+    console.log('content', content)
+
     useEffect(() => {
+        console.log('filepath', filePath)
         fetch(filePath)
             .then((res) => {
                 if (!res.ok) {
