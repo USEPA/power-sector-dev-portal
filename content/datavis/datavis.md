@@ -1,3 +1,8 @@
-# datavis.md!
+---
+title: "Data Visualization Style Guide"
+tagline: "Lorem Ipsum"
+---
 
-Test
+## Main Content
+
+This is a test paragraph.
