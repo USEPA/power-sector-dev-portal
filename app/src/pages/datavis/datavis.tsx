@@ -4,8 +4,7 @@ import ReactMarkdown from "react-markdown";
 import "./datavis.scss";
 
 const DataVisualization: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
-  const { content, frontmatter, error } = useMarkdownContent(`${base}content/datavis/datavis.md`);
+  const { content, error } = useMarkdownContent('/content/datavis/datavis.md');
 
   if (error) {
     return <div>Error loading content: {error}</div>;
@@ -13,8 +12,6 @@ const DataVisualization: React.FC = () => {
 
   return (
     <div>
-      {frontmatter.title && <h1>{frontmatter.title}</h1>}
-      {frontmatter.tagline && <p>{frontmatter.tagline}</p>}
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );

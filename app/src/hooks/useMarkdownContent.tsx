@@ -1,37 +1,38 @@
 import { useState, useEffect } from 'react';
 import matter from 'gray-matter';
 
-interface FrontmatterData {
-  title: string;
-  tagline: string;
-  [key: string]: string; 
-}
-
 const useMarkdownContent = (path: string) => {
   const [content, setContent] = useState<string>('');
-  const [frontmatter, setFrontmatter] = useState<FrontmatterData>({
-    title: '',
-    tagline: ''
-  });
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch(path);
+        console.log('Attempting to fetch markdown from:', path);
+        
+        const response = await fetch(path, {
+          headers: {
+            'Content-Type': 'text/markdown',
+          },
+        });
+
+        console.log('Fetch response:', response);
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
+
         if (!response.ok) {
+          const errorText = await response.text();
+          console.error('Error response text:', errorText);
           throw new Error(`HTTP error! status: ${response.status}`);
         }
+
         const text = await response.text();
+        console.log('Fetched markdown content:', text);
+
         const parsed = matter(text);
         setContent(parsed.content);
-        setFrontmatter({
-          title: parsed.data.title || '',
-          tagline: parsed.data.tagline || '',
-          ...parsed.data
-        });
       } catch (err) {
-        console.error('Error fetching markdown:', err);
+        console.error('Complete error details:', err);
         setError(err instanceof Error ? err.message : 'An unknown error occurred');
       }
     };
@@ -39,7 +40,7 @@ const useMarkdownContent = (path: string) => {
     fetchMarkdown();
   }, [path]);
 
-  return { content, frontmatter, error };
+  return { content, error };
 };
 
 export default useMarkdownContent;
