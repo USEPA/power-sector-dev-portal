@@ -1,27 +1,62 @@
-// src/pages/datavis/index.tsx
-import React from "react";
-// import { extractBanner } from "../../utilities/extractContent";
-
-import useMarkdownContent from "../../hooks/useMarkdownContent";
-import "./datavis.scss";
-// import Banner from "../../components/Banner/Banner";
+import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import matter from "gray-matter";
+import "./datavis.scss";
+
+
+interface Frontmatter {
+  title: string;
+  tagline: string;
+}
 
 const DataVisualization: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
-  const { content, error } = useMarkdownContent(`${base}content/datavis/datavis.md`);
+  const [content, setContent] = useState<string | null>(null);
+  const [frontmatter, setFrontmatter] = useState<Frontmatter | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
 
-  // const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const res = await fetch("/content/datavis/datavis.md"); 
+        if (!res.ok) throw new Error("Failed to fetch markdown file");
+        const markdownContent = await res.text();
+        
+        const { content, data } = matter(markdownContent);
+        
+        setContent(content); 
+        setFrontmatter({
+          title: data.title || 'Default Title',
+          tagline: data.tagline || 'Default Tagline',
+        });
+      } catch (err) {
+        if (err instanceof Error) {  
+          setError("Error loading content: " + err.message);
+        } else {
+          setError("Unknown error occurred");
+        }
+      }
+    };
+
+    fetchContent();
+  }, []);
 
   if (error) {
-    return <div>Error loading content: {error}</div>;
+    return <div>{error}</div>;
   }
 
   return (
     <div>
-       <ReactMarkdown>{content}</ReactMarkdown>
-      {/* <Banner title={title} tagline={tagline} level="level1" /> */}
+      
+      {frontmatter && (
+        <div className="banner">
+          <h1>{frontmatter.title}</h1>
+          <p>{frontmatter.tagline}</p>
+        </div>
+      )}
+      
+      
+      {content && <ReactMarkdown>{content}</ReactMarkdown>}
     </div>
   );
 };
