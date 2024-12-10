@@ -23,7 +23,8 @@
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.27.0",
-    "sass": "^1.80.5"
+    "sass": "^1.80.5",
+    "vite-plugin-md": "^0.22.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

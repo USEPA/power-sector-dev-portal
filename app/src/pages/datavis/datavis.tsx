@@ -9,7 +9,7 @@ import ReactMarkdown from "react-markdown";
 
 const DataVisualization: React.FC = () => {
   const base = import.meta.env.BASE_URL;
-  const { content, error } = useMarkdownContent(`${base}content/datavis/datavis.html`);
+  const { content, error } = useMarkdownContent(`${base}content/datavis/datavis.md`);
 
 
   // const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
