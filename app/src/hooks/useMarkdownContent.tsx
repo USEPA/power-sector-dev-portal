@@ -1,39 +1,23 @@
 import { useEffect, useState } from 'react';
-import matter from 'gray-matter';
 
 const useMarkdownContent = (filePath: string) => {
-  const [content, setContent] = useState<string>('');
-  const [frontmatter, setFrontmatter] = useState<Record<string, any>>({});
-  const [error, setError] = useState<string | null>(null);
+    const [content, setContent] = useState<string>('');
+    const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchMarkdown = async () => {
-      try {
-        // Fetch the markdown file content
-        const response = await fetch(filePath);
+    useEffect(() => {
+        console.log('filepath', filePath)
+        fetch(filePath)
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.text();
+            })
+            .then((text) => setContent(text))
+            .catch((error) => setError(error.message));
+    }, [filePath]);
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const text = await response.text();
-
-        // Parse frontmatter and content using gray-matter
-        const { data, content } = matter(text);
-        console.log(data, content)
-
-        setContent(content);
-        setFrontmatter(data);
-      } catch (err) {
-        console.error('Error fetching markdown:', err);
-        setError(err instanceof Error ? err.message : 'An unknown error occurred');
-      }
-    };
-
-    fetchMarkdown();
-  }, [filePath]);
-
-  return { content, frontmatter, error };
+    return { content, error };
 };
 
 export default useMarkdownContent;
