@@ -2,6 +2,7 @@
 import React from 'react';
 import './InfoBlock.scss';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 
 interface InfoBlockProps {
     title?: string;
@@ -15,9 +16,9 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ title, content, link }) => {
             <h3>{title}</h3>
             {content && <p>{content}</p>}
             {link && (
-                <a href={link}>
+                <Link to={link}>
                     Learn about {title} <ArrowForwardIcon />
-                </a>
+                </Link>
             )}
         </div>
     );

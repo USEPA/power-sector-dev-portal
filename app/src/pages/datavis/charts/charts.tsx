@@ -5,6 +5,7 @@ import { extractBanner, extractIntro, extractSections } from '../../../utilities
 import { Section, Card } from '../../../types/ContentTypes';
 import './Charts.scss';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 
 const Charts: React.FC = () => {
   const base = import.meta.env.BASE_URL;
@@ -37,7 +38,7 @@ const Charts: React.FC = () => {
                   <h4>{card.title}</h4>
                   <p>{card.content}</p>
                   {card.link ?
-                  <a href={card.link}>Learn about {card.title} <ArrowForwardIcon /></a> 
+                  <Link to={card.link}>Learn about {card.title} <ArrowForwardIcon /></Link> 
                   : " " }
                   </div>
                 </div>
