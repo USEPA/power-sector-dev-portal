@@ -6,7 +6,7 @@
   "type": "module",
 "scripts": {
   "dev": "concurrently \"npx gulp watch\" \"vite\"",
-  "build": "tsc -b && vite build && cp .nojekyll dist/",
+  "build": "tsc -b && vite build",
   "lint": "eslint .",
   "preview": "vite preview",
   "predeploy": "npm run build",
