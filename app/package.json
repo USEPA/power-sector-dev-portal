@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "touch dist/.nojekyll && rimraf node_modules/.cache && rimraf dist && rimraf .vite && gh-pages -d dist"
+    "deploy": "touch .nojekyll && rimraf node_modules/.cache && rimraf dist && rimraf .vite && gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
