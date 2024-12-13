@@ -23,7 +23,7 @@ sections:
       content: If you’re creating a chart with more than one line, directly label lines or use styles like dashes to distinguish between multiple lines to avoid forcing users to rely on color alone.
       type: "do"
     - title: "Single-Line Chars"
-      image: "/assets/datavis//charts/line-charts/single-line-charts-do.png"
+      image: "/assets/datavis/charts/line-charts/single-line-charts-do.png"
       content: If you’re creating a single-line chart, use a neutral color (**#2E2E2E**) for the line (unless you’re plotting a variable that falls into one of the groups outlined in the categorical palettes section).
       type: "do"
     - title: "Axes"

@@ -105,4 +105,5 @@ sections:
         content: "Violin plots function like box-and-whisker plots with the added element of showing density of data points for the chosen summary statistics."
         link: "/learn-grouped-bar-column-charts"
         image: "/assets/datavis/charts/violins.png"
+        
 
