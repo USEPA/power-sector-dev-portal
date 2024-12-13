@@ -19,51 +19,51 @@ sections:
     level: 3
     cards:
     - title: "Labeling"
-      image: "/src/assets/images/datavis/charts/line-charts/labeling-do.png"
+      image: "/assets/datavis/charts/line-charts/labeling-do.png"
       content: If you’re creating a chart with more than one line, directly label lines or use styles like dashes to distinguish between multiple lines to avoid forcing users to rely on color alone.
       type: "do"
     - title: "Single-Line Chars"
-      image: "/src/assets/images/datavis//charts/line-charts/single-line-charts-do.png"
+      image: "/assets/datavis//charts/line-charts/single-line-charts-do.png"
       content: If you’re creating a single-line chart, use a neutral color (**#2E2E2E**) for the line (unless you’re plotting a variable that falls into one of the groups outlined in the categorical palettes section).
       type: "do"
     - title: "Axes"
-      image: "/src/assets/images/datavis/charts/line-charts/axes-do.png"
+      image: "/assets/datavis/charts/line-charts/axes-do.png"
       content: Because they focus more on trends than absolute values, the y-axes of line charts don’t need to start at zero (like those of bar charts do).
       type: "do"
     - title: "Highlighting Multi-Line Charts"
-      image: "/src/assets/images/datavis/charts/line-charts/highlighting-multi-line-charts-do.png"
+      image: "/assets/datavis/charts/line-charts/highlighting-multi-line-charts-do.png"
       content: If your multiple-line chart exists to highlight a few lines against many others, use a light gray (**#C9C9C9**) for the lines in which you’re not immediately interested
       type: "do"
     - title: "Labeling Multi-Line Charts"
-      image: "/src/assets/images/datavis/charts/line-charts/labeling-multi-line-charts-do.png"
+      image: "/assets/datavis/charts/line-charts/labeling-multi-line-charts-do.png"
       content: If your multiple-line chart exists to make comparisons between a few (no more than 5) lines, use color for each line, but make sure to also label them directly or use stroke styles to distinguish between them.
       type: "do"
   - title: "Things to Avoid"
     level: 3
     cards:
     - title: "Labeling"
-      image: "/src/assets/images/datavis/charts/line-charts/labeling-do-not.png"
+      image: "/assets/datavis/charts/line-charts/labeling-do-not.png"
       content: Don’t force users to rely on color alone to distinguish between lines.
       type: "do not"
     - title: "Color, Single-Line Charts"
-      image: "/src/assets/images/datavis/charts/line-charts/color-single-line-charts-do-not.png"
+      image: "/assets/datavis/charts/line-charts/color-single-line-charts-do-not.png"
       content: If you’re plotting a variable that falls into one of the groups outlined in the categorical palettes section, don’t use a color belonging to a different category.
       type: "do not"
     - title: "Color, Multi-Line Charts"
-      image: "/src/assets/images/datavis/charts/line-charts/color-multi-line-charts-do-not.png"
+      image: "/assets/datavis/charts/line-charts/color-multi-line-charts-do-not.png"
       content: Don’t use color for every line if you’re not interested in all of them or if there are more than 5 lines of interest.
       type: "do not"
     - title: "Axes"
-      image: "/src/assets/images/datavis/charts/line-charts/axes-do-not.png"
+      image: "/assets/datavis/charts/line-charts/axes-do-not.png"
       content: Don’t produce line charts without labeled axes.
       type: "do not"
   - title: "Example Charts"
   - title: "Figure 1: Line Charts Example with Two Lines"
     level: 4
-    image: "/src/assets/images/datavis/charts/line-charts/figure-2-multiple-lines.png"
+    image: "/assets/datavis/charts/line-charts/figure-2-multiple-lines.png"
   - title: "Figure 2: Line Charts Example with Multiple Lines"
     level: 4
-    image: "/src/assets/images/datavis/charts/line-charts/figure-2-multiple-lines.png"
+    image: "/assets/datavis/charts/line-charts/figure-2-multiple-lines.png"
   - title: "Sparklines"
     level: 2
     content: |
@@ -77,18 +77,18 @@ sections:
     level: 3
     cards:
     - title: "'Chart Space'"
-      image: "/src/assets/images/datavis/charts/line-charts/chart-space.png"
+      image: "/assets/datavis/charts/line-charts/chart-space.png"
       content: Always show the “chart space” of a sparkline (either by putting a fill on the background or using divider lines).
       type: "do"
     - title: "Independently-Scaled Axes"
-      image: "/src/assets/images/datavis/charts/line-charts/independently-scaled-axes.png"
+      image: "/assets/datavis/charts/line-charts/independently-scaled-axes.png"
       content: Setting the axis separately for each sparkline is best if you’re only interested in trends and patterns over time and don’t need to be able to make precise comparisons between sparklines.
       type: "do"
     - title: "Standard, Static Axes"
-      image: "/src/assets/images/datavis/charts/line-charts/standard-static-axes.png"
+      image: "/assets/datavis/charts/line-charts/standard-static-axes.png"
       content: Setting a standard, static axis (where every sparkline has the same axis regardless of the data they all contain) is best if you’re interested in being able to make comparisons in values across sparklines on repeated viewings where being able to put them in context is important (e.g., data updates regularly). It also works well for datasets with set maximums and minimums, such as percents of wholes.
       type: "do"
     - title: "Non-Standard, Static Axes"
-      image: "/src/assets/images/datavis/charts/line-charts/non-standard-static-axes.png"
+      image: "/assets/datavis/charts/line-charts/non-standard-static-axes.png"
       content: Setting the axis to accommodate the highest and lowest points of the dataset is best if you’re interested in being able to make comparisons in values across sparklines but don’t care about possible changes to the axis if the data changes.
       type: "do"
