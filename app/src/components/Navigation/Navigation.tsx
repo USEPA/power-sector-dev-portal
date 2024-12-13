@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navigation.scss";
 import CloseIcon from '@mui/icons-material/Close';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -69,9 +69,9 @@ const Navigation: React.FC = () => {
           <div className="usa-navbar">
             <div className="usa-logo">
               <em className="usa-logo__text">
-                <a href={route} title={title}>
+                <Link to={route} title={title}>
                   {title}
-                </a>
+                </Link>
               </em>
             </div>
             <button type="button" className="usa-menu-btn">
@@ -86,12 +86,12 @@ const Navigation: React.FC = () => {
             {isDatavisRoute && (
               <ul className="usa-nav__primary usa-accordion" ref={dropdownRef}>
                 <li className="usa-nav__primary-item">
-                  <a
-                    href="/datavis/principles"
+                  <Link
+                    to="/datavis/principles"
                     className={`usa-nav-link ${isCurrentPath("/datavis/principles") ? "usa-current" : ""}`}
                   >
                     <span>Principles</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="usa-nav__primary-item">
                   <button
@@ -109,44 +109,44 @@ const Navigation: React.FC = () => {
                     style={{ display: expandedSection === "section-one" ? "block" : "none" }}
                   >
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/design-elements"
+                      <Link
+                        to="/datavis/design-elements"
                         className={isCurrentPath("/datavis/design-elements") ? "usa-current" : ""}
                       >
                         <span>Design Elements</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/design-elements/color"
+                      <Link
+                        to="/datavis/design-elements/color"
                         className={isCurrentPath("/datavis/design-elements/color") ? "usa-current" : ""}
                       >
                         <span>Color</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/design-elements/typography"
+                      <Link
+                        to="/datavis/design-elements/typography"
                         className={isCurrentPath("/datavis/design-elements/typography") ? "usa-current" : ""}
                       >
                         <span>Typography</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/design-elements/symbology"
+                      <Link
+                        to="/datavis/design-elements/symbology"
                         className={isCurrentPath("/datavis/design-elements/symbology") ? "usa-current" : ""}
                       >
                         <span>Symbology</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/design-elements/layout"
+                      <Link
+                        to="/datavis/design-elements/layout"
                         className={isCurrentPath("/datavis/design-elements/layout") ? "usa-current" : ""}
                       >
                         <span>Chart Layout</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
@@ -166,68 +166,68 @@ const Navigation: React.FC = () => {
                     style={{ display: expandedSection === "section-two" ? "block" : "none" }}
                   >
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/charts"
+                      <Link
+                        to="/datavis/charts"
                         className={isCurrentPath("/datavis/charts") ? "usa-current" : ""}
                       >
                         <span>Charts</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/charts/line-charts"
+                      <Link
+                        to="/datavis/charts/line-charts"
                         className={isCurrentPath("/datavis/charts/line-charts") ? "usa-current" : ""}
                       >
                         <span>Line Charts</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/charts/bar-charts"
+                      <Link
+                        to="/datavis/charts/bar-charts"
                         className={isCurrentPath("/datavis/charts/bar-charts") ? "usa-current" : ""}
                       >
                         <span>Bar Charts</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/charts/area-charts"
+                      <Link
+                        to="/datavis/charts/area-charts"
                         className={isCurrentPath("/datavis/charts/area-charts") ? "usa-current" : ""}
                       >
                         <span>Area Charts</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className="usa-nav__submenu-item">
-                      <a
-                        href="/datavis/charts/maps"
+                      <Link
+                        to="/datavis/charts/maps"
                         className={isCurrentPath("/datavis/charts/maps") ? "usa-current" : ""}
                       >
                         <span>Maps</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="usa-nav__primary-item">
-                  <a
-                    href="/datavis/further-reading"
+                  <Link
+                    to="/datavis/further-reading"
                     className={isCurrentPath("/datavis/further-reading") ? "usa-current" : ""}
                   >
                     <span>Further Reading</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className="usa-nav__primary-item">
-                  <a href="/" className="usa-nav-link backToHomeLink">
+                  <Link to="/" className="usa-nav-link backToHomeLink">
                     <span>Back to Open Source Hub</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             )}
             {(isApiRoute || isRStyleRoute) && (
               <ul className="usa-nav__primary usa-accordion">
                 <li className="usa-nav__primary-item">
-                  <a href="/" className="usa-nav-link backToHomeLink">
+                  <Link to="/" className="usa-nav-link backToHomeLink">
                     <span>Back to Open Source Hub</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             )}
