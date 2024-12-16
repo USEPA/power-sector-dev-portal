@@ -62,7 +62,7 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div className="top-nav">
       <div className="usa-overlay"></div>
       <header className="usa-header usa-header--basic">
         <div className="usa-nav-container">
@@ -234,7 +234,7 @@ const Navigation: React.FC = () => {
           </nav>
         </div>
       </header>
-    </>
+    </div>
   );
 };
 

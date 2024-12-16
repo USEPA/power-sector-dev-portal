@@ -2,6 +2,10 @@
 
 @media (min-width: 63.99em) {
 
+  .top-nav {
+
+
+
   .usa-nav__primary>.usa-nav__primary-item>a, .usa-nav__primary button[aria-expanded], .usa-nav__primary button[aria-expanded], .usa-nav__primary>.usa-nav__primary-item {
     // height: fit-content;
     padding: 0px;
@@ -68,7 +72,7 @@
 
 .backToHomeLink {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300 !important;
 }
 
 .usa-header--basic .usa-nav__link:hover::after, .usa-header--basic .usa-nav__primary-item>.usa-current::after {
@@ -76,5 +80,7 @@
   width: 100%;
   right:0;
   left: 0;
+}
+
 }
 
