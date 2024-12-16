@@ -1,86 +1,85 @@
 @use "../../variables" as *;
 
 @media (min-width: 63.99em) {
-
   .top-nav {
+    .usa-nav__primary > .usa-nav__primary-item > a,
+    .usa-nav__primary button[aria-expanded],
+    .usa-nav__primary button[aria-expanded],
+    .usa-nav__primary > .usa-nav__primary-item {
+      padding: 0px;
+    }
 
+    .usa-nav__primary > .usa-nav__primary-item > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .usa-nav__primary .usa-accordion__button span {
+      padding-right: 0;
+    }
 
+    nav {
+      padding: 10px;
 
-  .usa-nav__primary>.usa-nav__primary-item>a, .usa-nav__primary button[aria-expanded], .usa-nav__primary button[aria-expanded], .usa-nav__primary>.usa-nav__primary-item {
-    // height: fit-content;
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .usa-nav__primary .usa-accordion__button span {
-    padding-right: 0;
-  }
+      li:not(:first-child) {
+        margin-left: 2em;
+      }
+    }
 
-  nav {
-    padding: 10px;
-  
-    li:not(:first-child) {
-      margin-left: 2em;
+    .usa-header--basic .usa-nav-container {
+      max-width: none !important;
+      padding: 0px 35px 2px !important;
+      align-items: center;
+      display: flex;
+    }
+
+    .usa-navbar {
+      align-items: center;
+      height: fit-content;
+    }
+
+    .usa-logo {
+      margin: 0;
+      .usa-logo__text {
+        a {
+          white-space: nowrap;
+          font-size: 22px !important;
+          line-height: auto !important;
+          margin: 0.5em 0 !important;
+          height: fit-content !important;
+        }
+      }
+    }
+
+    ul {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .usa-nav__primary > .usa-nav__primary-item > a,
+    .usa-nav__primary button {
+      color: white;
     }
   }
 
-  .usa-header--basic .usa-nav-container {
-    max-width: none !important;
-    padding: 0px 35px 2px !important;
-    align-items: center;
-    display: flex;
-  }
-  
-  
-  .usa-navbar {
-    align-items: center;
-    height: fit-content;
-  }
-  
   .usa-logo {
     margin: 0;
     .usa-logo__text {
       a {
-        white-space: nowrap;
-        font-size: 22px !important;
-        line-height: auto !important;
-        margin: 0.5em 0 !important;
-        height: fit-content !important;
+        color: white;
       }
     }
   }
-  
-  ul {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  }
-  .usa-nav__primary>.usa-nav__primary-item>a, .usa-nav__primary button {
-  color: white;
-  }
-}
 
-.usa-logo {
-  margin: 0;
-  .usa-logo__text {
-    a {
-      color: white;
-    }
+  .backToHomeLink {
+    font-style: italic;
+    font-weight: 300 !important;
+  }
+
+  .usa-header--basic .usa-nav__link:hover::after,
+  .usa-header--basic .usa-nav__primary-item > .usa-current::after {
+    background-color: $blue-vivid;
+    width: 100%;
+    right: 0;
+    left: 0;
   }
 }
-
-
-.backToHomeLink {
-  font-style: italic;
-  font-weight: 300 !important;
-}
-
-.usa-header--basic .usa-nav__link:hover::after, .usa-header--basic .usa-nav__primary-item>.usa-current::after {
-  background-color: $blue-vivid;
-  width: 100%;
-  right:0;
-  left: 0;
-}
-
-}
-
