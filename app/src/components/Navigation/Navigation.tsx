@@ -81,9 +81,19 @@ const Navigation: React.FC = () => {
           </div>
 
           <nav aria-label="Primary navigation" className="usa-nav">
-            <button type="button" className="usa-nav__close">
-              <CloseIcon />
-            </button>
+            {isMobileView && (
+              <div className="mobile-icon-header">
+                <em className="usa-logo__text">
+                  <Link to={route} title={title}>
+                    {title}
+                  </Link>
+                </em>
+                <button type="button" className="usa-nav__close">
+                  <CloseIcon />
+                </button>
+              </div>
+            )}
+
             {isDatavisRoute && (
               <ul className="usa-nav__primary usa-accordion" ref={dropdownRef}>
                 <li className="usa-nav__primary-item">
@@ -127,7 +137,9 @@ const Navigation: React.FC = () => {
                       <Link
                         to="/datavis/design-elements/design-elements"
                         className={
-                          isCurrentPath("/datavis/design-elements/design-elements")
+                          isCurrentPath(
+                            "/datavis/design-elements/design-elements"
+                          )
                             ? "usa-current"
                             : ""
                         }
@@ -216,7 +228,9 @@ const Navigation: React.FC = () => {
                       <Link
                         to="/datavis/charts/charts"
                         className={
-                          isCurrentPath("/datavis/charts/charts") ? "usa-current" : ""
+                          isCurrentPath("/datavis/charts/charts")
+                            ? "usa-current"
+                            : ""
                         }
                       >
                         <span>Charts</span>

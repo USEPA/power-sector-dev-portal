@@ -83,6 +83,18 @@
       width: 100%;
       background-color: $primary-darker;
       color: white;
+      bottom: auto;
+    }
+
+    .mobile-icon-header {
+      display: flex;
+      color: white;
+      align-items: center;
+      justify-content: space-between;
+
+      h4 {
+        color: white;
+      }
     }
 
     .usa-header--basic .usa-nav-container {
@@ -104,6 +116,13 @@
     }
     .usa-nav__primary-item {
       border-top: 1px solid $blue-vivid;
+
+      &:last-child {
+        border-bottom: 1px solid $blue-vivid;
+      }
+    }
+    .usa-nav__submenu-item{
+      border: none;
     }
 
     .usa-nav__primary .usa-current::after {
@@ -113,6 +132,21 @@
     .usa-nav__primary button,
     .usa-nav__primary a:not(.usa-button) {
       font-weight: 700;
+      padding: .5em 1em;
+  
+
+      span {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: fit-content;
+
+        svg {
+          margin: 0;
+        }
+      }
     }
 
     .usa-nav__primary button:hover,
