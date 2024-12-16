@@ -1,11 +1,13 @@
-.cards-container {
+@use '../../variables.scss';
+
+cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 1.5rem;
     margin-top: 1rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile-width) {
     .cards-container {
       grid-template-columns: 1fr;
     }
