@@ -29,7 +29,7 @@ const Typography: React.FC = () => {
 
   return (
     <div className="color-page">
-      <div className="usa-in-page-nav-container container">
+      <div className="usa-in-page-nav-container container-with-sidenav">
       <main id="main-content" className="main-content">
       <div className="intro-section">
         <h1>{title}</h1>

@@ -45,7 +45,7 @@ body {
   width: 100%;
 }
 
-.container {
+.container, .container-with-sidenav {
   margin: 3em auto 6em;
   padding: 15px 30px;
 }
@@ -66,6 +66,10 @@ body {
 .container,
 .banner-container {
   max-width: $max-width;
+}
+
+.container-with-sidenav {
+  max-width: 1060px;
 }
 
 h1,
