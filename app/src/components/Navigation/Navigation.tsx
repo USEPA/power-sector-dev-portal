@@ -4,6 +4,7 @@ import "./Navigation.scss";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import useIsMobile from "../../hooks/useIsMobile";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -299,8 +300,15 @@ const Navigation: React.FC = () => {
                   </Link>
                 </li>
                 <li className="usa-nav__primary-item">
-                  <Link to="/" className="usa-nav-link backToHomeLink">
-                    <span>Back to Open Source Hub</span>
+                <Link to="/" className="usa-nav-link backToHomeLink">
+                    {!isMobileView ? (
+                      <span>Back to Open Source Hub</span>
+                    ) : (
+                      <span>
+                        <ArrowBackIcon /> Return to Open Source Resource Hub
+                        Home
+                      </span>
+                    )}
                   </Link>
                 </li>
               </ul>
@@ -309,7 +317,14 @@ const Navigation: React.FC = () => {
               <ul className="usa-nav__primary usa-accordion">
                 <li className="usa-nav__primary-item">
                   <Link to="/" className="usa-nav-link backToHomeLink">
-                    <span>Back to Open Source Hub</span>
+                    {!isMobileView ? (
+                      <span>Back to Open Source Hub</span>
+                    ) : (
+                      <span>
+                        <ArrowBackIcon /> Return to Open Source Resource Hub
+                        Home
+                      </span>
+                    )}
                   </Link>
                 </li>
               </ul>
