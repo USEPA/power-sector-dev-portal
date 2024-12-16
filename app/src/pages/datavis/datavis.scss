@@ -4,3 +4,9 @@
     gap: 1.5rem;
     margin-top: 1rem;
   }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+  }

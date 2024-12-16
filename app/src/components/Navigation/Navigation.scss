@@ -1,5 +1,6 @@
 @use "../../variables" as *;
 
+// desktop
 @media (min-width: 63.99em) {
   .top-nav {
     .usa-nav__primary > .usa-nav__primary-item > a,
@@ -9,9 +10,14 @@
       padding: 0px;
     }
 
+    .usa-header--basic .usa-nav-container {
+      padding: 0px 35px 0px !important;
+    }
+
     .usa-nav__primary > .usa-nav__primary-item > a {
       display: flex;
       align-items: center;
+
       justify-content: center;
     }
     .usa-nav__primary .usa-accordion__button span {
@@ -28,7 +34,6 @@
 
     .usa-header--basic .usa-nav-container {
       max-width: none !important;
-      padding: 0px 35px 2px !important;
       align-items: center;
       display: flex;
     }
@@ -59,8 +64,70 @@
     .usa-nav__primary button {
       color: white;
     }
-  }
 
+    .usa-header--basic .usa-nav__link:hover::after,
+    .usa-header--basic .usa-nav__primary-item > .usa-current::after {
+      background-color: $blue-vivid;
+      width: 100%;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+// mobile
+
+@media (max-width: 63.99em) {
+  .top-nav {
+    .usa-nav {
+      width: 100%;
+      background-color: $primary-darker;
+      color: white;
+    }
+
+    .usa-header--basic .usa-nav-container {
+      padding: 0px 0px 0px 15px;
+    }
+
+    .usa-navbar {
+      border-bottom: none;
+    }
+
+    .backToHomeLink {
+      font-style: italic;
+      font-weight: 300 !important;
+    }
+
+    .usa-nav__primary a:not(.usa-button):not(.usa-current),
+    .usa-nav__primary button {
+      color: white;
+    }
+    .usa-nav__primary-item {
+      border-top: 1px solid $blue-vivid;
+    }
+
+    .usa-nav__primary .usa-current::after {
+      display: none;
+    }
+
+    .usa-nav__primary button,
+    .usa-nav__primary a:not(.usa-button) {
+      font-weight: 700;
+    }
+
+    .usa-nav__primary button:hover,
+    .usa-nav__primary a:not(.usa-button):hover {
+      background-color: transparent !important;
+    }
+
+    .usa-current {
+      color: $blue-vivid !important;
+    }
+  }
+}
+
+// global
+.top-nav {
   .usa-logo {
     margin: 0;
     .usa-logo__text {
@@ -68,18 +135,5 @@
         color: white;
       }
     }
-  }
-
-  .backToHomeLink {
-    font-style: italic;
-    font-weight: 300 !important;
-  }
-
-  .usa-header--basic .usa-nav__link:hover::after,
-  .usa-header--basic .usa-nav__primary-item > .usa-current::after {
-    background-color: $blue-vivid;
-    width: 100%;
-    right: 0;
-    left: 0;
   }
 }

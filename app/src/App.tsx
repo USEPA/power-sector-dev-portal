@@ -48,14 +48,14 @@ function App() {
           <Route path="/datavis" element={<DataVisLayout />}>
             <Route index element={<DataVisualization />} />
             <Route path="principles" element={<Principles />} />
-            <Route path="design-elements" element={<DesignElements />} />
+            <Route path="design-elements/design-elements" element={<DesignElements />} />
             {/* Design Elements Sub-Routes */}
             <Route path="design-elements/color" element={<Color />} />
             <Route path="design-elements/typography" element={<Typography />} />
             <Route path="design-elements/symbology" element={<Symbology />} />
             <Route path="design-elements/layout" element={<Layout />} />
             {/* Charts Routes */}
-            <Route path="charts" element={<Charts />} />
+            <Route path="charts/charts" element={<Charts />} />
             <Route path="charts/line-charts" element={<LineCharts />} />
             <Route path="charts/bar-charts" element={<BarCharts />} />
             <Route path="charts/area-charts" element={<AreaCharts />} />
