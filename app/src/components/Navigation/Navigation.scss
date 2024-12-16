@@ -2,9 +2,28 @@
 
 @media (min-width: 63.99em) {
 
+  .usa-nav__primary>.usa-nav__primary-item>a, .usa-nav__primary button[aria-expanded], .usa-nav__primary button[aria-expanded], .usa-nav__primary>.usa-nav__primary-item {
+    // height: fit-content;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .usa-nav__primary .usa-accordion__button span {
+    padding-right: 0;
+  }
+
+  nav {
+    padding: 10px;
+  
+    li:not(:first-child) {
+      margin-left: 2em;
+    }
+  }
+
   .usa-header--basic .usa-nav-container {
     max-width: none !important;
-    padding: 20px 20px 2px !important;
+    padding: 0px 35px 2px !important;
     align-items: center;
     display: flex;
   }
@@ -50,5 +69,12 @@
 .backToHomeLink {
   font-style: italic;
   font-weight: 400;
+}
+
+.usa-header--basic .usa-nav__link:hover::after, .usa-header--basic .usa-nav__primary-item>.usa-current::after {
+  background-color: $blue-vivid;
+  width: 100%;
+  right:0;
+  left: 0;
 }
 

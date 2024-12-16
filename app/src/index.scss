@@ -38,13 +38,7 @@ body {
   min-height: 100vh;
 }
 
-nav {
-  padding: 10px;
 
-  li:not(:first-child) {
-    margin-left: 1em;
-  }
-}
 
 .main-banner {
   background-color: $primary-darker;
