@@ -4,3 +4,11 @@
     background-color: $base-lighter;
     padding: 15px !important;
   }
+
+
+    @supports ((-webkit-mask:url()) or (mask:url())) {
+        .usa-breadcrumb__list-item:not(:last-child)::after {
+            mask-image: url("/assets/uswds-img/usa-icons/navigate_next.svg"), linear-gradient(transparent, transparent);
+        }
+    }
+    
