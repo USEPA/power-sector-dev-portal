@@ -105,8 +105,6 @@
       border-bottom: none;
     }
 
-
-
     .usa-nav__primary a:not(.usa-button):not(.usa-current),
     .usa-nav__primary button {
       color: white;
@@ -118,7 +116,7 @@
         border-bottom: 1px solid $blue-vivid;
       }
     }
-    .usa-nav__submenu-item{
+    .usa-nav__submenu-item {
       border: none;
     }
 
@@ -129,8 +127,7 @@
     .usa-nav__primary button,
     .usa-nav__primary a:not(.usa-button) {
       font-weight: 700;
-      padding: .5em 1em;
-  
+      padding: 0.5em 1em;
 
       span {
         width: 100%;
@@ -155,11 +152,11 @@
       color: $blue-vivid !important;
     }
 
-    .backToHomeLink span{
+    .backToHomeLink span {
       align-items: center;
       justify-content: flex-start !important;
-      svg{
-        margin-right: .25em !important;
+      svg {
+        margin-right: 0.25em !important;
         font-size: 1em;
       }
     }
@@ -168,6 +165,9 @@
 
 // global
 .top-nav {
+  background-color: $primary-darker;
+  width: 100%;
+
   .usa-logo {
     margin: 0;
     .usa-logo__text {
