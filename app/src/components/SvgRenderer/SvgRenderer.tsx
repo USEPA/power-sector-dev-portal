@@ -23,6 +23,7 @@ const SVGRenderer: React.FC<{ src: string; alt?: string }> = ({ src, alt }) => {
 
   return (
     <div
+      className="svg-container"
       role="img"
       aria-label={alt}
       dangerouslySetInnerHTML={{ __html: svgContent }}

@@ -63,6 +63,18 @@ body {
   }
 }
 
+.svg-container {
+  display: inline-block; 
+  max-width: 100%; 
+  height: auto; 
+  overflow: hidden; 
+}
+
+.svg-container svg {
+  max-width: 100%; 
+  height: auto; 
+}
+
 .container,
 .banner-container {
   max-width: $max-width;
