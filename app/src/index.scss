@@ -38,9 +38,13 @@ body {
   min-height: 100vh;
 }
 
+.grey-container {
+  background-color: $base-lightest;
+}
+
 .container, .container-with-sidenav {
-  margin: 3em auto 6em;
-  padding: 15px 30px;
+  margin: 0 auto;
+  padding: 3em 30px 6em;
 }
 
 .secondary-nav {
@@ -137,6 +141,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.blue-button {
+  background-color: $blue-warm-vivid-50v !important;
+  &:hover {
+   background-color:  $blue-warm-vivid-70v !important;
+  }
+}
+
 img,
 svg {
   margin: 1em 0;
@@ -157,8 +168,17 @@ svg {
   grid-template-columns: repeat(1, 1fr);
 }
 
+.row-gap-3{
+row-gap: 3em;
+}
+
 .intro-section {
-  margin-bottom: 4em;
+  margin-bottom: 5em;
+}
+
+.bottom-border-section {
+  border-bottom: 1.5px solid $blue-vivid;
+  padding-bottom: 4em;
 }
 
 
