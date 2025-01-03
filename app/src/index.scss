@@ -181,6 +181,18 @@ row-gap: 3em;
   padding-bottom: 4em;
 }
 
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem;
+  margin-top: 1rem;
+  @media (max-width: $mobile-width) {
+
+      grid-template-columns: 1fr;
+
+  }
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
