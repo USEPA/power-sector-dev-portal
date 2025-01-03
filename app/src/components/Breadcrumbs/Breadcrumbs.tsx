@@ -9,8 +9,11 @@ const Breadcrumbs: React.FC = () => {
   const breadcrumbTitles: { [key: string]: string } = {
     datavis: "Data Visualization Style Guide",
     "design-elements": "Design Elements",
+    principles: "Principles",
     color: "Color",
+    symbology: "Symbology",
     typography: "Typography",
+    layout: "Chart Layout",
     charts: "Charts",
     maps: "Maps",
     "line-charts": "Line Charts",
