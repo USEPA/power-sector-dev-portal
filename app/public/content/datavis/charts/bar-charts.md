@@ -1,5 +1,5 @@
 ---
-title: "Bar Charts"
+title: "Bar and Column Charts"
 tagline: ""
 introTitle: "Introduction"
 introContent: | 
