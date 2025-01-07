@@ -64,10 +64,6 @@ sections:
       image: "/assets/images/datavis/charts/bar-and-column-charts/bar-x-axis-do-not.png"
       content: Don’t start a column chart’s x-axis at a non-zero number.
       type: "do not"
-    - title: "Category Labels"
-      image: "/assets/images/datavis/charts/bar-and-column-charts/column-category-labels-do-not.png"
-      content: Don’t use long labels for column charts.
-      type: "do not"
   - title: "Grouped Bar or Column Chart"
     level: 3
   - title: "Best Practices"
