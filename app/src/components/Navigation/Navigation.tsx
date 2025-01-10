@@ -322,7 +322,47 @@ const Navigation: React.FC = () => {
                   </li>
                 </ul>
               )}
-              {(isApiRoute || isRStyleRoute) && (
+              {(isRStyleRoute) && (
+                <ul className="usa-nav__primary usa-accordion">
+                       <li className="usa-nav__primary-item">
+                    <Link
+                      to="/rstyle/using-the-theme"
+                      className={
+                        isCurrentPath("/rstyle/using-the-theme")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Using the Theme</span>
+                    </Link>
+                  </li>
+                  <li className="usa-nav__primary-item">
+                    <Link
+                      to="/rstyle/best-practices"
+                      className={
+                        isCurrentPath("/rstyle/best-practices")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Best Practices</span>
+                    </Link>
+                  </li>
+                  <li className="usa-nav__primary-item">
+                    <Link to="/" className="usa-nav-link backToHomeLink">
+                      {!isMobileView ? (
+                        <span>Back to Open Source Hub</span>
+                      ) : (
+                        <span>
+                          <ArrowBackIcon /> Return to Open Source Resource Hub
+                          Home
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                </ul>
+              )}
+                {(isApiRoute) && (
                 <ul className="usa-nav__primary usa-accordion">
                   <li className="usa-nav__primary-item">
                     <Link to="/" className="usa-nav-link backToHomeLink">

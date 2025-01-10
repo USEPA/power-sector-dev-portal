@@ -1,5 +1,11 @@
-// App.tsx
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 import "./assets/css/styles.css";
 import DataVisualization from "./pages/datavis/datavis";
@@ -19,12 +25,37 @@ import Maps from "./pages/datavis/charts/maps";
 import FurtherReading from "./pages/datavis/further-reading/further-reading/further-reading";
 import RStyleGuide from "./pages/rstyle/rstyle";
 import APIDocumentation from "./pages/api/api";
+import BestPractices from "./pages/rstyle/best-practices/best-practices";
+import UsingTheTheme from "./pages/rstyle/using-the-theme/using-the-theme";
 
 function App() {
+  const DynamicTheme = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+      const root = document.documentElement; 
+
+      // Remove any previously added classes
+      root.classList.remove("rstyle", "datavis", "root");
+
+      // Add the class based on the current route
+      if (location.pathname.startsWith("/rstyle")) {
+        root.classList.add("rstyle");
+      } else if (location.pathname.startsWith("/datavis")) {
+        root.classList.add("datavis");
+      } else {
+        root.classList.add("root");
+      }
+    }, [location]);
+
+    return null;
+  };
+
   return (
     <Router>
       <div className="App">
-          <Navigation />
+        <DynamicTheme />
+        <Navigation />
         <Routes>
           <Route
             path="/"
@@ -60,7 +91,12 @@ function App() {
             {/* Other Routes */}
             <Route path="further-reading" element={<FurtherReading />} />
           </Route>
-          <Route path="/rstyle" element={<RStyleGuide />} />
+          <Route path="/rstyle" element={<DataVisLayout />}>
+            <Route index element={<RStyleGuide />} />
+            <Route path="using-the-theme" element={<UsingTheTheme />} />
+            <Route path="best-practices" element={<BestPractices />} />
+          </Route>
+          
           <Route path="/api" element={<APIDocumentation />} />
         </Routes>
       </div>

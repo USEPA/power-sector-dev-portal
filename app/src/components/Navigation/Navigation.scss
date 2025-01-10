@@ -2,12 +2,23 @@
 
 // desktop
 @media (min-width: $mobile-width) {
+.top-nav {
+  padding: 1em 0;
+}
+
   .top-nav {
     .usa-nav__primary > .usa-nav__primary-item > a,
     .usa-nav__primary button[aria-expanded],
     .usa-nav__primary button[aria-expanded],
     .usa-nav__primary > .usa-nav__primary-item {
       padding: 0px;
+    }
+    
+
+    .usa-nav__primary-item {
+      svg {
+        margin: 0 !important;
+      }
     }
 
     .usa-header--basic .usa-nav-container {
@@ -67,7 +78,7 @@
 
     .usa-header--basic .usa-nav__link:hover::after,
     .usa-header--basic .usa-nav__primary-item > .usa-current::after {
-      background-color: $blue-vivid;
+      background-color: var(--vivid);
       width: 100%;
       right: 0;
       left: 0;
@@ -81,7 +92,7 @@
   .top-nav {
     .usa-nav {
       width: 100%;
-      background-color: $primary-darker;
+      background-color: var(--primary-darker);
       color: white;
       bottom: auto;
     }
@@ -110,10 +121,10 @@
       color: white;
     }
     .usa-nav__primary-item {
-      border-top: 1px solid $blue-vivid;
+      border-top: 1px solid var(--vivid);
 
       &:last-child {
-        border-bottom: 1px solid $blue-vivid;
+        border-bottom: 1px solid var(--vivid);
       }
     }
     .usa-nav__submenu-item {
@@ -138,7 +149,7 @@
         height: fit-content;
 
         svg {
-          margin: 0;
+          margin: 0 !important;
         }
       }
     }
@@ -149,7 +160,7 @@
     }
 
     .usa-current {
-      color: $blue-vivid !important;
+      color: var(--vivid) !important;
     }
 
     .backToHomeLink span {
@@ -165,7 +176,7 @@
 
 // global
 .top-nav {
-  background-color: $primary-darker;
+  background-color: var(--primary-darker);;
   width: 100%;
 
   .usa-logo {

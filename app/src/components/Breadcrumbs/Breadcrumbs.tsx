@@ -22,6 +22,8 @@ const Breadcrumbs: React.FC = () => {
     "further-reading": "Further Reading",
     api: "API Documentation",
     rstyle: "R Style Guide",
+    "using-the-theme": "Using the Theme",
+    "best-practices": "Best Practices",
   };
 
   // Split the current path into segments

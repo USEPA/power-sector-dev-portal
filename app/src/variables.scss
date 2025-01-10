@@ -1,3 +1,4 @@
+// Color variables
 $blue-vivid: #2491ff;
 $ink: #1b1b1b;
 
@@ -7,6 +8,13 @@ $primary: #005ea2;
 $primary-vivid: #0050d8;
 $primary-dark: #1a4480;
 $primary-darker: #162e51;
+$blue-warm-vivid-50v: #2672de;
+$blue-warm-vivid-70v: #1a4480;
+$green-cool-vivid-40v: #00a91c;
+$green-cool-vivid-50v: #008817;
+$green-cool-vivid-70v: #154c21;
+$green-cool-vivid-80v: #19311e;
+
 $secondary-vivid: #e41d3d;
 $base-lightest: #f0f0f0;
 $base-lighter: #dfe1e2;
@@ -15,8 +23,7 @@ $base: #71767a;
 $base-dark: #565c65;
 $base-darker: #3d4551;
 $base-darkest: #1b1b1b;
-$blue-warm-vivid-50v: #2672DE;
-$blue-warm-vivid-70v: #1A4480;
+
 $ink: #1b1b1b;
 
 $max-width: 1020px;
@@ -25,3 +32,41 @@ $max-width: 1020px;
 $font-family: "Source Sans Pro", sans-serif;
 
 $mobile-width: 63.99em;
+
+// Theme maps
+$themes: (
+  rstyle: (
+    primary: $green-cool-vivid-70v,
+    primary-vivid: $green-cool-vivid-70v,
+    primary-dark: $green-cool-vivid-70v,
+    primary-darker: $green-cool-vivid-80v,
+    vivid: $green-cool-vivid-40v,
+    vivid-50v: $green-cool-vivid-50v,
+    vivid-70v: $green-cool-vivid-70v
+  ),
+  datavis: (
+    primary: $primary,
+    primary-vivid: $primary-vivid,
+    vivid: $blue-vivid,
+    primary-dark: $primary-dark,
+    primary-darker: $primary-darker,
+    vivid-50v: $blue-warm-vivid-50v,
+    vivid-70v: $blue-warm-vivid-70v
+  ),
+  root: (
+    primary: $primary,
+    primary-vivid: $primary-vivid,
+    vivid: $blue-vivid,
+    primary-dark: $primary-dark,
+    primary-darker: $primary-darker,
+    vivid-50v: $blue-warm-vivid-50v,
+    vivid-70v: $blue-warm-vivid-70v
+  )
+);
+
+// Mixin for themes
+@mixin theme($theme-name) {
+  @each $key, $value in map-get($themes, $theme-name) {
+    --#{$key}: #{$value};
+  }
+}

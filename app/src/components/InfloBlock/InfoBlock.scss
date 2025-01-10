@@ -1,7 +1,7 @@
 @use '../../variables' as *;
 
 .info-block {
-    border-top: 1.5px solid $blue-vivid;
+    border-top: 1.5px solid var(--vivid);
 
     h3 {
         margin: .5em 0px 0px;

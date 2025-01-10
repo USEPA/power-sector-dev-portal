@@ -2,6 +2,18 @@
 // @forward "./path/to/source/uswds";
 @use "./variables" as *;
 
+:root.root {
+  @include theme(root);
+}
+
+:root.rstyle {
+  @include theme(rstyle);
+}
+
+:root.datavis {
+  @include theme(datavis);
+}
+
 :root {
   font-family: $font-family;
   line-height: 1.5;
@@ -19,13 +31,23 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
+a{
   font-weight: 700;
-  color: $primary;
+  color: var(--primary);
   text-decoration: inherit;
 }
 a:hover {
-  color: $primary;
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.usa-breadcrumb__link {
+  font-weight: 700;
+  color: var(--primary) !important;
+  text-decoration: inherit;
+}
+.usa-breadcrumb__link:hover {
+  color: var(--primary) !important;
   text-decoration: underline;
 }
 
@@ -134,7 +156,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: $primary-dark;
+  border-color: var(--primary-dark);
 }
 button:focus,
 button:focus-visible {
@@ -142,9 +164,9 @@ button:focus-visible {
 }
 
 .blue-button {
-  background-color: $blue-warm-vivid-50v !important;
+  background-color: var(--vivid-50v)!important;
   &:hover {
-   background-color:  $blue-warm-vivid-70v !important;
+   background-color:  var(--vivid-70v)!important;
   }
 }
 
@@ -177,7 +199,7 @@ row-gap: 3em;
 }
 
 .bottom-border-section {
-  border-bottom: 1.5px solid $blue-vivid;
+  border-bottom: 1.5px solid var(--vivid);
   padding-bottom: 4em;
 }
 
@@ -191,6 +213,10 @@ row-gap: 3em;
       grid-template-columns: 1fr;
 
   }
+}
+
+.usa-menu-btn {
+  background-color: var(--primary) !important;
 }
 
 
