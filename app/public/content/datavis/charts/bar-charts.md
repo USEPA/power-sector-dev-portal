@@ -99,6 +99,13 @@ sections:
       image: "/assets/images/datavis/charts/bar-and-column-charts/highlight-the-most-important-subcategory.png"
       content: Make the most important subcategory in your chart (in this example, the blue) easy to identify and compare across categories by pulling it to the zero axis of the chart.
       type: "do"
+  - title: "Example Charts"
+  - title: "Figure 1: Stacked Column Chart Example"
+    level: 4
+    image: "/assets/images/datavis/charts/bar-and-column-charts/example-1.png"
+  - title: "Figure 2: Bar Chart Example with One Category Highlighted using Color"
+    level: 4
+    image: "/assets/images/datavis/charts/bar-and-column-charts/example-2.png"
 
 
  
