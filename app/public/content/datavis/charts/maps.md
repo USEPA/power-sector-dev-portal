@@ -18,13 +18,13 @@ sections:
     content: |
       Use a choropleth map when your data can be normalized and aggregated up to a common geographic boundary, such as counties or states. The focus with this type of map is on how a variable affects place.
   - title: "Best Practices"
-    level: 4
+    level: 3
     content: |
       - Your map’s text should have high contrast with your basemap, but with an outline that’s a similar shade; this helps makes it readable against any map elements.
           - Text should sit on top of any additional layers so it stays legible.
       - In general, if your data is not already expressed in terms of percentages or rates, you should normalize it. This helps to avoid allowing the size or population of your geography to skew perceptions of the data. For ­example, if you’re producing a map that shows impacts of emissions on different populations, using data per capita will make comparisons between block groups, counties, or states easier than using raw counts.
   - title: "Examples of Best Practices"
-    level: 4 
+    level: 3 
     cards:
     - title: "Text"
       image: "/assets/images/datavis/charts/maps/choropleth-text-do.png"
@@ -35,7 +35,7 @@ sections:
       content: Data should typically be normalized if not already expressed in rates or percentages.
       type: "do"
   - title: "Things to Avoid"
-    level: 4 
+    level: 3 
     cards:
     - title: "Text"
       image: "/assets/images/datavis/charts/maps/choropleth-text-do-not.png"
@@ -89,17 +89,68 @@ sections:
       - If using icons, keep them simple, high-contrast, and fixed-size in relation to the data they represent (they can scale slightly while zooming in and out for legibility)
         - Do not scale icons relative to the data. (It’s hard for people to gauge differences in size of irregular objects.)
   - title: "Examples of Best Practices"
-    level: 4 
+    level: 3 
     cards:
     - title: "Icons"
       image: "/assets/images/datavis/charts/maps/point-icons-do.png"
       content: Keep icons simple and high-contrast against your map’s otherl ayers.
       type: "do"
   - title: "Things to Avoid"
-    level: 4 
+    level: 3 
     cards:
     - title: "Icons"
       image: "/assets/images/datavis/charts/maps/point-icons-do-not.png"
       content: Don’t scale icons to show changes in your data.
       type: "do-not"
+  - title: "Bubble Maps"
+    level: 2
+    content: |
+      If your data cannot or should not be normalized or aggregated to broader geographic areas, you can use a point or bubble map to show it. Bubble maps are best for showing amounts in addition to specific, point-based locations. They’re also good for visualizing information about absolute numbers. For example, to visualize emissions from the power plants you identified in a point map, you could use bubbles to represent tons of emissions.
+  - title: "Best Practices"
+    level: 3
+    content: |
+      - Bubbles should be a little bit see-through (their opacity should be less than 100%).
+      - Data should map to bubble area, not radius. This should always be made clear in a legend.
+      - If possible, adjust the scale for bubble sizes when data is filtered so the full extent of the scale is being used.
+      - Don’t use more than one characteristic (e.g., both color and size) to encode the same variable. For example, if emissions are being shown by the size of the bubbles, you don’t also need to add a color scale to show the same thing.
+  - title: "Examples of Best Practices"
+    level: 3
+    cards:
+    - title: "Opacity"
+      image: "/assets/images/datavis/charts/maps/bubble-opacity-do.png"
+      content: Bubbles should be a little see-through to allow users to interpret overlaps.
+      type: "do"
+    - title: "Data Mapping"
+      image: "/assets/images/datavis/charts/maps/bubble-mapping-do.png"
+      content: Data should be encoded in a bubble’s radius, not its area. A legend should make this clear.
+      type: "do"
+    - title: "Data Encoding"
+      image: "/assets/images/datavis/charts/maps/bubble-encoding-do.png"
+      content: Use one characteristic to represent one variable.
+      type: "do"
+  - title: "Things to Avoid"
+    level: 3
+    cards:
+    - title: "Opacity"
+      image: "/assets/images/datavis/charts/maps/bubble-opacity-do-not.png"
+      content: Don’t make your bubbles 100% opaque or larger ones might block smaller, underlying ones. (In this example, a smaller bubble near the bottom left corner of the image is being occluded by a larger one.)
+      type: "do-not"
+    - title: "Data Mapping"
+      image: "/assets/images/datavis/charts/maps/bubble-mapping-do-not.png"
+      content: Do not encode data in a bubble’s area, doing so inappropriately magnifies differences in the data.
+      type: "do-not"
+    - title: "Data Encoding"
+      image: "/assets/images/datavis/charts/maps/bubble-encoding-do-not.png"
+      content: Don’t use more than one characteristic (in this example, both size and opacity) to represent the same variable.
+      type: "do-not"
+  - title: "Example Charts"
+    level: 3
+  - title: "Figure 1: Single-Variable Choropleth Map Example"
+    level: 4
+    image: "/assets/images/datavis/charts/maps/example-1.png"    
+  - title: "Figure 2: Icon Map Example"
+    level: 4
+    image: "/assets/images/datavis/charts/maps/example-2.png"
+
+
  

@@ -175,6 +175,11 @@ svg {
   margin: 1em 0;
 }
 
+.section-image {
+  border-radius: 5px;
+  border: 2px solid $base;
+}
+
 // custom components //
 
 .grid {
