@@ -69,6 +69,18 @@ const Symbology: React.FC = () => {
                   ))}
                 </div>
               )}
+
+              {section.downloads && section.downloads.length > 0 && (
+                <>
+                  {section.downloads.map((download) => (
+                    <p>
+                      <a href={download.link} download>
+                        {download.title}
+                      </a>
+                    </p>
+                  ))}
+                </>
+              )}
             </>
           ))}
         </main>

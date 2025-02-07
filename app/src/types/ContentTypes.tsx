@@ -7,6 +7,12 @@ export interface Card {
   type: 'do' | 'do-not'; 
 }
 
+export interface Download {
+  title?: string;
+  link?: string;
+}
+
+
   
 export interface Section {
   title?: string;
@@ -15,6 +21,7 @@ export interface Section {
   imagemb?: string;
   level?: number;
   cards?: Card[]; 
+  downloads?: Download[];
 }
 
   
