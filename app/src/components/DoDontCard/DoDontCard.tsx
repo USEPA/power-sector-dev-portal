@@ -6,7 +6,7 @@ import SVGRenderer from './../SvgRenderer/SvgRenderer';
 import ReactMarkdown from 'react-markdown';
 
 interface DoDontCardProps {
-  type: 'do' | 'do-not' | 'default';
+  type: 'do' | 'do not' | 'default';
   title?: string;
   content?: string;
   image?: string;
@@ -14,11 +14,11 @@ interface DoDontCardProps {
 
 const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) => {
   return (
-    <div className={`do-dont-card ${type === 'do' ? 'card-do' : type === 'do-not' ? 'card-do-not' : ''}`}>
+    <div className={`do-dont-card ${type === 'do' ? 'card-do' : type === 'do not' ? 'card-do-not' : ''}`}>
     <div className="card-icon">
       {type === 'do' ? (
         <CheckCircleIcon sx={{ color: '#0050d8', fontSize: '1.5rem' }} />
-      ) : type === 'do-not' ? (
+      ) : type === 'do not' ? (
         <CancelIcon sx={{ color: '#E41D3D', fontSize: '1.5rem' }} />
       ) : ''}
     </div>

@@ -52,7 +52,6 @@ const Symbology: React.FC = () => {
                   <img
                     src={section.image}
                     alt={section.title}
-                    className="section-image"
                   />
                 ))}
 

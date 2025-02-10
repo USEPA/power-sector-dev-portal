@@ -4,7 +4,7 @@ export interface Card {
   link?: string;
   image: string;
   imagemb?: string;
-  type: 'do' | 'do-not'; 
+  type: 'do' | 'do not'; 
 }
 
 export interface Download {
