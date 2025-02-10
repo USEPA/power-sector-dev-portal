@@ -71,11 +71,11 @@ sections:
   - title: "Icon Set B"
     level: 3
     content: |
-       This set of icons is simper and thus best suited for visualizations such as maps and charts. Beyond the plain black version (pictured below), this set has a variety of color variants for use in different scenarios."
+       This set of icons is simper and thus best suited for visualizations such as maps and charts. Beyond the plain black version (pictured below), this set has a variety of color variants for use in different scenarios.
     downloads:
     - title: "Download Icon Set B (Plain Black)"
       link: "/assets/images/datavis/design-elements/symbology/set-b-plain-black.zip"
     - title: "Download Icon Set B (Color Variant)"
-      link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant-download.svg"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
     - title: "Download Icon Set B (3 sets of Fuel Type Colors)"
-      link: "/assets/images/datavis/design-elements/symbology/set-b-three-sets-download.svg"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-three-sets.zip"
