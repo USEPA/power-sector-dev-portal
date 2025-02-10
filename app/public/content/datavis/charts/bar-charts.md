@@ -6,7 +6,23 @@ introContent: |
         Bar and column charts are most useful when you have data you want to compare across categories on a nominal or ordinal scale or when you have time-based data that is measured discreetly (for example, changes in emissions that are only measured once a year).
 
         If each category has multiple data points associated with it that you want to call out, you may want to use a boxplot or other chart type. Similarly, if you have a large number of categories, using a lollipop chart can help reduce clutter.
+
 sections:
+  - title: "General Bar and Column Chart Guidance"
+    content: |
+        - Use the y-axis to measure the quantitative variable with vertical, upright bars.
+        - Your y-axis should start at zero with this chart type.
+        - Keep category names short. Use this chart type if your categories are years or times.
+        - Center-align your category labels when using this chart type.
+    cards:
+    - title: "Sorting"
+      image: "/assets/images/datavis/charts/bar-and-column-charts/sorting.png"
+      content: Sorting bars or columns by value helps make patterns more obvious and can help highlight important values. There are some cases when sorting by value doesn’t make sense, for example if you have columns that represent points in time.
+      type: "default"
+    - title: "“Anchors”"
+      image: "/assets/images/datavis/charts/bar-and-column-charts/anchors.png"
+      content: Different tools may allow for different ways of presenting “anchors” (such as averages) as comparisons; these can add helpful context to your data points, but aren’t always necessary.
+      type: "default"
   - title: "Column Chart"
     level: 3
   - title: "Best Practices"
@@ -102,10 +118,10 @@ sections:
   - title: "Example Charts"
   - title: "Figure 1: Stacked Column Chart Example"
     level: 4
-    image: "/assets/images/datavis/charts/bar-and-column-charts/example-1.png"
+    image: "/assets/images/datavis/charts/bar-and-column-charts/example-1.svg"
   - title: "Figure 2: Bar Chart Example with One Category Highlighted using Color"
     level: 4
-    image: "/assets/images/datavis/charts/bar-and-column-charts/example-2.png"
+    image: "/assets/images/datavis/charts/bar-and-column-charts/example-2.svg"
 
 
  
