@@ -147,10 +147,10 @@ sections:
     level: 3
   - title: "Figure 1: Single-Variable Choropleth Map Example"
     level: 4
-    image: "/assets/images/datavis/charts/maps/example-1.png"    
+    image: "/assets/images/datavis/charts/maps/example-1.svg"    
   - title: "Figure 2: Icon Map Example"
     level: 4
-    image: "/assets/images/datavis/charts/maps/example-2.png"
+    image: "/assets/images/datavis/charts/maps/example-2.svg"
 
 
  
