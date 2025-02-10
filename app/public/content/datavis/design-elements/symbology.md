@@ -63,10 +63,11 @@ sections:
     level: 3
     content: |
        This set of icons is best suited for non-data-visualization uses, such as illustrative icons on websites. While the plain black version (pictured below) can be used in most cases, there are also additional two-color variant sets available.
-
-        [Download Icon Set A (Plain Black)](/assets/images/datavis/design-elements/symbology/set-a-plain-black-download.svg)
-
-        [Download Icon Set A (Color Variant)](/assets/images/datavis/design-elements/symbology/set-a-color-variant-download.svg)
+    downloads:
+    - title: "Download Icon Set A (Plain Black)"
+      link: "/assets/images/datavis/design-elements/symbology/set-a-plain-black.zip"
+    - title: "Download Icon Set A (Color Variant)"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
     image: "/assets/images/datavis/design-elements/symbology/set-a.svg"
   - title: "Icon Set B"
     level: 3
