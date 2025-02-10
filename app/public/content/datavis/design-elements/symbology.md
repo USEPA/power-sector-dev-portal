@@ -80,3 +80,4 @@ sections:
       link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
     - title: "Download Icon Set B (3 sets of Fuel Type Colors)"
       link: "/assets/images/datavis/design-elements/symbology/set-b-three-sets.zip"
+    image: "/assets/images/datavis/design-elements/symbology/set-b.svg"
