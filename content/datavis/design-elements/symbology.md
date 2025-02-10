@@ -63,19 +63,21 @@ sections:
     level: 3
     content: |
        This set of icons is best suited for non-data-visualization uses, such as illustrative icons on websites. While the plain black version (pictured below) can be used in most cases, there are also additional two-color variant sets available.
-
-        [Download Icon Set A (Plain Black)](/assets/images/datavis/design-elements/symbology/set-a-plain-black-download.svg)
-
-        [Download Icon Set A (Color Variant)](/assets/images/datavis/design-elements/symbology/set-a-color-variant-download.svg)
+    downloads:
+    - title: "Download Icon Set A (Plain Black)"
+      link: "/assets/images/datavis/design-elements/symbology/set-a-plain-black.zip"
+    - title: "Download Icon Set A (Color Variant)"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
     image: "/assets/images/datavis/design-elements/symbology/set-a.svg"
   - title: "Icon Set B"
     level: 3
     content: |
        This set of icons is simper and thus best suited for visualizations such as maps and charts. Beyond the plain black version (pictured below), this set has a variety of color variants for use in different scenarios.
-
-        [Download Icon Set B (Plain Black)](/assets/images/datavis/design-elements/symbology/set-b-plain-black-download.svg)
-
-        [Download Icon Set B (Color Variant)](/assets/images/datavis/design-elements/symbology/set-b-color-variant-download.svg)
-
-        [Download Icon Set B (3 sets of Fuel Type Colors)](/assets/images/datavis/design-elements/symbology/set-b-three-sets-download.svg)
+    downloads:
+    - title: "Download Icon Set B (Plain Black)"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-plain-black.zip"
+    - title: "Download Icon Set B (Color Variant)"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
+    - title: "Download Icon Set B (3 sets of Fuel Type Colors)"
+      link: "/assets/images/datavis/design-elements/symbology/set-b-three-sets.zip"
     image: "/assets/images/datavis/design-elements/symbology/set-b.svg"

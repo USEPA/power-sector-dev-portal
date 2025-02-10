@@ -40,11 +40,11 @@ sections:
     - title: "Text"
       image: "/assets/images/datavis/charts/maps/choropleth-text-do-not.png"
       content: Text should not sit underneath other layers, lack a border, or have a low-contrast color.
-      type: "do-not"
+      type: "do not"
     - title: "Data"
       image: "/assets/images/datavis/charts/maps/choropleth-data-do-not.png"
       content: Don’t plot raw counts on a map (unless the focus is purely on population, for example).
-      type: "do-not"
+      type: "do not"
   - title: "Color Palettes"
     level: 3 
     content: |
@@ -101,7 +101,7 @@ sections:
     - title: "Icons"
       image: "/assets/images/datavis/charts/maps/point-icons-do-not.png"
       content: Don’t scale icons to show changes in your data.
-      type: "do-not"
+      type: "do not"
   - title: "Bubble Maps"
     level: 2
     content: |
@@ -134,23 +134,23 @@ sections:
     - title: "Opacity"
       image: "/assets/images/datavis/charts/maps/bubble-opacity-do-not.png"
       content: Don’t make your bubbles 100% opaque or larger ones might block smaller, underlying ones. (In this example, a smaller bubble near the bottom left corner of the image is being occluded by a larger one.)
-      type: "do-not"
+      type: "do not"
     - title: "Data Mapping"
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do-not.png"
       content: Do not encode data in a bubble’s area, doing so inappropriately magnifies differences in the data.
-      type: "do-not"
+      type: "do not"
     - title: "Data Encoding"
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do-not.png"
       content: Don’t use more than one characteristic (in this example, both size and opacity) to represent the same variable.
-      type: "do-not"
+      type: "do not"
   - title: "Example Charts"
     level: 3
   - title: "Figure 1: Single-Variable Choropleth Map Example"
     level: 4
-    image: "/assets/images/datavis/charts/maps/example-1.png"    
+    image: "/assets/images/datavis/charts/maps/example-1.svg"    
   - title: "Figure 2: Icon Map Example"
     level: 4
-    image: "/assets/images/datavis/charts/maps/example-2.png"
+    image: "/assets/images/datavis/charts/maps/example-2.svg"
 
 
  
