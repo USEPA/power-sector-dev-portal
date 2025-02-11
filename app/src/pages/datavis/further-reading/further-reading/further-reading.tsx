@@ -36,6 +36,7 @@ const FurtherReading: React.FC = () => {
                   title={card.title}
                   content={card.content}
                   link={card.link}
+                  type="visit"
                 />
               ))}
             </div>
