@@ -10,6 +10,11 @@ sections:
       Color can be used to encode meaning in numerous ways, but it should be used sparingly when possible and in accordance with accessibility best practices (outlined in the next section). In general, think about what color(s) or color palette you want to use based on the aspect of the visualization you want to call attention to.
 
       In some cases, color can be used to draw attention to important parts of a chart without overwhelming the user by employing it as a highlight. For example, if you are producing a trend chart that contains multiple lines and you want users to attend to one specific line, a single color can be used to highlight that line of interest to distinguish it from the rest. This is often more productive than applying different colors to each line and asking users to direct their attention through the maze of encodings to the line you want them to pay attention to.
+    cards:
+    - title: "Color as Highlight"
+      image: "/assets/images/datavis/design-elements/color/color-as-highlight.png"
+      content: "Strategic use of color can emphasize certain data points over others."
+      type: "default"  
   - title: "Color and Accessibility"
     level: 3
   - title: "Contrast"
