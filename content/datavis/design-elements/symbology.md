@@ -5,7 +5,7 @@ introTitle: "Introduction"
 introContent: | 
         Icons and symbology can be useful tools when making data visualizations more accessible and engaging. Icons, shapes, and modifications to opacity or lines can allow people to understand your visualization without relying on color alone. 
 sections:
-  - title: "Symbology Best Practices"
+  - title: Symbology Best Practices
     level: 2
     content: |
         - Don’t scale icons with data; it’s hard for people to gauge differences in size of non-standard shapes.
