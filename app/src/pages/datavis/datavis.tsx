@@ -20,7 +20,7 @@ const DataVisualization: React.FC = () => {
   }
 
   return (
-    <div className=" grey-container">
+    <div className="page grey-container">
      <Banner title={title} tagline={tagline} level="level1" />
       <div className="container">
         <div className="intro-section bottom-border-section">

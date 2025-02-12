@@ -21,7 +21,7 @@ const Principles: React.FC = () => {
   }
 
   return (
-    <div className="principles-page">
+    <div className="page">
       <Banner title={title} tagline={tagline} level="level2" />
       <div className="container">
         <div className="intro-section">

@@ -19,7 +19,7 @@ const FurtherReading: React.FC = () => {
   }
 
   return (
-    <div className="further-reading-page">
+    <div className="page">
       <Banner title={title} tagline={tagline} level="level2" />
       <div className="container">
         <div className="intro-section">

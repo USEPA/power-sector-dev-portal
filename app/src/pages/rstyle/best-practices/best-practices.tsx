@@ -17,7 +17,7 @@ const BestPractices: React.FC = () => {
   }
 
   return (
-    <div className="best-practices-page">
+    <div className="page">
       <div className="container">
         <div className="intro-section">
           <h2>{introTitle}</h2>

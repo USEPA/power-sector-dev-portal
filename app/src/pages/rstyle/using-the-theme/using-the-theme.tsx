@@ -16,7 +16,7 @@ const UsingTheTheme: React.FC = () => {
   }
 
   return (
-    <div className="using-the-theme-page">
+    <div className="page">
       <div className="container">
         <div className="intro-section">
           <h2>{introTitle}</h2>

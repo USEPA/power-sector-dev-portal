@@ -19,7 +19,7 @@ const DesignElements: React.FC = () => {
   }
 
   return (
-    <div className="design-elements-page">
+    <div className="page">
       <Banner title={title} tagline={tagline} level="level2" />
       <div className="container">
         <div className="intro-section">
