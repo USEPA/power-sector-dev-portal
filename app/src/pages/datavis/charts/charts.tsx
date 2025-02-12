@@ -54,12 +54,10 @@ const Charts: React.FC = () => {
                     <div className="card-content">
                       <h4>{card.title}</h4>
                       <p>{card.content}</p>
-                      {card.link ? (
+                      {card.link && (
                         <Link to={card.link}>
                           Learn about {card.title} <ArrowForwardIcon />
                         </Link>
-                      ) : (
-                        " "
                       )}
                     </div>
                   </div>
