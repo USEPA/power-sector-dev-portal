@@ -36,14 +36,17 @@ function App() {
       const root = document.documentElement; 
 
       // Remove any previously added classes
-      root.classList.remove("rstyle", "datavis", "root");
+      root.classList.remove("rstyle", "datavis", "api", "root");
 
       // Add the class based on the current route
       if (location.pathname.startsWith("/rstyle")) {
         root.classList.add("rstyle");
       } else if (location.pathname.startsWith("/datavis")) {
         root.classList.add("datavis");
-      } else {
+      } else if (location.pathname.startsWith("/api")) {
+        root.classList.add("api");
+      } 
+      else {
         root.classList.add("root");
       }
     }, [location]);

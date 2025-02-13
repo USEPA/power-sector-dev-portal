@@ -14,9 +14,16 @@ $green-cool-vivid-40v: #00a91c;
 $green-cool-vivid-50v: #008817;
 $green-cool-vivid-70v: #154c21;
 $green-cool-vivid-80v: #19311e;
-
-
+$secondary-lighter: #f3e1e4;
+$secondary-light: #f2938c;
+$secondary: #d83933;
 $secondary-vivid: #e41d3d;
+$red-40: #E9695F;
+$red-50: #D83933;
+$red-70: #6F3331;
+$red-80: #3E2927;
+
+
 $base-lightest: #f0f0f0;
 $base-lighter: #dfe1e2;
 $base-light: #a9aeb1;
@@ -53,6 +60,15 @@ $themes: (
     primary-darker: $primary-darker,
     vivid-50v: $blue-warm-vivid-50v,
     vivid-70v: $blue-warm-vivid-70v
+  ),
+  api: (
+    primary: $red-70,
+    primary-vivid:$red-70,
+    primary-dark: $red-70,
+    primary-darker: $red-80,
+    vivid: $red-40,
+    vivid-50v: $red-50,
+    vivid-70v: $red-70,
   ),
   root: (
     primary: mix($primary, $base, 50%),
