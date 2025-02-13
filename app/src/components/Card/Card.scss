@@ -1,9 +1,23 @@
-.card {
-    background-color: white;
-    padding: 0 1.2em 1.2em;
-    border-radius: 5px;
+@use "../../variables" as *;
 
-    .content {
-        padding-bottom: .5em;
-    }
+.card {
+  background-color: white;
+  padding: 0 1.2em 1.2em;
+  border-radius: 5px;
+
+  .content {
+    padding-bottom: 0.5em;
+  }
+}
+
+.rStyleGuide {
+  border-top: 2.5px solid $green-cool-vivid-70v;
+}
+
+.dataVisualizationStyleGuide {
+  border-top: 2.5px solid $primary;
+}
+
+.api {
+  border-top: 2.5px solid $red-70;
 }
