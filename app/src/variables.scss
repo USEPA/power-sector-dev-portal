@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Color variables
 $blue-vivid: #2491ff;
 $ink: #1b1b1b;
@@ -71,13 +73,13 @@ $themes: (
     vivid-70v: $red-70,
   ),
   root: (
-    primary: mix($primary, $base, 50%),
-    primary-vivid: mix( $primary-vivid, $base, 50%),
-    vivid:  mix($blue-vivid, $base, 50%),
-    primary-dark:  mix($primary-dark, $base, 50%),
-    primary-darker:  mix($primary-darker, $base, 50%),
-    vivid-50v:  mix($blue-warm-vivid-50v, $base, 50%),
-    vivid-70v:  mix($blue-warm-vivid-70v, $base, 50%),
+    primary: color.mix($primary, $base, 50%),
+    primary-vivid: color.mix($primary-vivid, $base, 50%),
+    vivid: color.mix($blue-vivid, $base, 50%),
+    primary-dark: color.mix($primary-dark, $base, 50%),
+    primary-darker: color.mix($primary-darker, $base, 50%),
+    vivid-50v: color.mix($blue-warm-vivid-50v, $base, 50%),
+    vivid-70v: color.mix($blue-warm-vivid-70v, $base, 50%),
   )
 );
 
