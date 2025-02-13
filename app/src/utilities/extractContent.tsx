@@ -23,12 +23,16 @@ export function extractBanner(content: string) {
 }
 
 export function extractIntro(content: string) {
-  const parsedContent = matter(content);
-  const introContent = parsedContent.data.introContent || [];
-  
-  
-  return {
-    introTitle: parsedContent.data.introTitle,
-    introContent: introContent, 
-  };
+  try {
+    const parsedContent = matter(content);
+    return {
+      introTitle: parsedContent.data.introTitle || "", 
+      introContent: parsedContent.data.introContent || "", 
+    };
+  } catch (error) {
+    console.error("Error parsing intro content:", error);
+    return { introTitle: "", introContent: "" }; 
+  }
 }
+
+

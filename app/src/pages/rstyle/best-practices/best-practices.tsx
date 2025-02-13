@@ -1,15 +1,27 @@
-import React from 'react';
-import useMarkdownContent from '../../../hooks/useMarkdownContent';
-import InfoBlock from '../../../components/InfloBlock/InfoBlock';
-import { extractIntro, extractSections } from '../../../utilities/extractContent';
-import { Section } from '../../../types/ContentTypes';
-import './best-practices.scss';
+import React from "react";
+import useMarkdownContent from "../../../hooks/useMarkdownContent";
+import {
+  extractBanner,
+  extractIntro,
+  extractSections,
+} from "../../../utilities/extractContent";
+import { Section } from "../../../types/ContentTypes";
+import ReactMarkdown from "react-markdown";
+import renderHeader from "../../../utilities/renderContent";
+import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
+import DoDontCard from "../../../components/DoDontCard/DoDontCard";
+import SideNav from "../../../components/SideNav/SideNav";
 
 const BestPractices: React.FC = () => {
   const base = import.meta.env.BASE_URL;
-  const { content, error } = useMarkdownContent(`${base}content/rstyle/best-practices/best-practices.md`);
+  const { content, error } = useMarkdownContent(
+    `${base}content/rstyle/best-practices/best-practices.md`
+  );
+  const { title } = content ? extractBanner(content) : { title: "" };
+  const { introTitle, introContent } = content
+    ? extractIntro(content)
+    : { introTitle: "", introContent: "" };
 
-  const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
   const sections: Section[] = content ? extractSections(content) : [];
 
   if (error) {
@@ -18,27 +30,54 @@ const BestPractices: React.FC = () => {
 
   return (
     <div className="page">
-      <div className="container">
-        <div className="intro-section">
-          <h2>{introTitle}</h2>
-          <p>{introContent}</p>
-        </div>
-        {sections.map((section, index) => (
-          <div key={index} className="section">
-            <h3>{section.title}</h3>
-            <div className="grid grid-col--one">
-            {section.cards && section.cards.map((card, idx) => (
-                <InfoBlock
-                  key={idx}
-                  title={card.title}
-                  content={card.content}
-                  link={card.link}
-                  type="visit"
-                />
-              ))}
-            </div>
+      <div className="usa-in-page-nav-container container-with-sidenav">
+        <main id="main-content" className="main-content">
+          <div className="intro-section">
+            <h1>{title}</h1>
+            {(introTitle || introContent) && (
+              <div className="intro-section">
+                {introTitle && <h2>{introTitle}</h2>}
+                {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
+              </div>
+            )}
           </div>
-        ))}
+
+          {sections.map((section, idx) => (
+            <div key={idx}>
+              {section.title && renderHeader(section.title, section.level || 3)}
+              {section.content && (
+                <div>
+                  <ReactMarkdown>{section.content}</ReactMarkdown>
+                </div>
+              )}
+              {section.image &&
+                (section.image?.endsWith(".svg") ? (
+                  <SVGRenderer src={section.image} alt={section.title} />
+                ) : (
+                  <img
+                    src={section.image}
+                    alt={section.title}
+                    className="section-image"
+                  />
+                ))}
+
+              {section.cards && section.cards.length > 0 && (
+                <div className="cards-container">
+                  {section.cards.map((card, cardIdx) => (
+                    <DoDontCard
+                      key={cardIdx}
+                      type={card.type}
+                      title={card.title}
+                      content={card.content}
+                      image={card.image}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </main>
+        <SideNav />
       </div>
     </div>
   );
