@@ -2,12 +2,12 @@ import {
   HashRouter as Router,
   Routes,
   Route,
-  Link,
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
 import "./assets/css/styles.css";
+import OpenSourceResourceHub from './pages/open-source-resource-hub';
 import DataVisualization from "./pages/datavis/datavis";
 import Navigation from "./components/Navigation/Navigation";
 import DataVisLayout from "./layouts/dataVisLayout";
@@ -57,22 +57,9 @@ function App() {
         <DynamicTheme />
         <Navigation />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <ul>
-                <li>
-                  <Link to="/datavis">Data Visualization Style Guide</Link>
-                </li>
-                <li>
-                  <Link to="rstyle">R Style Guide</Link>
-                </li>
-                <li>
-                  <Link to="/api">API</Link>
-                </li>
-              </ul>
-            }
-          />
+          <Route path="/" element={<DataVisLayout />}>
+          <Route index element={<OpenSourceResourceHub />} />
+          </Route>
           <Route path="/datavis" element={<DataVisLayout />}>
             <Route index element={<DataVisualization />} />
             <Route path="principles" element={<Principles />} />
