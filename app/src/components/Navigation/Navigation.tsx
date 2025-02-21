@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
   };
 
   // Usage
-  const { route, title, isDatavisRoute, isApiRoute, isRStyleRoute } =
+  const { route, title, isDatavisRoute, isApiRoute, isRStyleRoute, isHomeRoute } =
     getPageInfo();
 
   // Function to toggle section open/closed
@@ -383,7 +383,7 @@ const Navigation: React.FC = () => {
         </header>
       </div>
       
-       <Breadcrumbs />
+       {!isHomeRoute && <Breadcrumbs />}
     
     </>
   );
