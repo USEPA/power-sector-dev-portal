@@ -13,44 +13,50 @@ const getClassNameFromTitle = (title?: string): string => {
 
   const allowedTitles = [
     "Data Visualization Style Guide",
-    "R Style Guide",
+    "Custom CAPD ggplot2 Theme",
     "API",
   ];
 
   if (allowedTitles.includes(title)) {
     return title
-      .split(" ") 
+      .split(" ")
       .map((word, index) =>
         index === 0
           ? word.toLowerCase()
           : word.charAt(0).toUpperCase() + word.slice(1)
       )
-      .join(""); 
+      .join("");
   }
 
   return "";
 };
 
 const Card: React.FC<CardProps> = ({ title, content, link }) => {
-  const { pathname } = useLocation(); 
+  const { pathname } = useLocation();
   const className = pathname === "/" ? getClassNameFromTitle(title) : "";
 
   return (
     <div className={`card ${className}`}>
       <h3>{title}</h3>
-      {content && <p className="content">{content}</p>}
-      {link && (
-        <Link to={link} className="usa-button blue-button">
-          {title === "Principles"
-            ? "Read the Principles"
-            : title === "Design Elements"
-            ? "Learn About Design Elements"
-            : title === "Charts"
-            ? "Choose a Chart"
-            : title === "Further Readings"
-            ? "Find Further Readings"
-            : `Go to ${title}`}
-        </Link>
+      {content != "Coming soon" ? (
+        <>
+          {content && <p className="content">{content}</p>}
+          {link && (
+            <Link to={link} className="usa-button blue-button">
+              {title === "Principles"
+                ? "Read the Principles"
+                : title === "Design Elements"
+                ? "Learn About Design Elements"
+                : title === "Charts"
+                ? "Choose a Chart"
+                : title === "Further Readings"
+                ? "Find Further Readings"
+                : `Go to ${title}`}
+            </Link>
+          )}
+        </>
+      ) : (
+        <p><i>{content}</i></p>
       )}
     </div>
   );
