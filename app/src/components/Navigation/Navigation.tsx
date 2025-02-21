@@ -13,6 +13,10 @@ const Navigation: React.FC = () => {
   const dropdownRef = useRef<HTMLUListElement | null>(null);
   const isMobileView = useIsMobile();
 
+  useEffect(() => {
+    setExpandedSection(null);
+  }, [location]);
+
   const getPageInfo = () => {
     if (location.pathname.startsWith("/datavis")) {
       return {
