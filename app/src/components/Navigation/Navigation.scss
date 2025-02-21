@@ -4,8 +4,9 @@
 @media (min-width: $mobile-width) {
 .top-nav {
   padding: 1em 0;
-  top: 0;
-  position:fixed;
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
 }
 
   .top-nav {
