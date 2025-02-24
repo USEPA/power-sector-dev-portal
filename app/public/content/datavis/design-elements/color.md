@@ -32,12 +32,12 @@ sections:
   - title: "Sequential Palette"
     level: 3
     content: |
-      Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO2 emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case **#274863**, the darkest of this palette) to be accessible.
+      Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO² emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case **#274863**, the darkest of this palette) to be accessible.
     image: "/assets/images/datavis/design-elements/color/sequential-palettes.svg"
-  - title: "Diverging Palette"
+  - title: "Divergent Palettes"
     level: 3
     content: |
-     If your quantitative data has a clear “midpoint” or “neutral” value, a divergent scale can highlight deviations from that point. For example, a choropleth map showing differences between states’ total CO2 emissions and the national average for those emissions might use a divergent color scale. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case **#274863**, **#78312**, or **#5C410A**, the darkest of these palettes) to be accessible.
+     If your quantitative data has a clear “midpoint” or “neutral” value, a divergent scale can highlight deviations from that point. For example, a choropleth map showing differences between states’ total CO² emissions and the national average for those emissions might use a divergent color scale. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case **#274863**, **#78312**, or **#5C410A**, the darkest of these palettes) to be accessible.
   - title: "Divergent Palette 1"
     level: 4
     image: "/assets/images/datavis/design-elements/color/divergent-palette-1.svg"
