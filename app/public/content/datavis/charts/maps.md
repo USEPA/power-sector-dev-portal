@@ -34,7 +34,7 @@ sections:
       image: "/assets/images/datavis/charts/maps/choropleth-data-do.png"
       content: Data should typically be normalized if not already expressed in rates or percentages.
       type: "do"
-  - title: "Things to Avoid"
+  - title: "Things to Avoid" 
     level: 3 
     cards:
     - title: "Text"
@@ -49,6 +49,8 @@ sections:
     level: 3 
     content: |
       Use different color palettes depending on how many variables and what kinds of changes to them you want to show in your choropleth map.
+
+      You can read about these palettes in more detail and grab specific hex codes on the [Color page](#/datavis/design-elements/color) of this guide.
     cards:
     - title: "Sequential Palette"
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-sequential.png"
