@@ -1,6 +1,6 @@
 ---
 title: "Area Charts"
-tagline: ""
+tagline: "Note: all charts on this page are for illustrative purposes only and are not based on real data."
 introTitle: "Introduction"
 introContent: | 
        We generally don’t recommend using area charts or stacked area charts for most scenarios. The former can suffer from some data “hiding” or occluding other data, while the latter looks misleadingly like a series of trend lines but cannot accurately be read as such because most lines lacks a consistent baseline. However, if you do decide to use either chart type, there are ways to make them more legible.

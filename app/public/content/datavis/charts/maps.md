@@ -1,6 +1,6 @@
 ---
 title: "Maps"
-tagline: ""
+tagline: "Note: all charts on this page are for illustrative purposes only and are not based on real data."
 introTitle: "Introduction"
 introContent: | 
         Maps are most useful when you have data that needs to be communicated geographically: when patterns or trends in the data exist along geographies.

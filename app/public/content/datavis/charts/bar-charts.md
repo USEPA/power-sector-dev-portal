@@ -1,6 +1,6 @@
 ---
 title: "Bar and Column Charts"
-tagline: ""
+tagline: "Note: all charts on this page are for illustrative purposes only and are not based on real data."
 introTitle: "Introduction"
 introContent: | 
         Bar and column charts are most useful when you have data you want to compare across categories on a nominal or ordinal scale or when you have time-based data that is measured discreetly (for example, changes in emissions that are only measured once a year).

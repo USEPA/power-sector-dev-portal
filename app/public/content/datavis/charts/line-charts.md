@@ -1,6 +1,6 @@
 ---
 title: "Line Charts"
-tagline: ""
+tagline: "Note: all charts on this page are for illustrative purposes only and are not based on real data."
 introTitle: "Introduction"
 introContent: | 
         Line charts are most useful when you want to show trends over time in continuous, quantitative data. If you have more than five or six categories, you might want to consider a different chart type or highlight only a few lines, as charts with too many lines can become confusing to read.

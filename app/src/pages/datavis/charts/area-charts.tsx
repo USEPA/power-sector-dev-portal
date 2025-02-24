@@ -16,7 +16,7 @@ const AreaCharts: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(`${base}content/datavis/charts/area-charts.md`
   );
-  const { title } = content ? extractBanner(content) : { title: "" };
+  const { title, tagline } = content ? extractBanner(content) : { title: "", tagline: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)
     : { introTitle: "", introContent: "" };
@@ -33,6 +33,7 @@ const AreaCharts: React.FC = () => {
          <main id="main-content" className="main-content">
         <div className="intro-section">
           <h1>{title}</h1>
+          <p><i>{tagline}</i></p>
           <h2>{introTitle}</h2>
           {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
         </div>

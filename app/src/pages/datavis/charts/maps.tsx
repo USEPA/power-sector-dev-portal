@@ -15,7 +15,7 @@ import SideNav from "../../../components/SideNav/SideNav";
 const Maps: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(`${base}content/datavis/charts/maps.md`);
-  const { title } = content ? extractBanner(content) : { title: "" };
+  const { title, tagline } = content ? extractBanner(content) : { title: "", tagline: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)
     : { introTitle: "", introContent: "" };
@@ -32,6 +32,7 @@ const Maps: React.FC = () => {
      <main id="main-content" className="main-content">
         <div className="intro-section">
           <h1>{title}</h1>
+          <p><i>{tagline}</i></p>
           <h2>{introTitle}</h2>
           {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
         </div>
