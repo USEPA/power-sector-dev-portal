@@ -1,8 +1,8 @@
 ---
 title: "Custom ggplot2 Theme"
-tagline: "Lorem ipsum dolor sit amet consectetur."
+tagline: ""
 introTitle: "About the Theme"
-introContent: "This theme is based on the guidance put forth in the CAPD Data Visualization Style Guide. It includes changes to default colors, chart layout, typography, and more. Additional methods to further bring ggplot2 charts in line with other CAPD data visualizations are outlined in the Best Practices section."
+introContent: "This theme is based on the guidance put forth in the CAPD Data Visualization Style Guide. It includes changes to default colors, chart layout, typography, and more. Additional methods to further bring ggplot2 charts in line with other CAPD data visualizations are outlined in the Best Practices section. You can download the theme package from this [public repository](https://github.com/USEPA/ggcapdthemes) on EPA’s Github."
 sections:
   - title: "About the Theme"
     cards:
