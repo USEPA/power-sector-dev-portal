@@ -20,11 +20,7 @@ sections:
   - title: "Contrast"
     level: 4
     content: |
-          Contrast (between a data element and the background of a chart, and/or between different data elements) is essential in maintaining accessible visualizations. Ways to ensure that include using a dark border around elements whose color is too light to have sufficient contrast with the background or other elements, and using palettes that prioritize high contrast between neighboring colors.
-  - title: "Color-blindness"
-    level: 4
-    content: |
-       The sequential palettes presented in this section have been calibrated to account for the most common types of color-blindness; however, you can test existing or new color combinations using tools like the WebAIM Contrast Checker.
+          Contrast (between a data element and the background of a chart, and/or between different data elements) is essential in maintaining accessible visualizations. Ways to ensure that include using a dark border around elements whose color is too light to have sufficient contrast with the background or other elements, and using palettes that prioritize high contrast between neighboring colors. You can test existing or new color combinations using tools like the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
   - title: "Additional Encodings (Beyond Color)"
     level: 4
     content: |
