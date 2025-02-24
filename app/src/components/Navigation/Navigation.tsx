@@ -5,7 +5,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import useIsMobile from "../../hooks/useIsMobile";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"; 
+import { getPageInfo, getPageLevelforBreadcrumbs, isCurrentPath, isExactlyPath } from "../../utilities/getPageInfo";
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -17,36 +18,24 @@ const Navigation: React.FC = () => {
     setExpandedSection(null);
   }, [location]);
 
-  const getPageInfo = () => {
-    if (location.pathname.startsWith("/datavis")) {
-      return {
-        route: "/datavis",
-        title: "Data Visualization Style Guide",
-        isDatavisRoute: true,
-      };
-    }
-    if (location.pathname.startsWith("/rstyle")) {
-      return { route: "/rstyle", title: "R Style Guide", isRStyleRoute: true };
-    }
-    if (location.pathname.startsWith("/api")) {
-      return { route: "/api", title: "API Documentation", isApiRoute: true };
-    }
-    return { route: "/", title: "Open Source Resource Hub", isHomeRoute: true };
-  };
+  const {
+    route,
+    title,
+    isDatavisRoute,
+    isApiRoute,
+    isRStyleRoute,
+    isHomeRoute,
+  } = getPageInfo(location);
 
-  // Usage
-  const { route, title, isDatavisRoute, isApiRoute, isRStyleRoute, isHomeRoute } =
-    getPageInfo();
+  const {
+    isRouteWithBanner
+  } = getPageLevelforBreadcrumbs(location);
 
   // Function to toggle section open/closed
   const toggleSection = (sectionId: string) => {
     setExpandedSection((prev) => (prev === sectionId ? null : sectionId));
   };
 
-  // Helper function to determine if the current path matches a given link
-  const isCurrentPath = (path: string) => location.pathname.startsWith(path);
-
-  const isExactlyPath = (path: string) => location.pathname === path;
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -112,7 +101,7 @@ const Navigation: React.FC = () => {
                     <Link
                       to="/datavis/principles"
                       className={`usa-nav-link ${
-                        isCurrentPath("/datavis/principles")
+                        isCurrentPath(location, "/datavis/principles")
                           ? "usa-current"
                           : ""
                       }`}
@@ -124,8 +113,8 @@ const Navigation: React.FC = () => {
                     <button
                       type="button"
                       className={`usa-accordion__button usa-nav__link ${
-                        isCurrentPath("/datavis/design-elements") ||
-                        isCurrentPath("/datavis/design-elements/")
+                        isCurrentPath(location, "/datavis/design-elements") ||
+                        isCurrentPath(location, "/datavis/design-elements/")
                           ? "usa-current"
                           : ""
                       }`}
@@ -151,9 +140,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements"
                           className={
-                            isExactlyPath(
-                              "/datavis/design-elements"
-                            )
+                            isExactlyPath(location, "/datavis/design-elements")
                               ? "usa-current"
                               : ""
                           }
@@ -165,7 +152,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/color"
                           className={
-                            isCurrentPath("/datavis/design-elements/color")
+                            isCurrentPath(location, "/datavis/design-elements/color")
                               ? "usa-current"
                               : ""
                           }
@@ -177,7 +164,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/typography"
                           className={
-                            isCurrentPath("/datavis/design-elements/typography")
+                            isCurrentPath(location, "/datavis/design-elements/typography")
                               ? "usa-current"
                               : ""
                           }
@@ -189,7 +176,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/symbology"
                           className={
-                            isCurrentPath("/datavis/design-elements/symbology")
+                            isCurrentPath(location, "/datavis/design-elements/symbology")
                               ? "usa-current"
                               : ""
                           }
@@ -201,7 +188,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/layout"
                           className={
-                            isCurrentPath("/datavis/design-elements/layout")
+                            isCurrentPath(location, "/datavis/design-elements/layout")
                               ? "usa-current"
                               : ""
                           }
@@ -215,8 +202,8 @@ const Navigation: React.FC = () => {
                     <button
                       type="button"
                       className={`usa-accordion__button usa-nav__link ${
-                        isCurrentPath("/datavis/charts") ||
-                        isCurrentPath("/datavis/charts/")
+                        isCurrentPath(location, "/datavis/charts") ||
+                        isCurrentPath(location, "/datavis/charts/")
                           ? "usa-current"
                           : ""
                       }`}
@@ -242,7 +229,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts"
                           className={
-                            isExactlyPath("/datavis/charts")
+                            isExactlyPath(location, "/datavis/charts")
                               ? "usa-current"
                               : ""
                           }
@@ -254,7 +241,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/line-charts"
                           className={
-                            isCurrentPath("/datavis/charts/line-charts")
+                            isCurrentPath(location, "/datavis/charts/line-charts")
                               ? "usa-current"
                               : ""
                           }
@@ -266,7 +253,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/bar-charts"
                           className={
-                            isCurrentPath("/datavis/charts/bar-charts")
+                            isCurrentPath(location, "/datavis/charts/bar-charts")
                               ? "usa-current"
                               : ""
                           }
@@ -278,7 +265,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/area-charts"
                           className={
-                            isCurrentPath("/datavis/charts/area-charts")
+                            isCurrentPath(location, "/datavis/charts/area-charts")
                               ? "usa-current"
                               : ""
                           }
@@ -290,7 +277,7 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/maps"
                           className={
-                            isCurrentPath("/datavis/charts/maps")
+                            isCurrentPath(location, "/datavis/charts/maps")
                               ? "usa-current"
                               : ""
                           }
@@ -304,7 +291,7 @@ const Navigation: React.FC = () => {
                     <Link
                       to="/datavis/further-reading"
                       className={
-                        isCurrentPath("/datavis/further-reading")
+                        isCurrentPath(location, "/datavis/further-reading")
                           ? "usa-current"
                           : ""
                       }
@@ -326,13 +313,13 @@ const Navigation: React.FC = () => {
                   </li>
                 </ul>
               )}
-              {(isRStyleRoute) && (
+              {isRStyleRoute && (
                 <ul className="usa-nav__primary usa-accordion">
-                       <li className="usa-nav__primary-item">
+                  <li className="usa-nav__primary-item">
                     <Link
                       to="/rstyle/using-the-theme"
                       className={
-                        isCurrentPath("/rstyle/using-the-theme")
+                        isCurrentPath(location, "/rstyle/using-the-theme")
                           ? "usa-current"
                           : ""
                       }
@@ -344,7 +331,7 @@ const Navigation: React.FC = () => {
                     <Link
                       to="/rstyle/best-practices"
                       className={
-                        isCurrentPath("/rstyle/best-practices")
+                        isCurrentPath(location, "/rstyle/best-practices")
                           ? "usa-current"
                           : ""
                       }
@@ -366,7 +353,7 @@ const Navigation: React.FC = () => {
                   </li>
                 </ul>
               )}
-                {(isApiRoute) && (
+              {isApiRoute && (
                 <ul className="usa-nav__primary usa-accordion">
                   <li className="usa-nav__primary-item">
                     <Link to="/" className="usa-nav-link backToHomeLink">
@@ -387,7 +374,7 @@ const Navigation: React.FC = () => {
         </header>
       </div>
       
-       {!isHomeRoute && <Breadcrumbs />}
+       {(!isHomeRoute && !isRouteWithBanner) && <Breadcrumbs />}
     
     </>
   );

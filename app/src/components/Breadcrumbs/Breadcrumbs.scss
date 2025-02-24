@@ -1,15 +1,4 @@
 @use "../../variables" as *;
-@media (min-width: $mobile-width) {
-  .usa-breadcrumb {
-    padding: 15px 35px !important;
-  }
-}
-@media (max-width: $mobile-width) {
-  .usa-breadcrumb {
-    padding: 15px !important;
-  }
-}
-
 @supports ((-webkit-mask: url()) or (mask: url())) {
   .usa-breadcrumb__list-item:not(:last-child)::after {
     mask-image: url("/assets/uswds-img/usa-icons/navigate_next.svg"),
