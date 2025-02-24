@@ -58,7 +58,7 @@ sections:
   - title: "Main Fuel Type Palette"
     level: 4
     image: "/assets/images/datavis/design-elements/color/main-fuel-type.svg"
-  - title: "Alternate Type Palette"
+  - title: "Alternate Fuel Type Colors"
     level: 4
     image: "/assets/images/datavis/design-elements/color/alternate-fuel-type.svg"
   - title: "Consolidated Fuel Type Palettes: Renewables"
