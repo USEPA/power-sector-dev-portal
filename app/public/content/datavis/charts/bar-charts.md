@@ -17,7 +17,7 @@ sections:
     cards:
     - title: "Sorting"
       image: "/assets/images/datavis/charts/bar-and-column-charts/sorting.png"
-      content: Sorting bars or columns by value helps make patterns more obvious and can help highlight important values. There are some cases when sorting by value doesn’t make sense, for example if you have columns that represent points in time.
+      content: Sorting bars or columns by value helps make patterns more obvious and can help highlight important values. There are some cases when sorting by value doesn’t make sense, like when you have columns that represent points in time.
       type: "default"
     - title: "“Anchors”"
       image: "/assets/images/datavis/charts/bar-and-column-charts/anchors.png"
