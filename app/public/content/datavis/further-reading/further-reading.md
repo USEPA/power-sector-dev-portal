@@ -10,7 +10,7 @@ sections:
         content: "This site is an excellent resource for questions about accessibility. It includes guides, trainings, and more to help people build accessible products."
         link: "https://www.section508.gov"
       - title: "EPA Web Standards"
-        content: "Proin purus mauris, dictum at leo ut, scelerisque feugiat magna. Praesent auctor ex a arcu scelerisque, id pharetra sem pretium. Quisque a pulvinar lorem."
+        content: "EPA’s in-house web standards are especially helpful to review if the data visualization product you’re building is intended to sit inside a Drupal webpage."
         link: "https://www.epa.gov"
       - title: "U.S. Web Design System"
         content: "The U.S. Web Design System (USWDS) provides guidance on all facets of web design. The sections on color and typesetting might be most relevant to readers interesting in data visualization."
