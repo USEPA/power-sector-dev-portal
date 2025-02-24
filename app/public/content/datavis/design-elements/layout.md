@@ -38,7 +38,7 @@ sections:
       Axes are a crucial chart elements because they place the data in context. Before deciding on an axis extent (the range of data that an axis covers), always consider how it might (mis)represent the data. For example, does using a y-axis of 10-15 distort a trend line that hovers between 12 and 13 and would appear almost nonexistent if the axis were extended to 0-15? Or is that an important change in the data to highlight?
 
         Axes should have titles. Exceptions to this rule include:
-        - if the title of the axis is included in the title/subtitle
+        - If the title of the axis is included in the title/subtitle
         - If one of the axes contains years and only years
     cards:
     - title: "Tick Density"
@@ -63,7 +63,7 @@ sections:
       type: "do"
     - title: "Gridline Style"
       image: "/assets/images/datavis/design-elements/layout/gridline-style.png"
-      content: "If necessary or desired, gridlines should be included as light gray (#C9C9C9) dashed lines. The zero line should be a darker gray (**#2E2E2E**) solid line."
+      content: "If necessary or desired, gridlines should be included as light gray (**#C9C9C9**) dashed lines. The zero line should be a darker gray (**#2E2E2E**) solid line."
       type: "do"
     - title: "Categorical Gridlines"
       image: "/assets/images/datavis/design-elements/layout/categorical-gridlines.png"
@@ -105,7 +105,7 @@ sections:
     content: |
       When possible, provide data tables that contain the same data the chart is built with. These tables can be shown in addition to charts, or as an optional download.
 
-        Alt text should always be used to describe charts. Advice on how to produce helpful alt text for charts can be found here.
+        Alt text should always be used to describe charts. Advice on how to produce helpful alt text for charts can be found in [this article](https://academy.datawrapper.de/article/330-how-to-write-good-alternative-descriptions-for-your-data-visualization#:~:text=Alternative%20text,%20also%20known%20as%20alt%20text,%20is%20a%20written) by data visualization company Datawrapper.
 
         These steps help make your charts more accessible to everyone, but especially users with screen readers and other low-vision groups.
     level: 3
