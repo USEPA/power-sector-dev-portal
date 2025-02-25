@@ -49,11 +49,11 @@ const BarCharts: React.FC = () => {
             )}
             {section.image &&
               (section.image?.endsWith(".svg") ? (
-                <SVGRenderer src={section.image} alt={section.title} />
+                <SVGRenderer src={section.image} alt={section.alt ? section.alt : section.title} />
               ) : (
                 <img
                   src={section.image}
-                  alt={section.title}
+                  alt={section.alt ? section.alt : section.title}
                   className="section-image"
                 />
               ))}

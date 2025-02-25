@@ -10,9 +10,10 @@ interface DoDontCardProps {
   title?: string;
   content?: string;
   image?: string;
+  alt?: string;
 }
 
-const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) => {
+const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image, alt }) => {
   return (
     <div className={`do-dont-card ${type === 'do' ? 'card-do' : type === 'do not' ? 'card-do-not' : ''}`}>
     <div className="card-icon">
@@ -25,9 +26,9 @@ const DoDontCard: React.FC<DoDontCardProps> = ({ type, title, content, image }) 
 
     <div className="card-image-container">
       {image && image.endsWith('.svg') ? (
-        <SVGRenderer src={image} alt={title} />
+        <SVGRenderer src={image} alt={alt ? alt : title} />
       ) : (
-        <img src={image} alt={title} className="card-image" />
+        <img src={image} alt={alt ? alt : title} className="card-image" />
       )}
     </div>
 

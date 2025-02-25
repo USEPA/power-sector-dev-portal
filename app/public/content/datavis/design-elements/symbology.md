@@ -15,14 +15,17 @@ sections:
     level: 3
     cards:
     - title: "Non-scaled Icons"
+      alt: ""
       image: "/assets/images/datavis/design-elements/symbology/non-scaled-icons.png"
       content: "Icons on maps are helpful to add more detail to categorical, point-based data. They should not be scaled to represent a quantitative variable."
       type: "do"
     - title: "Simple, Unique Icons"
+      alt: ""
       image: "/assets/images/datavis/design-elements/symbology/simple-unique-icons.png"
       content: "Icons should be straightforward to identify but distinct enough to be easy to distinguish from one another, no matter the size."
       type: "do"
     - title: "Icons with Legend"
+      alt: ""
       image: "/assets/images/datavis/design-elements/symbology/icons-with-legend.png"
       content: "Icons on maps are helpful to add more detail to categorical, point-based data. They should not be scaled to represent a quantitative variable."
       type: "do"
@@ -30,14 +33,17 @@ sections:
     level: 3
     cards:
     - title: "Scaled Icons"
+      alt: ""
       image: "/assets/images/datavis/design-elements/symbology/scaled-icons.png"
       content: "Scaling icons makes it difficult to compare differences between them because of their irregular shape."
       type: "do not"
     - title: "Complex or Similar Icons"
+      alt: ""
       image: "/assets/images/datavis/design-elements/symbology/complex-or-similar-icons.png"
       content: "If icons are too complex or look too similar to one another, they will be hard for users to differentiate in visualizations, especially at smaller sizes."
       type: "do not"
     - title: "Icons without Legend"
+      alt: ""
       image: "/assets/images/datavis/design-elements/symbology/icons-without-legend.png"
       content: "Scaling icons makes it difficult to compare differences between them because of their irregular shape."
       type: "do not"
@@ -49,11 +55,13 @@ sections:
     level: 3
     content: |
        The patterned fills provided in this palette are suggestions; your ability to use them may depend on the program in which you’re building a visualization. If these exact options are not available, the most important thing is to choose patterns that are not easily confused with one another. 
+    alt: ""
     image: "/assets/images/datavis/design-elements/symbology/categorical-palette.svg"
   - title: "Sequential Palettes"
     level: 3
     content: |
        As above, these fills are suggestions, to be adjusted depending on the software or program being used. Please note, some patterned fills may conflict with map elements (for example, the dots in the second palette below) and thus should not be used on map-based visualizations. 
+    alt: ""
     image: "/assets/images/datavis/design-elements/symbology/sequential-palettes.png"
   - title: "Special Icon Sets"
     level: 2
@@ -68,6 +76,7 @@ sections:
       link: "/assets/images/datavis/design-elements/symbology/set-a-plain-black.zip"
     - title: "Download Icon Set A (Color Variant)"
       link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
+    alt: ""
     image: "/assets/images/datavis/design-elements/symbology/set-a.svg"
   - title: "Icon Set B"
     level: 3
@@ -80,4 +89,5 @@ sections:
       link: "/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
     - title: "Download Icon Set B (3 sets of Fuel Type Colors)"
       link: "/assets/images/datavis/design-elements/symbology/set-b-three-sets.zip"
+    alt: ""
     image: "/assets/images/datavis/design-elements/symbology/set-b.svg"

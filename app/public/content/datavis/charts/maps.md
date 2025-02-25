@@ -27,10 +27,12 @@ sections:
     level: 3 
     cards:
     - title: "Text"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-text-do.png"
       content: Text should sit on top of other layers. Its color should contrast with that of the basemap and it should have a lighter-colored border.
       type: "do"
     - title: "Data"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-data-do.png"
       content: Data should typically be normalized if not already expressed in rates or percentages.
       type: "do"
@@ -38,10 +40,12 @@ sections:
     level: 3 
     cards:
     - title: "Text"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-text-do-not.png"
       content: Text should not sit underneath other layers, lack a border, or have a low-contrast color.
       type: "do not"
     - title: "Data"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-data-do-not.png"
       content: Don’t plot raw counts on a map (unless the focus is purely on population, for example).
       type: "do not"
@@ -53,14 +57,17 @@ sections:
       You can read about these palettes in more detail and grab specific hex codes on the [Color page](#/datavis/design-elements/color) of this guide.
     cards:
     - title: "Sequential Palette"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-sequential.png"
       content: Use this color palette when showing difference in one direction for a single variable.
       type: "default"
     - title: "Divergent Palette"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-divergent.png"
       content: Use this color palette when showing differences in a single variable whose data has a clear midpoint.
       type: "default"
     - title: "Bivariate Palette"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-bivariate.png"
       content: Use this color palette to show differences in two variables simultaneously.
       type: "default"
@@ -70,14 +77,17 @@ sections:
       Use different color palettes depending on how many variables and what kinds of changes to them you want to show in your choropleth map.
     cards:
     - title: "Linear Interpolation"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-interpolation-linear.png"
       content: This interpolation is best if your data is evenly distributed or, if not, when you want to highlight outliers. However, it makes it harder to discern between data points because many will have a similar color.
       type: "default"
     - title: "Quantiles"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-interpolation-quantiles.png"
       content: This interpolation minimizes the effect of outliers on the color scale, but also makes it hard to differentiate between “high” and “super high” for instance. (It makes outliers harder to spot.)
       type: "default"
     - title: "Natural Breaks/Jenks"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/choropleth-interpolation-natural.png"
       content: This interpolation is a compromise between linear and quantiles. It’s a way of splitting your data into groups that maximizes the differences between the groups while minimizing differences inside of them. It results in groups with fewer far apart data points and more close together data points so that differences between data groups are easier to spot while still showing outliers.
       type: "default"
@@ -94,6 +104,7 @@ sections:
     level: 3 
     cards:
     - title: "Icons"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/point-icons-do.png"
       content: Keep icons simple and high-contrast against your map’s other layers.
       type: "do"
@@ -101,6 +112,7 @@ sections:
     level: 3 
     cards:
     - title: "Icons"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/point-icons-do-not.png"
       content: Don’t scale icons to show changes in your data.
       type: "do not"
@@ -119,14 +131,17 @@ sections:
     level: 3
     cards:
     - title: "Opacity"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/bubble-opacity-do.png"
       content: Bubbles should be a little see-through to allow users to interpret overlaps.
       type: "do"
     - title: "Data Mapping"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do.png"
       content: Data should be encoded in a bubble’s area, not its radius. A legend should make this clear.
       type: "do"
     - title: "Data Encoding"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do.png"
       content: Use one characteristic to represent one variable.
       type: "do"
@@ -134,14 +149,17 @@ sections:
     level: 3
     cards:
     - title: "Opacity"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/bubble-opacity-do-not.png"
       content: Don’t make your bubbles 100% opaque or larger ones might block smaller, underlying ones. (In this example, a smaller bubble near the bottom left corner of the image is being occluded by a larger one.)
       type: "do not"
     - title: "Data Mapping"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do-not.png"
       content: Do not encode data in a bubble’s radius, doing so inappropriately magnifies differences in the data.
       type: "do not"
     - title: "Data Encoding"
+      alt: ""
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do-not.png"
       content: Don’t use more than one characteristic (in this example, both size and opacity) to represent the same variable.
       type: "do not"
@@ -149,9 +167,11 @@ sections:
     level: 3
   - title: "Figure 1: Single-Variable Choropleth Map Example"
     level: 4
+    alt: ""
     image: "/assets/images/datavis/charts/maps/example-1.svg"    
   - title: "Figure 2: Icon Map Example"
     level: 4
+    alt: ""
     image: "/assets/images/datavis/charts/maps/example-2.svg"
 
 

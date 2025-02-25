@@ -17,10 +17,12 @@ sections:
     cards:
     - title: "Sorting"
       image: "/assets/images/datavis/charts/bar-and-column-charts/sorting.png"
+      alt: ""
       content: Sorting bars or columns by value helps make patterns more obvious and can help highlight important values. There are some cases when sorting by value doesn’t make sense, like when you have columns that represent points in time.
       type: "default"
     - title: "“Anchors”"
       image: "/assets/images/datavis/charts/bar-and-column-charts/anchors.png"
+      alt: ""
       content: Different tools may allow for different ways of presenting “anchors” (such as averages) as comparisons; these can add helpful context to your data points, but aren’t always necessary.
       type: "default"
   - title: "Column Chart"
@@ -37,10 +39,12 @@ sections:
     cards:
     - title: "Y-Axis"
       image: "/assets/images/datavis/charts/bar-and-column-charts/column-y-axis-do.png"
+      alt: ""
       content: In a column chart, the y-axis starts at zero and measures the quantitative variable in your dataset.
       type: "do"
     - title: "Category Labels"
       image: "/assets/images/datavis/charts/bar-and-column-charts/column-category-labels-do.png"
+      alt: ""
       content: The names of your categories (columns) should be short and center-aligned. If you have longer category names, consider using a bar chart instead.
       type: "do"
   - title: "Things to Avoid"
@@ -48,10 +52,12 @@ sections:
     cards:
     - title: "Y-Axis"
       image: "/assets/images/datavis/charts/bar-and-column-charts/column-y-axis-do-not.png"
+      alt: ""
       content: Don’t start a column chart’s y-axis at a non-zero number.
       type: "do not"
     - title: "Category Labels"
       image: "/assets/images/datavis/charts/bar-and-column-charts/column-category-labels-do-not.png"
+      alt: ""
       content: Don’t use long labels for column charts.
       type: "do not"
   - title: "Bar Chart"
@@ -67,10 +73,12 @@ sections:
     cards:
     - title: "X-Axis"
       image: "/assets/images/datavis/charts/bar-and-column-charts/bar-x-axis-do.png"
+      alt: ""
       content: In a bar chart, the x-axis starts at zero and measures the quantitative variable in your dataset.
       type: "do"
     - title: "Category Labels"
       image: "/assets/images/datavis/charts/bar-and-column-charts/bar-category-labels-do.png"
+      alt: ""
       content: The names of your categories (bars) can be longer with this chart type. Their labels should be right-aligned.
       type: "do"
   - title: "Things to Avoid"
@@ -78,6 +86,7 @@ sections:
     cards:
     - title: "X-Axis"
       image: "/assets/images/datavis/charts/bar-and-column-charts/bar-x-axis-do-not.png"
+      alt: ""
       content: Don’t start a column chart’s x-axis at a non-zero number.
       type: "do not"
   - title: "Grouped Bar or Column Chart"
@@ -93,10 +102,12 @@ sections:
     cards:
     - title: "Space Between Groups"
       image: "/assets/images/datavis/charts/bar-and-column-charts/space-between-groups.png"
+      alt: ""
       content: Keeping more space between categories than subcategories makes comparisons easier.
       type: "do"
     - title: "Legends"
       image: "/assets/images/datavis/charts/bar-and-column-charts/legends.png"
+      alt: ""
       content: Adding a legend for subcategories helps users identify them when direct labeling isn’t possible.
       type: "do"
   - title: "Stacked Bar or Column Chart"
@@ -113,15 +124,18 @@ sections:
     cards:
     - title: "Highlight the Most Important Subcategory"
       image: "/assets/images/datavis/charts/bar-and-column-charts/highlight-the-most-important-subcategory.png"
+      alt: ""
       content: Make the most important subcategory in your chart (in this example, the blue) easy to identify and compare across categories by pulling it to the zero axis of the chart.
       type: "do"
   - title: "Example Charts"
   - title: "Figure 1: Stacked Column Chart Example"
     level: 4
     image: "/assets/images/datavis/charts/bar-and-column-charts/example-1.svg"
+    alt: ""
   - title: "Figure 2: Bar Chart Example with One Category Highlighted using Color"
     level: 4
     image: "/assets/images/datavis/charts/bar-and-column-charts/example-2.svg"
+    alt: ""
 
 
  
