@@ -50,4 +50,4 @@ sections:
       content: "The word pictured above uses a closed barrel g and a. This text would be harder to read at a smaller scale."
       type: "do not"
   - title: "Chemical Compounds"
-    content: When writing chemical compounds, subscripts should use uppercase letters.
+    content: When writing chemical compounds, subscripts should use uppercase letters. For example, the chemical notation for nitrous oxides would be written NO<sub>X</sub>, not NO<sub>x</sub>.
