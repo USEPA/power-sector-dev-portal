@@ -106,8 +106,8 @@ sections:
   - title: "Figure 1: Line Charts Example with Two Lines"
     level: 4
     alt: ""
-      image: "/assets/images/datavis/charts/line-charts/figure-1-two-lines.svg"
+    image: "/assets/images/datavis/charts/line-charts/figure-1-two-lines.svg"
   - title: "Figure 2: Line Charts Example with Multiple Lines"
     level: 4
     alt: ""
-      image: "/assets/images/datavis/charts/line-charts/figure-2-multiple-lines.svg"
+    image: "/assets/images/datavis/charts/line-charts/figure-2-multiple-lines.svg"
