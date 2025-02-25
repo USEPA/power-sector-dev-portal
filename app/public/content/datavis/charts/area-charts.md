@@ -63,7 +63,7 @@ sections:
       image: "/assets/images/datavis/charts/area-charts/simplify-number-of-categories.png"
       content: Consider rolling smaller categories into a single larger category.
       type: "default"
-    - title: "Optional Step 6: Convert to Grouped Bar Chart"
+    - title: "Optional Step 6: Convert to Grouped Column Chart"
       image: "/assets/images/datavis/charts/area-charts/convert-to-grouped-bar-chart.png"
-      content: Or, consider using a grouped bar column instead if specific values and comparisons are important.
+      content: Or, consider using a grouped column chart instead if specific values and comparisons are important.
       type: "default"

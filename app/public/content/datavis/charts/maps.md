@@ -95,7 +95,7 @@ sections:
     cards:
     - title: "Icons"
       image: "/assets/images/datavis/charts/maps/point-icons-do.png"
-      content: Keep icons simple and high-contrast against your map’s otherl ayers.
+      content: Keep icons simple and high-contrast against your map’s other layers.
       type: "do"
   - title: "Things to Avoid"
     level: 3 
@@ -124,7 +124,7 @@ sections:
       type: "do"
     - title: "Data Mapping"
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do.png"
-      content: Data should be encoded in a bubble’s radius, not its area. A legend should make this clear.
+      content: Data should be encoded in a bubble’s area, not its radius. A legend should make this clear.
       type: "do"
     - title: "Data Encoding"
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do.png"
@@ -139,7 +139,7 @@ sections:
       type: "do not"
     - title: "Data Mapping"
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do-not.png"
-      content: Do not encode data in a bubble’s area, doing so inappropriately magnifies differences in the data.
+      content: Do not encode data in a bubble’s radius, doing so inappropriately magnifies differences in the data.
       type: "do not"
     - title: "Data Encoding"
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do-not.png"
