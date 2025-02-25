@@ -13,7 +13,7 @@
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="188" y="81.266">#D3B77E</tspan></text>
 <rect y="94" width="82" height="15" fill="#2273BB"/>
 <rect x="94.5" y="94.5" width="81" height="14" fill="#88B0D3" stroke="#1B3F09"/>
-<rect x="188" y="94" width="82" height="15" fill="#F0F0F0"/>
+<rect stroke="#2E2E2E" x="188" y="94" width="82" height="15" fill="#F0F0F0"/>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="128.266">#2273BB</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="94" y="128.266">#88B0D3</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="188" y="128.266">#F0F0F0</tspan></text>
@@ -40,7 +40,7 @@
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="188" y="274.266">#A2C2A8</tspan></text>
 <rect y="287" width="82" height="15" fill="#A947B6"/>
 <rect x="94.5" y="287.5" width="81" height="14" fill="#CC9CD1" stroke="#412E4E"/>
-<rect x="188" y="287" width="82" height="15" fill="#F0F0F0"/>
+<rect  stroke="#2E2E2E" x="188" y="287" width="82" height="15" fill="#F0F0F0"/>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="321.266">#A947B6</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="94" y="321.266">#CC9CD1</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="188" y="321.266">#F0F0F0</tspan></text>

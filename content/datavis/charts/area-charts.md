@@ -1,6 +1,6 @@
 ---
 title: "Area Charts"
-tagline: ""
+tagline: "Note: all charts on this page are for illustrative purposes only and are not based on real data."
 introTitle: "Introduction"
 introContent: | 
        We generally don’t recommend using area charts or stacked area charts for most scenarios. The former can suffer from some data “hiding” or occluding other data, while the latter looks misleadingly like a series of trend lines but cannot accurately be read as such because most lines lacks a consistent baseline. However, if you do decide to use either chart type, there are ways to make them more legible.
@@ -12,14 +12,17 @@ sections:
     cards:
     - title: "Line Charts Make Comparisons Easy"
       image: "/assets/images/datavis/charts/area-charts/line-charts-make-comparisons-easy.png"
+      alt: ""
       content: In this chart, it’s easy to see that the solid red line is a point at which gray overtakes blue. It’s also easy to see that the leftmost red dot on the blue line is higher than the rightmost.
       type: "default"
     - title: "Area Charts Obscure Data Points"
       image: "/assets/images/datavis/charts/area-charts/area-charts-obscure-data-points.png"
+      alt: ""
       content: While you can still see the point at which gray category overtakes blue, you lose the ability to meaningfully plot multiple lines if they cross one another. You can no longer compare the blue category at each of the red dots because its position at one of them is obscured.
       type: "default"
     - title: "Stacked Area Charts Skew Relationships"
       image: "/assets/images/datavis/charts/area-charts/stacked-area-charts-skew-relationships.png"
+      alt: ""
       content: | 
          In this chart, it becomes harder to make comparisons between specific values within or between either category, because the blue lacks a consistent baseline; instead, its value are now dependent on those of the gray, which obscures trends. The leftmost red dot on the blue is now lower than the rightmost, which is the reverse of the actual values.
 
@@ -32,10 +35,12 @@ sections:
     cards:
     - title: "Stacked Area Chart"
       image: "/assets/images/datavis/charts/area-charts/stacked-area-chart.png"
+      alt: ""
       content: In this chart, exact values are hard to pinpoint and comparisons are hard to make, but the overall proportions of the categories are visible.
       type: "default"
     - title: "100% Stacked Area Chart"
       image: "/assets/images/datavis/charts/area-charts/100pct-stacked-area-chart.png"
+      alt: ""
       content: In this chart, like the previous one, the focus is on the proportions that make up the whole.
       type: "default"
   - title: "Stacked Area Charts: A Case Study in Simplification"
@@ -45,25 +50,31 @@ sections:
     cards:
     - title: "Step 1: A Difficult Chart to Read"
       image: "/assets/images/datavis/charts/area-charts/a-difficult-chart-to-read.png"
+      alt: ""
       content: This chart is overly complicated and obscures the trend of the blue category, the one we’re most interested in.
       type: "default"
     - title: "Step 2: Make Divisions Clear"
       image: "/assets/images/datavis/charts/area-charts/make-divisions-clear.png"
+      alt: ""
       content: Add a border in the same color as the background of the chart to make divisions between categories more clear. In this case, we should also add a dark border to the green category because it’s a light shade.
       type: "default"
     - title: "Step 3: “Ground” the Important Category"
       image: "/assets/images/datavis/charts/area-charts/ground-the-important-category.png"
+      alt: ""
       content: Keep your most important category at the bottom of the chart so the solid baseline makes it easier to pick out exact values.
       type: "default"
     - title: "Step 4: Use Color for Emphasis"
       image: "/assets/images/datavis/charts/area-charts/use-color-for-emphasis.png"
+      alt: ""
       content: Use color to further highlight the most important category.
       type: "default"
     - title: "Step 5: Simplify Number of Categories"
       image: "/assets/images/datavis/charts/area-charts/simplify-number-of-categories.png"
+      alt: ""
       content: Consider rolling smaller categories into a single larger category.
       type: "default"
-    - title: "Optional Step 6: Convert to Grouped Bar Chart"
+    - title: "Optional Step 6: Convert to Grouped Column Chart"
       image: "/assets/images/datavis/charts/area-charts/convert-to-grouped-bar-chart.png"
-      content: Or, consider using a grouped bar column instead if specific values and comparisons are important.
+      alt: ""
+      content: Or, consider using a grouped column chart instead if specific values and comparisons are important.
       type: "default"
