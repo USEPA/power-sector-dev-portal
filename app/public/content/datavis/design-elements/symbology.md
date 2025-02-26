@@ -24,11 +24,6 @@ sections:
       image: "/assets/images/datavis/design-elements/symbology/simple-unique-icons.png"
       content: "Icons should be straightforward to identify but distinct enough to be easy to distinguish from one another, no matter the size."
       type: "do"
-    - title: "Icons with Legend"
-      alt: ""
-      image: "/assets/images/datavis/design-elements/symbology/icons-with-legend.png"
-      content: "Icons on maps are helpful to add more detail to categorical, point-based data. They should not be scaled to represent a quantitative variable."
-      type: "do"
   - title: "Things to Avoid"
     level: 3
     cards:
@@ -41,11 +36,6 @@ sections:
       alt: ""
       image: "/assets/images/datavis/design-elements/symbology/complex-or-similar-icons.png"
       content: "If icons are too complex or look too similar to one another, they will be hard for users to differentiate in visualizations, especially at smaller sizes."
-      type: "do not"
-    - title: "Icons without Legend"
-      alt: ""
-      image: "/assets/images/datavis/design-elements/symbology/icons-without-legend.png"
-      content: "Scaling icons makes it difficult to compare differences between them because of their irregular shape."
       type: "do not"
   - title: "Non-Color Palettes"
     level: 2
