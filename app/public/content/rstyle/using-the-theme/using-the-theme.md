@@ -12,7 +12,8 @@ introContent: |
         ggplot2, we suggest loading it prior to loading `ggcapdthemes`.
 
 sections:
-  - title: "Applying the theme"
+  - image: "/assets/images/rstyle/using-the-theme/chart-layout.svg"   
+  - title: "Applying the theme `theme_capd()`"
     level: 2
     content: |
         This theme includes both quantitative and categorical color palettes.
@@ -27,6 +28,9 @@ sections:
         Using the `gghighlight` package to assist, we can emphasize certain
         groups or elements of charts. Leave fuel type as original color, gray
         out non-highlighted groups.
+  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-1.svg" 
+  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-2.svg" 
+  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-3.svg" 
   - title: "Font sizing"
     level: 3
     content: |
