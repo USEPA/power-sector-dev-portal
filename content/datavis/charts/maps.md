@@ -27,12 +27,12 @@ sections:
     level: 3 
     cards:
     - title: "Text"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania. Pittsburgh and Philadelphia are labeled, and the text for each label is a dark color with a light border. The text sits on top of all other elements of the map so it is legible."
       image: "/assets/images/datavis/charts/maps/choropleth-text-do.png"
       content: Text should sit on top of other layers. Its color should contrast with that of the basemap and it should have a lighter-colored border.
       type: "do"
     - title: "Data"
-      alt: ""
+      alt: "An image of a choropleth map’s legend. The data ranges are labeled in percents, not raw counts, to emphasize that it’s important to normalize data for maps."
       image: "/assets/images/datavis/charts/maps/choropleth-data-do.png"
       content: Data should typically be normalized if not already expressed in rates or percentages.
       type: "do"
@@ -40,12 +40,12 @@ sections:
     level: 3 
     cards:
     - title: "Text"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania. Pittsburgh and Philadelphia are labeled, and the text for each label is a dark color. The text sits underneath the choropleth layer of the map and is thus not legible."
       image: "/assets/images/datavis/charts/maps/choropleth-text-do-not.png"
       content: Text should not sit underneath other layers, lack a border, or have a low-contrast color.
       type: "do not"
     - title: "Data"
-      alt: ""
+      alt: "An image of a choropleth map’s legend. The data ranges are labeled in number of people, which is not usually a recommended practice for maps."
       image: "/assets/images/datavis/charts/maps/choropleth-data-do-not.png"
       content: Don’t plot raw counts on a map (unless the focus is purely on population, for example).
       type: "do not"
@@ -57,17 +57,17 @@ sections:
       You can read about these palettes in more detail and grab specific hex codes on the [Color page](#/datavis/design-elements/color) of this guide.
     cards:
     - title: "Sequential Palette"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania in a sequential color palette emphasizing differences in one direction in a single variable. In this case, the legend shows that the map is tracking percent differences ranging from zero to twenty-five percent."
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-sequential.png"
       content: Use this color palette when showing difference in one direction for a single variable.
       type: "default"
     - title: "Divergent Palette"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania in a divergent color palette emphasizing differences in two directions in a single variable. In this case, the legend shows that the map is tracking percent differences ranging from negative fifteen percent to positive twenty-three percent."
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-divergent.png"
       content: Use this color palette when showing differences in a single variable whose data has a clear midpoint.
       type: "default"
     - title: "Bivariate Palette"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania in a bivariate color palette showing differences in two variables at the same time. In this case, the legend shows that the map is tracking the percent of a population with asthma and levels of exposure to PM2.5."
       image: "/assets/images/datavis/charts/maps/choropleth-palettes-bivariate.png"
       content: Use this color palette to show differences in two variables simultaneously.
       type: "default"
@@ -77,17 +77,17 @@ sections:
       Use different color palettes depending on how many variables and what kinds of changes to them you want to show in your choropleth map.
     cards:
     - title: "Linear Interpolation"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania in a sequential color palette showing differences in one direction in a single variable. To the right of the map is a histogram showing the distribution of data points being represented in the map. The data points are divided into color categories and assigned a color using linear interpolation, which results in a map that emphasizes outliers in the data but includes most of the rest of the data in the same category. "
       image: "/assets/images/datavis/charts/maps/choropleth-interpolation-linear.png"
       content: This interpolation is best if your data is evenly distributed or, if not, when you want to highlight outliers. However, it makes it harder to discern between data points because many will have a similar color.
       type: "default"
     - title: "Quantiles"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania in a sequential color palette showing differences in one direction in a single variable. To the right of the map is a histogram showing the distribution of data points being represented in the map. The data points are divided into color categories and assigned a color using quantiles, which results in a map that de-emphasizes outliers in the data but makes it harder to differentiate between data points on the outer edges of the range."
       image: "/assets/images/datavis/charts/maps/choropleth-interpolation-quantiles.png"
       content: This interpolation minimizes the effect of outliers on the color scale, but also makes it hard to differentiate between “high” and “super high” for instance. (It makes outliers harder to spot.)
       type: "default"
     - title: "Natural Breaks/Jenks"
-      alt: ""
+      alt: "An image of a choropleth map of Pennsylvania in a sequential color palette showing differences in one direction in a single variable. To the right of the map is a histogram showing the distribution of data points being represented in the map. The data points are divided into color categories and assigned a color using natural breaks, which results in a map where differences between categories as well as outliers are easy to spot."
       image: "/assets/images/datavis/charts/maps/choropleth-interpolation-natural.png"
       content: This interpolation is a compromise between linear and quantiles. It’s a way of splitting your data into groups that maximizes the differences between the groups while minimizing differences inside of them. It results in groups with fewer far apart data points and more close together data points so that differences between data groups are easier to spot while still showing outliers.
       type: "default"
@@ -104,7 +104,7 @@ sections:
     level: 3 
     cards:
     - title: "Icons"
-      alt: ""
+      alt: "An image of a zoomed-in portion of a choropleth map of Pennsylvania with flame-shaped icons dotted throughout. The icons are simple and high-contrast against the color scheme of the map, which makes them easy to spot. "
       image: "/assets/images/datavis/charts/maps/point-icons-do.png"
       content: Keep icons simple and high-contrast against your map’s other layers.
       type: "do"
@@ -112,7 +112,7 @@ sections:
     level: 3 
     cards:
     - title: "Icons"
-      alt: ""
+      alt: "An image of a zoomed-in portion of a choropleth map of Pennsylvania with flame-shaped icons dotted throughout. The icons have been altered so some of them are bigger than others. This makes the map harder to understand because it’s difficult to compare sizes of irregular icons."
       image: "/assets/images/datavis/charts/maps/point-icons-do-not.png"
       content: Don’t scale icons to show changes in your data.
       type: "do not"
@@ -131,17 +131,17 @@ sections:
     level: 3
     cards:
     - title: "Opacity"
-      alt: ""
+      alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania. The bubbles are slightly see-through, which makes it easy to interpret overlapping bubbles."
       image: "/assets/images/datavis/charts/maps/bubble-opacity-do.png"
       content: Bubbles should be a little see-through to allow users to interpret overlaps.
       type: "do"
     - title: "Data Mapping"
-      alt: ""
+      alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania and its accompanying legend. The legend reveals that each bubble is scaled to the data according to its area, not radius. This makes the differences between bubbles easy to understand."
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do.png"
       content: Data should be encoded in a bubble’s area, not its radius. A legend should make this clear.
       type: "do"
     - title: "Data Encoding"
-      alt: ""
+      alt: "An image of a legend showing bubble sizes and values. In this case, the data is scaled only according to the size of each bubble."
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do.png"
       content: Use one characteristic to represent one variable.
       type: "do"
@@ -149,17 +149,17 @@ sections:
     level: 3
     cards:
     - title: "Opacity"
-      alt: ""
+      alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania. The bubbles are completely opaque, which makes it difficult to interpret overlapping bubbles as some end up blocking others."
       image: "/assets/images/datavis/charts/maps/bubble-opacity-do-not.png"
       content: Don’t make your bubbles 100% opaque or larger ones might block smaller, underlying ones. (In this example, a smaller bubble near the bottom left corner of the image is being occluded by a larger one.)
       type: "do not"
     - title: "Data Mapping"
-      alt: ""
+      alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania and its accompanying legend. The legend reveals that each bubble is scaled to the data according to its radius, not area. This makes the differences between bubbles difficult to understand and is not a recommended practice."
       image: "/assets/images/datavis/charts/maps/bubble-mapping-do-not.png"
       content: Do not encode data in a bubble’s radius, doing so inappropriately magnifies differences in the data.
       type: "do not"
     - title: "Data Encoding"
-      alt: ""
+      alt: "An image of a legend showing bubble sizes and values. In this case, each bubble has both a size and a color opacity that corresponds to the same variable in the data. This is not a recommended practice."
       image: "/assets/images/datavis/charts/maps/bubble-encoding-do-not.png"
       content: Don’t use more than one characteristic (in this example, both size and opacity) to represent the same variable.
       type: "do not"
@@ -167,11 +167,11 @@ sections:
     level: 3
   - title: "Figure 1: Single-Variable Choropleth Map Example"
     level: 4
-    alt: ""
+    alt: "An image of a choropleth map showing changes in the SO2 total output emission rate in the United States, state by state. The map uses a diverging color palette to show that changes in rate can be both positive and negative."
     image: "/assets/images/datavis/charts/maps/example-1.svg"    
   - title: "Figure 2: Icon Map Example"
     level: 4
-    alt: ""
+    alt: "And image of an icon map showing biomass powerplants in the state of Ohio. The icons used are the recommended biomass icon presented elsewhere in this guide. They have a dark border so the icons contrast with the light gray of the basemap."
     image: "/assets/images/datavis/charts/maps/example-2.svg"
 
 
