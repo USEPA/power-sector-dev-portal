@@ -68,7 +68,7 @@ sections:
     - title: "Units of Measurement"
       alt: ""
       image: "/assets/images/datavis/design-elements/layout/units-of-measurement.png"
-      content: "Include units of measurement in the axis title, not in each tick label. A possible exceptions to this rule is an axis showing percents."
+      content: "Include units of measurement in the axis title, not in each tick label. A possible exception to this rule is an axis showing percents."
       type: "do"
     - title: "Gridline Style"
       alt: ""
