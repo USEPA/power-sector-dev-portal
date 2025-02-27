@@ -10,69 +10,156 @@ introContent: |
 
         Because this package is intended to augment the functionality of
         ggplot2, we suggest loading it prior to loading `ggcapdthemes`.
-
+introImage: "/assets/images/rstyle/using-the-theme/chart-layout.svg"   
 sections:
-  - image: "/assets/images/rstyle/using-the-theme/chart-layout.svg"   
+  - content: |
+        Because this package is intended to augment the functionality of ggplot2, we suggest loading it prior to loading ggcapdthemes.
+  - code: |
+      library(ggplot2)
+      library(ggcapdthemes)
   - title: "Applying the theme `theme_capd()`"
     level: 2
     content: |
-        This theme includes both quantitative and categorical color palettes.
-        However, there are some situations where you might not want to use a
-        whole palette; instead, you might want to use color to draw attention
-        only to specific parts of a chart without overwhelming the user. For
-        more details on using color as a highlight, see the of the Data
-        Visualization Style Guide.
+        First, we start with some eGRID data shown in a ggplot bar chart, using the default ggplot theme. The ggcapdthemes package contains a data object called gg_ex_bar to use as a building block.
+    code: |
+        gg_ex_bar  
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-1.svg" 
+  - content: | 
+      Next, we add the theme_capd() function to apply our custom theme.
+    code: |  
+      gg_ex_bar +
+        theme_capd() 
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-5-1.svg" 
+  - content: | 
+      To change the orientation of the axis and grid lines to the y-axis, we can provide the axis_lines = 'vert' argument. The default is ‘horiz’ for horizontal (x-axis and horizontal grid lines shown).
+    code: |  
+      gg_ex_bar +
+        theme_capd(axis_lines = 'vert')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-6-1.svg" 
+  - content: | 
+      Other theme specifications can be controlled with the ticks grid_lines and legend_position arguments, as shown here.
+    code: |  
+      gg_ex_bar +
+         scale_fill_capd_discrete(palette = 'fuel_type') +
+         theme_capd(grid_lines = c('major','minor'), 
+                    axis_lines = 'vert', 
+                    ticks = TRUE, 
+                    legend_position = 'none')        
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-7-1.svg" 
+  - content: | 
+      Lastly, we can add the scale_fill_capd_discrete function to apply a custom color palette for fuel types.
+    code: |  
+      gg_ex_bar +
+         theme_capd(grid_lines = c('major','minor'), 
+                    axis_lines = 'vert', 
+                    ticks = TRUE, 
+                    legend_position = 'none')        
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-8-1.svg" 
   - title: "General theme info"
     level: 3
     content: |
-        Using the `gghighlight` package to assist, we can emphasize certain
-        groups or elements of charts. Leave fuel type as original color, gray
-        out non-highlighted groups.
-  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-1.svg" 
-  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-2.svg" 
-  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-3.svg" 
-  - title: "Font sizing"
+        The “Source Sans 3” font is downloaded from Google Fonts and applied to all when theme_capd is used. An initial font size is specified using the base_size argument; this defaults to 11pt, but we will use 10pt for this example.
+  - title: "Font sizing: `base_size`"
     level: 3
     content: |
-        Using the `gghighlight` package to assist, we can emphasize certain
-        groups or elements of charts. Leave fuel type as original color, gray
-        out non-highlighted groups.
-  - title: "Axis line orientation"
-    level: 3
-    content: |
-        Legends are most helpful and accessible when they are directly attached
-        to the relevant data elements. If that isn’t possible, keeping them as
-        close as possible to the data elements is a good compromise. For more
-        details on legend design, see the of the Data Visualization dedicated
-        section Style Guide.
+        Other fonts throughout the chart are re-sized relative to the base_size, using the ggplot2::rel function. The half_line setting is used for margins.
+  - code: |  
+      gg_ex_bar +
+         theme_capd(base_size = 11)
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-9-1.svg" 
+  - code: |  
+      gg_ex_bar +
+         theme_capd(base_size = 6)
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-9-2.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(base_size = 16)
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-9-3.svg" 
+  - content: |
+        Here we see the font applied to all text elements by default; they will be re-sized in the sections below.
 
-        By default, ggplot sorts character variables for color / fill
-        alphabetically from A to Z. Sometimes this is desired, other times there
-        are more useful orders for aligning to the data at hand.
-  - title: "Gridlines"
+        Plot annotations such as titles, subtitles is formatted through the following theme options. The title size is magnified 20% compared to base_size, while the caption is decreased 20%.
+  - title: "Axis line orientation: `plot direction`"
+    level: 3
+  - code: |  
+      ## default: 'horiz'
+      gg_ex_bar +
+          theme_capd(axis_lines = 'horiz')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-10-1.svg" 
+  - code: |  
+      gg_ex_bar +
+           theme_capd(axis_lines = 'vert')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-10-2.svg" 
+  - code: |  
+      gg_ex_bar +
+            theme_capd(axis_lines = 'both')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-10-3.svg" 
+  - title: "Gridlines: `grid_lines`"
     level: 3
     content: |
-        Using the `fct_reorder2` function from the `forcats` tidyverse package,
-        you can easily reorder columns by another columns value. This allows the
-        legend categories to go in order of highest to lowest value.
-  - title: "Tick Marks"
+      The grid_lines arguments controls which sets of gridlines to display.
+
+       Possible options include
+        - major grid lines 'major'
+        - minor grid lines: 'minor'
+        - both major and minor: c('major','minor')
+        - no gridlines: 'none'
+
+      Note that this interacts with the `axis_lines` argument and only shows the gridlines for the orientations specified. Other gridlines remain hidden.
+  - code: |  
+      gg_ex_bar +
+          theme_capd(grid_lines = 'major', axis_lines = 'horiz')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-1.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(grid_lines = 'major', axis_lines = 'vert')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-2.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(grid_lines = c('major','minor'), axis_lines = 'vert')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-3.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(grid_lines = 'none')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-4.svg" 
+  - title: "Tick Marks: `ticks`"
     level: 3
     content: |
-       Through the help of the `directlabels` package, you can also add labels
-       directly onto a ggplot for easier context. Here we add them to the end
-       of the lines using the `method = 'last.qp'` argument.
-  - title: "Legend"
+       The `ticks` argument determines whether to show (TRUE) or hide (FALSE) the tick marks on the non-major axis, or the one perpendicular to the plot’s orientation. For vertical `axis_liness`, this is the y-axis ticks marks and for horizontal orientations, this is the x-axis tick marks.
+  - code: |  
+      gg_ex_bar +
+          theme_capd(ticks = FALSE)
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-12-1.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(ticks = TRUE)
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-12-2.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(ticks = TRUE, axis_lines = 'both')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-13-1.svg" 
+    content: | 
+      When axis_lines = 'both', this controls whether to show both x-axis and y-axis tick marks.
+  - title: "Legend: `legend_position`"
     level: 3
     content: |
-        Tooltips that call out names, values, and style (color, stroke pattern,
-        etc.) of individual data elements can help make those data points easier
-        to identify in your chart. For more details on tooltip design, see the
-        of the Data Visualization Style Guide.
+        This is a wrapper for the `legend.position` ggplot theme argument. Valid options for `legend_position` are ‘top’, ‘bottom’, ‘left’, ‘right’, or ‘none’ to hide it.
+  - code: |  
+      gg_ex_bar +
+          theme_capd(legend_position = 'top')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-14-1.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(legend_position = 'bottom')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-14-2.svg" 
+  - code: |  
+      gg_ex_bar +
+          theme_capd(legend_position = 'bottom')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-14-3.svg" 
   - title: "Applying color palettes"
     level: 2
     content: |
-       The `plotly` package can be used for interactive charts. To turn a
-       ggplot object into a plotly chart, wrap it in `plotly::ggplotly()`.
+       Color scales are added separately from the theme, using the `scale_color_capd_*` and `scale_fill_capd_*` functions. Here we apply the “unordered” palette using `scale_color_capd_discrete`.
   - title: "Quantitative palettes"
     level: 3
     content: |
@@ -80,49 +167,46 @@ sections:
        points easier to identify
   - title: "Sequential"
     level: 4
-    content: |
-       Alternative text helps make charts more accessible for users who cannot
-       rely on visuals. Alt text should be specific and detailed but not overly
-       wordy; it can be used in combination with other, non-visual
-       representations of the same data, such as tables or direct downloads.
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-15-1.svg" 
   - title: "Divergent"
     level: 4
-    content: |
-        Using the `fct_reorder2` function from the `forcats` tidyverse package,
-        you can easily reorder columns by another columns value. This allows the
-        legend categories to go in order of highest to lowest value.
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-16-1.svg"
+  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-17-1.svg" 
   - title: "Categorical palettes"
     level: 3
-    content: |
-        Variations of color accessibility can be assessed using the
-        `colorblindr` package.
   - title: "Fuel type palettes"
     level: 5
-    content: |
-        Another way to make your charts more accessible is to provide the
-        underlying data directly to users either by providing data tables near
-        their respective charts, or by allowing users to download that data.
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-18-1.svg"
   - title: "Combustion vs Non-Combustion"
     level: 5
     content: |
-        Another way to make your charts more accessible is to provide the
-        underlying data directly to users either by providing data tables near
-        their respective charts, or by allowing users to download that data.
+        All Combustion fuel types:
+
+        Includes all fossil fuels (coal, oil, natural gas, blast furnace gas, and tire-derived fuel) and biomass, such as wood, agricultural byproducts, municipal solid waste, and landfill gas.
+  - code: |  
+      ggplot(combustion) +
+        geom_bar(aes(x = resource_mix, y=region, group=region, fill=fuel_type), stat='identity') +
+        scale_fill_capd_discrete(palette = 'combustion') +
+        scale_x_continuous(expand = c(0,0)) + 
+        labs(x = 'Resource Mix (%)', y='eGRID Subregion', fill = 'Fuel Type', title = '2023 eGRID Resource Mix',
+        subtitle = 'by Combustion vs. Non-combustion fuels') +
+        theme_capd(axis_lines = 'vert')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-19-1.svg"
   - title: "Renewables vs Non-renewables"
     level: 5
-    content: |
-        Another way to make your charts more accessible is to provide the
-        underlying data directly to users either by providing data tables near
-        their respective charts, or by allowing users to download that data.
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-20-1.svg"
+  - code: |  
+      ggplot(renewables) +
+        geom_bar(aes(x = resource_mix, y = region, group = region, fill = fuel_type), stat = 'identity') +
+        scale_fill_capd_discrete(palette = 'renewables2') +
+        scale_x_continuous(expand=c(0,0)) +
+        labs(x = 'Resource Mix (%)', y='eGRID Subregion', fill = 'Fuel Type', title = '2023 eGRID Resource Mix',
+        subtitle = 'by Renewable vs. Non-renewable fuels') +
+        theme_capd(axis_lines = 'vert')
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-21-1.svg"
   - title: "Pollutant palettes"
     level: 4
-    content: |
-        Another way to make your charts more accessible is to provide the
-        underlying data directly to users either by providing data tables near
-        their respective charts, or by allowing users to download that data.
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-22-1.svg"
   - title: "Unordered palettes"
     level: 4
-    content: |
-        Another way to make your charts more accessible is to provide the
-        underlying data directly to users either by providing data tables near
-        their respective charts, or by allowing users to download that data.
+    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-23-1.svg"
