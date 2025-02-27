@@ -7,6 +7,7 @@ export function extractSections(content: string): Section[] {
 
   return sections.map((section: Section) => ({
     ...section,
+    code: [{ language: "r", content: section.code }],
     cards: section.cards || [], 
   }));
 }
@@ -28,10 +29,11 @@ export function extractIntro(content: string) {
     return {
       introTitle: parsedContent.data.introTitle || "", 
       introContent: parsedContent.data.introContent || "", 
+      introImage: parsedContent.data.introImage || "", 
     };
   } catch (error) {
     console.error("Error parsing intro content:", error);
-    return { introTitle: "", introContent: "" }; 
+    return { introTitle: "", introContent: "", introImage: "" }; 
   }
 }
 

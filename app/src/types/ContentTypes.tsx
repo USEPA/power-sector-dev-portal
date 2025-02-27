@@ -13,7 +13,10 @@ export interface Download {
   link?: string;
 }
 
-
+export interface CodeSnippet {
+  language: "r";
+  content: string; 
+}
   
 export interface Section {
   title?: string;
@@ -24,6 +27,7 @@ export interface Section {
   level?: number;
   cards?: Card[]; 
   downloads?: Download[];
+  code?: CodeSnippet[];
 }
 
   
