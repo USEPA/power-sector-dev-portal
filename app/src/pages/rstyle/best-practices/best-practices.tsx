@@ -11,16 +11,18 @@ import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const BestPractices: React.FC = () => {
+const UsingTheTheme: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
     `${base}content/rstyle/best-practices/best-practices.md`
   );
   const { title } = content ? extractBanner(content) : { title: "" };
-  const { introTitle, introContent } = content
+  const { introTitle, introContent, introImage } = content
     ? extractIntro(content)
-    : { introTitle: "", introContent: "" };
+    : { introTitle: "", introContent: "", introImage: "" };
 
   const sections: Section[] = content ? extractSections(content) : [];
 
@@ -38,6 +40,16 @@ const BestPractices: React.FC = () => {
               <div className="intro-section">
                 {introTitle && <h2>{introTitle}</h2>}
                 {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
+                {introImage &&
+                  (introImage?.endsWith(".svg") ? (
+                    <SVGRenderer src={introImage} alt={introTitle} />
+                  ) : (
+                    <img
+                      src={introImage}
+                      alt={introTitle}
+                      className="section-image"
+                    />
+                  ))}
               </div>
             )}
           </div>
@@ -50,16 +62,29 @@ const BestPractices: React.FC = () => {
                   <ReactMarkdown>{section.content}</ReactMarkdown>
                 </div>
               )}
-              {section.image &&
-                (section.image?.endsWith(".svg") ? (
-                  <SVGRenderer src={section.image} alt={section.alt ? section.alt : section.title} />
-                ) : (
-                  <img
-                    src={section.image}
-                    alt={section.alt ? section.alt : section.title}
-                    className="section-image"
-                  />
-                ))}
+              {Array.isArray(section.code) &&
+                section.code.length > 0 &&
+                section.code.some((snippet) => snippet.content?.trim()) && (
+                  <div className="code-container">
+                    {section.code
+                      .filter((snippet) => snippet.content?.trim())
+                      .map((snippet, codeIdx) => (
+                        <SyntaxHighlighter
+                          key={codeIdx}
+                          language={snippet.language || "r"}
+                          style={materialLight}
+                        >
+                          {snippet.content}
+                        </SyntaxHighlighter>
+                      ))}
+                  </div>
+                )}
+              {section.image && (
+                <img
+                  src={section.image}
+                  alt={section.alt ? section.alt : section.title}
+                />
+              )}
 
               {section.cards && section.cards.length > 0 && (
                 <div className="cards-container">
@@ -84,4 +109,4 @@ const BestPractices: React.FC = () => {
   );
 };
 
-export default BestPractices;
+export default UsingTheTheme;
