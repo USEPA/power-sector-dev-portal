@@ -1,12 +1,12 @@
 ---
 title: "API Documentation"
 introTitle: "About the API Documentation"
-introContent: "Lorem ipsum dolor sit amet consectetur. In justo sit ullamcorper tempus nam enim adipiscing integer morbi. Id a ac a pellentesque a cras. Donec duis vestibulum pulvinar donec amet feugiat lectus urna gravida. Aliquet."
+introContent: "Content to Come"
 sections:
   - title: "API Documentation"
     cards:
-      - title: "Content to Come"
-        content: "Lorem ipsum dolor sit amet consectetur. In justo sit ullamcorper tempus nam enim adipiscing integer morbi. Id a ac a pellentesque a cras. Donec duis vestibulum pulvinar donec amet feugiat lectus urna gravida. Aliquet."
+      - title: "API Documentation"
+        content: "Coming soon"
         link: "/"
 
 
