@@ -7,37 +7,34 @@ introContent: |
         Visualization Style Guide can be integrated into your R visualizations.
         Through the use of the `{ggcapdthemes}` package and the `theme_capd`
         function, you can easily customize and standardize your ggplots!
-
-        Because this package is intended to augment the functionality of
-        ggplot2, we suggest loading it prior to loading `ggcapdthemes`.
 introImage: "/assets/images/ggplot/using-the-theme/chart-layout.svg"   
 sections:
   - content: |
-        Because this package is intended to augment the functionality of ggplot2, we suggest loading it prior to loading ggcapdthemes.
+        Because this package is intended to augment the functionality of ggplot2, we suggest loading it prior to loading `ggcapdthemes`.
   - code: |
       library(ggplot2)
       library(ggcapdthemes)
   - title: "Applying the theme `theme_capd()`"
     level: 2
     content: |
-        First, we start with some eGRID data shown in a ggplot bar chart, using the default ggplot theme. The ggcapdthemes package contains a data object called gg_ex_bar to use as a building block.
+        First, we start with some eGRID data shown in a ggplot bar chart, using the default ggplot theme. The `ggcapdthemes` package contains a data object called `gg_ex_bar` to use as a building block.
     code: |
         gg_ex_bar  
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-4-1.svg" 
   - content: | 
-      Next, we add the theme_capd() function to apply our custom theme.
+      Next, we add the `theme_capd()` function to apply our custom theme.
     code: |  
       gg_ex_bar +
         theme_capd() 
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-5-1.svg" 
   - content: | 
-      To change the orientation of the axis and grid lines to the y-axis, we can provide the axis_lines = 'vert' argument. The default is ‘horiz’ for horizontal (x-axis and horizontal grid lines shown).
+      To change the orientation of the axis and grid lines to the y-axis, we can provide the `axis_lines = 'vert'` argument. The default is ‘horiz’ for horizontal (x-axis and horizontal grid lines shown).
     code: |  
       gg_ex_bar +
         theme_capd(axis_lines = 'vert')
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-6-1.svg" 
   - content: | 
-      Other theme specifications can be controlled with the ticks grid_lines and legend_position arguments, as shown here.
+      Other theme specifications can be controlled with the ticks `grid_lines` and `legend_position` arguments, as shown here.
     code: |  
       gg_ex_bar +
          scale_fill_capd_discrete(palette = 'fuel_type') +
@@ -47,7 +44,7 @@ sections:
                     legend_position = 'none')        
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-7-1.svg" 
   - content: | 
-      Lastly, we can add the scale_fill_capd_discrete function to apply a custom color palette for fuel types.
+      Lastly, we can add the `scale_fill_capd_discrete` function to apply a custom color palette for fuel types.
     code: |  
       gg_ex_bar +
          theme_capd(grid_lines = c('major','minor'), 
@@ -58,11 +55,11 @@ sections:
   - title: "General theme info"
     level: 3
     content: |
-        The “Source Sans 3” font is downloaded from Google Fonts and applied to all when theme_capd is used. An initial font size is specified using the base_size argument; this defaults to 11pt, but we will use 10pt for this example.
+        The “Source Sans 3” font is downloaded from Google Fonts and applied to all when `theme_capd` is used. An initial font size is specified using the `base_size` argument; this defaults to 11pt, but we will use 10pt for this example.
   - title: "Font sizing: `base_size`"
     level: 3
     content: |
-        Other fonts throughout the chart are re-sized relative to the base_size, using the ggplot2::rel function. The half_line setting is used for margins.
+        Other fonts throughout the chart are re-sized relative to the `base_size`, using the `ggplot2::rel` function. The `half_line` setting is used for margins.
   - code: |  
       gg_ex_bar +
          theme_capd(base_size = 11)
@@ -78,7 +75,7 @@ sections:
   - content: |
         Here we see the font applied to all text elements by default; they will be re-sized in the sections below.
 
-        Plot annotations such as titles, subtitles is formatted through the following theme options. The title size is magnified 20% compared to base_size, while the caption is decreased 20%.
+        Plot annotations such as titles, subtitles is formatted through the following theme options. The title size is magnified 20% compared to `base_size`, while the caption is decreased 20%.
   - title: "Axis line orientation: `plot direction`"
     level: 3
   - code: |  
@@ -97,13 +94,13 @@ sections:
   - title: "Gridlines: `grid_lines`"
     level: 3
     content: |
-      The grid_lines arguments controls which sets of gridlines to display.
+      The `grid_lines` arguments controls which sets of gridlines to display.
 
        Possible options include
-        - major grid lines 'major'
-        - minor grid lines: 'minor'
-        - both major and minor: c('major','minor')
-        - no gridlines: 'none'
+        - major grid lines `'major'`
+        - minor grid lines: `'minor'`
+        - both major and minor: `c('major','minor')`
+        - no gridlines: `'none'`
 
       Note that this interacts with the `axis_lines` argument and only shows the gridlines for the orientations specified. Other gridlines remain hidden.
   - code: |  
@@ -125,7 +122,7 @@ sections:
   - title: "Tick Marks: `ticks`"
     level: 3
     content: |
-       The `ticks` argument determines whether to show (TRUE) or hide (FALSE) the tick marks on the non-major axis, or the one perpendicular to the plot’s orientation. For vertical `axis_liness`, this is the y-axis ticks marks and for horizontal orientations, this is the x-axis tick marks.
+       The `ticks` argument determines whether to show (TRUE) or hide (FALSE) the tick marks on the non-major axis, or the one perpendicular to the plot’s orientation. For vertical `axis_lines`, this is the y-axis ticks marks and for horizontal orientations, this is the x-axis tick marks.
   - code: |  
       gg_ex_bar +
           theme_capd(ticks = FALSE)
@@ -139,7 +136,7 @@ sections:
           theme_capd(ticks = TRUE, axis_lines = 'both')
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-13-1.svg" 
     content: | 
-      When axis_lines = 'both', this controls whether to show both x-axis and y-axis tick marks.
+      When `axis_lines = 'both'`, this controls whether to show both x-axis and y-axis tick marks.
   - title: "Legend: `legend_position`"
     level: 3
     content: |

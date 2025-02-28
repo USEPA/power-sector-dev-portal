@@ -4,6 +4,9 @@ tagline: ""
 
 
 sections:
+  - code: |  
+      library(ggplot2)
+      library(ggcapdthemes)
   - title: "Color as Highlight"
     content: |
         This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the of the Data Visualization Style Guide.
@@ -52,7 +55,7 @@ sections:
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-6-1.svg"  
   - title: "Sorting Legend Entries"
     content: |
-        Using the `fct_reorder2` function from the forcats tidyverse package, you can easily reorder columns by another columns value. This allows the legend categories to go in order of highest to lowest value.
+        Using the `fct_reorder2` function from the `forcats` tidyverse package, you can easily reorder columns by another columns value. This allows the legend categories to go in order of highest to lowest value.
     code: |  
       ggplot(so2_aq,
             aes(x=year, y=value, color = forcats::fct_reorder2(stat, year, value))) +
@@ -62,7 +65,7 @@ sections:
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-7-1.svg" 
   - title: "Adding Direct Labels on your Chart"
     content: |
-      Through the help of the directlabels package, you can also add labels directly onto a ggplot for easier context. Here we add them to the end of the lines using the `method = 'last.qp'` argument.
+      Through the help of the `directlabels` package, you can also add labels directly onto a ggplot for easier context. Here we add them to the end of the lines using the `method = 'last.qp'` argument.
     code: |  
       p_direct <- ggplot(so2_aq, aes(x=year, y=value, color=stat)) +
                     geom_line() +
@@ -76,7 +79,7 @@ sections:
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-2.svg" 
   - title: "Tooltips"
     content: |
-        Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the of the Data Visualization Style Guide
+        Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the [Data Visualization Style Guide](#/datavis).
   - title: "Plotly"
     content: |
        The `plotly` package can be used for interactive charts. To turn a ggplot object into a plotly chart, wrap it in `plotly::ggplotly()`.
@@ -102,6 +105,11 @@ sections:
 
       p_alt
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-10-1.svg" 
+  - title: "Generating alt text template"
+    level: 4
+    code: |  
+      ggalttext::generate_alt_text(p_bar)
+      #> [1] "2023 eGRID Generation Resource Mix.  A plot with Generation Resource Mix (%) on the x-axis and Resource on the y-axis. The data is displayed using bars."
   - title: "Color Accessibility"
     content: |
         Variations of color accessibility can be assessed using the
