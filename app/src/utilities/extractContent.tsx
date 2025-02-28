@@ -30,10 +30,11 @@ export function extractIntro(content: string) {
       introTitle: parsedContent.data.introTitle || "", 
       introContent: parsedContent.data.introContent || "", 
       introImage: parsedContent.data.introImage || "", 
+      introImgAlt: parsedContent.data.introImgAlt || "", 
     };
   } catch (error) {
     console.error("Error parsing intro content:", error);
-    return { introTitle: "", introContent: "", introImage: "" }; 
+    return { introTitle: "", introContent: "", introImage: "", introImgAlt: "" }; 
   }
 }
 

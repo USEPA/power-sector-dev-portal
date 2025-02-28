@@ -27,6 +27,7 @@ sections:
       )
       #> label_key: resource_label
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-4-1.svg"
+    alt: "An image of a bar chart showing generation resource mix built in ggplot with the custom CAPD theme applied. The bar showing Gas is orange while all other bars are light gray with a dark gray border."
   - title: "Highlighting Continuous Colors"
     code: |  
       p_co2 <- ggplot(co2_emission_2022, aes(y = Region, x = co2)) + 
@@ -52,7 +53,8 @@ sections:
         geom_line() +
         labs(color = 'Statistic') + 
         theme_capd()
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-6-1.svg"  
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-6-1.svg" 
+    alt: "An image of a multi-line chart with three lines. The order of the lines from top to bottom does not match the order in which they are described in the legend that sits to the right of the chart." 
   - title: "Sorting Legend Entries"
     content: |
         Using the `fct_reorder2` function from the `forcats` tidyverse package, you can easily reorder columns by another columns value. This allows the legend categories to go in order of highest to lowest value.
@@ -63,6 +65,7 @@ sections:
         labs(color = 'Statistic') + 
         theme_capd()
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-7-1.svg" 
+    alt: "An image of a multi-line chart with three lines. The order of the lines from top to bottom matches the order in which they are described in the legend that sits to the right of the chart."
   - title: "Adding Direct Labels on your Chart"
     content: |
       Through the help of the `directlabels` package, you can also add labels directly onto a ggplot for easier context. Here we add them to the end of the lines using the `method = 'last.qp'` argument.
@@ -74,9 +77,11 @@ sections:
 
       directlabels::direct.label(p_direct, method = 'last.qp')
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-1.svg" 
+    alt: "An image of a multi-line chart with three lines. The three lines are directly labeled with their names in their respective colors on the right-most edge of the chart."
   - code: |  
       directlabels::direct.label(p_direct, method = 'first.qp')
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-2.svg" 
+    alt: "An image of a multi-line chart with three lines. The three lines are directly labeled with their names in their respective colors on the left-most edge of the chart."
   - title: "Tooltips"
     content: |
         Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the [Data Visualization Style Guide](#/datavis).
@@ -105,6 +110,7 @@ sections:
 
       p_alt
     image: "/assets/images/ggplot/best-practices/unnamed-chunk-10-1.svg" 
+    alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied but with the default color scheme still applied."
   - title: "Generating alt text template"
     level: 4
     code: |  
@@ -117,6 +123,7 @@ sections:
     code: |  
       colorblindr::cvd_grid(p_bar)
     image: "/assets/images/ggplot/best-practices/colorblindr_example_barplot.svg" 
+    alt: "An image showing how a bar chart would look to readers with four different types of color blindness."
   - title: "Other Data Accessibility"
     content: |
         Another way to make your charts more accessible is to provide the underlying data directly to users either by providing data tables near their respective charts, or by allowing users to download that data.

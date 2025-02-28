@@ -8,7 +8,6 @@ import {
 import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderContent";
-import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -20,9 +19,9 @@ const UsingTheTheme: React.FC = () => {
     `${base}content/ggplot/using-the-theme/using-the-theme.md`
   );
   const { title } = content ? extractBanner(content) : { title: "" };
-  const { introTitle, introContent, introImage } = content
+  const { introTitle, introContent, introImage, introImgAlt } = content
     ? extractIntro(content)
-    : { introTitle: "", introContent: "", introImage: "" };
+    : { introTitle: "", introContent: "", introImage: "", introImgAlt: "" };
 
   const sections: Section[] = content ? extractSections(content) : [];
 
@@ -41,15 +40,12 @@ const UsingTheTheme: React.FC = () => {
                 {introTitle && <h2>{introTitle}</h2>}
                 {introContent && <ReactMarkdown>{introContent}</ReactMarkdown>}
                 {introImage &&
-                  (introImage?.endsWith(".svg") ? (
-                    <SVGRenderer src={introImage} alt={introTitle} />
-                  ) : (
                     <img
                       src={introImage}
-                      alt={introTitle}
+                      alt={introImgAlt}
                       className="section-image"
                     />
-                  ))}
+                }
               </div>
             )}
           </div>
