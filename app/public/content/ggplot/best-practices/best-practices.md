@@ -44,7 +44,7 @@ sections:
         )
   - title: "Legends"
     content: |
-        Legends are most helpful and accessible when they are directly attached to the relevant data elements. If that isn’t possible, keeping them as close as possible to the data elements is a good compromise. For more details on legend design, see the of the Data Visualization dedicated section Style Guide.
+        Legends are most helpful and accessible when they are directly attached to the relevant data elements. If that isn’t possible, keeping them as close as possible to the data elements is a good compromise. For more details on legend design, see the [dedicated section of the Data Visualization Style Guide](#/datavis/charts).
 
         By default, ggplot sorts character variables for color / fill alphabetically from A to Z. Sometimes this is desired, other times there are more useful orders for aligning to the data at hand.
     code: |  

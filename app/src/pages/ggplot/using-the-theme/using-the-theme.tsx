@@ -43,7 +43,6 @@ const UsingTheTheme: React.FC = () => {
                     <img
                       src={introImage}
                       alt={introImgAlt}
-                      className="section-image"
                     />
                 }
               </div>
