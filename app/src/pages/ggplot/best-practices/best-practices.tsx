@@ -99,7 +99,7 @@ const UsingTheTheme: React.FC = () => {
             </div>
           ))}
         </main>
-        <SideNav />
+        {content && <SideNav />}
       </div>
     </div>
   );

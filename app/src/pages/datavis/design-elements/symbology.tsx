@@ -85,7 +85,7 @@ const Symbology: React.FC = () => {
           ))}
         </main>
 
-        <SideNav />
+        {content && <SideNav />}
       </div>
     </div>
   );

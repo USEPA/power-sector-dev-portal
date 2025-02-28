@@ -72,7 +72,7 @@ const Layout: React.FC = () => {
           </>
         ))}
         </main>
-        <SideNav />
+        {content && <SideNav />}
       </div>
     </div>
   );

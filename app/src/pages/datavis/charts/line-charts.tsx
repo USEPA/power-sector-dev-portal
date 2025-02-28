@@ -73,7 +73,7 @@ const LineCharts: React.FC = () => {
           </div>
         ))}
         </main>
-        <SideNav />
+        {content && <SideNav />}
       </div>
     </div>
   );

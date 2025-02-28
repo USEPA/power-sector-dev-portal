@@ -73,7 +73,7 @@ const BarCharts: React.FC = () => {
             )}
           </>
         ))}
-        </main><SideNav />
+        </main>{content && <SideNav />}
       </div>
     </div>
   );

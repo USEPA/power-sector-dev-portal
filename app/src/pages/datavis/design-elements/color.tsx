@@ -85,7 +85,7 @@ const ColorPage: React.FC = () => {
           ))}
         </main>
 
-        <SideNav />
+        {content && <SideNav />}
       </div>
     </div>
   );

@@ -73,7 +73,7 @@ const AreaCharts: React.FC = () => {
           </div>
         ))}
         </main>
-        <SideNav />
+        {content && <SideNav />}
       </div>
     </div>
   );
