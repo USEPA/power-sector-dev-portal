@@ -6,8 +6,8 @@
   @include theme(root);
 }
 
-:root.rstyle {
-  @include theme(rstyle);
+:root.ggplot {
+  @include theme(ggplot);
 }
 
 :root.datavis {

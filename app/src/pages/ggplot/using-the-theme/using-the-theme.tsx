@@ -12,12 +12,12 @@ import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const UsingTheTheme: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
-    `${base}content/rstyle/best-practices/best-practices.md`
+    `${base}content/ggplot/using-the-theme/using-the-theme.md`
   );
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent, introImage } = content

@@ -23,7 +23,7 @@ sections:
           linewidth = 0.2) 
       )
       #> label_key: resource_label
-    image: "/assets/images/rstyle/best-practices/unnamed-chunk-4-1.svg"
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-4-1.svg"
   - title: "Highlighting Continuous Colors"
     code: |  
       p_co2 <- ggplot(co2_emission_2022, aes(y = Region, x = co2)) + 
@@ -49,7 +49,7 @@ sections:
         geom_line() +
         labs(color = 'Statistic') + 
         theme_capd()
-    image: "/assets/images/rstyle/best-practices/unnamed-chunk-6-1.svg"  
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-6-1.svg"  
   - title: "Sorting Legend Entries"
     content: |
         Using the `fct_reorder2` function from the forcats tidyverse package, you can easily reorder columns by another columns value. This allows the legend categories to go in order of highest to lowest value.
@@ -59,7 +59,7 @@ sections:
         geom_line() +
         labs(color = 'Statistic') + 
         theme_capd()
-    image: "/assets/images/rstyle/best-practices/unnamed-chunk-7-1.svg" 
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-7-1.svg" 
   - title: "Adding Direct Labels on your Chart"
     content: |
       Through the help of the directlabels package, you can also add labels directly onto a ggplot for easier context. Here we add them to the end of the lines using the `method = 'last.qp'` argument.
@@ -70,10 +70,10 @@ sections:
                     theme_capd()
 
       directlabels::direct.label(p_direct, method = 'last.qp')
-    image: "/assets/images/rstyle/best-practices/unnamed-chunk-8-1.svg" 
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-1.svg" 
   - code: |  
       directlabels::direct.label(p_direct, method = 'first.qp')
-    image: "/assets/images/rstyle/best-practices/unnamed-chunk-8-2.svg" 
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-2.svg" 
   - title: "Tooltips"
     content: |
         Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the of the Data Visualization Style Guide
@@ -101,14 +101,14 @@ sections:
         labs(alt = 'My alt text here')
 
       p_alt
-    image: "/assets/images/rstyle/best-practices/unnamed-chunk-10-1.svg" 
+    image: "/assets/images/ggplot/best-practices/unnamed-chunk-10-1.svg" 
   - title: "Color Accessibility"
     content: |
         Variations of color accessibility can be assessed using the
         `colorblindr` package.
     code: |  
       colorblindr::cvd_grid(p_bar)
-    image: "/assets/images/rstyle/best-practices/colorblindr_example_barplot.svg" 
+    image: "/assets/images/ggplot/best-practices/colorblindr_example_barplot.svg" 
   - title: "Other Data Accessibility"
     content: |
         Another way to make your charts more accessible is to provide the underlying data directly to users either by providing data tables near their respective charts, or by allowing users to download that data.

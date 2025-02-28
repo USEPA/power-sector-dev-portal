@@ -23,10 +23,10 @@ import BarCharts from "./pages/datavis/charts/bar-charts";
 import AreaCharts from "./pages/datavis/charts/area-charts";
 import Maps from "./pages/datavis/charts/maps";
 import FurtherReading from "./pages/datavis/further-reading/further-reading/further-reading";
-import RStyleGuide from "./pages/rstyle/rstyle";
+import GgplotGuide from "./pages/ggplot/ggplot";
 import APIDocumentation from "./pages/api/api";
-import BestPractices from "./pages/rstyle/best-practices/best-practices";
-import UsingTheTheme from "./pages/rstyle/using-the-theme/using-the-theme";
+import BestPractices from "./pages/ggplot/best-practices/best-practices";
+import UsingTheTheme from "./pages/ggplot/using-the-theme/using-the-theme";
 
 function App() {
   const DynamicTheme = () => {
@@ -36,11 +36,11 @@ function App() {
       const root = document.documentElement; 
 
       // Remove any previously added classes
-      root.classList.remove("rstyle", "datavis", "api", "root");
+      root.classList.remove("ggplot", "datavis", "api", "root");
 
       // Add the class based on the current route
-      if (location.pathname.startsWith("/rstyle")) {
-        root.classList.add("rstyle");
+      if (location.pathname.startsWith("/ggplot")) {
+        root.classList.add("ggplot");
       } else if (location.pathname.startsWith("/datavis")) {
         root.classList.add("datavis");
       } else if (location.pathname.startsWith("/api")) {
@@ -81,8 +81,8 @@ function App() {
             {/* Other Routes */}
             <Route path="further-reading" element={<FurtherReading />} />
           </Route>
-          <Route path="/rstyle" element={<DataVisLayout />}>
-            <Route index element={<RStyleGuide />} />
+          <Route path="/ggplot" element={<DataVisLayout />}>
+            <Route index element={<GgplotGuide />} />
             <Route path="using-the-theme" element={<UsingTheTheme />} />
             <Route path="best-practices" element={<BestPractices />} />
           </Route>

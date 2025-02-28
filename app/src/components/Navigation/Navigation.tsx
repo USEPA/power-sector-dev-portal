@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
     title,
     isDatavisRoute,
     isApiRoute,
-    isRStyleRoute,
+    isGgplotRoute,
     isHomeRoute,
   } = getPageInfo(location);
 
@@ -313,13 +313,13 @@ const Navigation: React.FC = () => {
                   </li>
                 </ul>
               )}
-              {isRStyleRoute && (
+              {isGgplotRoute && (
                 <ul className="usa-nav__primary usa-accordion">
                   <li className="usa-nav__primary-item">
                     <Link
-                      to="/rstyle/using-the-theme"
+                      to="/ggplot/using-the-theme"
                       className={
-                        isCurrentPath(location, "/rstyle/using-the-theme")
+                        isCurrentPath(location, "/ggplot/using-the-theme")
                           ? "usa-current"
                           : ""
                       }
@@ -329,9 +329,9 @@ const Navigation: React.FC = () => {
                   </li>
                   <li className="usa-nav__primary-item">
                     <Link
-                      to="/rstyle/best-practices"
+                      to="/ggplot/best-practices"
                       className={
-                        isCurrentPath(location, "/rstyle/best-practices")
+                        isCurrentPath(location, "/ggplot/best-practices")
                           ? "usa-current"
                           : ""
                       }

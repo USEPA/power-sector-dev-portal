@@ -9,8 +9,8 @@ export const getPageInfo = (location: Location) => {
       isDatavisRoute: true,
     };
   }
-  if (location.pathname.startsWith("/rstyle")) {
-    return { route: "/rstyle", title: "Custom ggplot Theme", isRStyleRoute: true };
+  if (location.pathname.startsWith("/ggplot")) {
+    return { route: "/ggplot", title: "Custom ggplot Theme", isGgplotRoute: true };
   }
   if (location.pathname.startsWith("/api")) {
     return { route: "/api", title: "API Documentation", isApiRoute: true };
@@ -33,7 +33,7 @@ export const getPageLevelforBreadcrumbs = (location: Location) => {
     isExactlyPath(location, "/datavis/principles") ||
     isExactlyPath(location, "/datavis/design-elements") ||
     isExactlyPath(location, "/datavis/further-reading") ||
-    isExactlyPath(location, "/rstyle")
+    isExactlyPath(location, "/ggplot")
   ) {
     return { isRouteWithBanner: true };
   }

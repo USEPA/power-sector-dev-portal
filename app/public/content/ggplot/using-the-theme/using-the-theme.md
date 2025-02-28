@@ -10,7 +10,7 @@ introContent: |
 
         Because this package is intended to augment the functionality of
         ggplot2, we suggest loading it prior to loading `ggcapdthemes`.
-introImage: "/assets/images/rstyle/using-the-theme/chart-layout.svg"   
+introImage: "/assets/images/ggplot/using-the-theme/chart-layout.svg"   
 sections:
   - content: |
         Because this package is intended to augment the functionality of ggplot2, we suggest loading it prior to loading ggcapdthemes.
@@ -23,19 +23,19 @@ sections:
         First, we start with some eGRID data shown in a ggplot bar chart, using the default ggplot theme. The ggcapdthemes package contains a data object called gg_ex_bar to use as a building block.
     code: |
         gg_ex_bar  
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-4-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-4-1.svg" 
   - content: | 
       Next, we add the theme_capd() function to apply our custom theme.
     code: |  
       gg_ex_bar +
         theme_capd() 
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-5-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-5-1.svg" 
   - content: | 
       To change the orientation of the axis and grid lines to the y-axis, we can provide the axis_lines = 'vert' argument. The default is ‘horiz’ for horizontal (x-axis and horizontal grid lines shown).
     code: |  
       gg_ex_bar +
         theme_capd(axis_lines = 'vert')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-6-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-6-1.svg" 
   - content: | 
       Other theme specifications can be controlled with the ticks grid_lines and legend_position arguments, as shown here.
     code: |  
@@ -45,7 +45,7 @@ sections:
                     axis_lines = 'vert', 
                     ticks = TRUE, 
                     legend_position = 'none')        
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-7-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-7-1.svg" 
   - content: | 
       Lastly, we can add the scale_fill_capd_discrete function to apply a custom color palette for fuel types.
     code: |  
@@ -54,7 +54,7 @@ sections:
                     axis_lines = 'vert', 
                     ticks = TRUE, 
                     legend_position = 'none')        
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-8-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-8-1.svg" 
   - title: "General theme info"
     level: 3
     content: |
@@ -66,15 +66,15 @@ sections:
   - code: |  
       gg_ex_bar +
          theme_capd(base_size = 11)
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-9-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-9-1.svg" 
   - code: |  
       gg_ex_bar +
          theme_capd(base_size = 6)
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-9-2.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-9-2.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(base_size = 16)
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-9-3.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-9-3.svg" 
   - content: |
         Here we see the font applied to all text elements by default; they will be re-sized in the sections below.
 
@@ -85,15 +85,15 @@ sections:
       ## default: 'horiz'
       gg_ex_bar +
           theme_capd(axis_lines = 'horiz')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-10-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-10-1.svg" 
   - code: |  
       gg_ex_bar +
            theme_capd(axis_lines = 'vert')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-10-2.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-10-2.svg" 
   - code: |  
       gg_ex_bar +
             theme_capd(axis_lines = 'both')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-10-3.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-10-3.svg" 
   - title: "Gridlines: `grid_lines`"
     level: 3
     content: |
@@ -109,19 +109,19 @@ sections:
   - code: |  
       gg_ex_bar +
           theme_capd(grid_lines = 'major', axis_lines = 'horiz')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-11-1.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(grid_lines = 'major', axis_lines = 'vert')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-2.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-11-2.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(grid_lines = c('major','minor'), axis_lines = 'vert')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-3.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-11-3.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(grid_lines = 'none')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-11-4.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-11-4.svg" 
   - title: "Tick Marks: `ticks`"
     level: 3
     content: |
@@ -129,15 +129,15 @@ sections:
   - code: |  
       gg_ex_bar +
           theme_capd(ticks = FALSE)
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-12-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-12-1.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(ticks = TRUE)
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-12-2.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-12-2.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(ticks = TRUE, axis_lines = 'both')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-13-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-13-1.svg" 
     content: | 
       When axis_lines = 'both', this controls whether to show both x-axis and y-axis tick marks.
   - title: "Legend: `legend_position`"
@@ -147,15 +147,15 @@ sections:
   - code: |  
       gg_ex_bar +
           theme_capd(legend_position = 'top')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-14-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-14-1.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(legend_position = 'bottom')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-14-2.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-14-2.svg" 
   - code: |  
       gg_ex_bar +
           theme_capd(legend_position = 'bottom')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-14-3.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-14-3.svg" 
   - title: "Applying color palettes"
     level: 2
     content: |
@@ -167,16 +167,16 @@ sections:
        points easier to identify
   - title: "Sequential"
     level: 4
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-15-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-15-1.svg" 
   - title: "Divergent"
     level: 4
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-16-1.svg"
-  - image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-17-1.svg" 
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-16-1.svg"
+  - image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-17-1.svg" 
   - title: "Categorical palettes"
     level: 3
   - title: "Fuel type palettes"
     level: 5
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-18-1.svg"
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-18-1.svg"
   - title: "Combustion vs Non-Combustion"
     level: 5
     content: |
@@ -191,10 +191,10 @@ sections:
         labs(x = 'Resource Mix (%)', y='eGRID Subregion', fill = 'Fuel Type', title = '2023 eGRID Resource Mix',
         subtitle = 'by Combustion vs. Non-combustion fuels') +
         theme_capd(axis_lines = 'vert')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-19-1.svg"
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-19-1.svg"
   - title: "Renewables vs Non-renewables"
     level: 5
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-20-1.svg"
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-20-1.svg"
   - code: |  
       ggplot(renewables) +
         geom_bar(aes(x = resource_mix, y = region, group = region, fill = fuel_type), stat = 'identity') +
@@ -203,10 +203,10 @@ sections:
         labs(x = 'Resource Mix (%)', y='eGRID Subregion', fill = 'Fuel Type', title = '2023 eGRID Resource Mix',
         subtitle = 'by Renewable vs. Non-renewable fuels') +
         theme_capd(axis_lines = 'vert')
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-21-1.svg"
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-21-1.svg"
   - title: "Pollutant palettes"
     level: 4
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-22-1.svg"
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-22-1.svg"
   - title: "Unordered palettes"
     level: 4
-    image: "/assets/images/rstyle/using-the-theme/unnamed-chunk-23-1.svg"
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-23-1.svg"

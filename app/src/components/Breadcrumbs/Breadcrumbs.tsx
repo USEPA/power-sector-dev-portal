@@ -22,7 +22,7 @@ const Breadcrumbs: React.FC = () => {
     "area-charts": "Area Charts",
     "further-reading": "Further Reading",
     api: "API Documentation",
-    rstyle: "Custom ggplot Theme",
+    ggplot: "Custom ggplot Theme",
     "using-the-theme": "Using the Theme",
     "best-practices": "Best Practices",
   };

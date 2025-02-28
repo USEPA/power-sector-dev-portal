@@ -11,7 +11,7 @@ import Card from "../../components/Card/Card";
 import ReactMarkdown from "react-markdown";
 
 const DataVisualization: React.FC = () => {
-  const { content, error } = useMarkdownContent("/content/rstyle/rstyle.md");
+  const { content, error } = useMarkdownContent("/content/ggplot/ggplot.md");
 
   // Extract content from markdown
   const { title, tagline } = content
