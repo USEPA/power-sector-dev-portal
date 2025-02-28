@@ -38,7 +38,7 @@ const Card: React.FC<CardProps> = ({ title, content, link }) => {
   return (
     <div className={`card ${className}`}>
       <h3>{title}</h3>
-      {content != "Coming soon" ? (
+      {(content != "Coming soon" && title != "Content to Come" )? (
         <>
           {content && <p className="content">{content}</p>}
           {link && (
