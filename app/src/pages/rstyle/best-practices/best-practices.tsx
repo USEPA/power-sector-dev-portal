@@ -12,7 +12,7 @@ import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const UsingTheTheme: React.FC = () => {
   const base = import.meta.env.BASE_URL;
@@ -72,7 +72,7 @@ const UsingTheTheme: React.FC = () => {
                         <SyntaxHighlighter
                           key={codeIdx}
                           language={snippet.language || "r"}
-                          style={materialLight}
+                          style={oneLight}
                         >
                           {snippet.content}
                         </SyntaxHighlighter>

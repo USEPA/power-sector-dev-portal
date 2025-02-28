@@ -10,7 +10,7 @@ export const getPageInfo = (location: Location) => {
     };
   }
   if (location.pathname.startsWith("/rstyle")) {
-    return { route: "/rstyle", title: "R Style Guide", isRStyleRoute: true };
+    return { route: "/rstyle", title: "Custom ggplot Theme", isRStyleRoute: true };
   }
   if (location.pathname.startsWith("/api")) {
     return { route: "/api", title: "API Documentation", isApiRoute: true };
