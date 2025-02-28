@@ -407,7 +407,8 @@
 <path style="fill-rule:nonzero;fill:rgb(78.823529%,78.823529%,78.823529%);fill-opacity:1;stroke-width:0.426791;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(18.039216%,18.039216%,18.039216%);stroke-opacity:1;stroke-miterlimit:10;" d="M 94.152344 84.113281 L 95.242188 84.113281 L 95.242188 66.363281 L 94.152344 66.363281 Z M 94.152344 84.113281 "/>
 </g>
 <g clip-path="url(#clip22)" clip-rule="nonzero">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(97.254902%,46.27451%,42.745098%);fill-opacity:1;" d="M 94.152344 202.445312 L 559.621094 202.445312 L 559.621094 184.695312 L 94.152344 184.695312 Z M 94.152344 202.445312 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:#EF5E25
+;fill-opacity:1;" d="M 94.152344 202.445312 L 559.621094 202.445312 L 559.621094 184.695312 L 94.152344 184.695312 Z M 94.152344 202.445312 "/>
 </g>
 <path style="fill:none;stroke-width:1.066978;stroke-linecap:butt;stroke-linejoin:round;stroke:rgb(18.039216%,18.039216%,18.039216%);stroke-opacity:1;stroke-miterlimit:10;" d="M 94.152344 244.847656 L 94.152344 23.957031 "/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
