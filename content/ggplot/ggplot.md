@@ -8,9 +8,9 @@ sections:
     cards:
       - title: "Using the Theme"
         content: "This section walks you through the process of downloading, installing, and using this custom theme for a variety of chart types."
-        link: "/rstyle/using-the-theme"
+        link: "/ggplot/using-the-theme"
       - title: "Best Practices"
         content: "Learn to further customize your charts to bring them in line with CAPD Data Visualization Style Guide best practices using additional packages and/or code."
-        link: "/rstyle/best-practices"
+        link: "/ggplot/best-practices"
 
 
