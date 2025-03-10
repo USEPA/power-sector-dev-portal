@@ -45,7 +45,7 @@ const Charts: React.FC = () => {
             <div className="cards">
               {section.cards &&
                 section.cards.map((card: Card, idx: number) => (
-                  <div key={idx} className="card">
+                  <div key={idx} className="charts-card">
                     {isMobileView ? (
                       <img src={card.imagemb} alt={card.alt} />
                     ) : (
