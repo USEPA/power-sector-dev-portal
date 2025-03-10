@@ -2,7 +2,7 @@
 title: "Color"
 tagline: "Guidelines on using color effectively in visualizations."
 introTitle: "Introduction"
-introContent: "This guide’s data visualization color palettes are built using the USWDS’s existing color guidance and are intended to adhere to our internal principles around accessibility, clarity, and consistency. This section of the guide aims to provide practical palettes to use in common quantitative and categorical data visualizations while also providing palettes for more CAPD-specific use cases such as fuel and pollutant types."
+introContent: "This guide’s data visualization color palettes are built using the [U.S. Web Design System's (USWDS)](https://designsystem.digital.gov) existing color guidance and are intended to adhere to our internal principles around accessibility, clarity, and consistency. This section of the guide aims to provide practical palettes to use in common quantitative and categorical data visualizations while also providing palettes for more CAPD-specific use cases such as fuel and pollutant types."
 sections:
   - title: "Color as Highlight"
     level: 3
@@ -33,13 +33,13 @@ sections:
   - title: "Sequential Palette"
     level: 3
     content: |
-      Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO² emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case **#274863**, the darkest of this palette) to be accessible.
+      Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO² emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** is needed on some of the lighter colors. In the image below, colors that need borders are shown with them. 
     alt: ""
     image: "/assets/images/datavis/design-elements/color/sequential-palettes.svg"
   - title: "Divergent Palettes"
     level: 3
     content: |
-     If your quantitative data has a clear “midpoint” or “neutral” value, a divergent scale can highlight deviations from that point. For example, a choropleth map showing differences between states’ total CO² emissions and the national average for those emissions might use a divergent color scale. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case **#274863**, **#78312**, or **#5C410A**, the darkest of these palettes) to be accessible.
+     If your quantitative data has a clear “midpoint” or “neutral” value, a divergent scale can highlight deviations from that point. For example, a choropleth map showing differences between states’ total CO₂ emissions and the national average for those emissions might use a divergent color scale. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** for the light blue, **#782312** for the light red, **#5C410A** for the light yellow, and **#2E2E2E** for the light gray is needed. In the images below, colors that need borders are shown with them. 
   - title: "Divergent Palette 1"
     level: 4
     alt: ""
@@ -51,7 +51,7 @@ sections:
   - title: "Bivariate Palettes"
     level: 3
     content: |
-       If you want to encode two variables or aspects of your data through color, you can use a bivariate color palette. For example, a choropleth map showing how states compare on both amount and severity of pollution exposure could use a bivariate scale. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border (in this case, **#1B3F09** or **#412E4E**, the darkest of the palettes) to be accessible.
+       If you want to encode two variables or aspects of your data through color, you can use a bivariate color palette. For example, a choropleth map showing how states compare on both amount and severity of pollution exposure could use a bivariate scale. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#1B3F09** for light colors in the first palette and a border of **#412E4E** for light colors in the second palette is needed. In the images below, colors that need borders are shown with them. 
     alt: ""
     image: "/assets/images/datavis/design-elements/color/bivariate-palettes.svg"
   - title: "Categorical Palettes"
