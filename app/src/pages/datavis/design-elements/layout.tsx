@@ -31,7 +31,7 @@ const Layout: React.FC = () => {
     <div className="page">
        <div className="usa-in-page-nav-container container-with-sidenav">
        <main id="main-content" className="main-content">
-      <div className="intro-section">
+      <div>
         <h1>{title}</h1>
         <h2>{introTitle}</h2>
         <ReactMarkdown>{introContent}</ReactMarkdown>
