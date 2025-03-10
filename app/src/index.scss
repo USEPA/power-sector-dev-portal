@@ -102,6 +102,12 @@ body {
   height: auto; 
 }
 
+.banner-container {
+  p {
+    font-size: 1.2em !important;
+  }
+}
+
 .container,
 .banner-container {
   max-width: $max-width;
