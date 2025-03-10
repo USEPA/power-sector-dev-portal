@@ -43,7 +43,7 @@ sections:
   - title: "Divergent Palettes"
     level: 3
     content: |
-     Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** for the light blue, #78312 for the light red, **#5C410A** for the light yellow, and **#2E2E2E** for the light gray is needed. In the images below, colors that need borders are shown with them. 
+     Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** for the light blue, **#782312** for the light red, **#5C410A** for the light yellow, and **#2E2E2E** for the light gray is needed. In the images below, colors that need borders are shown with them. 
   - title: "Divergent Palette 1"
     level: 4
     alt: ""
