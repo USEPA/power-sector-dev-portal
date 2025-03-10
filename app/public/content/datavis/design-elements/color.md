@@ -2,7 +2,7 @@
 title: "Color"
 tagline: "Guidelines on using color effectively in visualizations."
 introTitle: "Introduction"
-introContent: "This guide’s data visualization color palettes are built using the USWDS’s existing color guidance and are intended to adhere to our internal principles around accessibility, clarity, and consistency. This section of the guide aims to provide practical palettes to use in common quantitative and categorical data visualizations while also providing palettes for more CAPD-specific use cases such as fuel and pollutant types."
+introContent: "This guide’s data visualization color palettes are built using the [U.S. Web Design System's (USWDS)](https://designsystem.digital.gov) existing color guidance and are intended to adhere to our internal principles around accessibility, clarity, and consistency. This section of the guide aims to provide practical palettes to use in common quantitative and categorical data visualizations while also providing palettes for more CAPD-specific use cases such as fuel and pollutant types."
 sections:
   - title: "Color as Highlight"
     level: 3
