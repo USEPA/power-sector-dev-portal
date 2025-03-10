@@ -10,7 +10,7 @@ import { Section } from "../../types/ContentTypes";
 import Card from "../../components/Card/Card";
 import ReactMarkdown from "react-markdown";
 
-const DataVisualization: React.FC = () => {
+const GGplot: React.FC = () => {
   const { content, error } = useMarkdownContent("/content/ggplot/ggplot.md");
 
   // Extract content from markdown
@@ -52,4 +52,4 @@ const DataVisualization: React.FC = () => {
   );
 };
 
-export default DataVisualization;
+export default GGplot

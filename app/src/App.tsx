@@ -7,8 +7,8 @@ import {
 import { useEffect } from "react";
 import "./App.css";
 import "./assets/css/styles.css";
-import OpenSourceResourceHub from './pages/open-source-resource-hub';
-import DataVisualization from "./pages/datavis/datavis";
+import PowerSectorDevPortal from "./pages/power-sector-dev-portal";
+import DataVisStyleGuide from "./pages/datavis/datavis";
 import Navigation from "./components/Navigation/Navigation";
 import DataVisLayout from "./layouts/dataVisLayout";
 import Principles from "./pages/datavis/principles/principles";
@@ -23,7 +23,7 @@ import BarCharts from "./pages/datavis/charts/bar-charts";
 import AreaCharts from "./pages/datavis/charts/area-charts";
 import Maps from "./pages/datavis/charts/maps";
 import FurtherReading from "./pages/datavis/further-reading/further-reading/further-reading";
-import GgplotGuide from "./pages/ggplot/ggplot";
+import GGplot from "./pages/ggplot/ggplot";
 import APIDocumentation from "./pages/api/api";
 import BestPractices from "./pages/ggplot/best-practices/best-practices";
 import UsingTheTheme from "./pages/ggplot/using-the-theme/using-the-theme";
@@ -61,10 +61,10 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<DataVisLayout />}>
-          <Route index element={<OpenSourceResourceHub />} />
+          <Route index element={<PowerSectorDevPortal />} />
           </Route>
           <Route path="/datavis" element={<DataVisLayout />}>
-            <Route index element={<DataVisualization />} />
+            <Route index element={<DataVisStyleGuide />} />
             <Route path="principles" element={<Principles />} />
             <Route path="design-elements" element={<DesignElements />} />
             {/* Design Elements Sub-Routes */}
@@ -82,7 +82,7 @@ function App() {
             <Route path="further-reading" element={<FurtherReading />} />
           </Route>
           <Route path="/ggplot" element={<DataVisLayout />}>
-            <Route index element={<GgplotGuide />} />
+            <Route index element={<GGplot />} />
             <Route path="using-the-theme" element={<UsingTheTheme />} />
             <Route path="best-practices" element={<BestPractices />} />
           </Route>

@@ -16,7 +16,7 @@ export const getPageInfo = (location: Location) => {
     return { route: "/api", title: "API Documentation", isApiRoute: true };
   }
 
-  return { route: "/", title: "Open Source Resource Hub", isHomeRoute: true };
+  return { route: "/", title: "Power Sector Dev Portal", isHomeRoute: true };
 };
 
 // Helper function to determine if the current path matches a given link

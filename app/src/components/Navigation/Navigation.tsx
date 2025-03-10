@@ -305,7 +305,7 @@ const Navigation: React.FC = () => {
                         <span>Back to Open Source Hub</span>
                       ) : (
                         <span>
-                          <ArrowBackIcon /> Return to Open Source Resource Hub
+                          <ArrowBackIcon /> Return to Power Sector Dev Portal
                           Home
                         </span>
                       )}
@@ -345,7 +345,7 @@ const Navigation: React.FC = () => {
                         <span>Back to Open Source Hub</span>
                       ) : (
                         <span>
-                          <ArrowBackIcon /> Return to Open Source Resource Hub
+                          <ArrowBackIcon /> Return to Power Sector Dev Portal
                           Home
                         </span>
                       )}
@@ -361,7 +361,7 @@ const Navigation: React.FC = () => {
                         <span>Back to Open Source Hub</span>
                       ) : (
                         <span>
-                          <ArrowBackIcon /> Return to Open Source Resource Hub
+                          <ArrowBackIcon /> Return to Power Sector Dev Portal
                           Home
                         </span>
                       )}

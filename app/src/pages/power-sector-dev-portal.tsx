@@ -6,9 +6,9 @@ import { extractBanner, extractIntro, extractSections } from "../utilities/extra
 import { Section } from "../types/ContentTypes"; 
 import Card from "../components/Card/Card";
 
-const DataVisualization: React.FC = () => {
+const PowerSectorDevPortal: React.FC = () => {
 
-  const { content, error } = useMarkdownContent("/content/open-source-resource-hub.md");
+  const { content, error } = useMarkdownContent("/content/power-sector-dev-portal.md");
 
   // Extract content from markdown
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
@@ -44,4 +44,4 @@ const DataVisualization: React.FC = () => {
   );
 };
 
-export default DataVisualization;
+export default PowerSectorDevPortal;

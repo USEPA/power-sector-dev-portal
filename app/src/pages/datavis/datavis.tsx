@@ -6,7 +6,7 @@ import { extractBanner, extractIntro, extractSections } from "../../utilities/ex
 import { Section } from "../../types/ContentTypes"; 
 import Card from "../../components/Card/Card";
 
-const DataVisualization: React.FC = () => {
+const DataVisStyleGuide: React.FC = () => {
 
   const { content, error } = useMarkdownContent("/content/datavis/datavis.md");
 
@@ -44,4 +44,4 @@ const DataVisualization: React.FC = () => {
   );
 };
 
-export default DataVisualization;
+export default DataVisStyleGuide;

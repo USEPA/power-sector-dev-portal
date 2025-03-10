@@ -1,9 +1,9 @@
 ---
-title: "Open Source Resource Hub"
-introTitle: "About the Resource Hub"
+title: "Power Sector Dev Portal"
+introTitle: "About the Dev Portal"
 introContent: "Lorem ipsum dolor sit amet consectetur. In justo sit ullamcorper tempus nam enim adipiscing integer morbi. Id a ac a pellentesque a cras. Donec duis vestibulum pulvinar donec amet feugiat lectus urna gravida. Aliquet."
 sections:
-  - title: "Open Source Resource Hub"
+  - title: "Power Sector Dev Portal"
     cards:
       - title: "Data Visualization Style Guide"
         content: "Refer to this guide for best practices and advice when producing new data visualizations or updating existing ones. "

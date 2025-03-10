@@ -52,7 +52,7 @@ const Breadcrumbs: React.FC = () => {
         <ol className="usa-breadcrumb__list">
           <li className="usa-breadcrumb__list-item">
             <Link to="/" className="usa-breadcrumb__link">
-              Open Source Resource Hub
+              Power Sector Dev Portal
             </Link>
           </li>
 
