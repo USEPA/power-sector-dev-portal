@@ -68,21 +68,23 @@
     }
 
   }
+
+  .usa-accordion__button {
+    background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
+    border-bottom: 1.5px solid var(--vivid);
+  }
+  
+  
+  .usa-accordion__button[aria-expanded=true] {
+    background-image: url(./assets/uswds-img/usa-icons/arrow_drop_up.svg), linear-gradient(transparent, transparent) !important;
+    border-bottom: none;
+  }
+  
+  .usa-accordion__button[aria-expanded=false] {
+    background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
+    border-bottom: 1.5px solid var(--vivid);
+  
+  }
 }
 
-.usa-accordion__button {
-  background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
-  border-bottom: 1.5px solid var(--vivid);
-}
 
-
-.usa-accordion__button[aria-expanded=true] {
-  background-image: url(./assets/uswds-img/usa-icons/arrow_drop_up.svg), linear-gradient(transparent, transparent) !important;
-  border-bottom: none;
-}
-
-.usa-accordion__button[aria-expanded=false] {
-  background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
-  border-bottom: 1.5px solid var(--vivid);
-
-}
