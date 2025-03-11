@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useMarkdownContent from "../../../hooks/useMarkdownContent";
 import Banner from "../../../components/Banner/Banner";
 import {
@@ -22,6 +22,7 @@ const Charts: React.FC = () => {
     `${base}content/datavis/charts/charts.md`
   );
   const isMobileView = useIsMobile();
+  const [openAccordions, setOpenAccordions] = useState<number[]>([]);
 
   const { title, tagline } = content
     ? extractBanner(content)
@@ -31,6 +32,16 @@ const Charts: React.FC = () => {
     : { introTitle: "", introContent: "" };
   const sections: Section[] = content ? extractSections(content) : [];
   const accordions: Accordion[] = content ? extractAccordions(content) : [];
+
+  const toggleAccordion = (index: number) => {
+    setOpenAccordions((prevOpenAccordions) => {
+      if (prevOpenAccordions.includes(index)) {
+        return prevOpenAccordions.filter((i) => i !== index);
+      } else {
+        return [...prevOpenAccordions, index];
+      }
+    });
+  };
 
   if (error) {
     return <div>Error loading content: {error}</div>;
@@ -96,47 +107,51 @@ const Charts: React.FC = () => {
           </div>
         ))}
 
-        <div className="usa-accordion">
-          {accordions.map((accordion: Accordion, index: number) => (
-            <div key={index} className="accordion">
-              <h3 className="usa-accordion__heading">
-                <button
-                  type="button"
-                  className="usa-accordion__button"
-                  aria-expanded="false"
-                  aria-controls={`a-${index}`}
+        <div className="accordion-container">
+          {accordions.map((accordion: Accordion, index: number) => {
+            const isOpen = openAccordions.includes(index);
+            return (
+              <div key={index} className="accordion">
+                <h3 className="accordion__heading">
+                  <button
+                    type="button"
+                    className="accordion__button"
+                    aria-expanded={isOpen}
+                    aria-controls={`a-${index}`}
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    {accordion.title}
+                  </button>
+                </h3>
+                <div
+                  id={`a-${index}`}
+                  className={`accordion__content ${isOpen ? 'open' : 'closed'}`}
                 >
-                  {accordion.title}
-                </button>
-              </h3>
-              <div
-                id={`a-${index}`}
-                className="usa-accordion__content usa-prose"
-              >
-                <div className="cards">
-                  {accordion.cards &&
-                    accordion.cards.map((card: Card, idx: number) => (
-                      <div key={idx} className="charts-card">
-                        {isMobileView ? (
-                          <img src={card.imagemb} alt={card.alt} />
-                        ) : (
-                          <img src={card.image} alt={card.alt} />
-                        )}
-                        <div className="card-content">
-                          <h4>{card.title}</h4>
-                          <p>{card.content}</p>
-                          {card.link && (
-                            <Link to={card.link}>
-                              Learn about {card.title} <ArrowForwardIcon />
-                            </Link>
+                  <div className="cards">
+                    {accordion.cards &&
+                      accordion.cards.map((card: Card, idx: number) => (
+                        <div key={idx} className="charts-card">
+                          {isMobileView ? (
+                            <img src={card.imagemb} alt={card.alt} />
+                          ) : (
+                            <img src={card.image} alt={card.alt} />
                           )}
+                          <div className="card-content">
+                            <h4>{card.title}</h4>
+                            <p>{card.content}</p>
+                            {card.link && (
+                              <Link to={card.link}>
+                                Learn about {card.title} <ArrowForwardIcon />
+                              </Link>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

@@ -5,14 +5,14 @@
     margin-bottom: .5em;
   }
 
-  .usa-accordion__button {
+  .accordion__button {
     background-color: white !important;
     padding:  .5em 0  !important;
     background-size: 1.5em;
     background-position: center right;
   }
 
-  .usa-accordion__content{
+  .accordion__content{
     padding: 0 !important;
   }
   // margin-bottom: 4em;
@@ -61,26 +61,66 @@
 }
 
 .accordion {
+  &__content {
+    &.closed {
+      display: none;
+    }
+    
+    &.open {
+      display: block;
+    }
+  }
+  
+  &__button {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    
+    &[aria-expanded="true"] {
+      /* You can add styling for when the accordion is open */
+      font-weight: bold;
+      /* Additional styling as needed */
+    }
+  }
+
   &:first-child {
     border-top: 1.5px solid var(--vivid);
-    .usa-accordion__heading {
+    .accordion__heading {
       margin: 0 !important;
     }
 
   }
 
-  .usa-accordion__button {
+  .accordion__button {
     background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
     border-bottom: 1.5px solid var(--vivid);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    justify-content: normal;
+    text-align: left;
+    padding: 0;
+    color: #1b1b1b;
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 2.2rem;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem 3.5rem 1rem 1.25rem;
+    text-decoration: none;
+    width: 100%;
   }
   
+
   
-  .usa-accordion__button[aria-expanded=true] {
+  .accordion__button[aria-expanded=true] {
     background-image: url(./assets/uswds-img/usa-icons/arrow_drop_up.svg), linear-gradient(transparent, transparent) !important;
     border-bottom: none;
   }
   
-  .usa-accordion__button[aria-expanded=false] {
+  .accordion__button[aria-expanded=false] {
     background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
     border-bottom: 1.5px solid var(--vivid);
   
