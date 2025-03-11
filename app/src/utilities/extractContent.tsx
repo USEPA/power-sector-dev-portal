@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import { Section } from '../types/ContentTypes';
+import { Accordion, Section } from '../types/ContentTypes';
 
 export function extractSections(content: string): Section[] {
   const parsedContent = matter(content);
@@ -11,6 +11,17 @@ export function extractSections(content: string): Section[] {
     cards: section.cards || [], 
   }));
 }
+
+export function extractAccordions(content: string): Accordion[] {
+  const parsedContent = matter(content);
+  const accordions = parsedContent.data.accordions || [];
+
+  return accordions.map((accordion: Accordion) => ({
+    ...accordion,
+    cards: accordion.cards || [], 
+  }));
+}
+
 
 
 export function extractBanner(content: string) {

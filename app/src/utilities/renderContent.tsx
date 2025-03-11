@@ -1,4 +1,11 @@
 import ReactMarkdown from "react-markdown";
+const convertToIdTag = (sentence: string) => {
+  return sentence
+    .toLowerCase()            
+    .replace(/\s+/g, '-')     
+    .replace(/[^a-z0-9-]/g, '') 
+    .replace(/^-+|-+$/g, '');  
+};
 
 const renderHeader = (title: string, level: number) => {
   const HeaderTag = `h${level}` as keyof JSX.IntrinsicElements;
@@ -10,8 +17,11 @@ const renderHeader = (title: string, level: number) => {
     );
   }
 
+  // Convert title to ID tag
+  const idTag = convertToIdTag(title);
+
   return (
-    <HeaderTag>
+    <HeaderTag id={idTag}>
       <ReactMarkdown
         components={{
           p: ({ children }) => <>{children}</>,

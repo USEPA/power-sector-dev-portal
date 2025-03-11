@@ -1,15 +1,25 @@
 @use "./../../../variables" as *;
 
-.section {
+.section, .accordion {
   h3 {
     margin-bottom: .5em;
   }
-  margin-bottom: 4em;
+
+  .usa-accordion__button {
+    background-color: white !important;
+    padding:  .5em 0  !important;
+    background-size: 1.5em;
+    background-position: center right;
+  }
+
+  .usa-accordion__content{
+    padding: 0 !important;
+  }
+  // margin-bottom: 4em;
   .charts-card {
     display: flex;
     align-content: flex-start;
     justify-content: flex-start;
-    border-top: 1.5px solid var(--vivid);
     padding: 1em;
 
     @media (max-width: 720px) {
@@ -21,9 +31,6 @@
         }
     }
 
-    &:last-child {
-        border-bottom: 1.5px solid var(--vivid);
-    }
 
     .card-content {
       display: flex;
@@ -44,4 +51,38 @@
         align-items: center;
     }
   }
+}
+
+.section {
+  .charts-card {
+    border-top: 1.5px solid var(--vivid);
+  }
+  padding-bottom: 1em;
+}
+
+.accordion {
+  &:first-child {
+    border-top: 1.5px solid var(--vivid);
+    .usa-accordion__heading {
+      margin: 0 !important;
+    }
+
+  }
+}
+
+.usa-accordion__button {
+  background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
+  border-bottom: 1.5px solid var(--vivid);
+}
+
+
+.usa-accordion__button[aria-expanded=true] {
+  background-image: url(./assets/uswds-img/usa-icons/arrow_drop_up.svg), linear-gradient(transparent, transparent) !important;
+  border-bottom: none;
+}
+
+.usa-accordion__button[aria-expanded=false] {
+  background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
+  border-bottom: 1.5px solid var(--vivid);
+
 }

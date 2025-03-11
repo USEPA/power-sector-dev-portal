@@ -17,7 +17,17 @@ export interface CodeSnippet {
   language: "r";
   content: string; 
 }
-  
+
+export interface Accordion {
+  title?: string;
+  content?: string;
+  image?: string;
+  alt?: string;
+  imagemb?: string;
+  level?: number;
+  cards?: Card[]; 
+}
+
 export interface Section {
   title?: string;
   content?: string;
