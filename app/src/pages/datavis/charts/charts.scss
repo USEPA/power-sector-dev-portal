@@ -116,12 +116,12 @@
 
   
   .accordion__button[aria-expanded=true] {
-    background-image: url(./assets/images/uswds-img/usa-icons/arrow_drop_up.svg), linear-gradient(transparent, transparent) !important;
+    background-image: url(/assets/images/uswds-img/usa-icons/arrow_drop_up.svg), linear-gradient(transparent, transparent) !important;
     border-bottom: none;
   }
   
   .accordion__button[aria-expanded=false] {
-    background-image: url(./assets/images/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
+    background-image: url(/assets/images/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
     border-bottom: 1.5px solid var(--vivid);
   
   }
