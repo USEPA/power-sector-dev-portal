@@ -302,7 +302,7 @@ const Navigation: React.FC = () => {
                   <li className="usa-nav__primary-item">
                     <Link to="/" className="usa-nav-link backToHomeLink">
                       {!isMobileView ? (
-                        <span>Back to Open Source Hub</span>
+                        <span>Back to Dev Portal</span>
                       ) : (
                         <span>
                           <ArrowBackIcon /> Return to Power Sector Dev Portal
@@ -342,7 +342,7 @@ const Navigation: React.FC = () => {
                   <li className="usa-nav__primary-item">
                     <Link to="/" className="usa-nav-link backToHomeLink">
                       {!isMobileView ? (
-                        <span>Back to Open Source Hub</span>
+                        <span>Back to Dev Portal</span>
                       ) : (
                         <span>
                           <ArrowBackIcon /> Return to Power Sector Dev Portal
@@ -358,7 +358,7 @@ const Navigation: React.FC = () => {
                   <li className="usa-nav__primary-item">
                     <Link to="/" className="usa-nav-link backToHomeLink">
                       {!isMobileView ? (
-                        <span>Back to Open Source Hub</span>
+                        <span>Back to Dev Portal</span>
                       ) : (
                         <span>
                           <ArrowBackIcon /> Return to Power Sector Dev Portal
