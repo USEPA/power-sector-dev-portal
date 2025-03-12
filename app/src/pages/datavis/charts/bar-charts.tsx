@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useMarkdownContent from "../../../hooks/useMarkdownContent";
 import {
   extractBanner,
@@ -10,6 +10,7 @@ import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
+import { useLocation } from 'react-router-dom';
 import SideNav from "../../../components/SideNav/SideNav";
 
 const BarCharts: React.FC = () => {
@@ -21,6 +22,21 @@ const BarCharts: React.FC = () => {
     : { introTitle: "", introContent: "" }; 
 
   const sections: Section[] = content ? extractSections(content) : [];
+  const location = useLocation();
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      const hash = location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, 100); 
+
+    return () => clearTimeout(timeoutId);
+  }, [location]);
 
   if (error) {
     return <div>Error loading content: {error}</div>;
@@ -73,7 +89,8 @@ const BarCharts: React.FC = () => {
             )}
           </>
         ))}
-        </main>{content && <SideNav />}
+        </main>
+        {content && <SideNav />}
       </div>
     </div>
   );

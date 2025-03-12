@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useMarkdownContent from "../../../hooks/useMarkdownContent";
 import {
   extractBanner,
@@ -11,6 +11,7 @@ import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
+import { useLocation } from "react-router-dom";
 
 const LineCharts: React.FC = () => {
   const base = import.meta.env.BASE_URL;
@@ -22,6 +23,21 @@ const LineCharts: React.FC = () => {
     : { introTitle: "", introContent: "" };
 
   const sections: Section[] = content ? extractSections(content) : [];
+   const location = useLocation();
+  
+    useEffect(() => {
+      const timeoutId = setTimeout(() => {
+        const hash = location.hash;
+        if (hash) {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, 100); 
+  
+      return () => clearTimeout(timeoutId);
+    }, [location]);
 
   if (error) {
     return <div>Error loading content: {error}</div>;
