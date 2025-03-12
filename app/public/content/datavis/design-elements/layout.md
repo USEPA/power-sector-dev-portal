@@ -41,9 +41,7 @@ sections:
     content: |
       Axes are a crucial chart elements because they place the data in context. Before deciding on an axis extent (the range of data that an axis covers), always consider how it might (mis)represent the data. For example, does using a y-axis of 10-15 distort a trend line that hovers between 12 and 13 and would appear almost nonexistent if the axis were extended to 0-15? Or is that an important change in the data to highlight?
 
-        Axes should have titles. Exceptions to this rule include:
-        - If the title of the axis is included in the title/subtitle
-        - If one of the axes contains years and only years
+      Axes should be titled, unless that title is already clearly marked elsewhere in the chart or if the axis clearly includes only years and labeling it as “year” would be redundant.
     cards:
     - title: "Tick Density"
       alt: "An image showing a multi-line chart where the x-axis is labeled in five year intervals. Each year has a small tick mark connecting it to its respective spot along the axis line. There are five labels on the chart, which is a good number to strive for."
