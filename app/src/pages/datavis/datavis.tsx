@@ -23,10 +23,12 @@ const DataVisStyleGuide: React.FC = () => {
     <div className="page grey-container">
      <Banner title={title} tagline={tagline} level="level1" />
       <div className="container">
+        {introTitle &&
         <div className="intro-section bottom-border-section">
           <h2>{introTitle}</h2>
           <p>{introContent}</p>
         </div>
+}
         {sections.map((section, idx) => (
           <div key={idx} className="grid grid-col--two row-gap-3">
             {section.cards && section.cards.map((card, cardIdx) => (

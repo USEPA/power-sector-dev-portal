@@ -1,7 +1,5 @@
 ---
 title: "Data Visualization Style Guide"
-introTitle: "About the Style Guide"
-introContent: "This guide is a tool that you can refer to when producing new data visualizations or improving existing ones. It was created with CAPD-specific use cases in mind, but its overarching ideas can be applied to any chart, graph, or visualization. To that end, it should be treated as a starting point when thinking about data visualizations, not a comprehensive rulebook."
 sections:
   - title: "Data Visualization Style Guide"
     cards:
