@@ -3,11 +3,11 @@
 @use "./variables" as *;
 
 :root.root {
-  @include theme(root);
+  @include theme(datavis);
 }
 
 :root.ggplot {
-  @include theme(ggplot);
+  @include theme(datavis);
 }
 
 :root.datavis {
@@ -15,7 +15,7 @@
 }
 
 :root.api {
-  @include theme(api);
+  @include theme(datavis);
 }
 
 :root {
