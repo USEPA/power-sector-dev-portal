@@ -26,6 +26,10 @@ sections:
     level: 4
     content: |
       The most accessible way to build a data visualization is to use something other than color to encode meaning; this way, you can sidestep many of the issues inherent to using color mentioned above. In practice, this can mean using patterned fills overlaid onto color scales (stripes, cross hatches, dots, etc.) and employing symbols to represent different categories in things like scatterplots or line charts. See the [Symbology](#/datavis/design-elements/symbology) page for more information.
+  - title: "Color Blindness"
+    level: 4
+    content: |
+      [Color blindness](https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/color-blindness) (also called color vision deficiency) is a condition that makes it difficult to tell the difference between some colors, most often red and green. While the color palettes in this guide are not color-blind-safe on their own, you can use other methods to ensure your charts are accessible to people with color vision deficiency, including things like high-contrast borders and non-color encodings, outlined in the sections immediately below this one. 
   - title: "Quantitative Palettes"
     content: |
       Quantitative palettes are essential for representing data that has a natural order or scale. In this section, we examine different types of quantitative palettes and their appropriate usage.
@@ -33,7 +37,7 @@ sections:
   - title: "Sequential Palette"
     level: 3
     content: |
-      Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO² emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** is needed on some of the lighter colors. In the image below, colors that need borders are shown with them. 
+      Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO₂ emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** is needed on some of the lighter colors. In the image below, colors that need borders are shown with them.
     alt: ""
     image: "/assets/images/datavis/design-elements/color/sequential-palettes.svg"
   - title: "Divergent Palettes"
