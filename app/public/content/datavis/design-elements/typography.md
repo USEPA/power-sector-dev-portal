@@ -3,7 +3,7 @@ title: "Typography"
 tagline: ""
 introTitle: "Introduction"
 introContent: | 
-        The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov) includes four typeface options. Of those four, we recommend using Source Sans Pro for most text in your data visualizations and data products and Roboto Mono for numbers in visualizations and tables.
+        The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov) includes four typeface options. Of those four, we recommend using [Source Sans Pro](https://fonts.adobe.com/fonts/source-sans) for most text in your data visualizations and data products and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) for numbers in visualizations and tables.
 
         For a more in-depth look at using the above and more fonts and type styles, including an exploration of serif vs. sans serif typefaces, please refer to the [USWDS page on typography](https://designsystem.digital.gov/components/typography/). In this guide, we will only call out best practices as they relate to specific data visualization use cases. 
 sections:
