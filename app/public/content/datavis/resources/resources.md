@@ -18,3 +18,6 @@ sections:
       - title: "Federal Website Standards"
         content: "Created to help agencies adhere to the 21st Century Integrated Digital Experience Act (IDEA), this site on the Federal website standards provides guidance on making high-quality, user-friendly digital experiences."
         link: "https://standards.digital.gov/standards/"
+      - title: "WebAIM"
+        content: "This site offers trainings, tools, and other resources for making accessible webpages, including the [contrast checker](https://webaim.org/resources/contrastchecker/) referenced in this guide."
+        link: "https://webaim.org/"
