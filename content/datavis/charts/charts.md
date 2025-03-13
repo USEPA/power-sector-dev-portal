@@ -2,7 +2,10 @@
 title: "Charts"
 tagline: "Specific guidance about common chart types and subtypes."
 introTitle: "Charts"
-introContent: "There are two common approaches to choosing the right chart. One is to focus on the kind of underlying data you have: are you working with quantitative or categorical values? Are you representing absolute values or changes within a value? The other is to focus on the story you’re trying to tell with the data, or the insights you want people to walk away with: Are you trying to emphasize a change? Are you trying to compare two groups to each other or to a third value? In this guide, we focus on the second method, by starting with the “purpose” of a chart."
+introContent: |
+    There are two common approaches to choosing the right chart. One is to focus on the kind of underlying data you have: are you working with quantitative or categorical values? Are you representing absolute values or changes within a value? The other is to focus on the story you’re trying to tell with the data, or the insights you want people to walk away with: Are you trying to emphasize a change? Are you trying to compare two groups to each other or to a third value? 
+
+    In this guide, we focus on the second method, by starting with the “purpose” of a chart. However, this guide only includes guidance for a select number of the many kinds of charts you could use. The first section of this page lists those chart types, followed by a more exploratory look at choosing a chart type for a purpose. (Some charts may appear in multiple purposes and sections.)
 sections:
   - title: "Chart Types in this Guide"
     cards:
@@ -33,7 +36,7 @@ sections:
   - title: "Picking Charts for a Purpose"      
     level: 3
     content: | 
-       You can use this section of the guide to explore what kinds of charts might be best suited to different kinds of goals you have for your data visualization. Where applicable, this sections includes links to individual chart pages for more in-depth guidance.
+       You can use this section of the guide to explore what kinds of charts might be best suited to different kinds of goals you have for your data visualization. Where applicable, this sections includes links to individual chart pages for more in-depth guidance. 
 accordions:        
   - title: "Examining Proportions"
     cards:

@@ -38,6 +38,16 @@ sections:
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-6-1.svg" 
     alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. The orientation of the axis and gridlines has now been changed to vertical to match the fact that this is a bar chart. The default color scheme is still applied."
   - content: | 
+      Lastly, we can add the `scale_fill_capd_discrete` function to apply a custom color palette for fuel types.
+    code: |  
+      gg_ex_bar +
+         theme_capd(grid_lines = c('major','minor'), 
+                    axis_lines = 'vert', 
+                    ticks = TRUE, 
+                    legend_position = 'none')        
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-8-1.svg" 
+    alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. The custom fuel type color palette from the CAPD data visualization style guide has now been applied so that the colors of the bars match the fuel type they’re representing."
+  - content: | 
       Other theme specifications can be controlled with the ticks `grid_lines` and `legend_position` arguments, as shown here.
     code: |  
       gg_ex_bar +
@@ -48,16 +58,6 @@ sections:
                     legend_position = 'none')        
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-7-1.svg" 
     alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. Tick marks have now been added to the x-axis labels and the legend had been removed to show that that’s possible. The default color scheme is still applied."
-  - content: | 
-      Lastly, we can add the `scale_fill_capd_discrete` function to apply a custom color palette for fuel types.
-    code: |  
-      gg_ex_bar +
-         theme_capd(grid_lines = c('major','minor'), 
-                    axis_lines = 'vert', 
-                    ticks = TRUE, 
-                    legend_position = 'none')        
-    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-8-1.svg" 
-    alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. The custom fuel type color palette from the CAPD data visualization style guide has now been applied so that the colors of the bars match the fuel type they’re representing."
   - title: "General theme info"
     level: 3
     content: |

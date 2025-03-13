@@ -53,11 +53,6 @@ sections:
       image: "/assets/images/datavis/design-elements/layout/first-and-last-ticks.png"
       content: "Always label the starting and ending points of an axis, even if they don’t fall into regular “ticks” as laid out in the previous piece of advice or if you don’t plan to include other ticks at all."
       type: "do"
-    - title: "Tick Orientation"
-      alt: "A zoomed-in section of an image showing a bar chart with state name labels. Label text should always be horizontal if possible."
-      image: "/assets/images/datavis/design-elements/layout/tick-orientation.png"
-      content: "Label your ticks with horizontal text; don’t rotate labels. If you find yourself running out of space to do this, you might have too many ticks or may need to adjust the orientation of your chart."
-      type: "do"
     - title: "Tick Alignment"
       alt: "A zoomed-in section of an image showing the year labels on the x-axis of a line chart. The first label is left-aligned relative to its tick mark. The other labels are center-aligned relative to their respective tick marks."
       image: "/assets/images/datavis/design-elements/layout/tick-alignment.png"
@@ -68,6 +63,11 @@ sections:
       image: "/assets/images/datavis/design-elements/layout/units-of-measurement.png"
       content: "Include units of measurement in the axis title, not in each tick label. A possible exception to this rule is an axis showing percents."
       type: "do"
+  - title: "Gridlines"
+    level: 3
+    content: |
+      Gridlines allow users to more easily identify data against values on the axes. They should complement the data, not distract from it. To that end, they should be less visually prominent than most other elements in your chart.
+    cards:
     - title: "Gridline Style"
       alt: "An image of a set of horizontal gridlines and an x-axis. The gridlines are dotted in a light gray and the x-axis is a solid dark gray."
       image: "/assets/images/datavis/design-elements/layout/gridline-style.png"
