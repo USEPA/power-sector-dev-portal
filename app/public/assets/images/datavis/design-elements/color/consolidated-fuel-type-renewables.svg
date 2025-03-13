@@ -1,20 +1,20 @@
-<svg width="488" height="168" viewBox="0 0 488 168" fill="none" xmlns="http://www.w3.org/2000/svg">
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="13.266">Non-renewables </tspan><tspan x="0" y="31.266">(excluding nuclear)</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="126" y="13.266">Renewables </tspan><tspan x="126" y="31.266">(excluding hydro)</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="252" y="31.266">Hydro</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="378" y="31.266">Nuclear</tspan></text>
-<rect width="110" height="15" transform="matrix(-1 8.74228e-08 8.74228e-08 1 488 44)" fill="#9287D8"/>
-<rect width="110" height="15" transform="matrix(-1 8.74228e-08 8.74228e-08 1 362 44)" fill="#2378C3"/>
-<rect width="110" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 236 44)" fill="#8A984B"/>
-<rect width="110" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 110 44)" fill="#EF5E25"/>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="80.266">#EF5E25</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="126" y="80.266">#8A984B</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="252" y="80.266">#2378C3</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="378" y="80.266">#9287D8</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="114.266">Non-renewable</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="126" y="114.266">Renewable</tspan></text>
-<rect width="110" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 236 127)" fill="#8A984B"/>
-<rect width="110" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 110 127)" fill="#EF5E25"/>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="163.266">#EF5E25</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="126" y="163.266">#8A984B</tspan></text>
+<svg width="568" height="191" viewBox="0 0 568 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="15.477">Non-renewables </tspan><tspan x="0" y="36.477">(excluding nuclear)</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="146" y="15.477">Renewables </tspan><tspan x="146" y="36.477">(excluding hydro)</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="292" y="36.477">Hydro</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="438" y="36.477">Nuclear</tspan></text>
+<rect width="130" height="15" transform="matrix(-1 8.74228e-08 8.74228e-08 1 568 50)" fill="#9287D8"/>
+<rect width="130" height="15" transform="matrix(-1 8.74228e-08 8.74228e-08 1 422 50)" fill="#2378C3"/>
+<rect width="130" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 276 50)" fill="#8A984B"/>
+<rect width="130" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 130 50)" fill="#EF5E25"/>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="88.477">#EF5E25</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="146" y="88.477">#8A984B</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="292" y="88.477">#2378C3</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="438" y="88.477">#9287D8</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="133.477">Non-renewable</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="146" y="133.477">Renewable</tspan></text>
+<rect width="130" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 276 147)" fill="#8A984B"/>
+<rect width="130" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 130 147)" fill="#EF5E25"/>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="185.477">#EF5E25</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="146" y="185.477">#8A984B</tspan></text>
 </svg>
