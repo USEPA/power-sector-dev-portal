@@ -13,10 +13,10 @@
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="248" y="86.477">#D3B77E&#10;</tspan><tspan x="248" y="107.477">(border: #1B3F09)</tspan></text>
 <rect y="121" width="112" height="15" fill="#2273BB"/>
 <rect x="124.5" y="121.5" width="111" height="14" fill="#88B0D3" stroke="#1B3F09"/>
-<rect x="248" y="121" width="112" height="15" fill="#F0F0F0"/>
+<rect x="248.5" y="121.5" width="111" height="14" fill="#F0F0F0" stroke="#1B3F09"/>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="157.477">#2273BB</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="124" y="157.477">#88B0D3&#10;</tspan><tspan x="124" y="178.477">(border: #1B3F09)</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="248" y="157.477">#F0F0F0</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="248" y="157.477">#F0F0F0&#10;</tspan><tspan x="248" y="178.477">(border: #1B3F09)</tspan></text>
 <rect x="428" y="19" width="25" height="25" transform="rotate(-45 428 19)" fill="#1B3F09"/>
 <rect x="410" y="37" width="25" height="25" transform="rotate(-45 410 37)" fill="#1E5964"/>
 <rect x="392" y="55" width="25" height="25" transform="rotate(-45 392 55)" fill="#2273BB"/>
@@ -40,10 +40,10 @@
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="248" y="306.477">#A2C2A8&#10;</tspan><tspan x="248" y="327.477">(border: #412E4E)</tspan></text>
 <rect y="341" width="112" height="15" fill="#A947B6"/>
 <rect x="124.5" y="341.5" width="111" height="14" fill="#CC9CD1" stroke="#412E4E"/>
-<rect x="248" y="341" width="112" height="15" fill="#F0F0F0"/>
+<rect x="248.5" y="341.5" width="111" height="14" fill="#F0F0F0" stroke="#412E4E"/>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="377.477">#A947B6</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="124" y="377.477">#CC9CD1&#10;</tspan><tspan x="124" y="398.477">(border: #412E4E)</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="248" y="377.477">#F0F0F0</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="248" y="377.477">#F0F0F0&#10;</tspan><tspan x="248" y="398.477">(border: #412E4E)</tspan></text>
 <rect x="428" y="239.322" width="25" height="25" transform="rotate(-45 428 239.322)" fill="#412E4E"/>
 <rect x="410" y="257.322" width="25" height="25" transform="rotate(-45 410 257.322)" fill="#753B82"/>
 <rect x="392" y="275.322" width="25" height="25" transform="rotate(-45 392 275.322)" fill="#A947B6"/>
