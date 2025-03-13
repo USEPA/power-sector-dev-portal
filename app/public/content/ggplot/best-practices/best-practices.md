@@ -30,17 +30,18 @@ sections:
     alt: "An image of a bar chart showing generation resource mix built in ggplot with the custom CAPD theme applied. The bar showing Gas is orange while all other bars are light gray with a dark gray border."
   - title: "Highlighting Continuous Colors"
     code: |  
-      p_co2 <- ggplot(co2_emission_2022, aes(y = Region, x = co2)) + 
+      p_co2 <- ggplot(co2_emission_2022, aes(y = region, x = co2)) + 
         geom_bar(stat = 'identity', fill = '#2378C3') + 
-        theme_capd()
+        scale_x_continuous(limits=c(0,NA), expand=c(0,0)) +
+        theme_capd(axis_lines = 'vert')
 
       p_co2 +
         gghighlight::gghighlight(
-          Region == 'NYUP',
+          region == 'NYUP',
           unhighlighted_params = list(
             fill = '#C9C9C9', 
             linewidth = 0.2
-          ) 
+          )
         )
   - title: "Legends"
     content: |
@@ -97,9 +98,6 @@ sections:
           theme_capd()
 
         plotly::ggplotly(p_so2)
-  - title: "Data Labels"
-    content: |
-      Like tooltips, data labels can help make individual or important data points easier to identify
   - title: "Alt Text for Charts"
     content: |
        Alternative text helps make charts more accessible for users who cannot rely on visuals. Alt text should be specific and detailed but not overly wordy; it can be used in combination with other, non-visual representations of the same data, such as tables or direct downloads.
