@@ -90,6 +90,10 @@ body {
   }
 }
 
+.usa-breadcrumb__list-item:not(:last-child)::after {
+  mask-image: url(/assets/images/uswds-img/usa-icons/navigate_next.svg), linear-gradient(transparent, transparent) !important;
+}
+
 .svg-container {
   display: inline-block; 
   max-width: 100%; 
