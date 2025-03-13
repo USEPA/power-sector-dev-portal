@@ -11,7 +11,7 @@ sections:
         link: "https://www.section508.gov"
       - title: "EPA Web Standards"
         content: "EPA’s in-house web standards are especially helpful to review if the data visualization product you’re building is intended to sit inside a Drupal webpage."
-        link: "https://www.epa.gov"
+        link: "https://www.epa.gov/web-policies-and-procedures/epa-web-standards"
       - title: "U.S. Web Design System"
         content: "The U.S. Web Design System (USWDS) provides guidance on all facets of web design. The sections on color and typesetting might be most relevant to readers interesting in data visualization."
         link: "https://designsystem.digital.gov/"
