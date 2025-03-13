@@ -63,6 +63,11 @@ sections:
       image: "/assets/images/datavis/design-elements/layout/units-of-measurement.png"
       content: "Include units of measurement in the axis title, not in each tick label. A possible exception to this rule is an axis showing percents."
       type: "do"
+  - title: "Gridlines"
+    level: 3
+    content: |
+      Gridlines allow users to more easily identify data against values on the axes. They should complement the data, not distract from it. To that end, they should be less visually prominent than most other elements in your chart.
+    cards:
     - title: "Gridline Style"
       alt: "An image of a set of horizontal gridlines and an x-axis. The gridlines are dotted in a light gray and the x-axis is a solid dark gray."
       image: "/assets/images/datavis/design-elements/layout/gridline-style.png"
