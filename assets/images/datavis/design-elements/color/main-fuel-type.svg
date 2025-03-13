@@ -1,4 +1,4 @@
-<svg width="826" height="85" viewBox="0 0 826 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="826" height="88" viewBox="0 0 826 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="13.266">Other </tspan><tspan x="0" y="31.266">Unknown</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="76" y="31.266">Gas</tspan></text>
 <text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="152" y="31.266">Oil</tspan></text>
@@ -21,15 +21,15 @@
 <rect width="60" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 212 44)" fill="#8E704F"/>
 <rect width="60" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 136 44)" fill="#EF5E25"/>
 <rect width="60" height="15" transform="matrix(-1 6.56737e-08 1.16374e-07 1 60 44)" fill="#CD425B"/>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="0" y="80.266">#CD425B</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="76" y="80.266">#EF5E25</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="152" y="80.266">#8E704F</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="228" y="80.266">#8A984B</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="304" y="80.266">#4D8055</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="380" y="80.266">#168092</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="456" y="80.266">#5C5C5C</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="532" y="80.266">#2378C3</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="608" y="80.266">#9287D8</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="684" y="80.266">#B04ABD</tspan></text>
-<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="760" y="80.266">#C84281</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="0" y="82.477">#CD425B</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="76" y="82.477">#EF5E25</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="152" y="82.477">#8E704F</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="228" y="82.477">#8A984B</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="304" y="82.477">#4D8055</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="380" y="82.477">#168092</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="456" y="82.477">#5C5C5C</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="532" y="82.477">#2378C3</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="608" y="82.477">#9287D8</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="684" y="82.477">#B04ABD</tspan></text>
+<text fill="#1B1B1B" xml:space="preserve" style="white-space: pre" font-family="Source Sans Pro" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="760" y="82.477">#C84281</tspan></text>
 </svg>

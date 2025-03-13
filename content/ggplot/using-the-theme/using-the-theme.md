@@ -15,6 +15,8 @@ sections:
   - code: |
       library(ggplot2)
       library(ggcapdthemes)
+  - content: |
+      For R users looking for DVSG best practices that go beyond the theme, check out the [Best Practices](#/ggplot/best-practices) vignette.
   - title: "Applying the theme `theme_capd()`"
     level: 2
     content: |
@@ -38,17 +40,7 @@ sections:
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-6-1.svg" 
     alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. The orientation of the axis and gridlines has now been changed to vertical to match the fact that this is a bar chart. The default color scheme is still applied."
   - content: | 
-      Lastly, we can add the `scale_fill_capd_discrete` function to apply a custom color palette for fuel types.
-    code: |  
-      gg_ex_bar +
-         theme_capd(grid_lines = c('major','minor'), 
-                    axis_lines = 'vert', 
-                    ticks = TRUE, 
-                    legend_position = 'none')        
-    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-8-1.svg" 
-    alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. The custom fuel type color palette from the CAPD data visualization style guide has now been applied so that the colors of the bars match the fuel type they’re representing."
-  - content: | 
-      Other theme specifications can be controlled with the ticks `grid_lines` and `legend_position` arguments, as shown here.
+      Other theme specifications can be controlled with the `ticks`, `grid_lines`, and `legend_position` arguments, as shown here.
     code: |  
       gg_ex_bar +
          scale_fill_capd_discrete(palette = 'fuel_type') +
@@ -58,6 +50,16 @@ sections:
                     legend_position = 'none')        
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-7-1.svg" 
     alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. Tick marks have now been added to the x-axis labels and the legend had been removed to show that that’s possible. The default color scheme is still applied."
+  - content: | 
+      Lastly, we can add the `scale_fill_capd_discrete` function to apply a custom color palette for fuel types.
+    code: |  
+      gg_ex_bar +
+         theme_capd(grid_lines = c('major','minor'), 
+                    axis_lines = 'vert', 
+                    ticks = TRUE, 
+                    legend_position = 'none')        
+    image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-8-1.svg" 
+    alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied. The custom fuel type color palette from the CAPD data visualization style guide has now been applied so that the colors of the bars match the fuel type they’re representing."
   - title: "General theme info"
     level: 3
     content: |
@@ -85,7 +87,7 @@ sections:
         Here we see the font applied to all text elements by default; they will be re-sized in the sections below.
 
         Plot annotations such as titles, subtitles is formatted through the following theme options. The title size is magnified 20% compared to `base_size`, while the caption is decreased 20%.
-  - title: "Axis line orientation: `plot direction`"
+  - title: "Axis line orientation: `axis_lines`"
     level: 3
   - code: |  
       ## default: 'horiz'
@@ -200,6 +202,28 @@ sections:
     level: 5
     image: "/assets/images/ggplot/using-the-theme/unnamed-chunk-18-1.svg"
     alt: "An image of two categorial color palettes each showing 11 distinct colors for the 11 fuel types commonly described in CAPD products."
+  - content: | 
+        Example of a barchart using the `scale_fill_capd_discrete` function
+    code: |
+        ggplot(resource_mix[resource_mix$year==2023,],aes(y = resource_label, x = generation_resource_mix, fill = resource_label)) +
+          geom_bar(stat='identity') +
+          scale_fill_capd_discrete(palette='fuel_type')+
+          scale_x_continuous(expand=c(0,0), labels=scales::label_percent())+
+          labs(x='', y='Resource Mix (%)', title='eGRID 2023 Resource Mix', color='Resource') +
+          theme_capd(axis_lines = 'vert', grid_lines = c('major','minor'), legend_position = 'none') 
+    image: "/assets/images/ggplot/using-the-theme/example-barcart.svg"
+    alt: "An image of a bar chart showing 11 distinct colors for the 11 fuel types commonly described in CAPD products."
+  - content: | 
+        Example of a line plot using the `scale_color_capd_discrete` function
+    code: |
+        ggplot(resource_mix,aes(x = year, y = generation_resource_mix*100, color = resource_label, group = resource_label)) +
+          geom_line() +
+          geom_point()+
+          scale_color_capd_discrete(palette='fuel_type')+
+          labs(x='', y='Resource Mix (%)', title='eGRID Annual Resource Mix, 2018-2023', color='Resource') +
+          theme_capd(grid_lines = c('major','minor'))
+    image: "/assets/images/ggplot/using-the-theme/example-line-plot.svg"
+    alt: "An image of a line plot showing 11 distinct colors for the 11 fuel types commonly described in CAPD products."
   - title: "Combustion vs Non-Combustion"
     level: 5
     content: |
