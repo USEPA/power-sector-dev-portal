@@ -53,11 +53,38 @@ const Charts: React.FC = () => {
       <div className="container">
         <div className="intro-section">
           <h2>{introTitle}</h2>
-          <p>{introContent}</p>
+          <ReactMarkdown>{introContent}</ReactMarkdown>
         </div>
         {sections.map((section: Section, index: number) => (
           <div key={index} className="section">
-            {!section.cards || section.cards.length === 0 && (
+            {!section.cards ||
+              (section.cards.length === 0 && (
+                <>
+                  {section.title &&
+                    renderHeader(section.title, section.level || 3)}
+                  {section.content && (
+                    <div>
+                      <ReactMarkdown>{section.content}</ReactMarkdown>
+                    </div>
+                  )}
+                  {section.image &&
+                    (section.image?.endsWith(".svg") ? (
+                      <SVGRenderer
+                        src={section.image}
+                        alt={section.alt ? section.alt : section.title}
+                      />
+                    ) : (
+                      <img
+                        src={section.image}
+                        alt={section.alt ? section.alt : section.title}
+                        className="section-image"
+                      />
+                    ))}
+                </>
+              ))}
+
+{!section.cards ||
+              (section.cards.length > 0 && (
               <>
                 {section.title &&
                   renderHeader(section.title, section.level || 3)}
@@ -66,44 +93,28 @@ const Charts: React.FC = () => {
                     <ReactMarkdown>{section.content}</ReactMarkdown>
                   </div>
                 )}
-                {section.image &&
-                  (section.image?.endsWith(".svg") ? (
-                    <SVGRenderer
-                      src={section.image}
-                      alt={section.alt ? section.alt : section.title}
-                    />
-                  ) : (
-                    <img
-                      src={section.image}
-                      alt={section.alt ? section.alt : section.title}
-                      className="section-image"
-                    />
-                  ))}
-              </>
-            )}
-
-            {section.cards && (
-              <div className="cards">
-                {section.cards.map((card: Card, idx: number) => (
-                  <div key={idx} className="charts-card">
-                    {isMobileView ? (
-                      <img src={card.imagemb} alt={card.alt} />
-                    ) : (
-                      <img src={card.image} alt={card.alt} />
-                    )}
-                    <div className="card-content">
-                      <h4>{card.title}</h4>
-                      <p>{card.content}</p>
-                      {card.link && (
-                        <Link to={card.link}>
-                          Learn about {card.title} <ArrowForwardIcon />
-                        </Link>
+                <div className="cards">
+                  {section.cards.map((card: Card, idx: number) => (
+                    <div key={idx} className="charts-card">
+                      {isMobileView ? (
+                        <img src={card.imagemb} alt={card.alt} />
+                      ) : (
+                        <img src={card.image} alt={card.alt} />
                       )}
+                      <div className="card-content">
+                        <h4>{card.title}</h4>
+                        <p>{card.content}</p>
+                        {card.link && (
+                          <Link to={card.link}>
+                            Learn about {card.title} <ArrowForwardIcon />
+                          </Link>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            )}
+                  ))}
+                </div>
+              </>
+               ))}
           </div>
         ))}
 
@@ -125,7 +136,7 @@ const Charts: React.FC = () => {
                 </h3>
                 <div
                   id={`a-${index}`}
-                  className={`accordion__content ${isOpen ? 'open' : 'closed'}`}
+                  className={`accordion__content ${isOpen ? "open" : "closed"}`}
                 >
                   <div className="cards">
                     {accordion.cards &&
