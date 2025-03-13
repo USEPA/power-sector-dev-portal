@@ -289,14 +289,14 @@ const Navigation: React.FC = () => {
                   </li>
                   <li className="usa-nav__primary-item">
                     <Link
-                      to="/datavis/further-reading"
+                      to="/datavis/resources"
                       className={
-                        isCurrentPath(location, "/datavis/further-reading")
+                        isCurrentPath(location, "/datavis/resources")
                           ? "usa-current"
                           : ""
                       }
                     >
-                      <span>Further Reading</span>
+                      <span>Resources</span>
                     </Link>
                   </li>
                   <li className="usa-nav__primary-item">

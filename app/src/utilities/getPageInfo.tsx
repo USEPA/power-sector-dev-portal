@@ -32,7 +32,7 @@ export const getPageLevelforBreadcrumbs = (location: Location) => {
     isExactlyPath(location, "/datavis/charts") ||
     isExactlyPath(location, "/datavis/principles") ||
     isExactlyPath(location, "/datavis/design-elements") ||
-    isExactlyPath(location, "/datavis/further-reading") ||
+    isExactlyPath(location, "/datavis/resources") ||
     isExactlyPath(location, "/ggplot")
   ) {
     return { isRouteWithBanner: true };

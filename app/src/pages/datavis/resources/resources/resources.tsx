@@ -4,11 +4,11 @@ import Banner from '../../../../components/Banner/Banner';
 import InfoBlock from '../../../../components/InfloBlock/InfoBlock';
 import { extractBanner, extractIntro, extractSections } from '../../../../utilities/extractContent';
 import { Section } from '../../../../types/ContentTypes';
-import './further-reading.scss';
+import './resources.scss';
 
 const FurtherReading: React.FC = () => {
   const base = import.meta.env.BASE_URL;
-  const { content, error } = useMarkdownContent(`${base}content/datavis/further-reading/further-reading.md`);
+  const { content, error } = useMarkdownContent(`${base}content/datavis/resources/resources.md`);
 
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
   const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
@@ -28,7 +28,6 @@ const FurtherReading: React.FC = () => {
         </div>
         {sections.map((section, index) => (
           <div key={index} className="section">
-            <h3>{section.title}</h3>
             <div className="grid grid-col--one">
             {section.cards && section.cards.map((card, idx) => (
                 <InfoBlock

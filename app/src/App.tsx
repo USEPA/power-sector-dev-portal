@@ -22,7 +22,7 @@ import Charts from "./pages/datavis/charts/charts";
 import BarCharts from "./pages/datavis/charts/bar-charts";
 import AreaCharts from "./pages/datavis/charts/area-charts";
 import Maps from "./pages/datavis/charts/maps";
-import FurtherReading from "./pages/datavis/further-reading/further-reading/further-reading";
+import FurtherReading from "./pages/datavis/resources/resources/resources";
 import GGplot from "./pages/ggplot/ggplot";
 import APIDocumentation from "./pages/api/api";
 import BestPractices from "./pages/ggplot/best-practices/best-practices";
@@ -79,7 +79,7 @@ function App() {
             <Route path="charts/area-charts" element={<AreaCharts />} />
             <Route path="charts/maps" element={<Maps />} />
             {/* Other Routes */}
-            <Route path="further-reading" element={<FurtherReading />} />
+            <Route path="resources" element={<FurtherReading />} />
           </Route>
           <Route path="/ggplot" element={<DataVisLayout />}>
             <Route index element={<GGplot />} />

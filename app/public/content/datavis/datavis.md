@@ -12,8 +12,8 @@ sections:
       - title: "Charts"
         content: "This section of the guide includes best practices, things to avoid, and visual examples for a variety of chart types, as well as guidance on when to use what kind of chart."
         link: "/datavis/charts"
-      - title: "Further Reading"
+      - title: "Resources"
         content: "Explore other, related guidance on design elements, specific chart types, and general data visualization best practices."
-        link: "/datavis/further-reading"
+        link: "/datavis/resources"
 
 

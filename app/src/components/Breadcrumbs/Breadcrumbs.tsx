@@ -20,7 +20,7 @@ const Breadcrumbs: React.FC = () => {
     "line-charts": "Line Charts",
     "bar-charts": "Bar Charts",
     "area-charts": "Area Charts",
-    "further-reading": "Further Reading",
+    "resources": "Resources",
     api: "API Documentation",
     ggplot: "Custom Ggplot Theme",
     "using-the-theme": "Using the Theme",

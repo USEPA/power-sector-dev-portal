@@ -49,8 +49,8 @@ const Card: React.FC<CardProps> = ({ title, content, link }) => {
                 ? "Learn About Design Elements"
                 : title === "Charts"
                 ? "Choose a Chart"
-                : title === "Further Readings"
-                ? "Find Further Readings"
+                : title === "Resourcess"
+                ? "Find Resourcess"
                 : `Go to ${title}`}
             </Link>
           )}
