@@ -87,7 +87,7 @@ sections:
         Here we see the font applied to all text elements by default; they will be re-sized in the sections below.
 
         Plot annotations such as titles, subtitles is formatted through the following theme options. The title size is magnified 20% compared to `base_size`, while the caption is decreased 20%.
-  - title: "Axis line orientation: `plot direction`"
+  - title: "Axis line orientation: `axis_lines`"
     level: 3
   - code: |  
       ## default: 'horiz'
