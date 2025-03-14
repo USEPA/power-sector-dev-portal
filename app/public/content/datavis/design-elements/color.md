@@ -78,7 +78,7 @@ sections:
   - title: "Consolidated Fuel Type Palettes: Renewables"
     level: 4
     content: |
-       Use these palettes for commonly grouped renewable fuel types, like in the Data Explorer and Power Profiler’s fuel mix visualizations.
+       Use these palettes for commonly grouped renewable fuel types, like in the [Data Explorer](https://www.epa.gov/egrid/data-explorer) and [Power Profiler’s](https://www.epa.gov/egrid/power-profiler#/) fuel mix visualizations.
     alt: ""
     image: "/assets/images/datavis/design-elements/color/consolidated-fuel-type-renewables.svg"
   - title: "Consolidated Fuel Type Palette: Combustion"

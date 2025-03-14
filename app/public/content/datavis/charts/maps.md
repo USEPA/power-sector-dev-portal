@@ -6,7 +6,7 @@ introContent: |
         Maps are most useful when you have data that needs to be communicated geographically: when patterns or trends in the data exist along geographies.
 
         You might want to consider a different chart type if:
-        - Your audience doesn’t need to “see” the geography underlying the data. Ask yourself whether a table of states (for example) be enough to communicate the information.
+        - Your audience doesn’t need to “see” the geography underlying the data. Ask yourself whether a table of states (for example) will be enough to communicate the information.
         - The physical geography would cause bias in interpreting the data. (For example, larger states are more visually salient--does this influence how reader interpret your map by putting undue emphasis on those states?) Ask yourself if the geography is overwhelming other aspects of your data.
 sections:
   - title: "General Map Guidance"
@@ -123,7 +123,8 @@ sections:
   - title: "Best Practices"
     level: 3
     content: |
-      - Bubbles should be a little bit see-through (their opacity should be less than 100%).
+      - Bubbles should be a little bit see-through (i.e., their opacity should be less than 100%).
+      - A contrasting border should be added to bubble to further make overlaps clear.
       - Data should map to bubble area, not radius. This should always be made clear in a legend.
       - If possible, adjust the scale for bubble sizes when data is filtered so the full extent of the scale is being used.
       - Don’t use more than one characteristic (e.g., both color and size) to encode the same variable. For example, if emissions are being shown by the size of the bubbles, you don’t also need to add a color scale to show the same thing.
@@ -133,7 +134,7 @@ sections:
     - title: "Opacity"
       alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania. The bubbles are slightly see-through, which makes it easy to interpret overlapping bubbles."
       image: "/assets/images/datavis/charts/maps/bubble-opacity-do.png"
-      content: Bubbles should be a little see-through to allow users to interpret overlaps.
+      content: Bubbles should be a little see-through to allow users to interpret overlaps. A contrasting border should be added to bubble to further make overlaps clear.
       type: "do"
     - title: "Data Mapping"
       alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania and its accompanying legend. The legend reveals that each bubble is scaled to the data according to its area, not radius. This makes the differences between bubbles easy to understand."

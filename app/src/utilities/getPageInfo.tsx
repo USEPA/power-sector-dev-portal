@@ -5,7 +5,7 @@ export const getPageInfo = (location: Location) => {
   if (location.pathname.startsWith("/datavis")) {
     return {
       route: "/datavis",
-      title: "Data Visualization Style Guide",
+      title: "CAPD Data Visualization Style Guide",
       isDatavisRoute: true,
     };
   }

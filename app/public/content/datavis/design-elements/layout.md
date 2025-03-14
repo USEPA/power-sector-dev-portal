@@ -103,7 +103,7 @@ sections:
     content: |
       Where possible (where there’s enough visual space) and if they would help make the takeaway(s) more clear, data labels can be used to highlight important parts of a chart.
 
-        The difference between a data label and a tooltip is nuanced; generally speaking, a data label is always present, while a tooltip is conjured by a user’s interaction with the chart. Furthermore, a data label exist to highlight specific points of interest on the chart, while a tooltip exists to provide any available detail that the user wishes to see.
+        The difference between a data label and a tooltip is nuanced; generally speaking, a data label is always present, while a tooltip is conjured by a user’s interaction with the chart. Furthermore, a data label exists to highlight specific points of interest on the chart, while a tooltip exists to provide any available detail that the user wishes to see.
     cards:
     - title: "Data Label Anatomy"
       alt: "A zoomed-in section of an image showing a bubble plot. There are numerous bubbles, but one of them is outlined in black and has a line connecting it to a label on the chart. The label describes the bubble but does not block any of the other bubbles from being seen."

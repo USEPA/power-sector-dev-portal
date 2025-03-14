@@ -12,7 +12,7 @@ const getClassNameFromTitle = (title?: string): string => {
   if (!title) return "";
 
   const allowedTitles = [
-    "Data Visualization Style Guide",
+    "CAPD Data Visualization Style Guide",
     "Custom CAPD ggplot2 Theme",
     "API",
   ];

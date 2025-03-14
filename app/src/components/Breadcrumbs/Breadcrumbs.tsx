@@ -8,7 +8,7 @@ const Breadcrumbs: React.FC = () => {
 
   // Map of path segments to user-friendly titles
   const breadcrumbTitles: { [key: string]: string } = {
-    datavis: "Data Visualization Style Guide",
+    datavis: "CAPD Data Visualization Style Guide",
     "design-elements": "Design Elements",
     principles: "Principles",
     color: "Color",
