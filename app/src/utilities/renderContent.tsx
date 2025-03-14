@@ -14,7 +14,7 @@ const renderHeader = (title: string, level: number) => {
     return str.replace(
       /\w\S*/g,
       (text) => {
-        if (text.toLowerCase() === "ggplot") {
+        if (text.toLowerCase() === "ggplot2") {
           return "ggplot";
         }
         return text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
