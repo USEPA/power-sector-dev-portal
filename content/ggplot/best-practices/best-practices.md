@@ -9,7 +9,7 @@ sections:
       library(ggcapdthemes)
   - title: "Color as Highlight"
     content: |
-        This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the of the Data Visualization Style Guide.
+        This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the [Color page](#/datavis/design-elements/color) of the [Data Visualization Style Guide](#/datavis).
   - title: "Highlighting Discrete Colors"
     content: |
         Using the `gghighlight` package to assist, we can emphasize certain groups or elements of charts. Leave fuel type as original color, gray out non-highlighted groups.
@@ -85,7 +85,7 @@ sections:
     alt: "An image of a multi-line chart with three lines. The three lines are directly labeled with their names in their respective colors on the left-most edge of the chart."
   - title: "Tooltips"
     content: |
-        Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the [Data Visualization Style Guide](#/datavis).
+        Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the [Chart Layout page](#/datavis/design-elements/layout) of the [Data Visualization Style Guide](#/datavis).
   - title: "Plotly"
     content: |
        The `plotly` package can be used for interactive charts. To turn a ggplot object into a plotly chart, wrap it in `plotly::ggplotly()`.

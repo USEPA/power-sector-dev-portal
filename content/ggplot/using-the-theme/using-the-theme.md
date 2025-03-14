@@ -3,7 +3,7 @@ title: "Using the Theme"
 tagline: ""
 introTitle: "Introduction"
 introContent: |
-        Welcome! This vignette will demonstrate how the EPA CAPD Data
+        Welcome! This page will demonstrate how the EPA CAPD Data
         Visualization Style Guide can be integrated into your R visualizations.
         Through the use of the `{ggcapdthemes}` package and the `theme_capd`
         function, you can easily customize and standardize your ggplots!
@@ -16,7 +16,7 @@ sections:
       library(ggplot2)
       library(ggcapdthemes)
   - content: |
-      For R users looking for DVSG best practices that go beyond the theme, check out the [Best Practices](#/ggplot/best-practices) vignette.
+      For R users looking for DVSG best practices that go beyond the theme, check out the [Best Practices](#/ggplot/best-practices) page.
   - title: "Applying the theme `theme_capd()`"
     level: 2
     content: |

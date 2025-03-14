@@ -7,10 +7,10 @@ sections:
   - title: "Design Elements"
     cards:
       - title: "Color"
-        content: "Explore a variety of palettes built using the US Web Design System’s color guidance that you can use in common quantitative and categorical data visualizations."
+        content: "Explore a variety of palettes built using theU.S.Web Design System’s color guidance that you can use in common quantitative and categorical data visualizations."
         link: "/datavis/design-elements/color"
       - title: "Typography"
-        content: "Find out which US Web Design System font we recommend for visualizations and learn which common data-viz-related typography mistakes to avoid."
+        content: "Find out whichU.S.Web Design System font we recommend for visualizations and learn which common data-viz-related typography mistakes to avoid."
         link: "/datavis/design-elements/typography"
       - title: "Symbology"
         content: "Learn how icons and symbology can help make your data visualizations more accessible and engaging."
