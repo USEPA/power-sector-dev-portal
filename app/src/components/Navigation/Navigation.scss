@@ -124,10 +124,10 @@
       color: white;
     }
     .usa-nav__primary-item {
-      border-top: 1px solid var(--vivid);
+      border-top: 1px solid var(--primary);
 
       &:last-child {
-        border-bottom: 1px solid var(--vivid);
+        border-bottom: 1px solid var(--primary);
       }
     }
     .usa-nav__submenu-item {

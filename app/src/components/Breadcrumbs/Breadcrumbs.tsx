@@ -18,11 +18,11 @@ const Breadcrumbs: React.FC = () => {
     charts: "Charts",
     maps: "Maps",
     "line-charts": "Line Charts",
-    "bar-charts": "Bar Charts",
+    "bar-charts": "Bar and Column Charts",
     "area-charts": "Area Charts",
     "resources": "Resources",
     api: "API Documentation",
-    ggplot: "Custom Ggplot Theme",
+    ggplot: "Custom ggplot Theme",
     "using-the-theme": "Using the Theme",
     "best-practices": "Best Practices",
   };

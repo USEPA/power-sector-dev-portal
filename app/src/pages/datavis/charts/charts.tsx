@@ -155,6 +155,9 @@ const Charts: React.FC = () => {
                                 Learn about {card.title} <ArrowForwardIcon />
                               </Link>
                             )}
+                            {!card.link && (
+                              <p><b><i>(not included in this guide)</i></b></p>
+                            )}
                           </div>
                         </div>
                       ))}

@@ -22,6 +22,10 @@
     justify-content: flex-start;
     padding: 1em;
 
+    svg {
+      margin: 0;
+    }
+
     @media (max-width: 720px) {
         grid-template-columns: 1fr;
         flex-direction: column;

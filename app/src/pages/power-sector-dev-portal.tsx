@@ -2,7 +2,7 @@
 import React from "react";
 import useMarkdownContent from "../hooks/useMarkdownContent";
 import Banner from "../components/Banner/Banner";
-import { extractBanner, extractIntro, extractSections } from "../utilities/extractContent";
+import { extractBanner, extractSections } from "../utilities/extractContent";
 import { Section } from "../types/ContentTypes"; 
 import Card from "../components/Card/Card";
 
@@ -12,7 +12,6 @@ const PowerSectorDevPortal: React.FC = () => {
 
   // Extract content from markdown
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };
-  const { introTitle, introContent } = content ? extractIntro(content) : { introTitle: '', introContent: '' };
   const sections: Section[] = content ? extractSections(content) : [];
 
   if (error) {
@@ -23,10 +22,6 @@ const PowerSectorDevPortal: React.FC = () => {
     <div className="page grey-container">
      <Banner title={title} tagline={tagline} level="level1" />
       <div className="container">
-        <div className="intro-section bottom-border-section">
-          <h2>{introTitle}</h2>
-          <p>{introContent}</p>
-        </div>
         {sections.map((section, idx) => (
           <div key={idx} className="grid grid-col--two row-gap-3">
             {section.cards && section.cards.map((card, cardIdx) => (

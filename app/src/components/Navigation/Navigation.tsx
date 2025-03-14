@@ -258,7 +258,7 @@ const Navigation: React.FC = () => {
                               : ""
                           }
                         >
-                          <span>Bar Charts</span>
+                          <span>Bar and Column Charts</span>
                         </Link>
                       </li>
                       <li className="usa-nav__submenu-item">

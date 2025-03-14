@@ -3,7 +3,7 @@ title: "Color"
 tagline: "Guidelines on using color effectively in visualizations."
 introTitle: "Introduction"
 introContent: | 
-    The U.S. Web Design System (USWDS) includes extensive documentation on using color on the web, available on [their Color page](https://designsystem.digital.gov/utilities/color/). This guide’s data visualization color palettes are built using that existing guidance and are intended to adhere to our internal principles around accessibility, clarity, and consistency. This section of the guide aims to provide practical palettes to use in common quantitative and categorical data visualizations while also providing palettes for more CAPD-specific use cases such as fuel and pollutant types. 
+    The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) includes extensive documentation on using color on the web, available on [their Color page](https://designsystem.digital.gov/utilities/color/). This guide’s data visualization color palettes are built using that existing guidance and are intended to adhere to our internal principles around accessibility, clarity, and consistency. This section of the guide aims to provide practical palettes to use in common quantitative and categorical data visualizations while also providing palettes for more CAPD-specific use cases such as fuel and pollutant types. 
 
     A quick note on reading this page: When you see a hashtag or pound symbol followed by a combination of 6 letters and/or numbers, that’s called a “hex code” and is a way of identifying and reproducing that particular color in code and in programs that allow you to edit the colors of visual elements.  
 sections:
