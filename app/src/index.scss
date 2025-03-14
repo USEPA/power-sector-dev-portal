@@ -193,9 +193,9 @@ button:focus-visible {
 }
 
 .blue-button {
-  background-color: var(--vivid-50v)!important;
+  background-color: var(--primary)!important;
   &:hover {
-   background-color:  var(--vivid-70v)!important;
+   background-color:  var(--primary-dark)!important;
   }
 }
 

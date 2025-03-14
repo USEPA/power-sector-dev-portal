@@ -88,7 +88,7 @@
   }
 
   &:first-child {
-    border-top: 1.5px solid var(--vivid);
+    border-top: 1.5px solid var(--primary);
     .accordion__heading {
       margin: 0 !important;
     }
@@ -97,7 +97,7 @@
 
   .accordion__button {
     background-image: url(./assets/uswds-img/usa-icons/arrow_drop_down.svg), linear-gradient(transparent, transparent) !important;
-    border-bottom: 1.5px solid var(--vivid);
+    border-bottom: 1.5px solid var(--primary);
     border: 0;
     border-radius: 0;
     box-shadow: none;
