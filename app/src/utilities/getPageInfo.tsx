@@ -10,7 +10,7 @@ export const getPageInfo = (location: Location) => {
     };
   }
   if (location.pathname.startsWith("/ggplot")) {
-    return { route: "/ggplot", title: "Custom Ggplot Theme", isGgplotRoute: true };
+    return { route: "/ggplot", title: "Custom ggplot Theme", isGgplotRoute: true };
   }
   if (location.pathname.startsWith("/api")) {
     return { route: "/api", title: "API Documentation", isApiRoute: true };

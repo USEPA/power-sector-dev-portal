@@ -13,7 +13,12 @@ const renderHeader = (title: string, level: number) => {
   function toTitleCase(str: string) {
     return str.replace(
       /\w\S*/g,
-      (text) => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+      (text) => {
+        if (text.toLowerCase() === "ggplot") {
+          return "ggplot";
+        }
+        return text.charAt(0).toUpperCase() + text.substring(1).toLowerCase();
+      }
     );
   }
 
