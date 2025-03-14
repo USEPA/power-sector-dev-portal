@@ -72,17 +72,17 @@ body {
   background-color: $base-lightest;
 }
 
-// .code-container {
-//   max-width: 75%;
-//   overflow-x: auto;
-// }
+.code-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
 
-// .code-container pre {
-//   max-width: 100%;
-//   overflow-x: auto;
-//   white-space: pre-wrap;
-//   word-break: break-word;
-// }
+.code-container pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
 
 .container, .container-with-sidenav {
   margin: 0 auto;
