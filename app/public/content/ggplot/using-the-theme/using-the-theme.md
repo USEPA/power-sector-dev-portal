@@ -3,10 +3,10 @@ title: "Using the Theme"
 tagline: ""
 introTitle: "Introduction"
 introContent: |
-        Welcome! This page will demonstrate how the EPA CAPD Data
+        This page will demonstrate how the EPA CAPD Data
         Visualization Style Guide can be integrated into your R visualizations.
         Through the use of the `{ggcapdthemes}` package and the `theme_capd`
-        function, you can easily customize and standardize your ggplots!
+        function, you can easily customize and standardize your ggplots.
 introImage: "/assets/images/ggplot/using-the-theme/chart-layout.svg"   
 introImgAlt: "An image showing an example line chart with its key elements labeled highlighted in red. The key elements of the chart include its title, subtitle, a labeled and titled y-axis, a labeled and titled x-axis, tick marks connecting x-axis labels to their respective points along the axis line, dotted gridlines, and the two labeled lines that represent the data behind the chart."
 sections:
