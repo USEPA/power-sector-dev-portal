@@ -71,7 +71,7 @@ sections:
   - title: "Icon Set B"
     level: 3
     content: |
-       This set of icons is simper and thus best suited for visualizations such as maps and charts. Beyond the plain black version (pictured below), this set has a variety of color variants for use in different scenarios.
+       This set of icons is simpler and thus best suited for visualizations such as maps and charts. Beyond the plain black version (pictured below), this set has a variety of color variants for use in different scenarios.
     downloads:
     - title: "Download Icon Set B (Plain Black)"
       link: "/assets/images/datavis/design-elements/symbology/set-b-plain-black.zip"

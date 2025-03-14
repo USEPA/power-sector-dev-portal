@@ -1,7 +1,7 @@
 ---
-title: "Data Visualization Style Guide"
+title: "CAPD Data Visualization Style Guide"
 sections:
-  - title: "Data Visualization Style Guide"
+  - title: "CAPD Data Visualization Style Guide"
     cards:
       - title: "Principles"
         content: "The five high-level principles put forth in this guide are intended to describe an approach to creating data visualizations that is complemented by more specific rules and suggestions provided in the other sections."
