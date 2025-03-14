@@ -105,9 +105,9 @@ sections:
   - title: "Example Charts"
   - title: "Figure 1: Line Charts Example with Two Lines"
     level: 4
-    alt: "An image showing a multi-line chart with two lines representing the CO2 emissions over time of an imaginedU.S.region compared to theU.S.average. Each line is in a different color, but both lines are also labeled to make the chart easy to read."
+    alt: "An image showing a multi-line chart with two lines representing the CO2 emissions over time of an imagined U.S. region compared to the U.S. average. Each line is in a different color, but both lines are also labeled to make the chart easy to read."
     image: "/assets/images/datavis/charts/line-charts/figure-1-two-lines.svg"
   - title: "Figure 2: Line Charts Example with Multiple Lines"
     level: 4
-    alt: "An image showing a multi-line chart with numerous lines, too many to count, representing the CO2 emissions over time of a large number of imaginedU.S.regions compared to theU.S.average. Most of the region lines are in light gray, but the line representing the region of interest is in a different color, and so is the line representing theU.S.average. Both lines are also labeled to make the chart easy to read. Including the background lines helps frame that region’s emissions in context, but highlighting only the region of interest ensures the main takeaway of the chart is still clear."
+    alt: "An image showing a multi-line chart with numerous lines, too many to count, representing the CO2 emissions over time of a large number of imaginedU.S.regions compared to the U.S. average. Most of the region lines are in light gray, but the line representing the region of interest is in a different color, and so is the line representing the U.S. average. Both lines are also labeled to make the chart easy to read. Including the background lines helps frame that region’s emissions in context, but highlighting only the region of interest ensures the main takeaway of the chart is still clear."
     image: "/assets/images/datavis/charts/line-charts/figure-2-multiple-lines.svg"

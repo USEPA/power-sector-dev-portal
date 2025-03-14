@@ -31,8 +31,8 @@ const UsingTheTheme: React.FC = () => {
 
   return (
     <div className="page">
-      <div className="usa-in-page-nav-container container-with-sidenav">
-        <main id="main-content" className="main-content">
+    <div className="usa-in-page-nav-container container-with-sidenav">
+      <main id="main-content" className="main-content">
           <div>
             <h1>{title}</h1>
             {(introTitle || introContent) && (

@@ -44,7 +44,7 @@ sections:
       type: "do"
     - title: "Category Labels"
       image: "/assets/images/datavis/charts/bar-and-column-charts/column-category-labels-do.png"
-      alt: "A zoomed-in image of a column chart showing that its column labels are short. In this case, they useU.S.state abbreviations instead of full names. This makes the chart easy to read."
+      alt: "A zoomed-in image of a column chart showing that its column labels are short. In this case, they use U.S. state abbreviations instead of full names. This makes the chart easy to read."
       content: The names of your categories (columns) should be short and center-aligned. If you have longer category names, consider using a bar chart instead.
       type: "do"
   - title: "Things to Avoid"
@@ -57,7 +57,7 @@ sections:
       type: "do not"
     - title: "Category Labels"
       image: "/assets/images/datavis/charts/bar-and-column-charts/column-category-labels-do-not.png"
-      alt: "A zoomed-in image of a column chart showing that its column labels are long. In this case, they use fullU.S.state names. This makes the chart hard to read because the labels crowd one another. "
+      alt: "A zoomed-in image of a column chart showing that its column labels are long. In this case, they use full U.S. state names. This makes the chart hard to read because the labels crowd one another. "
       content: Don’t use long labels for column charts.
       type: "do not"
   - title: "Bar Chart"
@@ -78,7 +78,7 @@ sections:
       type: "do"
     - title: "Category Labels"
       image: "/assets/images/datavis/charts/bar-and-column-charts/bar-category-labels-do.png"
-      alt: "A zoomed-in image of a bar chart showing that its column labels are long. In this case, they use fullU.S.state names. Because the bars and their labels are horizontal, this is OK."
+      alt: "A zoomed-in image of a bar chart showing that its column labels are long. In this case, they use full U.S. state names. Because the bars and their labels are horizontal, this is OK."
       content: The names of your categories (bars) can be longer with this chart type. Their labels should be right-aligned.
       type: "do"
   - title: "Things to Avoid"
