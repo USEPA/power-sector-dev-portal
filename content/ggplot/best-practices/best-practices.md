@@ -9,7 +9,7 @@ sections:
       library(ggcapdthemes)
   - title: "Color as Highlight"
     content: |
-        This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the [Color page](power-sector-dev-portal/#/datavis/design-elements/color) of the [Data Visualization Style Guide](#/datavis).
+        This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the [Color page](power-sector-dev-portal/#/datavis/design-elements/color) of the [Data Visualization Style Guide](power-sector-dev-portal/#/datavis).
   - title: "Highlighting Discrete Colors"
     content: |
         Using the `gghighlight` package to assist, we can emphasize certain groups or elements of charts. Leave fuel type as original color, gray out non-highlighted groups.
@@ -45,7 +45,7 @@ sections:
         )
   - title: "Legends"
     content: |
-        Legends are most helpful and accessible when they are directly attached to the relevant data elements. If that isn’t possible, keeping them as close as possible to the data elements is a good compromise. For more details on legend design, see the [dedicated section of the Data Visualization Style Guide](#/datavis/charts).
+        Legends are most helpful and accessible when they are directly attached to the relevant data elements. If that isn’t possible, keeping them as close as possible to the data elements is a good compromise. For more details on legend design, see the [dedicated section of the Data Visualization Style Guide](power-sector-dev-portal/#/datavis/charts).
 
         By default, ggplot sorts character variables for color / fill alphabetically from A to Z. Sometimes this is desired, other times there are more useful orders for aligning to the data at hand.
     code: |  
@@ -85,7 +85,7 @@ sections:
     alt: "An image of a multi-line chart with three lines. The three lines are directly labeled with their names in their respective colors on the left-most edge of the chart."
   - title: "Tooltips"
     content: |
-        Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the [Chart Layout page](#/datavis/design-elements/layout) of the [Data Visualization Style Guide](#/datavis).
+        Tooltips that call out names, values, and style (color, stroke pattern, etc.) of individual data elements can help make those data points easier to identify in your chart. For more details on tooltip design, see the [Chart Layout page](power-sector-dev-portal/#/datavis/design-elements/layout) of the [Data Visualization Style Guide](power-sector-dev-portal/#/datavis).
   - title: "Plotly"
     content: |
        The `plotly` package can be used for interactive charts. To turn a ggplot object into a plotly chart, wrap it in `plotly::ggplotly()`.
