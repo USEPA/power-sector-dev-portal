@@ -29,6 +29,7 @@ sections:
     image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-4-1.svg"
     alt: "An image of a bar chart showing generation resource mix built in ggplot with the custom CAPD theme applied. The bar showing Gas is orange while all other bars are light gray with a dark gray border."
   - title: "Highlighting Continuous Colors"
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/continuous.svg"
     code: |  
       p_co2 <- ggplot(co2_emission_2022, aes(y = region, x = co2)) + 
         geom_bar(stat = 'identity', fill = '#2378C3') + 
