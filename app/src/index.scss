@@ -238,6 +238,10 @@ svg {
 
 .grid-col--two {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  @media (max-width: $mobile-width) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
 
 .grid-col--one {

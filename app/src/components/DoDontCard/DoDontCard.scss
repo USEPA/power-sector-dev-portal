@@ -20,6 +20,10 @@
 .do-dont-card img {
   border-radius: 5px;
   border: 2px solid $base;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
+  }
 }
 
 .card-do img {
