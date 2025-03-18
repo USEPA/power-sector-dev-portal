@@ -54,7 +54,7 @@ sections:
     content: |
       Use different color palettes depending on how many variables and what kinds of changes to them you want to show in your choropleth map.
 
-      You can read about these palettes in more detail and grab specific hex codes on the [Color page](power-sector-dev-portal/#/datavis/design-elements/color) of this guide.
+      You can read about these palettes in more detail and grab specific hex codes on the [Color page](#/datavis/design-elements/color) of this guide.
     cards:
     - title: "Sequential Palette"
       alt: "An image of a choropleth map of Pennsylvania in a sequential color palette emphasizing differences in one direction in a single variable. In this case, the legend shows that the map is tracking percent differences ranging from zero to twenty-five percent."
