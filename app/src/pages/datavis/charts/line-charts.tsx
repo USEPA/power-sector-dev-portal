@@ -34,7 +34,7 @@ const LineCharts: React.FC = () => {
             element.scrollIntoView({ behavior: 'smooth' });
           }
         }
-      }, 100); 
+      }, 200); 
   
       return () => clearTimeout(timeoutId);
     }, [location]);
