@@ -229,6 +229,12 @@ svg {
   border: 2px solid $base;
 }
 
+svg {
+  text, tspan{
+    font-family: $font-family !important;
+  }
+}
+
 // custom components //
 
 .grid {

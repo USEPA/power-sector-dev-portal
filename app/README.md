@@ -74,7 +74,7 @@ Once the dependencies are installed, you can run the development server from the
 npm run dev
 ```
 
-This will usually start the development server at http://localhost:5173/
+This will usually start the development server at http://localhost:5173/power-sector-dev-portal/
 
 To build the project for deployment, use the following command:
 ``` bash
