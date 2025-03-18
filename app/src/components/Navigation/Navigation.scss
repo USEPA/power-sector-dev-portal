@@ -93,6 +93,10 @@
 
 @media (max-width: $mobile-width) {
   .top-nav {
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+
     .usa-nav {
       width: 100%;
       background-color: var(--primary-darker);
