@@ -28,7 +28,7 @@ sections:
   - title: "Additional Encodings (Beyond Color)"
     level: 4
     content: |
-      The most accessible way to build a data visualization is to use something other than color to encode meaning; this way, you can sidestep many of the issues inherent to using color mentioned above. In practice, this can mean using patterned fills overlaid onto color scales (stripes, cross hatches, dots, etc.) and employing symbols to represent different categories in things like scatterplots or line charts. See the [Symbology](#/datavis/design-elements/symbology) page for more information.
+      The most accessible way to build a data visualization is to use something other than color to encode meaning; this way, you can sidestep many of the issues inherent to using color mentioned above. In practice, this can mean using patterned fills overlaid onto color scales (stripes, cross hatches, dots, etc.) and employing symbols to represent different categories in things like scatterplots or line charts. See the [Symbology](power-sector-dev-portal/#/datavis/design-elements/symbology) page for more information.
   - title: "Color Blindness"
     level: 4
     content: |
