@@ -14,10 +14,10 @@ sections:
       - If you’re creating a single-line chart, use a neutral color (**#2E2E2E**) for the line (unless you’re plotting a variable that falls into one of the groups outlined in the [categorical palettes section](#/datavis/design-elements/color)).
       - Because they focus more on trends than absolute values, the y-axes of line charts don’t need to start at zero (like those of bar charts do).
       - Before deciding on an axis extent (the range of data that an axis covers), always consider how it might (mis)represent the data.
-      - If your multiple-line chart exists to highlight a few lines against many others, use a light gray (**#C9C9C9) for the lines in which you’re not immediately interested.
+      - If your multiple-line chart exists to highlight a few lines against many others, use a light gray (**#C9C9C9**) for the lines in which you’re not immediately interested.
       - If your multiple-line chart exists to make comparisons between a few (no more than 5) lines, use color for each line.
   - title: "Examples of Best Practices"
-    level: 3
+    level: 4
     cards:
     - title: "Labeling"
       alt: "An image of a multi-line chart with two lines. Each is directly labeled to the right of the chart. This makes the chart easy to read, especially for readers who cannot rely on color to distinguish between lines."
@@ -45,7 +45,7 @@ sections:
       content: If your multiple-line chart exists to make comparisons between a few (no more than 5) lines, use color for each line, but make sure to also label them directly or use stroke styles to distinguish between them.
       type: "do"
   - title: "Things to Avoid"
-    level: 3
+    level: 4
     cards:
     - title: "Labeling"
       alt: "An image of a multi-line chart with four lines, each in a different color. There is a legend below the chart showing the line labels in their respective colors. This makes the chart hard to parse for readers who cannot rely on color to distinguish between lines."
@@ -76,7 +76,7 @@ sections:
     content: |
         - Always show the “chart space” of a sparkline (either by putting a fill on the background or using divider lines).
   - title: "Examples of Best Practices"
-    level: 3
+    level: 4
     cards:
     - title: "“Chart Space”"
       alt: "An image showing different ways to show the chart space of a set of sparklines. In the first option, each sparklines is presented on a lightly colored background. In the second option, divider lines are inserted between the sparklines. Both options make the individual sparklines easier to read."
