@@ -2,9 +2,11 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Breadcrumbs.scss";
 import { getPageLevelforBreadcrumbs } from "../../utilities/getPageInfo";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const Breadcrumbs: React.FC = () => {
   const location = useLocation();
+  const isMobileView = useIsMobile();
 
   // Map of path segments to user-friendly titles
   const breadcrumbTitles: { [key: string]: string } = {
@@ -45,6 +47,9 @@ const Breadcrumbs: React.FC = () => {
       isRouteWithBanner
     } = getPageLevelforBreadcrumbs(location);
 
+    const lastBreadcrumb = breadcrumbs[breadcrumbs.length - 1];
+    const parentBreadcrumb = breadcrumbs[breadcrumbs.length - 2];
+
   return (
     <nav className="usa-breadcrumb" aria-label="Breadcrumbs">
       <div className={isRouteWithBanner ? "banner-container" : "banner-container-with-sidenav"}>
@@ -55,24 +60,29 @@ const Breadcrumbs: React.FC = () => {
               Power Sector Dev Portal
             </Link>
           </li>
-
-          {breadcrumbs.map((breadcrumb, index) => (
-            <li
-              key={breadcrumb.path}
-              className="usa-breadcrumb__list-item"
-              aria-current={
-                index === breadcrumbs.length - 1 ? "page" : undefined
-              }
-            >
-              {index === breadcrumbs.length - 1 ? (
-                <span>{breadcrumb.name}</span>
-              ) : (
-                <Link to={breadcrumb.path} className="usa-breadcrumb__link">
-                  {breadcrumb.name}
-                </Link>
-              )}
+          {isMobileView ? (
+            <li className="usa-breadcrumb__list-item">
+              <Link to={parentBreadcrumb?.path || "#"} className="usa-breadcrumb__link">
+                {lastBreadcrumb.name}
+              </Link>
             </li>
-          ))}
+          ) : (
+            breadcrumbs.map((breadcrumb, index) => (
+              <li
+                key={breadcrumb.path}
+                className="usa-breadcrumb__list-item"
+                aria-current={index === breadcrumbs.length - 1 ? "page" : undefined}
+              >
+                {index === breadcrumbs.length - 1 ? (
+                  <span>{breadcrumb.name}</span>
+                ) : (
+                  <Link to={breadcrumb.path} className="usa-breadcrumb__link">
+                    {breadcrumb.name}
+                  </Link>
+                )}
+              </li>
+            ))
+          )}
         </ol>
       </div>
     </nav>
