@@ -16,7 +16,7 @@ sections:
       library(ggplot2)
       library(ggcapdthemes)
   - content: |
-      For R users looking for Data Visualization Style Guide best practices that go beyond the theme, check out the [Best Practices](power-sector-dev-portal/#/ggplot/best-practices) page.
+      For R users looking for Data Visualization Style Guide best practices that go beyond the theme, check out the [Best Practices](#/ggplot/best-practices) page.
   - title: "Applying the theme `theme_capd()`"
     level: 2
     content: |
