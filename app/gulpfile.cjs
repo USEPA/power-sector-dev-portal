@@ -13,11 +13,13 @@ uswds.paths.dist.fonts = './dist/fonts';
 
 gulp.task('adjust-font-paths', function () {
   return gulp.src('./src/assets/css/uswds.min.css') 
-    .pipe(replace(/url\('\/fonts/g, "url('/power-sector-dev-portal/fonts")) 
+    // Adjust font paths
+    .pipe(replace(/url\(\s*['"]?\/fonts/g, "url('/power-sector-dev-portal/fonts"))
+    .pipe(replace(/url\(\s*['"]?\/img/g, "url('/power-sector-dev-portal/img"))
     .pipe(gulp.dest('./dist/css')); 
 });
 
 // Export tasks
 exports.init = uswds.init;
-exports.compile = gulp.series(uswds.compile, 'adjust-font-paths'); 
+exports.compile = gulp.series(uswds.compile, 'adjust-css-paths'); 
 exports.watch = uswds.watch;
