@@ -16,7 +16,7 @@ export default defineConfig({
       frontmatter: true,
     }),
   ],
-  base: '/',
+  base: '/power-sector-dev-portal/',
   build: {
     rollupOptions: {
       input: {
