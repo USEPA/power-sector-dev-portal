@@ -8,7 +8,7 @@ uswds.settings.version = 3;
 // Path settings
 uswds.paths.dist.css = './src/assets/css';
 uswds.paths.dist.theme = './src/styles/uswds';
-uswds.paths.dist.fonts = './dist/fonts'; 
+uswds.paths.dist.fonts = './dist/fonts/sadjasdlk'; 
 
 
 gulp.task('adjust-font-paths', function () {
