@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useMarkdownContent from "../../../hooks/useMarkdownContent";
 import {
   extractBanner,
@@ -11,6 +11,7 @@ import renderHeader from "../../../utilities/renderContent";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
+import { useLocation } from "react-router-dom";
 
 const ColorPage: React.FC = () => {
   const base = import.meta.env.BASE_URL;
@@ -18,6 +19,22 @@ const ColorPage: React.FC = () => {
     `${base}content/datavis/design-elements/color.md`
   );
 
+     const location = useLocation();
+    
+      useEffect(() => {
+        const timeoutId = setTimeout(() => {
+          const hash = location.hash;
+          if (hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }, 200); 
+    
+        return () => clearTimeout(timeoutId);
+      }, [location]);
+      
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)
