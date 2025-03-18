@@ -13,9 +13,11 @@ import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
 
 const ColorPage: React.FC = () => {
+  const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
-    "/content/datavis/design-elements/color.md"
+    `${base}content/datavis/design-elements/color.md`
   );
+
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)
@@ -47,7 +49,10 @@ const ColorPage: React.FC = () => {
               )}
               {section.image &&
                 (section.image?.endsWith(".svg") ? (
-                  <SVGRenderer src={section.image} alt={section.alt ? section.alt : section.title} />
+                  <SVGRenderer
+                    src={section.image}
+                    alt={section.alt ? section.alt : section.title}
+                  />
                 ) : (
                   <img
                     src={section.image}

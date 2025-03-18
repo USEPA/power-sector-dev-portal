@@ -13,9 +13,12 @@ import DoDontCard from "../../../components/DoDontCard/DoDontCard";
 import SideNav from "../../../components/SideNav/SideNav";
 
 const Layout: React.FC = () => {
+
+  const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
-    "/content/datavis/design-elements/layout.md"
+    `${base}content/datavis/design-elements/layout.md`
   );
+
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent } = content
     ? extractIntro(content)

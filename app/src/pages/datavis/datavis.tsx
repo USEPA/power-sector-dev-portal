@@ -8,7 +8,8 @@ import Card from "../../components/Card/Card";
 
 const DataVisStyleGuide: React.FC = () => {
 
-  const { content, error } = useMarkdownContent("/content/datavis/datavis.md");
+  const base = import.meta.env.BASE_URL;
+  const { content, error } = useMarkdownContent(`${base}content/datavis/datavis.md`);
 
   // Extract content from markdown
   const { title, tagline } = content ? extractBanner(content) : { title: '', tagline: '' };

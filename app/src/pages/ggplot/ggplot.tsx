@@ -11,7 +11,10 @@ import Card from "../../components/Card/Card";
 import ReactMarkdown from "react-markdown";
 
 const GGplot: React.FC = () => {
-  const { content, error } = useMarkdownContent("/content/ggplot/ggplot.md");
+  const base = import.meta.env.BASE_URL;
+  const { content, error } = useMarkdownContent(
+    `${base}content/ggplot/ggplot.md`
+  );
 
   // Extract content from markdown
   const { title, tagline } = content
