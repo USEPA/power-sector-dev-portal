@@ -11,7 +11,7 @@ sections:
     level: 3
     content: |
       - If you’re creating a chart with more than one line, directly label lines or use styles like dashes to distinguish between multiple lines to avoid forcing users to rely on color alone.
-      - If you’re creating a single-line chart, use a neutral color (**#2E2E2E**) for the line (unless you’re plotting a variable that falls into one of the groups outlined in the [categorical palettes section](#/datavis/design-elements/color)).
+      - If you’re creating a single-line chart, use a neutral color (**#2E2E2E**) for the line (unless you’re plotting a variable that falls into one of the groups outlined in the [categorical palettes section](#/datavis/design-elements/color#categorical-palettes-2)).
       - Because they focus more on trends than absolute values, the y-axes of line charts don’t need to start at zero (like those of bar charts do).
       - Before deciding on an axis extent (the range of data that an axis covers), always consider how it might (mis)represent the data.
       - If your multiple-line chart exists to highlight a few lines against many others, use a light gray (**#C9C9C9**) for the lines in which you’re not immediately interested.
