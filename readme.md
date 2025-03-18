@@ -1,20 +1,15 @@
-# EPA Open Source Reference
+# EPA Power Sector Dev Portal
 
 ## Brief Project Description
 
-This repository contains files for teams to reuse when working in and with EPA Open Source projects.
+This repository contains a project that provides guidance on creating data products within EPA's Power Sector.
+It includes the CAPD Data Visualization Style Guide (DVSG), which provides best practices for use when producing new data visualizations or updating existing ones. It includes high-level principles, chart-specific guidance, and advice on common chart-related design elements.
 
-Also, this repository contains the link to [EPA's System Lifecycle Management Policy and Procedure](https://www.epa.gov/irmpoli8/policy-procedures-and-guidance-system-life-cycle-management-slcm) which lays out EPA's Open Source Software Policy and [EPA's Open Source Code Guidance](https://www.epa.gov/developers/open-source-software-and-epa-code-repository-requirements). 
+A related project, the [CAPD ggplot2 Custom Theme]([url](https://github.com/usepa/ggcapdthemes)) is based on the guidance put forth in the DVSG. It includes changes to default colors, chart layout, typography, and additional methods to further bring ggplot2 charts in line with other Power Sector data visualizations.
 
-## For EPA Teams
+## Project Website
 
-For EPA Teams, we have guidance on how EPA puts our open source software policies into practice on GitHub. Read [EPA's GitHub Guidance.](https://www.epa.gov/webguide/github-guidance)
-
-[EPA's Open Source Project repo](https://github.com/USEPA/open-source-projects) is for EPA teams to reuse file for properly maintaining their open source project. All projects must include a readme.md, license.md, contributing.md file and the disclaimer below.   
-
-### Credits
-
-This repository reused material from [GSA](https://www.gsa.gov/), [18F](https://18f.gsa.gov/) , [Lawrence Livermore National Lab](https://www.llnl.gov/), and from the [Consumer Financial Protection Bureau's policy](https://github.com/cfpb/source-code-policy).
+The [Power Sector Dev Portal]([url](https://usepa.github.io/power-sector-dev-portal/)) is available is website form. In it are pages for the [Data Visualization Style Guide]([url](https://usepa.github.io/power-sector-dev-portal/#/datavis)) and [custom ggplot theme]([url](https://usepa.github.io/power-sector-dev-portal/#/ggplot)).
 
 ### Disclaimer
 
