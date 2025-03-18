@@ -2,6 +2,11 @@
 // @forward "./path/to/source/uswds";
 @use "./variables" as *;
 
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('/assets/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2') format('woff2');
+}
+
 :root.root {
   @include theme(datavis);
 }
