@@ -26,7 +26,7 @@ sections:
           linewidth = 0.2) 
       )
       #> label_key: resource_label
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-4-1.svg"
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-4-1.svg"
     alt: "An image of a bar chart showing generation resource mix built in ggplot with the custom CAPD theme applied. The bar showing Gas is orange while all other bars are light gray with a dark gray border."
   - title: "Highlighting Continuous Colors"
     code: |  
@@ -54,7 +54,7 @@ sections:
         geom_line() +
         labs(color = 'Statistic') + 
         theme_capd()
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-6-1.svg" 
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-6-1.svg" 
     alt: "An image of a multi-line chart with three lines. The order of the lines from top to bottom does not match the order in which they are described in the legend that sits to the right of the chart." 
   - title: "Sorting Legend Entries"
     content: |
@@ -65,7 +65,7 @@ sections:
         geom_line() +
         labs(color = 'Statistic') + 
         theme_capd()
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-7-1.svg" 
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-7-1.svg" 
     alt: "An image of a multi-line chart with three lines. The order of the lines from top to bottom matches the order in which they are described in the legend that sits to the right of the chart."
   - title: "Adding Direct Labels on your Chart"
     content: |
@@ -77,11 +77,11 @@ sections:
                     theme_capd()
 
       directlabels::direct.label(p_direct, method = 'last.qp')
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-1.svg" 
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-8-1.svg" 
     alt: "An image of a multi-line chart with three lines. The three lines are directly labeled with their names in their respective colors on the right-most edge of the chart."
   - code: |  
       directlabels::direct.label(p_direct, method = 'first.qp')
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-8-2.svg" 
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-8-2.svg" 
     alt: "An image of a multi-line chart with three lines. The three lines are directly labeled with their names in their respective colors on the left-most edge of the chart."
   - title: "Tooltips"
     content: |
@@ -107,7 +107,7 @@ sections:
         labs(alt = 'My alt text here')
 
       p_alt
-    image: "/assets/images/ggplot/best-practices/unnamed-chunk-10-1.svg" 
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/unnamed-chunk-10-1.svg" 
     alt: "An image of a bar chart showing generation resource mix by fuel type built in ggplot with the custom theme_capd() theme applied but with the default color scheme still applied."
   - title: "Generating alt text template"
     level: 4
@@ -120,7 +120,7 @@ sections:
         `colorblindr` package.
     code: |  
       colorblindr::cvd_grid(p_bar)
-    image: "/assets/images/ggplot/best-practices/colorblindr_example_barplot.svg" 
+    image: "/power-sector-dev-portal/assets/images/ggplot/best-practices/colorblindr_example_barplot.svg" 
     alt: "An image showing how a bar chart would look to readers with four different types of color blindness."
   - title: "Other Data Accessibility"
     content: |
