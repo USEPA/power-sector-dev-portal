@@ -9,7 +9,7 @@ sections:
       library(ggcapdthemes)
   - title: "Color as Highlight"
     content: |
-        This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the [Color page](power-sector-dev-portal/#/datavis/design-elements/color) of the [Data Visualization Style Guide](power-sector-dev-portal/#/datavis).
+        This theme includes both quantitative and categorical color palettes. However, there are some situations where you might not want to use a whole palette; instead, you might want to use color to draw attention only to specific parts of a chart without overwhelming the user. For more details on using color as a highlight, see the [Color page](#/datavis/design-elements/color) of the [Data Visualization Style Guide](#/datavis).
   - title: "Highlighting Discrete Colors"
     content: |
         Using the `gghighlight` package to assist, we can emphasize certain groups or elements of charts. Leave fuel type as original color, gray out non-highlighted groups.
