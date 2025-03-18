@@ -24,7 +24,7 @@ sections:
           - Text should sit on top of any additional layers so it stays legible.
       - In general, if your data is not already expressed in terms of percentages or rates, you should normalize it. This helps to avoid allowing the size or population of your geography to skew perceptions of the data. For ­example, if you’re producing a map that shows impacts of emissions on different populations, using data per capita will make comparisons between block groups, counties, or states easier than using raw counts.
   - title: "Examples of Best Practices"
-    level: 3 
+    level: 4 
     cards:
     - title: "Text"
       alt: "An image of a choropleth map of Pennsylvania. Pittsburgh and Philadelphia are labeled, and the text for each label is a dark color with a light border. The text sits on top of all other elements of the map so it is legible."
@@ -37,7 +37,7 @@ sections:
       content: Data should typically be normalized if not already expressed in rates or percentages.
       type: "do"
   - title: "Things to Avoid" 
-    level: 3 
+    level: 4 
     cards:
     - title: "Text"
       alt: "An image of a choropleth map of Pennsylvania. Pittsburgh and Philadelphia are labeled, and the text for each label is a dark color. The text sits underneath the choropleth layer of the map and is thus not legible."
@@ -101,7 +101,7 @@ sections:
       - If using icons, keep them simple, high-contrast, and fixed-size in relation to the data they represent (they can scale slightly while zooming in and out for legibility)
         - Do not scale icons relative to the data. (It’s hard for people to gauge differences in size of irregular objects.)
   - title: "Examples of Best Practices"
-    level: 3 
+    level: 4 
     cards:
     - title: "Icons"
       alt: "An image of a zoomed-in portion of a choropleth map of Pennsylvania with flame-shaped icons dotted throughout. The icons are simple and high-contrast against the color scheme of the map, which makes them easy to spot. "
@@ -109,7 +109,7 @@ sections:
       content: Keep icons simple and high-contrast against your map’s other layers.
       type: "do"
   - title: "Things to Avoid"
-    level: 3 
+    level: 4 
     cards:
     - title: "Icons"
       alt: "An image of a zoomed-in portion of a choropleth map of Pennsylvania with flame-shaped icons dotted throughout. The icons have been altered so some of them are bigger than others. This makes the map harder to understand because it’s difficult to compare sizes of irregular icons."
@@ -129,7 +129,7 @@ sections:
       - If possible, adjust the scale for bubble sizes when data is filtered so the full extent of the scale is being used.
       - Don’t use more than one characteristic (e.g., both color and size) to encode the same variable. For example, if emissions are being shown by the size of the bubbles, you don’t also need to add a color scale to show the same thing.
   - title: "Examples of Best Practices"
-    level: 3
+    level: 4
     cards:
     - title: "Opacity"
       alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania. The bubbles are slightly see-through, which makes it easy to interpret overlapping bubbles."
@@ -147,7 +147,7 @@ sections:
       content: Use one characteristic to represent one variable.
       type: "do"
   - title: "Things to Avoid"
-    level: 3
+    level: 4
     cards:
     - title: "Opacity"
       alt: "An image of a zoomed-in portion of an outline-only bubble map of Pennsylvania. The bubbles are completely opaque, which makes it difficult to interpret overlapping bubbles as some end up blocking others."

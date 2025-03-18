@@ -12,7 +12,7 @@ sections:
         - Keep icons simple but unique. Think about how they might read at different sizes (i.e., as small icons on a map, or larger icons next to call-out values).
         - Always provide a legend; don’t expect people to intuit the meaning of icons.
   - title: "Examples of Best Practices"
-    level: 3
+    level: 4
     cards:
     - title: "Non-scaled Icons"
       alt: "An image of a choropleth map of Pennsylvania with flame-shaped icons dotted throughout. The icons are simple and high-contrast against the color scheme of the map, which makes them easy to spot."
@@ -25,7 +25,7 @@ sections:
       content: "Icons should be straightforward to identify but distinct enough to be easy to distinguish from one another, no matter the size."
       type: "do"
   - title: "Things to Avoid"
-    level: 3
+    level: 4
     cards:
     - title: "Scaled Icons"
       alt: "An image of a choropleth map of Pennsylvania with flame-shaped icons dotted throughout. The icons are scaled to represent changes in data, which makes them hard to read and makes the whole map confusing."
