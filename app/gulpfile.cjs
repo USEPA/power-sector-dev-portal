@@ -8,10 +8,10 @@ uswds.settings.version = 3;
 // Path settings
 uswds.paths.dist.css = './src/assets/css';
 uswds.paths.dist.theme = './src/styles/uswds';
-uswds.paths.dist.fonts = './dist/fonts'; 
+uswds.paths.dist.fonts = './dist/fonts/sadjasdlk'; 
 
 
-gulp.task('adjust-css-paths', function () {
+gulp.task('adjust-font-paths', function () {
   return gulp.src('./src/assets/css/uswds.min.css') 
     // Adjust font paths
     .pipe(replace(/url\(\s*['"]?\/fonts/g, "url('/power-sector-dev-portal/fonts"))
