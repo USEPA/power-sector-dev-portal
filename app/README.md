@@ -161,7 +161,7 @@ Save the file - changes will be reflected when the site is rebuilt
     - **type**: Either "default", "do", or "do not" - used to style "Things to avoid" and "Best Practices" cards
 
 - **downloads**: Array of downloadable content (see Download interface)
-    - **link**: URL for any linked content
+    - **link**: URL for any linked content, should link to a **zip** folder if more than one file is to be downloaded
     - **title**: Download header text
 
 ## Markdown Formatting
