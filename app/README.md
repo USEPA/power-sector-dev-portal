@@ -128,7 +128,13 @@ This project contains several functions and utilities for rendering the markdown
 - **extractSections**: Extracts and formats the sections of the markdown content into a structured format.
 
 # Updating page content
-To update existing content, open the respective markdown file from the public/content folder. All content is optional. Content types can be found in the types/ContentTypes.tsx file. Some pages have a slightly different structure, but the general layout is as follows:
+To update a specific page:
+Locate the appropriate markdown file in the public/content folder. All content is optional. Content types can be found in the types/ContentTypes.tsx file. Some pages have a slightly different structure, but the general layout is as follows:
+
+Edit the fields you wish to change
+Add or remove sections as needed by adding or removing section blocks
+Save the file - changes will be reflected when the site is rebuilt
+
 - **title**: Found on top level pages, used in banners like the Power Sector Dev Portal homepage
 - **tagline**: Optional paragraph text included in some banners, like the design elements page
 - **introTitle**: Intro header found on most pages, like the color page. Typically called "Introduction"
@@ -136,22 +142,27 @@ To update existing content, open the respective markdown file from the public/co
 - **introImage**: Intro image, not found on many pages except the Using the Theme and Best Practices Pages
 
 - **sections**: Wrapper for page content. A new section is created using the - symbol. A section cannot have more than one of each parameter (image, title, level), but all parameters are optional.
-- **title**: String used for header content
-- **level**: Number used to designate header level (e.g., 2 for h2, 3 for h3)
-- **content**: String for paragraph content. Can be multiple paragraphs
-- **image****: Relative path for images, found in public assets folder
-- **alt**: Alt text for images. If missing, image will use the title as alt text
-- **cards**: Array of card content (see Card interface below)
-- **downloads**: Array of downloadable content (see Download interface)
-- **code**: Array of code snippets (see CodeSnippet interface)
+    - **title**: String used for header content
+    - **level**: Number used to designate header level (e.g., 2 for h2, 3 for h3)
+    - **content**: String for paragraph content. Can be multiple paragraphs
+    - **image**: Relative path for images, found in public assets folder
+    - **alt**: Alt text for images. If missing, image will use the title as alt text
 
-- **title**: Card header text
-- **content**: Card body text
-- **image**: Path to card image
-- **alt**: Alt text for card image
-- **imagemb**: Mobile-specific image path (if different from desktop)
-- **type**: Either "default", "do", or "do not" - used to style "Things to avoid" and "Best Practices" cards
-- **link**: URL for any linked content
+
+- **code**: Array of code snippets (see CodeSnippet interface)
+    - **language**: Code language. Will always be 'r'
+    - **content**: Code body text
+
+- **cards**: Array of card content (see Card interface below)
+    - **content**: Card body text
+    - **image**: Path to card image
+    - **alt**: Alt text for card image
+    - **imagemb**: Mobile-specific image path (if different from desktop)
+    - **type**: Either "default", "do", or "do not" - used to style "Things to avoid" and "Best Practices" cards
+
+- **downloads**: Array of downloadable content (see Download interface)
+    - **link**: URL for any linked content
+    - **title**: Download header text
 
 ## Markdown Formatting
 The content uses the ReactMarkdown library, which means you can include Markdown formatting within content strings:
@@ -165,7 +176,7 @@ Create links with [link text](URL)
 Create bulleted lists with - item or * item
 Create numbered lists with 1. item
 
-Multiple Elements
+## Multiple Elements
 If you need multiple elements of the same type (e.g., two images next to each other), create separate sections with one element each. For example:
 
 ```bash
@@ -176,20 +187,14 @@ sections:
     alt: "Second image description"
 ```
 
-Content Handling Notes
+## Content Handling Notes
 
 If a field is missing, it will simply not be rendered - no error will occur
 Use the pipe symbol | for multi-paragraph content in YAML
 Indentation is important in the YAML structure - maintain consistent indentation
-For complex content that needs HTML features, you can include HTML directly within markdown content as ReactMarkdown supports this
+For complex content that needs HTML features, you can include HTML directly within markdown content as ReactMarkdown supports this. Verify that the page you are editing contains the `<ReactMarkdown>` tag as not all pages currently use this
 
-Example Updates
-To update a specific page:
-
-Locate the appropriate markdown file in the public/content folder
-Edit the fields you wish to change
-Add or remove sections as needed by adding or removing section blocks
-Save the file - changes will be reflected when the site is rebuilt
+## Example Updates
 
 Testing Content Changes
 After making changes to content files:
