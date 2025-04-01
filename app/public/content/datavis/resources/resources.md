@@ -1,7 +1,7 @@
 ---
 title: "Resources"
 tagline: "A very brief repository of other, related resources."
-introTitle: "Resources"
+introTitle: "Further Reading"
 introContent: "The resources below offer differing or more in-depth perspectives on ideas brought up elsewhere in this guide."
 sections:
   - title: "Resources"

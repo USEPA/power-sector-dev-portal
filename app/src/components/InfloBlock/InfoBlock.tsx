@@ -2,6 +2,7 @@
 import React from "react";
 import "./InfoBlock.scss";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
@@ -25,7 +26,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
       {link &&
         (type === "visit" ? (
           <a className="external-link" href={link} target="_blank" rel="noopener noreferrer">
-            Visit {title} <ArrowForwardIcon />
+            Visit {title} <OpenInNewIcon fontSize="small"/>
           </a>
         ) : (
           <Link className="external-link" to={link}>
