@@ -4,9 +4,13 @@ import "./Navigation.scss";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import useIsMobile from "../../hooks/useIsMobile";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs"; 
-import { getPageInfo, getPageLevelforBreadcrumbs, isCurrentPath, isExactlyPath } from "../../utilities/getPageInfo";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import {
+  getPageInfo,
+  getPageLevelforBreadcrumbs,
+  isCurrentPath,
+  isExactlyPath,
+} from "../../utilities/getPageInfo";
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -27,15 +31,12 @@ const Navigation: React.FC = () => {
     isHomeRoute,
   } = getPageInfo(location);
 
-  const {
-    isRouteWithBanner
-  } = getPageLevelforBreadcrumbs(location);
+  const { isRouteWithBanner } = getPageLevelforBreadcrumbs(location);
 
   // Function to toggle section open/closed
   const toggleSection = (sectionId: string) => {
     setExpandedSection((prev) => (prev === sectionId ? null : sectionId));
   };
-
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -65,7 +66,17 @@ const Navigation: React.FC = () => {
         <div className="usa-overlay"></div>
         <header className="usa-header usa-header--basic">
           <div className="usa-nav-container">
+            {!isMobileView && !isHomeRoute && (
+              <Link to="/" className="home-back-link">
+                Power Sector Dev Portal
+              </Link>
+            )}
             <div className="usa-navbar">
+              {isMobileView && !isHomeRoute && (
+                <Link to="/" className="home-back-link">
+                  Power Sector Dev Portal
+                </Link>
+              )}
               <div className="usa-logo">
                 <em className="usa-logo__text">
                   <Link to={route} title={title}>
@@ -90,6 +101,35 @@ const Navigation: React.FC = () => {
                     <CloseIcon />
                   </button>
                 </div>
+              )}
+
+              {isHomeRoute && (
+                <ul className="usa-nav__primary usa-accordion">
+                  <li className="usa-nav__primary-item">
+                    <Link
+                      to="/datavis"
+                      className={
+                        isCurrentPath(location, "/datavis")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Data Visualization Style Guide</span>
+                    </Link>
+                  </li>
+                  <li className="usa-nav__primary-item">
+                    <Link
+                      to="/ggplot"
+                      className={
+                        isCurrentPath(location, "/ggplot")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Custom CAPD ggplot2 Theme</span>
+                    </Link>
+                  </li>
+                </ul>
               )}
 
               {isDatavisRoute && (
@@ -152,7 +192,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/color"
                           className={
-                            isCurrentPath(location, "/datavis/design-elements/color")
+                            isCurrentPath(
+                              location,
+                              "/datavis/design-elements/color"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -164,7 +207,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/typography"
                           className={
-                            isCurrentPath(location, "/datavis/design-elements/typography")
+                            isCurrentPath(
+                              location,
+                              "/datavis/design-elements/typography"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -176,7 +222,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/symbology"
                           className={
-                            isCurrentPath(location, "/datavis/design-elements/symbology")
+                            isCurrentPath(
+                              location,
+                              "/datavis/design-elements/symbology"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -188,7 +237,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/design-elements/layout"
                           className={
-                            isCurrentPath(location, "/datavis/design-elements/layout")
+                            isCurrentPath(
+                              location,
+                              "/datavis/design-elements/layout"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -241,7 +293,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/line-charts"
                           className={
-                            isCurrentPath(location, "/datavis/charts/line-charts")
+                            isCurrentPath(
+                              location,
+                              "/datavis/charts/line-charts"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -253,7 +308,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/bar-charts"
                           className={
-                            isCurrentPath(location, "/datavis/charts/bar-charts")
+                            isCurrentPath(
+                              location,
+                              "/datavis/charts/bar-charts"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -265,7 +323,10 @@ const Navigation: React.FC = () => {
                         <Link
                           to="/datavis/charts/area-charts"
                           className={
-                            isCurrentPath(location, "/datavis/charts/area-charts")
+                            isCurrentPath(
+                              location,
+                              "/datavis/charts/area-charts"
+                            )
                               ? "usa-current"
                               : ""
                           }
@@ -299,18 +360,6 @@ const Navigation: React.FC = () => {
                       <span>Resources</span>
                     </Link>
                   </li>
-                  <li className="usa-nav__primary-item">
-                    <Link to="/" className="usa-nav-link backToHomeLink">
-                      {!isMobileView ? (
-                        <span>Back to Dev Portal</span>
-                      ) : (
-                        <span>
-                          <ArrowBackIcon /> Return to Power Sector Dev Portal
-                          Home
-                        </span>
-                      )}
-                    </Link>
-                  </li>
                 </ul>
               )}
               {isGgplotRoute && (
@@ -339,43 +388,15 @@ const Navigation: React.FC = () => {
                       <span>Best Practices</span>
                     </Link>
                   </li>
-                  <li className="usa-nav__primary-item">
-                    <Link to="/" className="usa-nav-link backToHomeLink">
-                      {!isMobileView ? (
-                        <span>Back to Dev Portal</span>
-                      ) : (
-                        <span>
-                          <ArrowBackIcon /> Return to Power Sector Dev Portal
-                          Home
-                        </span>
-                      )}
-                    </Link>
-                  </li>
                 </ul>
               )}
-              {isApiRoute && (
-                <ul className="usa-nav__primary usa-accordion">
-                  <li className="usa-nav__primary-item">
-                    <Link to="/" className="usa-nav-link backToHomeLink">
-                      {!isMobileView ? (
-                        <span>Back to Dev Portal</span>
-                      ) : (
-                        <span>
-                          <ArrowBackIcon /> Return to Power Sector Dev Portal
-                          Home
-                        </span>
-                      )}
-                    </Link>
-                  </li>
-                </ul>
-              )}
+              {isApiRoute && <></>}
             </nav>
           </div>
         </header>
       </div>
-      
-       {(!isHomeRoute && !isRouteWithBanner) && <Breadcrumbs />}
-    
+
+      {!isHomeRoute && !isRouteWithBanner && <Breadcrumbs />}
     </>
   );
 };
