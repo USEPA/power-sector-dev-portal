@@ -7,13 +7,9 @@ import {
   extractSections,
 } from "../../../utilities/extractContent";
 import { Section } from "../../../types/ContentTypes";
-import ReactMarkdown from "react-markdown";
-import { Link } from "react-router-dom";
-import useIsMobile from "../../../hooks/useIsMobile";
 import ImageCard from "../../../components/imageCard/imageCard";
 
 const DesignElements: React.FC = () => {
-  const isMobileView = useIsMobile();
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
     `${base}content/datavis/design-elements/design-elements.md`
