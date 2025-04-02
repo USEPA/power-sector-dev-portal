@@ -10,6 +10,7 @@ import { Section } from "../../../types/ContentTypes";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import useIsMobile from "../../../hooks/useIsMobile";
+import ImageCard from "../../../components/imageCard/imageCard";
 
 const DesignElements: React.FC = () => {
   const isMobileView = useIsMobile();
@@ -43,24 +44,15 @@ const DesignElements: React.FC = () => {
           <div key={idx} className="section">
             {section.cards &&
               section.cards.map((card) => (
-                <div className="charts-card">
-                  {isMobileView ? (
-                    <img src={card.imagemb} alt={card.alt} />
-                  ) : (
-                    <img src={card.image} alt={card.alt} />
-                  )}
-                  <div className="card-content">
-                    <h4>{card.title}</h4>
-                    {card.content && (
-                      <ReactMarkdown>{card.content}</ReactMarkdown>
-                    )}
-                    {card.link && (
-                      <Link className="usa-button blue-button" to={card.link}>
-                        Learn about {card.title}
-                      </Link>
-                    )}
-                  </div>
-                </div>
+                <ImageCard
+                  idx={idx}
+                  alt={card.alt}
+                  image={card.image}
+                  title={card.title}
+                  imagemb={card.imagemb}
+                  content={card.content}
+                  link={card.link}
+                />
               ))}
           </div>
         ))}

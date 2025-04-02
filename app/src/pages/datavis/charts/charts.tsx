@@ -9,19 +9,16 @@ import {
 } from "../../../utilities/extractContent";
 import { Section, Card, Accordion } from "../../../types/ContentTypes";
 import "./Charts.scss";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Link } from "react-router-dom";
-import useIsMobile from "../../../hooks/useIsMobile";
 import SVGRenderer from "../../../components/SvgRenderer/SvgRenderer";
 import ReactMarkdown from "react-markdown";
 import renderHeader from "../../../utilities/renderContent";
+import ImageCard from "../../../components/imageCard/imageCard";
 
 const Charts: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
     `${base}content/datavis/charts/charts.md`
   );
-  const isMobileView = useIsMobile();
   const [openAccordions, setOpenAccordions] = useState<number[]>([]);
 
   const { title, tagline } = content
@@ -95,25 +92,15 @@ const Charts: React.FC = () => {
                   )}
                   <div className="cards">
                     {section.cards.map((card: Card, idx: number) => (
-                      <div key={idx} className="charts-card">
-                        {isMobileView ? (
-                          <img src={card.imagemb} alt={card.alt} />
-                        ) : (
-                          <img src={card.image} alt={card.alt} />
-                        )}
-                        <div className="card-content">
-                          <h4>{card.title}</h4>
-                          <p>{card.content}</p>
-                          {card.link && (
-                            <Link
-                              to={card.link}
-                              className="usa-button blue-button"
-                            >
-                              Learn about {card.title}
-                            </Link>
-                          )}
-                        </div>
-                      </div>
+                      <ImageCard
+                        idx={idx}
+                        alt={card.alt}
+                        image={card.image}
+                        title={card.title}
+                        imagemb={card.imagemb}
+                        content={card.content}
+                        link={card.link}
+                      />
                     ))}
                   </div>
                 </>
@@ -144,29 +131,15 @@ const Charts: React.FC = () => {
                   <div className="cards">
                     {accordion.cards &&
                       accordion.cards.map((card: Card, idx: number) => (
-                        <div key={idx} className="charts-card">
-                          {isMobileView ? (
-                            <img src={card.imagemb} alt={card.alt} />
-                          ) : (
-                            <img src={card.image} alt={card.alt} />
-                          )}
-                          <div className="card-content">
-                            <h4>{card.title}</h4>
-                            <p>{card.content}</p>
-                            {card.link && (
-                              <Link to={card.link}>
-                                Learn about {card.title} <ArrowForwardIcon />
-                              </Link>
-                            )}
-                            {!card.link && (
-                              <p>
-                                <b>
-                                  <i>(not included in this guide)</i>
-                                </b>
-                              </p>
-                            )}
-                          </div>
-                        </div>
+                        <ImageCard
+                          idx={idx}
+                          alt={card.alt}
+                          image={card.image}
+                          title={card.title}
+                          imagemb={card.imagemb}
+                          content={card.content}
+                          link={card.link}
+                        />
                       ))}
                   </div>
                 </div>
