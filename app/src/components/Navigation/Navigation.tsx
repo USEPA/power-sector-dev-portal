@@ -72,11 +72,6 @@ const Navigation: React.FC = () => {
               </Link>
             )}
             <div className="usa-navbar">
-              {isMobileView && !isHomeRoute && (
-                <Link to="/" className="home-back-link">
-                  Power Sector Dev Portal
-                </Link>
-              )}
               <div className="usa-logo">
                 <em className="usa-logo__text">
                   <Link to={route} title={title}>
