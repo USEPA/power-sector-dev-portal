@@ -83,38 +83,41 @@ const Charts: React.FC = () => {
                 </>
               ))}
 
-{!section.cards ||
+            {!section.cards ||
               (section.cards.length > 0 && (
-              <>
-                {section.title &&
-                  renderHeader(section.title, section.level || 3)}
-                {section.content && (
-                  <div>
-                    <ReactMarkdown>{section.content}</ReactMarkdown>
-                  </div>
-                )}
-                <div className="cards">
-                  {section.cards.map((card: Card, idx: number) => (
-                    <div key={idx} className="charts-card">
-                      {isMobileView ? (
-                        <img src={card.imagemb} alt={card.alt} />
-                      ) : (
-                        <img src={card.image} alt={card.alt} />
-                      )}
-                      <div className="card-content">
-                        <h4>{card.title}</h4>
-                        <p>{card.content}</p>
-                        {card.link && (
-                          <Link to={card.link}>
-                            Learn about {card.title} <ArrowForwardIcon />
-                          </Link>
-                        )}
-                      </div>
+                <>
+                  {section.title &&
+                    renderHeader(section.title, section.level || 3)}
+                  {section.content && (
+                    <div>
+                      <ReactMarkdown>{section.content}</ReactMarkdown>
                     </div>
-                  ))}
-                </div>
-              </>
-               ))}
+                  )}
+                  <div className="cards">
+                    {section.cards.map((card: Card, idx: number) => (
+                      <div key={idx} className="charts-card">
+                        {isMobileView ? (
+                          <img src={card.imagemb} alt={card.alt} />
+                        ) : (
+                          <img src={card.image} alt={card.alt} />
+                        )}
+                        <div className="card-content">
+                          <h4>{card.title}</h4>
+                          <p>{card.content}</p>
+                          {card.link && (
+                            <Link
+                              to={card.link}
+                              className="usa-button blue-button"
+                            >
+                              Learn about {card.title}
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ))}
           </div>
         ))}
 
@@ -156,7 +159,11 @@ const Charts: React.FC = () => {
                               </Link>
                             )}
                             {!card.link && (
-                              <p><b><i>(not included in this guide)</i></b></p>
+                              <p>
+                                <b>
+                                  <i>(not included in this guide)</i>
+                                </b>
+                              </p>
                             )}
                           </div>
                         </div>
