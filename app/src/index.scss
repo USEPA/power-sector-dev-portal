@@ -73,8 +73,14 @@ body {
   min-height: 100vh;
 }
 
+body, :root, html {
+  min-height: 100vh;
+}
+
+
 .grey-container {
   background-color: $base-lightest;
+  min-height: calc(100vh - 24px);
 }
 
 .code-container {
@@ -287,6 +293,12 @@ row-gap: 3em;
 .usa-menu-btn {
   background-color: var(--primary) !important;
 }
+
+
+
+
+
+
 
 
 @media (prefers-color-scheme: light) {
