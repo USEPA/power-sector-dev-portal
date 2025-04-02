@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                           : ""
                       }
                     >
-                      <span>Data Visualization Style Guide</span>
+                      <span>CAPD Data Visualization Style Guide</span>
                     </Link>
                   </li>
                   <li className="usa-nav__primary-item">

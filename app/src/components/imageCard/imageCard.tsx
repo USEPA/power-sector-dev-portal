@@ -41,7 +41,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
           </Link>
         )}
         {!link && (
-          <p>
+          <p className="not-included-text">
             <b>
               <i>(not included in this guide)</i>
             </b>

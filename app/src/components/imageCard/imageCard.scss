@@ -43,7 +43,7 @@
         justify-content: flex-start;
       }
   
-      h4, p {
+      h4, p:not(.not-included-text) {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
       }

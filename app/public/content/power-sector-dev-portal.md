@@ -5,7 +5,7 @@ introContent: "Lorem ipsum dolor sit amet consectetur. In justo sit ullamcorper 
 sections:
   - title: "Power Sector Dev Portal"
     cards:
-      - title: "Data Visualization Style Guide"
+      - title: "CAPD Data Visualization Style Guide"
         content: "Refer to this guide for best practices and advice when producing new data visualizations or updating existing ones. "
         link: "/datavis"
       - title: "Custom CAPD ggplot2 Theme"
