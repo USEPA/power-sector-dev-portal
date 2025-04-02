@@ -189,17 +189,14 @@ sections:
 
 ## Content Handling Notes
 
-If a field is missing, it will simply not be rendered - no error will occur
-Use the pipe symbol | for multi-paragraph content in YAML
-Indentation is important in the YAML structure - maintain consistent indentation
-For complex content that needs HTML features, you can include HTML directly within markdown content as ReactMarkdown supports this. Verify that the page you are editing contains the `<ReactMarkdown>` tag as not all pages currently use this
+- If a field is missing, it will simply not be rendered - no error will occur
+- Use the pipe symbol | for multi-paragraph content in YAML
+- Indentation is important in the YAML structure - maintain consistent indentation
+- For complex content that needs HTML features, you can include HTML directly within markdown content as ReactMarkdown supports this. Verify that the page you are editing contains the `<ReactMarkdown>` tag as not all pages currently use this
 
 ## Example Updates
 
 Testing Content Changes
 After making changes to content files:
 
-Run the development server to preview changes locally
-Check both desktop and mobile views to ensure content displays correctly
-Verify that any markdown formatting renders as expected
-Confirm that all images load properly and have appropriate alt text
+Run the development server to preview changes locally using `npm run dev` from the app folder
