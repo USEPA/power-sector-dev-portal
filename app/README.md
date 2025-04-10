@@ -1,56 +1,3 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-
-
-```
-
 # Installation
 1. Clone the repository:
 
@@ -68,7 +15,7 @@ cd power-sector-dev-portal/app
 npm install
 ```
 
-# Usage
+# Development
 Once the dependencies are installed, you can run the development server from the app folder to preview the app locally:
 ```bash
 npm run dev
@@ -76,12 +23,17 @@ npm run dev
 
 This will usually start the development server at http://localhost:5173/power-sector-dev-portal/
 
-To build the project for deployment, use the following command:
-``` bash
+# Deployment
+The app is deployed to GitHub Pages using the following steps:
+
+1. To deploy the app, run the following command:
+
+```bash
 npm run deploy
 ```
-
 This will bundle the project for production then deploy from the `gh-pages` branch.
+
+**Note**: Ensure the .nojekyll file is present in the gh-pages branch to properly render the markdown content.
 
 # Project Structure
 ```bash
@@ -99,7 +51,7 @@ This will bundle the project for production then deploy from the `gh-pages` bran
 │   ├── hooks/               # Custom React hooks (e.g., useMarkdownContent)
 │   ├── pages/               # Contains structure for pages, follows the same naming convention as /content
 │   ├── utilities/           # Utility functions (e.g., extractBanner, extractInfo, extractSections)
-│   ├── img/           # USWDS, material, and favicons
+│   ├── img/                 # USWDS, material, and favicons
 │   ├── types/               # TypeScript interfaces for content structure (e.g., Card, Accordion, Section)
 │   ├── layouts/             # Shared layout components (e.g., DataVisLayout for nested routing)
 │   ├── styles/              # Global styles and USWDS integration (e.g., styles.scss, uswds-theme settings)
@@ -110,18 +62,6 @@ This will bundle the project for production then deploy from the `gh-pages` bran
 ├── vite.config.js           # Vite configuration file
 └── README.md                # This file
 ```
-
-# Deployment
-The app is deployed to GitHub Pages using the following steps:
-
-1. To deploy the app, run the following command:
-
-```bash
-npm run deploy
-```
-This will build the project and push it to the gh-pages branch.
-
-**Note**: Ensure the .nojekyll file is present in the gh-pages branch to properly render the markdown content.
 
 # Functions & Utilities
 This project contains several functions and utilities for rendering the markdown content.
@@ -174,14 +114,14 @@ Save the file - changes will be reflected when the site is rebuilt
 ## Markdown Formatting
 The content uses the ReactMarkdown library, which means you can include Markdown formatting within content strings:
 
-Use *text* or _text_ for italic text
-Use **text** or __text__ for bold text
-Use # Header for main headers (though these are typically handled by the title parameter)
-Use backticks for inline code
-Use triple backticks for code blocks
-Create links with [link text](URL)
-Create bulleted lists with - item or * item
-Create numbered lists with 1. item
+- Use `*text*` or `_text_` for italic text
+- Use `**text**` or `__text__` for bold text
+- Use `# Header` for main headers (though these are typically handled by the title parameter)
+- Use backticks for inline code
+- Use triple backticks for code blocks
+- Create links with `[link text](URL)`
+- Create bulleted lists with `-` item or `*` item
+- Create numbered lists with `1.` item
 
 ## Multiple Elements
 If you need multiple elements of the same type (e.g., two images next to each other), create separate sections with one element each. For example:
@@ -201,13 +141,12 @@ sections:
 - Indentation is important in the YAML structure - maintain consistent indentation
 - For complex content that needs HTML features, you can include HTML directly within markdown content as ReactMarkdown supports this. Verify that the page you are editing contains the `<ReactMarkdown>` tag as not all pages currently use this
 
-Run the development server to preview changes locally using `npm run dev` from the app folder
-
 ## 📍 Routes
 
 This application uses [`react-router-dom`](https://reactrouter.com/) for client-side routing, with routes defined in [`App.tsx`](./src/App.tsx). The app is wrapped in a `HashRouter` to support deployment on GitHub Pages.
 
 #### Main Sections
+
 
 - `/` – Power Sector Developer Portal (Landing Page)
 - `/datavis` – Data Visualization Style Guide  
@@ -226,7 +165,8 @@ This application uses [`react-router-dom`](https://reactrouter.com/) for client-
 - `/ggplot` – ggplot Theme Documentation  
   - `/ggplot/using-the-theme`  
   - `/ggplot/best-practices`
-- `/api` – API Documentation
+- `/api` – API Documentation (unused)
+
 
 Dynamic theming is handled based on the current route using a combination of the `useLocation` hook and a `useEffect` in the `DynamicTheme` component.
 
@@ -245,7 +185,7 @@ In `src/pages`, add a `.tsx` file for your new page in the appropriate tool fold
 You can copy an existing page as a template.  
 Update the `useMarkdownContent` hook to load the corresponding markdown file:
 
-```tsx
+```bash
 const base = import.meta.env.BASE_URL;
 const { content, error } = useMarkdownContent(`${base}content/api/api.md`);
 ```
@@ -257,7 +197,7 @@ Create a .md file in the matching folder under public/content. For example: `pub
 ### 3. Register the route
 Import the new component in App.tsx and add a <Route> entry:
 
-```tsx
+```bash
 import NewPage from "./pages/api/api";
 
 <Route path="/api" element={<NewPage />} />
@@ -266,7 +206,7 @@ import NewPage from "./pages/api/api";
 ### 4. Update the navigation
 Add a link to the new page in the Navigation component:
 
-```tsx
+```bash
 <li className="usa-nav__primary-item">
   <Link
     to="/api"
@@ -282,7 +222,7 @@ Add a link to the new page in the Navigation component:
 ### 5. (Optional) Apply dynamic theming
 If your new route needs specific styling, update the DynamicTheme logic in App.tsx:
 
-```tsx
+```bash
 if (location.pathname.startsWith("/api")) {
   root.classList.add("api");
 }
