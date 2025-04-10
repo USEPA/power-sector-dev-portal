@@ -92,10 +92,17 @@ This will bundle the project for production then deploy from the `gh-pages` bran
 │   └── content/             # Contains the markdown files for content
 │
 ├── src/
+├── assets/
+│   │   ├── css/             # Compiled CSS from USWDS (e.g., styles.css, styles.css.map)
+│   │   └── public-sans/     # Public Sans font files used in the design system
 │   ├── components/          # React components
 │   ├── hooks/               # Custom React hooks (e.g., useMarkdownContent)
 │   ├── pages/               # Contains structure for pages, follows the same naming convention as /content
 │   ├── utilities/           # Utility functions (e.g., extractBanner, extractInfo, extractSections)
+│   ├── img/           # USWDS, material, and favicons
+│   ├── types/               # TypeScript interfaces for content structure (e.g., Card, Accordion, Section)
+│   ├── layouts/             # Shared layout components (e.g., DataVisLayout for nested routing)
+│   ├── styles/              # Global styles and USWDS integration (e.g., styles.scss, uswds-theme settings)
 │   └── App.js               # Main app file
 │
 ├── .nojekyll                # Prevents GitHub Pages from using Jekyll and ensures markdown is rendered
@@ -194,9 +201,89 @@ sections:
 - Indentation is important in the YAML structure - maintain consistent indentation
 - For complex content that needs HTML features, you can include HTML directly within markdown content as ReactMarkdown supports this. Verify that the page you are editing contains the `<ReactMarkdown>` tag as not all pages currently use this
 
-## Example Updates
-
-Testing Content Changes
-After making changes to content files:
-
 Run the development server to preview changes locally using `npm run dev` from the app folder
+
+## 📍 Routes
+
+This application uses [`react-router-dom`](https://reactrouter.com/) for client-side routing, with routes defined in [`App.tsx`](./src/App.tsx). The app is wrapped in a `HashRouter` to support deployment on GitHub Pages.
+
+#### Main Sections
+
+- `/` – Power Sector Developer Portal (Landing Page)
+- `/datavis` – Data Visualization Style Guide  
+  - `/datavis/principles`  
+  - `/datavis/design-elements`  
+    - `/datavis/design-elements/color`  
+    - `/datavis/design-elements/typography`  
+    - `/datavis/design-elements/symbology`  
+    - `/datavis/design-elements/layout`
+  - `/datavis/charts`  
+    - `/datavis/charts/line-charts`  
+    - `/datavis/charts/bar-charts`  
+    - `/datavis/charts/area-charts`  
+    - `/datavis/charts/maps`
+  - `/datavis/resources`
+- `/ggplot` – ggplot Theme Documentation  
+  - `/ggplot/using-the-theme`  
+  - `/ggplot/best-practices`
+- `/api` – API Documentation
+
+Dynamic theming is handled based on the current route using a combination of the `useLocation` hook and a `useEffect` in the `DynamicTheme` component.
+
+
+## 📝 Adding a New Page
+
+To add a new page to the application, follow these steps:
+
+---
+
+### 1. **Create a new React component**
+
+In `src/pages`, add a `.tsx` file for your new page in the appropriate tool folder: for example `src/pages/api/api.tsx`
+
+
+You can copy an existing page as a template.  
+Update the `useMarkdownContent` hook to load the corresponding markdown file:
+
+```tsx
+const base = import.meta.env.BASE_URL;
+const { content, error } = useMarkdownContent(`${base}content/api/api.md`);
+```
+
+### 2. Add the corresponding markdown file
+
+Create a .md file in the matching folder under public/content. For example: `public/content/api/api.md`
+
+### 3. Register the route
+Import the new component in App.tsx and add a <Route> entry:
+
+```tsx
+import NewPage from "./pages/api/api";
+
+<Route path="/api" element={<NewPage />} />
+```
+
+### 4. Update the navigation
+Add a link to the new page in the Navigation component:
+
+```tsx
+<li className="usa-nav__primary-item">
+  <Link
+    to="/api"
+    className={
+      isCurrentPath(location, "/api") ? "usa-current" : ""
+    }
+  >
+    <span>API</span>
+  </Link>
+</li>
+```
+
+### 5. (Optional) Apply dynamic theming
+If your new route needs specific styling, update the DynamicTheme logic in App.tsx:
+
+```tsx
+if (location.pathname.startsWith("/api")) {
+  root.classList.add("api");
+}
+```
