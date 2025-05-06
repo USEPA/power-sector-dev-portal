@@ -24,6 +24,9 @@ import AreaCharts from "./pages/datavis/charts/area-charts";
 import Maps from "./pages/datavis/charts/maps";
 import FurtherReading from "./pages/datavis/resources/resources/resources";
 import GGplot from "./pages/ggplot/ggplot";
+import Highcharts from "./pages/highcharts/highcharts";
+import HighchartsUsingTheTheme from "./pages/highcharts/hc-using-the-theme/hc-using-the-theme";
+import HighchartsCustomization from "./pages/highcharts/hc-customization/hc-customization";
 import APIDocumentation from "./pages/api/api";
 import BestPractices from "./pages/ggplot/best-practices/best-practices";
 import UsingTheTheme from "./pages/ggplot/using-the-theme/using-the-theme";
@@ -36,13 +39,15 @@ function App() {
       const root = document.documentElement; 
 
       // Remove any previously added classes
-      root.classList.remove("ggplot", "datavis", "api", "root");
+      root.classList.remove("ggplot", "datavis", "highcharts", "api", "root");
 
       // Add the class based on the current route
       if (location.pathname.startsWith("/ggplot")) {
         root.classList.add("ggplot");
       } else if (location.pathname.startsWith("/datavis")) {
         root.classList.add("datavis");
+      } else if (location.pathname.startsWith("/highcharts")) {
+        root.classList.add("highcharts");
       } else if (location.pathname.startsWith("/api")) {
         root.classList.add("api");
       } 
@@ -86,8 +91,12 @@ function App() {
             <Route path="using-the-theme" element={<UsingTheTheme />} />
             <Route path="best-practices" element={<BestPractices />} />
           </Route>
-          
-          <Route path="/api" element={<APIDocumentation />} />
+          <Route path="/highcharts" element={<DataVisLayout />}>
+            <Route index element={<Highcharts />} />
+            <Route path="hc-using-the-theme" element={<HighchartsUsingTheTheme />} />
+            <Route path="hc-customization" element={<HighchartsCustomization />} />
+          </Route>
+             <Route path="/api" element={<APIDocumentation />} />
         </Routes>
       </div>
     </Router>
