@@ -27,6 +27,9 @@ const Breadcrumbs: React.FC = () => {
     ggplot: "Custom ggplot2 Theme",
     "using-the-theme": "Using the Theme",
     "best-practices": "Best Practices",
+    highcharts: "Custom Highcharts Theme",
+    "hc-using-the-theme": "Using the Theme",
+    "hc-customization": "Customization",
   };
 
   // Split the current path into segments

@@ -13,10 +13,10 @@ import SideNav from "../../../components/SideNav/SideNav";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const BestPractices: React.FC = () => {
+const HighchartsCustomization: React.FC = () => {
   const base = import.meta.env.BASE_URL;
   const { content, error } = useMarkdownContent(
-    `${base}content/ggplot/best-practices/best-practices.md`
+    `${base}content/highcharts/hc-customization/hc-customization.md`
   );
   const { title } = content ? extractBanner(content) : { title: "" };
   const { introTitle, introContent, introImage, introImgAlt } = content
@@ -105,4 +105,4 @@ const BestPractices: React.FC = () => {
   );
 };
 
-export default BestPractices;
+export default HighchartsCustomization;
