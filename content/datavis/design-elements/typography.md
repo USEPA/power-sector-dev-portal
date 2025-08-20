@@ -3,9 +3,9 @@ title: "Typography"
 tagline: ""
 introTitle: "Introduction"
 introContent: | 
-        The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov) includes four typeface options. Of those four, we recommend using [Source Sans Pro](https://fonts.adobe.com/fonts/source-sans) for most text in your data visualizations and data products and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) for numbers in visualizations and tables.
+        The US Web Design System [(USWDS)](https://designsystem.digital.gov) includes four typeface options. Of those four, we recommend using [Source Sans](https://fonts.adobe.com/fonts/source-sans) for most text in your data products, including visualizations and tables.
 
-        For a more in-depth look at using the above and more fonts and type styles, including an exploration of serif vs. sans serif typefaces, please refer to the [USWDS page on typography](https://designsystem.digital.gov/components/typography/). In this guide, we will only call out best practices as they relate to specific data visualization use cases. 
+        For a more in-depth look at using fonts and type styles, please refer to the [USWDS page on typography](https://designsystem.digital.gov/components/typography/). In this guide, we will only call out best practices as they relate to specific data visualization use cases.
 sections:
   - title: "Typographic Best Practices"
     level: 2
@@ -42,20 +42,6 @@ sections:
       alt: "An image showing two numbers in the Public Sans font, one in thin and one in bold. Each number is labeled to show how wide it is; some numbers are wider than others, and the bold numbers are even wider than the thin ones."
       image: "/power-sector-dev-portal/assets/images/datavis/design-elements/typography/non-multiplexed-numbers.png"
       content: "If heavier font weights make text wider, it becomes harder to compare numbers to each other."
-      type: "do not"
-  - title: "Special Characters"
-    level: 3
-    content: "In text throughout your visualization, use the open barrel lowercase a and g. These letter forms are easier to read at small sizes, including things like legends and axis labels."
-    cards:
-    - title: "Open Barrel Letters"
-      alt: "An image showing the word gambit with open barrel letters. This means the letter g looks like a circle with a long tail and the letter a looks like a circle with a small tail."
-      image: "/power-sector-dev-portal/assets/images/datavis/design-elements/typography/open-barrel-letters.png"
-      content: "The word pictured above uses the open barrel g and a. This text should remain easy to read even in smaller sizes."
-      type: "do"
-    - title: "Closed Barrel Letters"
-      alt: "An image showing the word gambit with closed barrel letters. This means the letter g looks like two circles connected by a small line and the letter a looks like a circle topped with a hook."
-      image: "/power-sector-dev-portal/assets/images/datavis/design-elements/typography/closed-barrel-letters.png"
-      content: "The word pictured above uses a closed barrel g and a. This text would be harder to read at a smaller scale."
       type: "do not"
   - title: "Chemical Compounds"
     content: When writing chemical compounds, subscripts should use uppercase letters. For example, the chemical notation for nitrogen oxides would be written NO<sub>X</sub>, not NO<sub>x</sub>.
