@@ -12,6 +12,9 @@ export const getPageInfo = (location: Location) => {
   if (location.pathname.startsWith("/ggplot")) {
     return { route: "/ggplot", title: "Custom ggplot2 Theme", isGgplotRoute: true };
   }
+  if (location.pathname.startsWith("/highcharts")) {
+    return { route: "/highcharts", title: "Custom Highcharts Theme", isHcplotRoute: true };
+  }
   if (location.pathname.startsWith("/api")) {
     return { route: "/api", title: "API Documentation", isApiRoute: true };
   }
@@ -33,7 +36,8 @@ export const getPageLevelforBreadcrumbs = (location: Location) => {
     isExactlyPath(location, "/datavis/principles") ||
     isExactlyPath(location, "/datavis/design-elements") ||
     isExactlyPath(location, "/datavis/resources") ||
-    isExactlyPath(location, "/ggplot")
+    isExactlyPath(location, "/ggplot") ||
+    isExactlyPath(location, "/highcharts")
   ) {
     return { isRouteWithBanner: true };
   }

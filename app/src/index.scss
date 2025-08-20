@@ -15,6 +15,10 @@
   @include theme(datavis);
 }
 
+:root.highcharts {
+  @include theme(datavis);
+}
+
 :root.datavis {
   @include theme(datavis);
 }
@@ -196,7 +200,8 @@ p {
 code {
   font-family: Consolas, Monaco, 'Courier New', monospace !important;
   font-size: 85% !important;
-  text-transform: lowercase;
+  /* changed to "none" from "lowercase" for highcharts section */
+  text-transform: none;
   background-color: $base-lightest;
     border-radius: 3px;
     color: #333;

@@ -28,6 +28,7 @@ const Navigation: React.FC = () => {
     isDatavisRoute,
     isApiRoute,
     isGgplotRoute,
+    isHcplotRoute,
     isHomeRoute,
   } = getPageInfo(location);
 
@@ -122,6 +123,18 @@ const Navigation: React.FC = () => {
                       }
                     >
                       <span>Custom CAPD ggplot2 Theme</span>
+                    </Link>
+                  </li>
+                  <li className="usa-nav__primary-item">
+                    <Link
+                      to="/highcharts"
+                      className={
+                        isCurrentPath(location, "/highcharts")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Custom CAPD Highcharts Theme</span>
                     </Link>
                   </li>
                 </ul>
@@ -353,6 +366,34 @@ const Navigation: React.FC = () => {
                       }
                     >
                       <span>Resources</span>
+                    </Link>
+                  </li>
+                </ul>
+              )}
+               {isHcplotRoute && (
+                <ul className="usa-nav__primary usa-accordion">
+                  <li className="usa-nav__primary-item">
+                    <Link
+                      to="/highcharts/hc-using-the-theme"
+                      className={
+                        isCurrentPath(location, "/highcharts/hc-using-the-theme")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Using the Theme</span>
+                    </Link>
+                  </li>
+                  <li className="usa-nav__primary-item">
+                    <Link
+                      to="/highcharts/hc-customization"
+                      className={
+                        isCurrentPath(location, "/highcharts/hc-customization")
+                          ? "usa-current"
+                          : ""
+                      }
+                    >
+                      <span>Customization</span>
                     </Link>
                   </li>
                 </ul>
