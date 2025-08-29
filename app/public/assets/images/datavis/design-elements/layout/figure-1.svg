@@ -1,5 +1,5 @@
 <svg width="820" height="442" viewBox="0 0 820 442" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="819" height="441" rx="4.5" fill="white" stroke="#1B1B1B"/>
+<path d="M5 0.5H815C817.485 0.5 819.5 2.51472 819.5 5V437C819.5 439.485 817.485 441.5 815 441.5H5C2.51472 441.5 0.5 439.485 0.5 437V5C0.500007 2.51472 2.51472 0.5 5 0.5Z" fill="white" stroke="#1B1B1B"/>
 <rect x="150" y="352" width="458" height="12" fill="#E41D3D" fill-opacity="0.1"/>
 <rect x="605" y="124" width="69" height="56" fill="#E41D3D" fill-opacity="0.1"/>
 <rect x="120" y="50" width="433" height="13" fill="#E41D3D" fill-opacity="0.1"/>
@@ -40,17 +40,17 @@
 <rect x="120" y="79" width="92" height="21" fill="#E41D3D" fill-opacity="0.1"/>
 <rect x="120" y="102" width="32" height="243" fill="#E41D3D" fill-opacity="0.1"/>
 <rect x="150" y="343" width="458" height="7" fill="#E41D3D" fill-opacity="0.1"/>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="67.2969" y="88.418">Y-axis title </tspan><tspan x="69.875" y="100.418">with units</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="30.041" y="189.418">Y-axis labels; right-</tspan><tspan x="23.5664" y="201.418">aligned, centered on </tspan><tspan x="75.0605" y="213.418">gridlines</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="611" y="363.418">X-axis labels; centered aligned </tspan><tspan x="611" y="375.418">except for first and last</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="611" y="350.418">X-axis ticks</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="627" y="329.418">Zero line; should be solid in </tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="750.105" y="329.418">#2E2E2E</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="621" y="212.418">Gridlines; should be </tspan><tspan x="621" y="224.418">dashed in </tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="666.625" y="224.418">#C9C9C9</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="605" y="120.418">Legend</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="93.5957" y="43.418">Title</tspan></text>
-<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="10" letter-spacing="0em"><tspan x="79.2207" y="59.418">Subtitle</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="70.9102" y="89.12">Y-axis title </tspan><tspan x="71.6914" y="103.12">with units</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="35.6953" y="190.12">Y-axis labels; right-</tspan><tspan x="27.6875" y="204.12">aligned, centered on </tspan><tspan x="76.8574" y="218.12">gridlines</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="611" y="364.12">X-axis labels; centered aligned </tspan><tspan x="611" y="378.12">except for first and last</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="611" y="351.12">X-axis ticks</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="743.035" y="330.12">#2E2E2E</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="627" y="330.12">Zero line; should be solid in </tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" font-weight="bold" letter-spacing="0em"><tspan x="663.656" y="227.12">#C9C9C9</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="621" y="213.12">Gridlines; should be </tspan><tspan x="621" y="227.12">dashed in </tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="605" y="121.12">Legend</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="94.2891" y="44.12">Title</tspan></text>
+<text fill="#E41D3D" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="10" letter-spacing="0em"><tspan x="80.1387" y="60.12">Subtitle</tspan></text>
 <path d="M599 341.5H608V326H621.5" stroke="#E41D3D"/>
 <path d="M593 300H602.2V217H616" stroke="#E41D3D"/>
 <path d="M593 104H602.2V215H616" stroke="#E41D3D"/>
