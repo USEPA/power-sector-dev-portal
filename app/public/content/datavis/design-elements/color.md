@@ -37,12 +37,22 @@ sections:
     content: |
       Quantitative palettes are essential for representing data that has a natural order or scale. In this section, we examine different types of quantitative palettes and their appropriate usage.
     level: 2
-  - title: "Sequential Palette"
+  - title: "Sequential Palettes"
     level: 3
     content: |
       Sequential scales can be used to show differences in quantitative data. For example, a choropleth map showing total CO₂ emissions by state might use a sequential color scale. Darker colors should be used for higher numbers. Keep in mind that some lighter colors don’t have high contrast with white backgrounds and may need a darker border to be accessible. In this case, a border of **#274863** is needed on some of the lighter colors. In the image below, colors that need borders are shown with them.
     alt: ""
+  - title: "Sequential Palette 1"
+    level: 4
     image: "/power-sector-dev-portal/assets/images/datavis/design-elements/color/sequential-palettes.svg"
+  - title: "Sequential Palette 2"
+    level: 4
+    image: "/power-sector-dev-portal/assets/images/datavis/design-elements/color/sequential-palettes-2.svg"
+    alt: ""
+  - title: "Sequential Palette 3"
+    level: 4
+    image: "/power-sector-dev-portal/assets/images/datavis/design-elements/color/sequential-palettes-3.svg"
+    alt: ""
   - title: "Divergent Palettes"
     level: 3
     content: |
