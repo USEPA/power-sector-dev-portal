@@ -34,22 +34,22 @@
 <rect x="379" y="286" width="40" height="43" fill="#2378C3"/>
 <rect x="379" y="153" width="40" height="131" fill="#CD425B"/>
 <rect width="40" height="56" transform="matrix(-1 0 0 1 419 95)" fill="#9287D8"/>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="114.419" y="351.785">ABCD</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="64.8711" y="328.785">0%</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="56.9961" y="272.785">25%</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="56.9961" y="214.785">50%</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="56.9961" y="155.785">75%</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="49.1211" y="97.7852">100%</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="181.384" y="351.785">EFGH</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="253.062" y="351.785">IJKL</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="312.156" y="351.785">MNOP</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="381.034" y="351.785">QRST</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="49" y="75.7852">Emissions (% of total)</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="445.401" y="351.785">UVWX</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="515.123" y="351.785">YZAB</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="582.499" y="351.785">CDEF</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="648.462" y="351.785">GHIJ</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="709.223" y="351.785">KLMN</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="116.278" y="353.368">ABCD</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="64.502" y="330.368">0%</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="57.543" y="274.368">25%</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="57.543" y="216.368">50%</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="57.543" y="157.368">75%</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="50.584" y="99.368">100%</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="183.031" y="353.368">EFGH</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="254.354" y="353.368">IJKL</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="314.269" y="353.368">MNOP</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="382.106" y="353.368">QRST</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="49" y="77.368">Emissions (% of total)</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="448.321" y="353.368">UVWX</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="517.207" y="353.368">YZAB</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="584.044" y="353.368">CDEF</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="650.425" y="353.368">GHIJ</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" letter-spacing="0em"><tspan x="711.424" y="353.368">KLMN</tspan></text>
 <line x1="90" y1="328.5" x2="770" y2="328.5" stroke="#2E2E2E"/>
 <text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="49" y="404.785">Legend</tspan></text>
 <rect width="10" height="10" rx="1" transform="matrix(-1 0 0 1 117 395)" fill="#9287D8"/>
@@ -61,7 +61,7 @@
 <rect x="223" y="395" width="10" height="10" rx="1" fill="#2378C3"/>
 <text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="256.704" y="404.785">x</tspan></text>
 <text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="237.071" y="404.785">NO</tspan></text>
-<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="378.009" y="381.785">Region</tspan></text>
+<text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Source Sans 3" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="379.158" y="383.368">Region</tspan></text>
 <text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" letter-spacing="0em"><tspan x="79.0918" y="442.785">: This chart is for illustrative purposes only.</tspan></text>
 <text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="14" font-weight="bold" letter-spacing="0em"><tspan x="49" y="442.785">Note</tspan></text>
 <text fill="#2E2E2E" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="18" letter-spacing="0em"><tspan x="49" y="39.6523">Share of Total Emissions by Region</tspan></text>
