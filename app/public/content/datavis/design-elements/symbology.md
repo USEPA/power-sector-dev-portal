@@ -65,7 +65,7 @@ sections:
     - title: "Download Icon Set A (Plain Black)"
       link: "/power-sector-dev-portal/assets/images/datavis/design-elements/symbology/set-a-plain-black.zip"
     - title: "Download Icon Set A (Color Variant)"
-      link: "/power-sector-dev-portal/assets/images/datavis/design-elements/symbology/set-b-color-variant.zip"
+      link: "/power-sector-dev-portal/assets/images/datavis/design-elements/symbology/set-a-color-variant.zip"
     alt: ""
     image: "/power-sector-dev-portal/assets/images/datavis/design-elements/symbology/set-a.svg"
   - title: "Icon Set B"
