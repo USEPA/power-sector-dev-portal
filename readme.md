@@ -1,6 +1,6 @@
 # EPA Power Sector Dev Portal
 
-## Brief Project Description
+## Project Description
 
 This repository contains a project that provides guidance on creating data products within EPA's Power Sector.
 It includes the Clean Air and Power Division (CAPD) Data Visualization Style Guide (DVSG), which provides best practices for use when producing new data visualizations or updating existing ones. It includes high-level principles, chart-specific guidance, and advice on common chart-related design elements.
